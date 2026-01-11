@@ -12,4 +12,8 @@ public class ClassicalBoard extends Board {
     public ClassicalBoard(int width, int height){
         super(width, height);
     }
+
+    public void calculPath(){
+
+    }
 }
