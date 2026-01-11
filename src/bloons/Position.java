@@ -13,5 +13,13 @@ public class Position {
         this.x = x;
         this.y = y;
     }
+
+    /**
+     * get the cordonnate x
+     * @return the cordonnate x
+     */
+    public int getX(){
+        return this.x;
+    }
     
 }
