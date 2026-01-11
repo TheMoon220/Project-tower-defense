@@ -22,6 +22,8 @@ public abstract class Board {
         }
     }
 
+    public abstract void calculPath();
+    
     /**
      * get the width of the board
      * @return the width of the board
