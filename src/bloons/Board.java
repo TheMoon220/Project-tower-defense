@@ -22,4 +22,12 @@ public abstract class Board {
         }
     }
 
+    /**
+     * get the width of the board
+     * @return the width of the board
+     */
+    public int getWidth() {
+    return this.width;
+    }
+
 }
