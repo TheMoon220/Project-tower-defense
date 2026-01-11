@@ -5,7 +5,7 @@ public class Position {
     private int y;
 
     /**
-     * Bulds a position with coordonates
+     * Builds a position with coordonates
      * @param x coordonate x
      * @param y coordonate y
      */
@@ -28,6 +28,20 @@ public class Position {
      */
     public int getY(){
         return this.y;
+    }
+
+    /**
+     * @param o an object
+     * @return if the position and the other object are equals
+     */
+    public boolean equals(Object o){
+        if (o instanceof Position){
+            Position other = (Position)o;
+            return this.x==other.x && this.y==other.y;
+        }
+        else{
+            return false;
+        }
     }
     
 }
