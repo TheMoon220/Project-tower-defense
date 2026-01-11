@@ -1,7 +1,7 @@
 package bloons;
 
 public class Cell {
-    
+
     private Position pos;
 
     /**
@@ -10,5 +10,12 @@ public class Cell {
      */
     public Cell(Position pos){
         this.pos = pos;
+    }
+
+    /** the position of cell 
+     * @return the position of cell 
+     */
+    public Position getPos() {
+        return this.pos;
     }
 }
