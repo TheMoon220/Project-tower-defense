@@ -30,4 +30,12 @@ public abstract class Board {
     return this.width;
     }
 
+    /**
+     * get the height of the board
+     * @return the height of the board
+     */
+    public int getHeight() {
+    return this.height;
+    }
+
 }
