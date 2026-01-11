@@ -12,4 +12,8 @@ public class RandomBoard extends Board {
     public RandomBoard(int width, int height){
         super(width, height);
     }
+
+    public void calculPath(){
+
+    }
 }
