@@ -55,10 +55,17 @@ public abstract class Board {
      * get the grid of the board
      * @return grid, the grid of the board
      */
-    public Cell[][] getCell(){
+    public Cell[][] getGridCells(){ //jai changé le nom pour que ça soit plus coherent
         return this.grid;
     }
-
+    /**
+     * get the cell in the board at the position p 
+     * @param p the position p
+     * @return the cell  a the position p in the board 
+     */
+    public Cell getCell(Position p){  // j'ai ecrit cette fonction pour recuper la cellule a une position donnee
+        return this.grid[p.getX()][p.getY()];
+    }
     /**
      * get the path 
      * @return path, the path in the board
