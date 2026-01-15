@@ -87,7 +87,7 @@ Après une réfexion commune sur le sujet et les diagrammes UML faites:
 
 - La répartition du travail pour la semaine:
   
-Mariama Séré SYLLA : elle s'assure faire les tests, et améliorer les diagrammes UML
+Mariama Séré SYLLA : elle s'assure de faire les tests, et améliorer les diagrammes UML
 
 Farmata Sall SOW : elle s'assure de fournir le code de la classe ClassicalBoard surtout l'algorithme de calcul du chemin lié à cette classe et améliorer les algorithmes existants des autres classes ou ajouter des algorithmes si cela est nécessaire.
 
