@@ -6,6 +6,7 @@ public class BoardTest {
     private Position p1;
     private Position p2;
     private Cell cell1;
+    private Board board;
 
 
     @BeforeEach
@@ -13,6 +14,8 @@ public class BoardTest {
             this.p1= new Position(1, 5);
             this.p2=new Position(1, 0);
             this.cell1= new Cell(p1) ;
+            
+
         
         }
 
