@@ -25,7 +25,7 @@ public abstract class Board {
     public Board(int width, int height){
 
         if(height <=0 || width <= 0) {
-            throw new WrongSizeException("Invalide size, please try again !");
+            throw new IllegalArgumentException("Invalide size, please try again !");
         }
 
         this.width = width;
