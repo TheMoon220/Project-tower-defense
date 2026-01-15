@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 public class PositionTest {
     private Position p1;
     private Position p2;
-    private Position p3;
     private Position p4;
 
 
@@ -14,7 +13,6 @@ public class PositionTest {
         public void Before(){
             this.p1= new Position(1, 5);
             this.p2=new Position(1, 0);
-            this.p3= new Position(3, 2);
             this.p4= new Position(1, 5);
 
         }
