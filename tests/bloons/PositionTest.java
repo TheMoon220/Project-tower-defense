@@ -1,8 +1,7 @@
 package tests.bloons;
 import bloons.*;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 public class PositionTest {
     private Position p1;
     private Position p2;
