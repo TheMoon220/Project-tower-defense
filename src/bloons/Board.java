@@ -3,8 +3,6 @@ package bloons;
 import java.util.ArrayList;
 import java.util.List;
 
-import bloons.*;
-
 /** the object Board an abstract class, for our game */
 public abstract class Board {
     /** an attribute width, that represent the board's width */
@@ -95,6 +93,15 @@ public abstract class Board {
            System.out.println();
         }
             
+    }
+
+    /** display the path */
+    public void displayPath(){
+        System.out.println("Path:");
+        for (Position p : this.getPath()) {
+            System.out.println("(" + p.getX() + "," + p.getY() + ")");
+        }
+        System.out.println();
     }
 }
 
