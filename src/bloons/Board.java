@@ -56,4 +56,11 @@ public abstract class Board {
       return this.height;
     }
 
+    /**
+     * get the grid of the board
+     * @return grid, the grid of the board
+     */
+    public Cell[][] getCell(){
+        return this.grid;
+    }
 }
