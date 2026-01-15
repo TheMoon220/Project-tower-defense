@@ -14,7 +14,7 @@ public abstract class Board {
     /** an attribute grid, that represent the cells in our board */
     protected Cell[][] grid;
     /** an attribute path, that represent the path for each board */
-    protected List<Position> path = new new ArrayList<>();
+    protected List<Position> path = new ArrayList<>();
 
     /**
      * Builds a board wiht sizes width and height
@@ -62,5 +62,13 @@ public abstract class Board {
      */
     public Cell[][] getCell(){
         return this.grid;
+    }
+
+    /**
+     * get the path 
+     * @return path, the path in the board
+     */
+    public List<Position> getPath(){
+        return this.path;
     }
 }
