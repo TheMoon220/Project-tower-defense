@@ -1,6 +1,9 @@
 package bloons;
 
-import bloons.WrongSizeException;
+import java.util.ArrayList;
+import java.util.List;
+
+import bloons.*;
 
 /** the object Board an abstract class, for our game */
 public abstract class Board {
@@ -10,6 +13,8 @@ public abstract class Board {
     protected int height;
     /** an attribute grid, that represent the cells in our board */
     protected Cell[][] grid;
+    /** an attribute path, that represent the path for each board */
+    protected List<Position> path = new new ArrayList<>();
 
     /**
      * Builds a board wiht sizes width and height
@@ -32,7 +37,7 @@ public abstract class Board {
             }
         }
     }
-
+    /** an abstract method */
     public abstract void calculPath();
     
     /**
@@ -40,7 +45,7 @@ public abstract class Board {
      * @return the width of the board
      */
     public int getWidth() {
-    return this.width;
+      return this.width;
     }
 
     /**
@@ -48,7 +53,7 @@ public abstract class Board {
      * @return the height of the board
      */
     public int getHeight() {
-    return this.height;
+      return this.height;
     }
 
 }
