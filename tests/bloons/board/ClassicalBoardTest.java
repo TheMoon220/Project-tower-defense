@@ -31,8 +31,17 @@ public class ClassicalBoardTest {
         assertEquals(4, board.getWidth());
         assertEquals(6, board.getHeight());
         assertNotEquals(5, board.getHeight());
-        
+
     }
 
+
+
+    @Test
+
+    public void  cellAtPositionPAtTheBoard(){
+         assertEquals(cell1, board.getCell(p1));
+         assertNotEquals(cell1, board.getCell(p2));
+    }
+ 
     
 }
