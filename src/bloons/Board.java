@@ -71,4 +71,30 @@ public abstract class Board {
     public List<Position> getPath(){
         return this.path;
     }
+
+    /** display board */
+    public void displayBoard(){
+        System.out.print("     ");
+        for (int x = 0; x < this.width; x++){
+            // Chaque numéro prend exactement 2 caractères de large pour coller à "X "
+            System.out.print((x % 10) + " "); 
+        }
+        System.out.println();
+
+        for (int y = 0; y < this.height; y++) {
+           // Numéro de ligne sur 2 chiffres + barre de séparation
+           System.out.print(String.format("%2d | ", y));
+
+           for (int x = 0; x < this.width; x++) {
+              Position currentPos = new Position(x,y);
+              if(this.getPath() != null && this.getPath().contains(currentPos))
+                System.out.print("X ");
+              else
+                System.out.print(". ");
+           }
+           System.out.println();
+        }
+            
+    }
 }
+
