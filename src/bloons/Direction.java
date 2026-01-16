@@ -6,7 +6,7 @@ public enum Direction {
     BOTTOM(0,-1),RIGHT(+1,0),DOWN(0,+1);
     private int dx;
     private int dy;
-    private Neighbor(int dx,int dy){
+    private Direction(int dx,int dy){
         this.dx=dx;
         this.dy=dy;
 

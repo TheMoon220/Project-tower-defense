@@ -25,7 +25,7 @@ public class ClassicalBoard extends Board {
 
 
    /**
-    * 
+    * generate a position
     * @param direction
     */
     private void paths(Direction direction){
