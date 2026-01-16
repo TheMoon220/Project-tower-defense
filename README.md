@@ -98,10 +98,22 @@ Après une réfexion commune sur le sujet et les diagrammes UML faites:
 ## Semaine 2
 
 ### Ce qui a été réalisé
+Voici ce qui a été réalisé pour la semaine:
+Pour cette semaine on a ou amélioerer les diagrammes uml des differentes entités du livrable. Nous avons pu implementer les methodes de calcule de chemin des differentes palateau de jeu ainsi que leurs methodes de test bien sùr. on a aussi modelisé un premier programme permettant d'afficher un plateau de jeu ainsi que son chemin.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+- L'objectif pour cette semaine est de terminer le premier livrable en implementant un programme optimisé qui génére un plateau de jeu ainsi que son chemin (selon le type de plateau) difini de mainere aléatoire.
+
+-Le travail est répartit comme suit : 
+**Mariama Séré SYLLA** : elle s'assurée d'implémenter les diffèrentes methodes de teste pour les methodes de chaque classe
+
+**Farmata Sall SOW** : elle s'est assurée de fournir le code de la mehode permettant de calculer un chemin pour la classe ClassicalBoard tout en implementant une nouvelle enum **Direction** qui modélise les trois directions qu'un chemin peut s'orienter.
+
+**Khadim BEYE** : il s'est chargé de d'ameliorer les diagrammes uml en y ajoutant diffèrent attributs et methodes pour une decomposition du travail.
+
+**Mamadou Baïllo SOW** : il s'est assuré de fournir le code de la methode permettant de calculer un chemin pour la classe RandomBoard et l'implementation d'un programme permettant d'afficher un plateau de jeu ainsi que son chemin.
 
 ## Semaine 3
 
