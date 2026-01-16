@@ -75,7 +75,7 @@ Cet UML évoluera selon si l'on introduit une nouvelle classe ou non.
 ### Ce qui a été réalisé
  
  Voici ce qui a été réalisé pour la semaine:
- - Conception des diagrammes UML: avec différentes classes soient le Board une classe abstraite qui aura deux dérivés une classe ClassicalBoard et RandomBoard, une classe Cell pour les cellules, une classe position pour obtenir la position exacte de tout type qui sera implémenté dans le plateau.
+ - Conception des diagrammes UML: avec différentes classes soient le **Board** une classe abstraite qui aura deux dérivés une classe **ClassicalBoard** et **RandomBoard**, une classe **Cell** pour les cellules, une classe **Position** pour obtenir la position exacte de tout type qui sera implémenté dans le plateau.
 
  - L'architecture du projet: des paquetages et sous paquetages ajoutés, l'implémentation minimal des différentes classes, de nouvelles informations y seront ajoutées plus tard selon le besoin. Notre approche est de réflechir de telle sorte à fournir du code optimal, et compréhensible. 
 
@@ -87,13 +87,13 @@ Après une réfexion commune sur le sujet et les diagrammes UML faites:
 
 - La répartition du travail pour la semaine:
   
-Mariama Séré SYLLA : elle s'assure de faire les tests, et améliorer les diagrammes UML
+**Mariama Séré SYLLA** : elle s'assure de faire les tests, et améliorer les diagrammes UML
 
-Farmata Sall SOW : elle s'assure de fournir le code de la classe ClassicalBoard surtout l'algorithme de calcul du chemin lié à cette classe et améliorer les algorithmes existants des autres classes ou ajouter des algorithmes si cela est nécessaire.
+**Farmata Sall SOW** : elle s'assure de fournir le code de la classe ClassicalBoard surtout l'algorithme de calcul du chemin lié à cette classe et améliorer les algorithmes existants des autres classes ou ajouter des algorithmes si cela est nécessaire.
 
-Khadim BEYE : il fournit le code minimal des différentes classes(Board, Cell, Position) ansi que la documentation de chaque méthode. En plus d'aider pour les tests.
+**Khadim BEYE** : il fournit le code minimal des différentes classes(Board, ClassicalBoard, RandomBoard, Cell, Position) ansi que la documentation de chaque méthode. En plus d'aider pour les tests.
 
-Mamadou Baïllo SOW : il s'assure de fournir le code de la classe RandomBoard surtout l'algorithme de calcul du chemin lié à cette classe et améliorer les algorithmes exitants des autres classes ou ajouter des algorithmes si cela est nécessaire.
+**Mamadou Baïllo SOW** : il s'assure de fournir le code de la classe RandomBoard surtout l'algorithme de calcul du chemin lié à cette classe et améliorer les algorithmes exitants des autres classes ou ajouter des algorithmes si cela est nécessaire.
 
 ## Semaine 2
 
