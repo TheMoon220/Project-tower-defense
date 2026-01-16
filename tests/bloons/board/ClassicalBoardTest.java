@@ -40,7 +40,11 @@ public class ClassicalBoardTest {
 
     public void  cellAtPositionPAtTheBoard(){
          assertNotEquals(cell1, board.getCell(p2));
+         assertNotEquals(new Cell(new Position(4, 2)), board.getCell(new Position(1, 0)));
     }
  
-    
+    @Test
+    public void wrongPositionForHaveCellAtTheBoard()throws IndexOutOfBoundsException{
+        assertThrows(IndexOutOfBoundsException.class,()-> this.board.getCell(new Position(-1, 4)));
+    }
 }
