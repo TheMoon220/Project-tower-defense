@@ -3,7 +3,7 @@ package bloons;
 import java.util.Random;
 
 public enum Direction {
-    BOTTOM(0,-1),RIGHT(+1,0),DOWN(0,+1);
+    BOTTOM(-1,0),RIGHT(0,+1),TOP(+1,0);
     private int dx;
     private int dy;
     private Direction(int dx,int dy){

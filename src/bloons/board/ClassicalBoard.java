@@ -17,7 +17,7 @@ public class ClassicalBoard extends Board {
     }
 
     public void calculPath(){
-        paths(Direction.DOWN);
+        paths(Direction.TOP);
 
     }
 
