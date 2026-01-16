@@ -30,13 +30,13 @@ public class ClassicalBoard extends Board {
     */
     private void paths(Direction direction){
     Random r=new Random();
-    int n=r.nextInt(width);
+    int n=r.nextInt(height);
     Position p=new Position(n, 0);
     path.add(p);
-    while (p.getX()<height){
+    while (p.getX()<width){
 
       p=direction.generateNeighbor(p);
-      while(this.path.contains(p) && p.getY()<width){
+      while(this.path.contains(p) && p.getX()<width){
          p=direction.generateNeighbor(p);
         
       }
