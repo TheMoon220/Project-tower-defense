@@ -69,7 +69,7 @@ public abstract class Board {
         if( x<0||x>=grid.length ||  y<0 || y>grid[0].length){
             throw new IndexOutOfBoundsException("the position is incorect");
         }
-        return this.grid[p.getX()][p.getY()];
+        return this.grid[x][y];
     }
     /**
      * get the path 
