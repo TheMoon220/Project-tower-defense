@@ -15,7 +15,7 @@ public class MainLivrable1 {
 
            randomBoard.displayBoard();
            randomBoard.displayPath();
-           //randomBoard.calculPath();
+           
 
           
         }catch(IllegalArgumentException e){
