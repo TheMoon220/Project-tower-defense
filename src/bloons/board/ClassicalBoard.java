@@ -14,6 +14,7 @@ public class ClassicalBoard extends Board {
      */
     public ClassicalBoard(int width, int height){
         super(width, height);
+        this.calculPath();
     }
 
     public void calculPath(){
@@ -21,16 +22,13 @@ public class ClassicalBoard extends Board {
      Random r=new Random();
     int n=r.nextInt(height);
     Position p=new Position(0, n);
-    path.add(p);
+    this.path.add(p);
     System.out.println("valide"+p.getX()+" "+p.getY());
     while (p.getX()<width){
 
       p=this.chooseValidNeighborPosition(p);
       this.path.add(p);
-      if(path.contains(p)){
-         System.out.println("valide"+p.getX()+" "+p.getY());
-        
-      }
+      
      
 
 
