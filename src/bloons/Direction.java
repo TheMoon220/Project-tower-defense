@@ -3,7 +3,7 @@ package bloons;
 import java.util.Random;
 
 public enum Direction {
-    DOWN(-1,0),RIGHT(0,+1),TOP(+1,0);
+    DOWN(0,+1),RIGHT(+1,0),TOP(0,-1);
     private int dx;
     private int dy;
     private Direction(int dx,int dy){
@@ -20,8 +20,8 @@ public enum Direction {
     public Position generateNeighbor(Position p){
         Random random=new Random(); 
         int n=random.nextInt(3);
-        Direction B= values()[n];
-      return new Position(B.dx+p.getX(), B.dy+p.getY());
+        Direction d= values()[n];
+      return new Position(d.dx+p.getX(), d.dy+p.getY());
     }
 
     

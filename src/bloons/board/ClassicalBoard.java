@@ -17,33 +17,43 @@ public class ClassicalBoard extends Board {
     }
 
     public void calculPath(){
-        paths(Direction.TOP);
-
-    }
-
-
-
-
-   /**
-    * generate a position
-    * @param direction
-    */
-    private void paths(Direction direction){
-    Random r=new Random();
+   
+     Random r=new Random();
     int n=r.nextInt(height);
-    Position p=new Position(n, 0);
+    Position p=new Position(0, n);
     path.add(p);
+    System.out.println("valide"+p.getX()+" "+p.getY());
     while (p.getX()<width){
 
-      p=direction.generateNeighbor(p);
-      while(this.path.contains(p) && p.getX()<width){
-         p=direction.generateNeighbor(p);
+      p=this.chooseValidNeighborPosition(p);
+      this.path.add(p);
+      if(path.contains(p)){
+         System.out.println("valide"+p.getX()+" "+p.getY());
         
       }
-      this.path.add(p);
+     
 
 
     }
+    }
+
+
+
+
+public boolean isValid(Position P){
+
+    return P.getY()>0 && P.getY()<this.height && !path.contains(P);
+}
+
+public Position chooseValidNeighborPosition(Position p){
+   Position p2=Direction.TOP.generateNeighbor(p);
+   while (!isValid(p2)){
+   
+    p2=Direction.TOP.generateNeighbor(p);
+
+   }
+   return p2;
+
 }
 
     
