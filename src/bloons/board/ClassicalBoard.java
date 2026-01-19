@@ -43,16 +43,16 @@ public class ClassicalBoard extends Board {
        return P.getY()>0 && P.getY()<this.height && !path.contains(P);
     }
 
-public Position chooseValidNeighborPosition(Position p){
-   Position p2=Direction.TOP.generateNeighbor(p);
-   while (!isValid(p2)){
-   
-    p2=Direction.TOP.generateNeighbor(p);
-
-   }
-   return p2;
-
-}
-
-    
+    /**
+     * this method choose a position valid by a givin position
+     * @param p
+     * @return p2 a valid position
+     */
+    public Position chooseValidNeighborPosition(Position p){
+       Position p2=Direction.TOP.generateNeighbor(p);
+       while (!isValid(p2)){
+          p2=Direction.TOP.generateNeighbor(p);
+       }
+       return p2;
+    }
 }
