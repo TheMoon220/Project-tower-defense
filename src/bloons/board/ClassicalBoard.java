@@ -4,8 +4,10 @@ import bloons.*;
 import java.util.*;
 import bloons.utils.Direction;
 
-
+/** the object ClassicalBoard for the board with a defnine path */
 public class ClassicalBoard extends Board {
+    /** an attribut path, a empty list of positions */
+    private List<Position> path = new ArrayList<>();
     
     /**
      * Builds a board wiht sizes width and height
@@ -54,5 +56,14 @@ public class ClassicalBoard extends Board {
           p2=Direction.TOP.generateNeighbor(p);
        }
        return p2;
+    }
+
+    /**
+     * get the path
+     * @return a list of path
+     */
+    @Override
+    public List<Position> getPath(){
+        return this.path;
     }
 }
