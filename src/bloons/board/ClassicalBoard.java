@@ -1,8 +1,8 @@
 package bloons.board;
 
-import java.util.*;
-
 import bloons.*;
+import java.util.*;
+import bloons.utils.Direction;
 
 
 public class ClassicalBoard extends Board {
@@ -17,31 +17,27 @@ public class ClassicalBoard extends Board {
         this.calculPath();
     }
 
+    /**
+     * this method calculate the path of the first board, the
+     * classical board
+     */
     public void calculPath(){
    
-     Random r=new Random();
-    int n=r.nextInt(height);
-    Position p=new Position(0, n);
-    this.path.add(p);
-    System.out.println("valide"+p.getX()+" "+p.getY());
-    while (p.getX()<width){
-
-      p=this.chooseValidNeighborPosition(p);
+      Random r=new Random();
+      int n=r.nextInt(height);
+      Position p=new Position(0, n);
       this.path.add(p);
-      
-     
-
-
+      //System.out.println("valide"+p.getX()+" "+p.getY());
+      while (p.getX()<width){
+         p=this.chooseValidNeighborPosition(p);
+         this.path.add(p);
+      }
     }
+
+    public boolean isValid(Position P){
+
+       return P.getY()>0 && P.getY()<this.height && !path.contains(P);
     }
-
-
-
-
-public boolean isValid(Position P){
-
-    return P.getY()>0 && P.getY()<this.height && !path.contains(P);
-}
 
 public Position chooseValidNeighborPosition(Position p){
    Position p2=Direction.TOP.generateNeighbor(p);
