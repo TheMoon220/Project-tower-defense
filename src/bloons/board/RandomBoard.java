@@ -1,5 +1,7 @@
 package bloons.board;
 
+import java.util.*;
+
 import bloons.*;
 
 public class RandomBoard extends Board {
@@ -17,26 +19,19 @@ public class RandomBoard extends Board {
     /** a method for calculate the path (horizontal or vertical) in the board*/
     @Override
     public void calculPath(){
+<<<<<<< HEAD
        this.path.clear(); 
+=======
+      this.getPath().clear();
+    }
+>>>>>>> d4f92107ed20dd4a021662d99c0a4f26654cea49
 
-       int x = 0;
-       int y = (int)(Math.random() * this.height);
-
-       this.path.add(new Position(x, y));
-
-       while(x < this.width - 1){
-          int move = (int)(Math.random() * 3);
-
-          if(move == 0 && x + 1 < this.height) 
-            x++; // avancer
-          else if(move == 1 && y > 0)
-            y--; // monter
-          else if(move ==2 && y < this.height - 1)
-            y++; // descendre
-
-          Position pos = new Position(x,y);
-          if(!this.path.contains(pos))
-            this.path.add(pos);
-       }
+     /**
+     * get a empty path list
+     * @return path 
+     */
+    @Override
+    public List<Position> getPath(){
+        return new ArrayList<>();
     }
 }

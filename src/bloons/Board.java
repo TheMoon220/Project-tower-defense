@@ -1,6 +1,7 @@
 package bloons;
-import java.util.ArrayList;
+
 import java.util.List;
+
 public abstract class Board {
     /** an attribute width, that represent the board's width */
     protected int width;
@@ -8,8 +9,6 @@ public abstract class Board {
     protected int height;
     /** an attribute grid, that represent the cells in our board */
     protected Cell[][] grid;
-    /** an attribute path, that represent the path for each board */
-    protected List<Position> path = new ArrayList<>();
 
     /**
      * Builds a board wiht sizes width and height
@@ -32,8 +31,11 @@ public abstract class Board {
             }
         }
     }
-    /** an abstract method */
+    /** an abstract method for calculate the path on the board*/
     public abstract void calculPath();
+
+    /** an abstract method to keep the position of a path*/
+    public abstract List<Position> getPath();
     
     /**
      * get the width of the board
@@ -69,14 +71,7 @@ public abstract class Board {
         if( x<0||x>=grid.length ||  y<0 || y>grid[0].length){
             throw new IndexOutOfBoundsException("the position is incorect");
         }
-        return this.grid[p.getX()][p.getY()];
-    }
-    /**
-     * get the path 
-     * @return path, the path in the board
-     */
-    public List<Position> getPath(){
-        return this.path;
+        return this.grid[x][y];
     }
 
     /** display board */
@@ -106,7 +101,8 @@ public abstract class Board {
 
     /** display the path */
     public void displayPath(){
-        System.out.println("Path:");
+        String text = this.getPath().isEmpty() ? "Not defined path yet, Beause it's depends to the bloons!" : "Path:";
+        System.out.println(text);
         for (Position p : this.getPath()) {
             System.out.println("(" + p.getX() + "," + p.getY() + ")");
         }
