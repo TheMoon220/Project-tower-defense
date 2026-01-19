@@ -21,6 +21,7 @@ public class ClassicalBoard extends Board {
      * this method calculate the path of the first board, the
      * classical board
      */
+    @Override
     public void calculPath(){
    
       Random r=new Random();
@@ -34,8 +35,11 @@ public class ClassicalBoard extends Board {
       }
     }
 
+    /**
+     * an method for check if a givin position is valid or not
+     * @return true if the position is valid otherwise false.
+     */
     public boolean isValid(Position P){
-
        return P.getY()>0 && P.getY()<this.height && !path.contains(P);
     }
 
