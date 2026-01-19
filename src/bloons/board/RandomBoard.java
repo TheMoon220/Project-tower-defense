@@ -17,7 +17,7 @@ public class RandomBoard extends Board {
     /** a method for calculate the path (horizontal or vertical) in the board*/
     @Override
     public void calculPath(){
-       this.path.clear();
+       this.path.clear(); 
 
        int x = 0;
        int y = (int)(Math.random() * this.height);

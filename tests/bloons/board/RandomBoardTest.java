@@ -47,8 +47,6 @@ import org.junit.jupiter.api.*;
         assertThrows(IndexOutOfBoundsException.class,()-> this.board.getCell(new Position(-1, 4)));
     }
 
-    @Test
-    public void path
 }
 
 
