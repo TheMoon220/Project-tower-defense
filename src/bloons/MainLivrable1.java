@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MainLivrable1 {
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
-       int h = 0, w = 0;
+       int h, w;
 
        if (args.length == 2) {
            try {
