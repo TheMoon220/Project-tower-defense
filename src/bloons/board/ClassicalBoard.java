@@ -20,7 +20,7 @@ public class ClassicalBoard extends Board {
     }
 
     /**
-     * this method calculate the path of the first board, the
+     * this method calculate the path of the first board
      * the methode generate at first a random Position on the first row of the grid(the brginning of the path) and add this first position on the path
      * classical board
      */
