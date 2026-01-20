@@ -64,6 +64,6 @@ public class ClassicalBoard extends Board {
      */
     @Override
     public List<Position> getPath(){
-        return this.path;
+        return this.path; 
     }
 }

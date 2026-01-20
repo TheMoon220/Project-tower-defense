@@ -1,6 +1,8 @@
 package tests.bloons.board;
 import bloons.board.*;
 import bloons.*;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 public class ClassicalBoardTest {
@@ -46,5 +48,14 @@ public class ClassicalBoardTest {
     @Test
     public void wrongPositionForHaveCellAtTheBoard()throws IndexOutOfBoundsException{
         assertThrows(IndexOutOfBoundsException.class,()-> this.board.getCell(new Position(-1, 4)));
+    }
+
+    @Test 
+
+    public void isItpositionValid(){
+        assertTrue(board.isValid(p1));
+        assertFalse(board.isValid(new Position(0, 9)));
+        assertFalse(board.isValid(new Position(1,-5)));
+
     }
 }
