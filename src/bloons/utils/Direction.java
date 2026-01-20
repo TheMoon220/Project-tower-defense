@@ -14,6 +14,7 @@ public enum Direction {
 
     /** 
      * a private constructor for the enumerate class Direction
+     * example to move on the top of an position we should substract -1 one orders(dy) axis, ect...
      * @param dx x-axis
      * @param dy y-axis
      */
@@ -23,7 +24,8 @@ public enum Direction {
     }
 
     /**
-     * generate a random position :chose one position  one  among all position that are generated
+     * generate a random position :chose one position  one  among all position that are generated:this function choose at first 
+     * a random direction among all possible direction and the corresponding posiiton
      * @param p a given position
      * @return a new position 
     */

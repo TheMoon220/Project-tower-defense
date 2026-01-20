@@ -1,8 +1,8 @@
 package bloons.board;
 
+import bloons.*;
 import java.util.*;
 
-import bloons.*;
 
 public class RandomBoard extends Board {
 
@@ -19,8 +19,11 @@ public class RandomBoard extends Board {
     /** a method for calculate the path (horizontal or vertical) in the board*/
     @Override
     public void calculPath(){
+
+
       this.getPath().clear();
     }
+
 
 
      /**

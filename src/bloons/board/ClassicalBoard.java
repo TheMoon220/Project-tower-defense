@@ -21,6 +21,7 @@ public class ClassicalBoard extends Board {
 
     /**
      * this method calculate the path of the first board, the
+     * the methode generate at first a random Position on the first row of the grid(the brginning of the path) and add this first position on the path
      * classical board
      */
     @Override
@@ -30,7 +31,6 @@ public class ClassicalBoard extends Board {
       int n=r.nextInt(height);
       Position p=new Position(0, n);
       this.path.add(p);
-      //System.out.println("valide"+p.getX()+" "+p.getY());
       while (p.getX()<width){
          p=this.chooseValidNeighborPosition(p);
          this.path.add(p);
@@ -38,7 +38,7 @@ public class ClassicalBoard extends Board {
     }
 
     /**
-     * an method for check if a givin position is valid or not
+     * an method for check if a given position is valid or not as the same time the method checks if path not  contains position
      * @return true if the position is valid otherwise false.
      */
     public boolean isValid(Position P){
@@ -46,7 +46,8 @@ public class ClassicalBoard extends Board {
     }
 
     /**
-     * this method choose a position valid by a givin position
+     * this method choose a position valid by a givin position if the genrated position is not in the grid the one other position w'll
+     * be genrated and then when the position is in grid it is returned
      * @param p
      * @return p2 a valid position
      */
