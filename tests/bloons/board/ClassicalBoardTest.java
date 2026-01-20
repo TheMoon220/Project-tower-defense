@@ -70,4 +70,10 @@ public class ClassicalBoardTest {
 
       
     }
+
+    @Test
+    public void positionChooseIsRight(){
+        Position p4= board.chooseValidNeighborPosition(p1);
+        assertTrue(board.isValid(p4));
+    }
 }
