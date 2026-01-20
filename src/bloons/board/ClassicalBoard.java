@@ -30,10 +30,12 @@ public class ClassicalBoard extends Board {
       Random r=new Random();
       int n=r.nextInt(height);
       Position p=new Position(0, n);
-      this.path.add(p);
+      //this.path.add(p);
       while (p.getX()<width){
+      this.path.add(p);
+
          p=this.chooseValidNeighborPosition(p);
-         this.path.add(p);
+         //this.path.add(p);
       }
     }
 
