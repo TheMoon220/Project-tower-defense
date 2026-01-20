@@ -58,4 +58,11 @@ public class ClassicalBoardTest {
         assertFalse(board.isValid(new Position(1,-5)));
 
     }
+
+    @Test
+    public void  wrongNeighborPosition(){
+        Position p= board.chooseValidNeighborPosition(p1);
+    
+
+    }
 }

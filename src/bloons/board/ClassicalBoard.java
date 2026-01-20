@@ -54,9 +54,9 @@ public class ClassicalBoard extends Board {
      * @return p2 a valid position
      */
     public Position chooseValidNeighborPosition(Position p){
-       Position p2=Direction.TOP.generateNeighbor(p);
+       Position p2=Direction.generateNeighbor(p);
        while (!isValid(p2)){
-          p2=Direction.TOP.generateNeighbor(p);
+          p2=Direction.generateNeighbor(p);
        }
        return p2;
     }
