@@ -29,7 +29,7 @@ public enum Direction {
      * @param p a given position
      * @return a new position 
     */
-    public Position generateNeighbor(Position p){
+    public static  Position generateNeighbor(Position p){
         Random random=new Random(); 
         int n=random.nextInt(3);
         Direction d= values()[n];
