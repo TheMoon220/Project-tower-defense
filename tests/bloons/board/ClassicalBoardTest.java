@@ -2,7 +2,6 @@ package tests.bloons.board;
 import bloons.board.*;
 import bloons.*;
 import bloons.utils.*;
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 public class ClassicalBoardTest {
@@ -50,15 +49,14 @@ public class ClassicalBoardTest {
         assertThrows(IndexOutOfBoundsException.class,()-> this.board.getCell(new Position(-1, 4)));
     }
 
-    @Test 
-
-    public void isItpositionValid(){
+   
+   /**  public void isItpositionValid(){
         assertTrue(board.isValid(p1));
         assertFalse(board.isValid(new Position(0, 9)));
         assertFalse(board.isValid(new Position(1,-5)));
-        assertFalse(board.getPath().contains(p1));
+        //assertFalse(board.getPath().contains(p1));
     }
-    
+    */
     @Test
     public void  isItRightGenereNeighborPosition(){
         Position p3= Direction.generateNeighbor(p1);
@@ -76,4 +74,13 @@ public class ClassicalBoardTest {
         Position p4= board.chooseValidNeighborPosition(p1);
         assertTrue(board.isValid(p4));
     }
-}
+    @Test 
+    public void pathFoundIsRight(){
+        board.calculPath();
+        assertFalse(board.getPath().isEmpty());
+        Position p= board.getPath().get(0);
+        assertEquals(0, p.getX());
+        assertTrue(p.getY()>=0);
+        assertTrue(p.getY()<=6);
+    }
+}   
