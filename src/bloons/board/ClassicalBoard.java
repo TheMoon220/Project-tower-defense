@@ -41,6 +41,7 @@ public class ClassicalBoard extends Board {
 
     /**
      * an method for check if a given position is valid or not as the same time the method checks if path not  contains position
+     * @param P the position to check.
      * @return true if the position is valid otherwise false.
      */
     public boolean isValid(Position P){
@@ -50,7 +51,7 @@ public class ClassicalBoard extends Board {
     /**
      * this method choose a position valid by a givin position if the genrated position is not in the grid the one other position w'll
      * be genrated and then when the position is in grid it is returned
-     * @param p
+     * @param p the position 
      * @return p2 a valid position
      */
     public Position chooseValidNeighborPosition(Position p){

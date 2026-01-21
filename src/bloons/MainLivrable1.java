@@ -3,7 +3,13 @@ package bloons;
 import bloons.board.*;
 import java.util.Scanner;
 
+/** the main class for the game */
 public class MainLivrable1 {
+     /** default constructor */
+     public MainLivrable1(){}
+    /** the main programm
+     *  @param args arguments an array.  
+     */  
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
        int h, w;

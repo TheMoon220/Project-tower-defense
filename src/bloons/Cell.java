@@ -1,7 +1,9 @@
 package bloons;
 
+/** the object Cell for both of the board */
 public class Cell {
 
+    /** an attribute pos for the position */
     private Position pos;
 
     /**

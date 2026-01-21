@@ -5,7 +5,12 @@ import bloons.*;
 
 /** an enumeration for the object Direction */
 public enum Direction {
-    DOWN(0,+1),RIGHT(+1,0),TOP(0,-1);
+    /** an value to represente down of the board*/
+    DOWN(0,+1),
+    /** an value to represente right of the board */
+    RIGHT(+1,0),
+    /** an value to represente top of the board */
+    TOP(0,-1);
 
     /** an attribute dx that represente the axis of the abscisses */
     private int dx;

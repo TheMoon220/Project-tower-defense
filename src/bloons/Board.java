@@ -2,6 +2,7 @@ package bloons;
 
 import java.util.List;
 
+/** the object Board an abstract class for our game */
 public abstract class Board {
     /** an attribute width, that represent the board's width */
     protected int width;
@@ -14,7 +15,7 @@ public abstract class Board {
      * Builds a board wiht sizes width and height
      * @param width the width of the board
      * @param height the height of the board
-     * @exception WrongSizeException when the height or width isn't an integer
+     * @exception IllegalArgumentException when the height or width isn't an integer
      */
     public Board(int width, int height){
 
@@ -34,7 +35,9 @@ public abstract class Board {
     /** an abstract method for calculate the path on the board*/
     public abstract void calculPath();
 
-    /** an abstract method to keep the position of a path*/
+    /** an abstract method to keep the position of a path
+     *  @return a list of position
+    */
     public abstract List<Position> getPath();
     
     /**

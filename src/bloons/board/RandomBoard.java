@@ -3,7 +3,7 @@ package bloons.board;
 import bloons.*;
 import java.util.*;
 
-
+/** the object RandomBoard the second board */
 public class RandomBoard extends Board {
 
     /**
@@ -24,7 +24,7 @@ public class RandomBoard extends Board {
 
      /**
      * get a empty path list
-     * @return path 
+     * @return path a list of positions
      */
     @Override
     public List<Position> getPath(){
