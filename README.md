@@ -25,6 +25,46 @@ Un lien vers une image de l'UML doit être fourni (une photo d'un diagramme UML 
 
 ## Livrable 1
 
+Le premier livrable, avec une approche objet les concepts utilisés sont entre autres l'encapsulation, l'héritage notamment une classe abstraite **Board** qui concentre toutes les méthodes communes aux deux plateaux **ClassicalBoard** et **RandomBoard**. En plus d'une certaine méthode abstraite qui sont définit dans les deux classes correspondantes aux deux plateaux, puisque chacun des plateaux à des choses en plus que l'autre n'a pas c'est-à-dire dans le **ClassicalBoard** un chemin est défini d'avance selon les critères du sujet où les ballons suivront ce chemin defini jusqu'à la sortie et aucune tour ne sera posée sur les cellules traversées par ce chemin. le second plateau est différent, chaque ballon définit sa trajectoire suivant où il est positionné au départ, de ce fait aucun chemin n'est definit d'avance car ce chemin dépendra du ballon (donc le prochain livrable) selon le sujet.
+
+Différentes classes ont été implémenté afin de construire les deux plateaux. Un plateau contient plusieurs cellules donc une classe **Cell**, une cellule à une position dans un plateau donc une cellule depend d'une position d'où, une classe **Position** qui contient juste deux attributs et sourtout vérifiée si deux positions sont égales très important.
+
+Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
+
+**Générer la documentation**
+
+```bash
+make docs
+```
+
+**Compiler l'ensemble des classes .java en .class**
+
+```bash
+make build
+```
+
+**Lancer les tests avec junit**
+
+```bash
+make tests
+```
+
+**Lancer le programme MainLivrable1** ou **Lancer le MainLivrable1 avec les arguments (2 args)**
+
+```bash
+make run
+```
+
+```bash
+java -classpath classes bloons.MainLivrable1 val1 val2
+```
+
+**Supprimer les .class et la doc, nettoyage complet**
+
+```bash
+make clean-all
+```
+
 ### Atteinte des objectifs
 
 ### Difficultés restant à résoudre
