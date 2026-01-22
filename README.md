@@ -25,7 +25,7 @@ Un lien vers une image de l'UML doit être fourni (une photo d'un diagramme UML 
 
 ## Livrable 1
 
-Le premier livrable, avec une approche objet les concepts utilisés sont entre autres l'encapsulation, l'héritage notamment une classe abstraite **Board** qui concentre toutes les méthodes communes aux deux plateaux **ClassicalBoard** et **RandomBoard**. En plus d'une certaine méthode abstraite qui sont définit dans les deux classes correspondantes aux deux plateaux, puisque chacun des plateaux à des choses en plus que l'autre n'a pas c'est-à-dire dans le **ClassicalBoard** un chemin est défini d'avance selon les critères du sujet où les ballons suivront ce chemin defini jusqu'à la sortie et aucune tour ne sera posée sur les cellules traversées par ce chemin. le second plateau est différent, chaque ballon définit sa trajectoire suivant où il est positionné au départ, de ce fait aucun chemin n'est definit d'avance car ce chemin dépendra du ballon (donc le prochain livrable) selon le sujet.
+Le premier livrable, avec une approche objet les concepts utilisés sont entre autres l'encapsulation, des exceptions pour quand des valeurs négatives sont saisies par le joueur et l'héritage notamment une classe abstraite **Board** qui concentre toutes les méthodes communes aux deux plateaux **ClassicalBoard** et **RandomBoard**. En plus d'une certaine méthode abstraite qui sont définit dans les deux classes correspondantes aux deux plateaux, puisque chacun des plateaux à des choses en plus que l'autre n'a pas c'est-à-dire dans le **ClassicalBoard** un chemin est défini d'avance selon les critères du sujet où les ballons suivront ce chemin defini jusqu'à la sortie et aucune tour ne sera posée sur les cellules traversées par ce chemin. le second plateau le **RandomBoard** est différent, chaque ballon définit sa trajectoire suivant où il est positionné au départ, de ce fait aucun chemin n'est definit d'avance car ce chemin dépendra du ballon (donc le prochain livrable) selon le sujet.
 
 Différentes classes ont été implémenté afin de construire les deux plateaux. Un plateau contient plusieurs cellules donc une classe **Cell**, une cellule à une position dans un plateau donc une cellule depend d'une position d'où, une classe **Position** qui contient juste deux attributs et sourtout vérifiée si deux positions sont égales très important.
 
@@ -66,6 +66,17 @@ make clean-all
 ```
 
 ### Atteinte des objectifs
+
+- Deux plateaux générés en fonction des hauteur et largeur renseignées sur le console, 
+  au cas où l'une de ces deux valeurs est négative ou les deux, une exception est déclenchée. 
+
+- Calcul d'un chemin et affichage de ce chemin après que le plateau ait été générer, de ce fait on voit toutes les cellules traversées par le chemin.
+
+- Ajout d'un makefile afin de simplifier ou d'automatiser certaines commandes.
+
+- Ajout des tests pour toutes les méthodes publiques qui sont très importantes qui sont nécessaires pour la logique du jeu.
+
+- Concernant le groupe, l'entente est globalement très bonne et chacun a donné du sien pour assurer le bon déroulement de ce livrable.
 
 ### Difficultés restant à résoudre
 
