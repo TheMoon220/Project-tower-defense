@@ -90,7 +90,7 @@ java -jar mainLivrable1.jar
 
 - Ajout des tests pour toutes les méthodes publiques qui sont très importantes qui sont nécessaires pour la logique du jeu.
 
-- Avec un fichier **manifest** on a jugé utile de généré .jar, le fichier **mainLivrable1.jar** propre au livrable1.
+- Avec un fichier **manifest** on a jugé utile de générer .jar, le fichier **mainLivrable1.jar** propre au livrable1.
 
 - Concernant le groupe, l'entente est globalement très bonne et chacun a donné du sien pour assurer le bon déroulement de ce livrable.
 
