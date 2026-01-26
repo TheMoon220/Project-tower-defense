@@ -1,15 +1,15 @@
 package bloons;
 /** classe Position */
 public class Position {
-    private int x;
-    private int y;
+    private double x;
+    private double y;
 
     /**
      * Builds a position with coordonates
      * @param x coordonate x
      * @param y coordonate y
      */
-    public Position(int x, int y){
+    public Position(double x, double y){
         this.x = x;
         this.y = y;
     }
@@ -18,7 +18,7 @@ public class Position {
      * get the cordonnate x
      * @return the cordonnate x
      */
-    public int getX(){
+    public double getX(){
         return this.x;
     }
 
@@ -26,7 +26,7 @@ public class Position {
      * get the cordonnate y
      * @return the cordonnate y
      */
-    public int getY(){
+    public double getY(){
         return this.y;
     }
 
