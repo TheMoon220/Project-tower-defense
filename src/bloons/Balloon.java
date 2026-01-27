@@ -11,12 +11,11 @@ public class Balloon {
     // an attribute speed, that represent the ballon's speed
     private double speed ;
     //constuctor of Balloon
-    public Balloon(Position position, Level level){
+    public Balloon(Position position, Level level,double  speed ){
         this.position = position;
         this.level = level;
-        this.speed= 
-        this.health= 
-
+        this.speed= speed;
+        this.health= chooseHealth(level);
     }  
     /**
      * return the level of this balloon
@@ -52,14 +51,37 @@ public class Balloon {
      * @param health the health 
      */
     public void setHealth(int health) {
-        this.health = health;
+        this.health = health-1; 
     }
+     /**
+      * choose the health of the ballon depending on the level
+      * @param l the level
+      * @return the corresponding  health 
+      */
+    public int chooseHealth(Level l){
+        if (l== Level.NIV1){
+           return 1; 
+        }
+        if (l== Level.NIV2){
+           return 2;
+        }
+        return 4;
+    }
+
+    public boolean chechEndOfPath(){
+
+    }
+
+    public  void advancePosition()
+
     /**
-     * moove the ballon accordint to its speed 
+     * moove the ballon according to its speed 
      * @param b
      */
-    public void mooveBalloon(Balloon b){
+    public void moveBalloon(Position p){
+        
+
         
     }
-    
+
 }
