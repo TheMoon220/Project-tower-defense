@@ -10,8 +10,8 @@ public enum Direction {
     /** an value to represente right of the board */
     RIGHT(+1,0),
     /** an value to represente top of the board */
-    TOP(0,-1);
-
+    TOP(0,-1),
+    LEFT(-1,0);
     /** an attribute dx that represente the axis of the abscisses */
     private int dx;
     /** an attribute dy that represente the axis of the orders */
@@ -36,7 +36,7 @@ public enum Direction {
     */
     public static  Position generateNeighbor(Position p){
         Random random=new Random(); 
-        int n=random.nextInt(3);
+        int n=random.nextInt(4);
         Direction d= values()[n];
 
         return new Position(d.dx+p.getX(), d.dy+p.getY());

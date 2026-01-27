@@ -13,8 +13,8 @@ public class ClassicalBoardTest {
 
     @BeforeEach
         public void Before(){
-            this.p1= new Position(1, 5);
-            this.p2=new Position(1, 0);
+            this.p1= new Position(1.0, 5.0);
+            this.p2=new Position(1.0, 0.0);
             this.cell1= new Cell(p1) ;
             this.board= new ClassicalBoard(4,6) ;
 
@@ -41,12 +41,12 @@ public class ClassicalBoardTest {
 
     public void  cellAtPositionPAtTheBoard(){
          assertNotEquals(cell1, board.getCell(p2));
-         assertNotEquals(new Cell(new Position(4, 2)), board.getCell(new Position(1, 0)));
+         assertNotEquals(new Cell(new Position(4, 2)), board.getCell(new Position(1.0, 0.0)));
     }
  
     @Test
     public void wrongPositionForHaveCellAtTheBoard()throws IndexOutOfBoundsException{
-        assertThrows(IndexOutOfBoundsException.class,()-> this.board.getCell(new Position(-1, 4)));
+        assertThrows(IndexOutOfBoundsException.class,()-> this.board.getCell(new Position(-1.0, 4.0)));
     }
 
    
@@ -59,11 +59,16 @@ public class ClassicalBoardTest {
     */
     @Test
     public void  isItRightGenereNeighborPosition(){
-        Position p3= Direction.generateNeighbor(p1);
+        Position p3= bloons.utils.Direction.generateNeighbor(p1);
+        while (p3.getX()<p1.getX()){
+         p3= bloons.utils.Direction.generateNeighbor(p1);
+
+
+        }
         assertTrue(p3.getY()<=board.getHeight());
         assertTrue(p3.getX()<=board.getWidth());
-        int dx= (p3.getX()-p1.getX());
-        int dy= (p3.getY()-p1.getY());
+        int dx=  (int)((p3.getX())-(p1.getX()));
+        int dy= (int)(p3.getY()-p1.getY());
        // assertTrue(dx+dy==1); // pour verifier si la position generer est une position voisine (right,top,down) 
 
       
