@@ -30,6 +30,13 @@ public class Position {
         return this.y;
     }
 
+    public void setX(double s){
+        this.x=s;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
     /**
      * @param o an object
      * @return if the position and the other object are equals

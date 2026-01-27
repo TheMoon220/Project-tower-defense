@@ -31,6 +31,7 @@ public class Balloon {
     public Position getPosition(){
         return this.position;
     }
+
     /**
      * return the speed of this balloon
      * @return the speed 
@@ -67,12 +68,30 @@ public class Balloon {
         }
         return 4;
     }
+    /**
+     * 
+     */
+     public  void advancePosition(){
+       
+        this.position.setX( this.position.getX() + this.speed);
+        this.position.setY(this.position.getY()+this.speed);
+         if (this.position.getX()>0.9  || this.position.getY()>0.9){
+            checkNextCell();
+            
+        }
 
-    public boolean chechEndOfPath(){
+
+
+    }
+    public boolean checkEndOfPath(){
 
     }
 
-    public  void advancePosition()
+
+    public void checkNextCell(){
+       
+    }
+   
 
     /**
      * moove the ballon according to its speed 
