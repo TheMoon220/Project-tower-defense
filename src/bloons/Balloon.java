@@ -10,12 +10,14 @@ public class Balloon {
     private  int health;
     // an attribute speed, that represent the ballon's speed
     private double speed ;
+    private int currentCellIndex ; // la première  case du chemin
     //constuctor of Balloon
     public Balloon(Position position, Level level,double  speed ){
         this.position = position;
         this.level = level;
         this.speed= speed;
         this.health= chooseHealth(level);
+        this.currentCellIndex=0;
     }  
     /**
      * return the level of this balloon
@@ -69,10 +71,11 @@ public class Balloon {
         return 4;
     }
     /**
-     * 
+     *  Advances the balloon within its current cell based on its speed.
+     * Calls checkNextCell() if the edge of the cell is reached to move
+     * to the next cell in the path.
      */
      public  void advancePosition(){
-       
         this.position.setX( this.position.getX() + this.speed);
         this.position.setY(this.position.getY()+this.speed);
          if (this.position.getX()>0.9  || this.position.getY()>0.9){
@@ -83,13 +86,20 @@ public class Balloon {
 
 
     }
+
+    /**
+     * 
+     * @return
+     */
     public boolean checkEndOfPath(){
 
     }
 
-
+    /**
+     *  Moves the balloon to the next cell 
+     */
     public void checkNextCell(){
-       
+          
     }
    
 
