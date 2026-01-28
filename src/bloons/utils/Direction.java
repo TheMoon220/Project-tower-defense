@@ -11,6 +11,7 @@ public enum Direction {
     RIGHT(+1,0),
     /** an value to represente top of the board */
     TOP(0,-1),
+    /** an value to represente lef of the board */
     LEFT(-1,0);
     /** an attribute dx that represente the axis of the abscisses */
     private int dx;
