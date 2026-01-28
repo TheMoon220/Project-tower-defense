@@ -76,6 +76,7 @@ public class Balloon {
      * to the next cell in the path.
      */
      public  void advancePosition(){
+        //la methode n'est paas fini je dois mettre une conditon pour l'avacement , jai juste mis ca pour l'instant  
         this.position.setX( this.position.getX() + this.speed);
         this.position.setY(this.position.getY()+this.speed);
          if (this.position.getX()>0.9  || this.position.getY()>0.9){
@@ -92,7 +93,7 @@ public class Balloon {
      * @return true if the balloon has completed its trajectory, false otherwise
      */
     public boolean checkEndOfPath(){
-        if 
+        return true;// jai mis ça pour que le methode ne soit pas souligné en rouge.
  
     }
 
@@ -114,7 +115,9 @@ public class Balloon {
  
         
     }
-
+    /*
+    *representztion of the ballon with a attribute
+     */
     public String toString(){
         return "this ballon has a position "+ this.position +"a level"+ this.level+ "a speed" + this.speed ;
     }
