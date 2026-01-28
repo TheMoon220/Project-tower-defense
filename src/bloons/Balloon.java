@@ -53,8 +53,8 @@ public class Balloon {
      * set the health with the health in param
      * @param health the health 
      */
-    public void setHealth(int health) {
-        this.health = health-1; 
+    public void setHealth() {
+        this.health--; 
     }
      /**
       * choose the health of the ballon depending on the level
