@@ -88,17 +88,19 @@ public class Balloon {
     }
 
     /**
-     * 
-     * @return
+     * Checks whether the balloon has reached the end of its path.
+     * @return true if the balloon has completed its trajectory, false otherwise
      */
     public boolean checkEndOfPath(){
-
+        if 
+ 
     }
 
     /**
      *  Moves the balloon to the next cell 
      */
     public void checkNextCell(){
+        currentCellIndex++;  
           
     }
    
@@ -109,8 +111,12 @@ public class Balloon {
      */
     public void moveBalloon(Position p){
         
-
+ 
         
+    }
+
+    public String toString(){
+        return "this ballon has a position "+ this.position +"a level"+ this.level+ "a speed" + this.speed ;
     }
 
 }
