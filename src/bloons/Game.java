@@ -2,6 +2,7 @@ package bloons;
 
 import bloons.*;
 import bloons.board.*;
+import bloons.utils.*;
 import java.util.*;
 
 /** the object Game that which centralizes everything */
@@ -39,5 +40,13 @@ public class Game {
      */
     public Player getPlayer(){
         return this.player;
+    }
+
+    /**
+     * get the balloons
+     * @return balloons 
+     */
+    public List<Balloon> getBalloons(){
+        return this.balloons;
     }
 }
