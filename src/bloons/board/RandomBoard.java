@@ -36,34 +36,41 @@ public class RandomBoard extends Board {
      * a method that allows the appearance of a balloon
      * @param level the level of the balloon
      */
-    public Balloon spawnBalloon(Level level){
+    public Balloon spawnBalloon(Level level, double speed){
        Random random = new Random();
        int side = random.nextInt(4);
 
-       double x = 0, y = 0;
-       Direction direction;
+       double startX , startY;
+       List<Position> straightPath = new ArrayList<>();
+
        switch(side){
-          case 0: //haut
-            x = random.nextInt(this.width);
-            y = 0;
-            direction = Direction.DOWN;
+          case 0: //top to down
+            startX = random.nextInt(this.width);
+            for(int y = 0; y < this.height; y++){
+              straightPath.add(new Position(startX, y));
+            }
             break;
-          case 1: //down
-            x = random.nextInt(this.width);
-            direction = Direction.TOP;
-            y = this.height - 1;
+          case 1: //down to top
+            startX = random.nextInt(this.width);
+            for(int y = this.height - 1; y >= 0; y--){
+              straightPath.add(new Position(startX, y));
+            }
             break;
-          case 2: //left
-            x = 0;
-            y = random.nextInt(this.height);
-            direction = Direction.RIGHT;
+          case 2: //left to right
+            startY = random.nextInt(this.height);
+            for(int x = 0; x < this.width; x++){
+              straightPath.add(new Position(x, startY));
+            }
             break;
-          default: // right
-            x = this.width - 1;
-            y = random.nextInt(this.height);
-            direction = Direction.LEFT;
-       }
-       Position position = new Position(x, y);
-       //return new Balloon(position,level,direction,this); // here this represente 'this board'
-    }
+          default: // right to left
+            startY = random.nextInt(this.height);
+            for(int x = this.width - 1; x >= 0; x--){
+              straightPath.add(new Position(x, startY));
+            }
+
+      }
+       
+      Balloon balloon = new Balloon(straightPath.get(0), level, speed);
+      balloon.setTrajectory(straightPath);
+      return balloon;
 }
