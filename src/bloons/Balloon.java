@@ -1,6 +1,5 @@
 package bloons;
 import java.util.List;
-import bloons.*;
 import bloons.utils.*;
 //class Balloon
 public class Balloon {
@@ -71,6 +70,24 @@ public class Balloon {
     public boolean isDestroyed() {
         return health <= 0;
     }
+
+    /**
+     * Sets the path (trajectory) that the balloon will follow.
+     * 
+     * This method must be called after creating the balloon to provide it with
+     * the path it will move along. It also resets the balloon's current cell
+     * and progress along the cell to the beginning of the path.
+     *
+     * @param path the list of positions representing the trajectory for the balloon
+     * @throws IllegalArgumentException if the path is null or empty
+     */
+    public void setTrajectory(List<Position> path) {
+        if (path == null || path.isEmpty())
+            throw new IllegalArgumentException("Chemin invalide");
+        this.path = path;
+        this.currentCellIndex = 0;
+        this.progress = 0.0;
+}
 
      /**
      *  Moves the balloon to the next cell 
