@@ -75,4 +75,41 @@ public class Game {
 
        System.out.println("\n===== Step 3 : balloons run");
     }
+
+    /**
+     * spawn balloons for the current round
+     */
+    private void spawnBalloons(){
+        int count = 3 + (this.round -1) * 3; // Round 1: 3, Round 2: 6, etc...
+        if(this.board instanceof ClassicalBoard){
+            for(int i = 0; i < count; i++){
+                double speed = 1.0 + i + (this.round * 0.1);
+                Level level = getLevelForRound(round);
+                
+                Balloon balloon = new Balloon(level, this.board);
+                balloon.setSpeed(speed);
+                this.balloons.add(balloon);
+
+                System.out.println("Bloon " + i + "at (" + 
+                                   (int)balloon.getPosition().getX() + ", " +
+                                   (int)balloon.getPosition().getY() + ") speed: " + 
+                                    balloon.getSpeed() + " health: " + balloon.getHealth());
+            }
+        }else if(board instanceof RandomBoard){
+            RandomBoard rb = (RandomBoard) board;
+            for(int i = 0; i < count; i++){
+                double speed = 1.0 + i + (this.round * 0.1);
+                Level level = getLevelForRound(this.round);
+
+                Balloon balloon = rb.spawnBalloon(level);
+                balloon.setSpeed(speed);
+                this.balloons.add(balloon);
+
+                System.out.println("Bloon " + i + " at (" + (int)balloon.getPosition().getX() +
+                                   ", " + (int)balloon.getPosition().getY() + ") speed: " + 
+                                   balloon.getSpeed() + " health: " + balloon.getHealth());
+            }
+        }
+        System.out.println("Spawned " + count + " bloons.");
+    }
 }
