@@ -1,7 +1,11 @@
 package bloons;
+import java.util.List;
+import bloons.*;
 import bloons.utils.*;
 //class Balloon
 public class Balloon {
+    // path of the balloon
+     private List<Position> path;
     // an attribute Position, that represent the ballon's position
     private   Position position;
     // an attribute level, that represent the ballon's level
@@ -11,13 +15,17 @@ public class Balloon {
     // an attribute speed, that represent the ballon's speed
     private double speed ;
     private int currentCellIndex ; // la première  case du chemin
+    // progression in  the cell
+    private double progress;
     //constuctor of Balloon
     public Balloon(Position position, Level level,double  speed ){
         this.position = position;
         this.level = level;
         this.speed= speed;
-        this.health= chooseHealth(level);
+        this.health= level.getResistance();
         this.currentCellIndex=0;
+        this.progress=0.0;
+        
     }  
     /**
      * return the level of this balloon 
@@ -56,65 +64,36 @@ public class Balloon {
     public void setHealth() {
         this.health--; 
     }
+
+    /** check if the balloon is destroy 
+     * @return true if the ballon is destroy
+    */
+    public boolean isDestroyed() {
+        return health <= 0;
+    }
+
      /**
-      * choose the health of the ballon depending on the level
-      * @param l the level
-      * @return the corresponding  health 
-      */
-    public int chooseHealth(Level l){
-        if (l== Level.NIV1){
-           return 1; 
-        }
-        if (l== Level.NIV2){
-           return 2;
-        }
-        return 4;
-    }
-    /**
-     *  Advances the balloon within its current cell based on its speed.
-     * Calls checkNextCell() if the edge of the cell is reached to move
-     * to the next cell in the path.
+     *  Moves the balloon to the next cell 
      */
-     public  void advancePosition(){
-        //la methode n'est paas fini je dois mettre une conditon pour l'avacement , jai juste mis ca pour l'instant  
-        this.position.setX( this.position.getX() + this.speed);
-        this.position.setY(this.position.getY()+this.speed);
-         if (this.position.getX()>0.9  || this.position.getY()>0.9){
-            checkNextCell();
-            
-        }
-
-
-
+    public void checkNextCell(){
+        while (progress >= 1.0 && currentCellIndex < path.size() - 1) {
+            progress -= 1.0;  // on remet le progress à 0 pour dire qu'il est dans une nouvelle cellule 
+            currentCellIndex++;
+        } 
+          
     }
+    
 
     /**
      * Checks whether the balloon has reached the end of its path.
      * @return true if the balloon has completed its trajectory, false otherwise
      */
     public boolean checkEndOfPath(){
-        return true;// jai mis ça pour que le methode ne soit pas souligné en rouge.
+        return currentCellIndex >= path.size() - 1 && progress>=1.0;
  
     }
 
-    /**
-     *  Moves the balloon to the next cell 
-     */
-    public void checkNextCell(){
-        currentCellIndex++;  
-          
-    }
    
-
-    /**
-     * moove the ballon according to its speed 
-     * @param b
-     */
-    public void moveBalloon(Position p){
-        
- 
-        
-    }
     /*
     *representztion of the ballon with a attribute
      */
