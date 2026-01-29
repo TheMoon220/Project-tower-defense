@@ -115,6 +115,7 @@ public class Game {
 
     /**
      * get balloon level based on round number
+     * @param round
      */
     private Level getLevelForRound(int round){
         if(round == 1)
@@ -123,5 +124,31 @@ public class Game {
             return Level.NIV2;
         else 
             return Level.NIV4;
+    }
+
+    /**
+     * Update game
+     * @param deltaTime time elapsed in milliseconds
+     */
+    public void update(long deltaTime){
+        this.currentTime += deltaTime;
+        List<Balloon> toRemove = new ArrayList<>();
+
+        for(Balloon balloon : this.balloons){
+            balloon.move(deltaTime);
+
+            if(balloon.hasReachedEnd()){
+                this.player.setHealth();
+                toRemove.add(balloon);
+                System.out.println("Lives remaining: " + this.player.getHealth());
+            }
+
+            if(balloon.isDestroyed()){
+                //this.player.earnMoney(balloon.getReward) // à implémenter
+                toRemove.add(balloon);
+                System.out.println(balloon + " popped");
+            }
+        }
+        this.balloons.removeAll(toRemove);
     }
 }
