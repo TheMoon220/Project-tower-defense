@@ -82,6 +82,9 @@ public class Balloon {
         } 
           
     }
+    /**
+     * update the ballon's position with the information path , currentCellIndex
+     */
     private void updateBalloonPosition() {
         Position currentPosition = path.get(currentCellIndex);
         Position nextPosition = path.get(Math.min(currentCellIndex + 1, path.size() - 1));
@@ -92,7 +95,22 @@ public class Balloon {
         position.setX(currentPosition.getX() + dx * progress);
         position.setY(currentPosition.getY() + dy * progress);
     }
-   
+    /**
+     *  Advances the balloon within its current cell based on its speed.
+     * Calls checkNextCell() if the edge of the cell is reached to move
+     * to the next cell in the path.
+     */
+     public  void moveBallon(){
+        if (path == null || path.isEmpty() || checkEndOfPath() || isDestroyed()){
+            return; 
+        } 
+        progress += speed;
+        // Passage at the next cell if progress >= 1
+        checkNextCell();;
+        // Calcul de la position réelle entre la cellule actuelle et la suivante
+        updateBalloonPosition();
+    }
+
    
     /**
      * Checks whether the balloon has reached the end of its path.
