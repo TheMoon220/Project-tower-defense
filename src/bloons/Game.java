@@ -32,4 +32,12 @@ public class Game {
     public Board getBoard(){
         return this.board;
     }
+
+    /**
+     * get the player
+     * @return player
+     */
+    public Player getPlayer(){
+        return this.player;
+    }
 }
