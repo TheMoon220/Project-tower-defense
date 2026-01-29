@@ -82,8 +82,18 @@ public class Balloon {
         } 
           
     }
-    
+    private void updateBalloonPosition() {
+        Position currentPosition = path.get(currentCellIndex);
+        Position nextPosition = path.get(Math.min(currentCellIndex + 1, path.size() - 1));
 
+        double dx = nextPosition.getX() - currentPosition.getX();
+        double dy = nextPosition.getY() - currentPosition.getY();
+
+        position.setX(currentPosition.getX() + dx * progress);
+        position.setY(currentPosition.getY() + dy * progress);
+    }
+   
+   
     /**
      * Checks whether the balloon has reached the end of its path.
      * @return true if the balloon has completed its trajectory, false otherwise
