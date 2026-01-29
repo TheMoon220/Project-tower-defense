@@ -112,4 +112,16 @@ public class Game {
         }
         System.out.println("Spawned " + count + " bloons.");
     }
+
+    /**
+     * get balloon level based on round number
+     */
+    private Level getLevelForRound(int round){
+        if(round == 1)
+            return Level.NIV2;
+        else if(round <= 3)
+            return Level.NIV2;
+        else 
+            return Level.NIV4;
+    }
 }
