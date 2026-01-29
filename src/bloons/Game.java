@@ -57,4 +57,22 @@ public class Game {
     public int getRound(){
         return this.round;
     }
+
+    /**
+     * start a new round
+     */
+    public void startRound(){
+       this.round++;
+       System.out.println("\n=== Starting Round " + this.round + " ===");
+
+       this.displayGame(); // display the board (empty or with the path)
+
+       System.out.println("\n===== Step 1 : player plays");
+       System.out.println("No more action"); // the actions, later
+
+       System.out.println("\n===== Step 3 : spawn balloons");
+       this.spawnBalloons();
+
+       System.out.println("\n===== Step 3 : balloons run");
+    }
 }
