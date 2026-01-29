@@ -24,4 +24,12 @@ public class Game {
        this.currentTime = 0;
        this.round = 0;
     }
+
+    /**
+     * get the board
+     * @return board
+     */
+    public Board getBoard(){
+        return this.board;
+    }
 }
