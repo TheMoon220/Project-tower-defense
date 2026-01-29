@@ -20,7 +20,7 @@ public class Balloon {
         this.currentCellIndex=0;
     }  
     /**
-     * return the level of this balloon
+     * return the level of this balloon 
      * @return level
      */
     public Level getLevel(){
