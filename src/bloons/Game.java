@@ -20,5 +20,8 @@ public class Game {
     public Game(Board board, Player player){
        this.board = board;
        this.player = player;
+       this.balloons = new ArrayList<>();
+       this.currentTime = 0;
+       this.round = 0;
     }
 }
