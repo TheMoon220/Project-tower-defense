@@ -49,4 +49,12 @@ public class Game {
     public List<Balloon> getBalloons(){
         return this.balloons;
     }
+
+    /**
+     * get the round
+     * @return round
+     */
+    public int getRound(){
+        return this.round;
+    }
 }
