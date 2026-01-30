@@ -3,7 +3,7 @@ package bloons.utils;
 public enum Level {
     NIV1(1), 
     NIV2(2), 
-    NIV4(3);
+    NIV4(4);
     
 
     private final int resistance ;
