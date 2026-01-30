@@ -113,8 +113,9 @@ public class Balloon {
         position.setY(currentPosition.getY() + dy * progress);
     }
     /**
-     *  Advances the balloon within its current cell based on its speed.
+     *  move  the balloon within its current cell based on its speed.
      * Calls checkNextCell() if the edge of the cell is reached to move
+     * update the balloon's position with updateBalloon()
      * to the next cell in the path.
      */
      public  void moveBallon(){
@@ -138,6 +139,9 @@ public class Balloon {
  
     }
 
+    public void randomChoiceSpeed(){
+        
+    }
    
     /*
     *representztion of the ballon with a attribute

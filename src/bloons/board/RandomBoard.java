@@ -74,3 +74,4 @@ public class RandomBoard extends Board {
       balloon.setTrajectory(straightPath);
       return balloon;
 }
+}
