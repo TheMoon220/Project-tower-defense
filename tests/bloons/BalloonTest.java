@@ -17,9 +17,14 @@ public class BalloonTest {
             l = Level.NIV1;
             bal = new Balloon(pos, l, 2.1);
         }
-        
+
     @Test
     public void testGetPosition (){
         assertTrue(pos.equals(bal.getPosition()));
     }
+    @Test
+    public void testGetLevel(){
+        assertEquals(l, bal.getLevel());
+    }
+
 }
