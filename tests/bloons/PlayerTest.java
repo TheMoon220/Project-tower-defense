@@ -21,5 +21,11 @@ public class PlayerTest {
         assertEquals(25, p2.getHealth());
     }
     
+    @Test
+    public void testGetCredit() {
+        // Test if the player's credit is correctly returned
+        assertEquals(600, p1.getCredit());
+        assertEquals(250, p2.getCredit());
+    }
 
 }
