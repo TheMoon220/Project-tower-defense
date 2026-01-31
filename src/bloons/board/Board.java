@@ -1,6 +1,8 @@
-package bloons;
+package bloons.board;
 
 import java.util.List;
+
+import bloons.*;
 
 /** the object Board an abstract class for our game */
 public abstract class Board {
