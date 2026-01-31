@@ -12,6 +12,7 @@ public class BalloonTest {
     private Position pos;
     private Level l1;
     private Level l2;
+    
     @BeforeEach
         public void Before(){
             pos = new Position(0, 2);
