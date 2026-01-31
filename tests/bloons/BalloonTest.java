@@ -24,6 +24,7 @@ public class BalloonTest {
     @Test
     public void testGetPosition (){
         assertTrue(pos.equals(bal1.getPosition()));
+        assertTrue(pos.equals(bal2.getPosition()));
     }
 
     @Test
