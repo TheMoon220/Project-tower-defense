@@ -16,16 +16,20 @@ public class PlayerTest {
     
     @Test
     public void testGetHealth() {
-        // Test if the player's health is correctly returned
         assertEquals(40, p1.getHealth());
         assertEquals(25, p2.getHealth());
     }
     
     @Test
     public void testGetCredit() {
-        // Test if the player's credit is correctly returned
         assertEquals(600, p1.getCredit());
         assertEquals(250, p2.getCredit());
+    }
+
+    @Test
+    public void testSetHealth() {
+        p1.setHealth();
+        assertEquals(39, p1.getHealth()); // le niveau de vie decremente de 1
     }
 
 }
