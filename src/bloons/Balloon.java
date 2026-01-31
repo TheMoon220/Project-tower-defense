@@ -155,6 +155,9 @@ public class Balloon {
     public int getCurrentCellIndex() {
         return currentCellIndex;
     }
+    public double getProgress() {
+        return progress;
+    }
     
 
 }
