@@ -9,9 +9,11 @@ public class BalloonTest {
     
     private Balloon bal;
     private Position pos;
+    private Level l;
     @BeforeEach
         public void Before(){
             pos = new Position(0, 2);
-            bal = new Balloon(pos, Level.NIV1, 2.1);
+            l = Level.NIV1;
+            bal = new Balloon(pos, l, 2.1);
         }
 }
