@@ -14,5 +14,12 @@ public class PlayerTest {
             this.p2 = new Player(25, 250);
         } 
     
+    @Test
+    public void testGetHealth() {
+        // Test if the player's health is correctly returned
+        assertEquals(40, p1.getHealth());
+        assertEquals(25, p2.getHealth());
+    }
+    
 
 }
