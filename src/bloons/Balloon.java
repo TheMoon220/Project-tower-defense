@@ -152,5 +152,9 @@ public class Balloon {
     public List<Position> getPath() {
         return path;
     }
+    public int getCurrentCellIndex() {
+        return currentCellIndex;
+    }
+    
 
 }
