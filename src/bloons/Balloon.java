@@ -149,5 +149,8 @@ public class Balloon {
     public String toString(){
         return "this ballon has a position "+ this.position +"a level"+ this.level+ "a speed" + this.speed ;
     }
+    public List<Position> getPath() {
+        return path;
+    }
 
 }
