@@ -33,4 +33,10 @@ public class BalloonTest {
         assertEquals(2.1, bal.getSpeed());
     }
 
+    @Test
+    public void testGetResistance(){
+        assertEquals(1, bal.getHealth());
+    }
+
+
 }
