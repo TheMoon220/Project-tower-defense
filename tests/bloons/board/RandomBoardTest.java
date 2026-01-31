@@ -1,5 +1,4 @@
-package tests.bloons.board;
-import bloons.board.*;
+package bloons.board;
 import bloons.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
