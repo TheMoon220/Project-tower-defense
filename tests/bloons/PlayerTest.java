@@ -31,5 +31,10 @@ public class PlayerTest {
         p1.setHealth();
         assertEquals(39, p1.getHealth()); // le niveau de vie decremente de 1
     }
+    @Test
+    public void testSetCredit(){
+        p1.setCredit();
+        assertEquals(610, p1.getCredit());
+    } 
 
 }
