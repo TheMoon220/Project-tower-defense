@@ -7,36 +7,51 @@ import bloons.utils.Level;
 
 public class BalloonTest {
     
-    private Balloon bal;
+    private Balloon bal1;
+    private Balloon bal2;
     private Position pos;
-    private Level l;
-
+    private Level l1;
+    private Level l2;
     @BeforeEach
         public void Before(){
             pos = new Position(0, 2);
-            l = Level.NIV1;
-            bal = new Balloon(pos, l, 2.1);
+            l1 = Level.NIV1;
+            l2 = Level.NIV2;
+            bal1 = new Balloon(pos, l1, 2.1);
+            bal2 = new Balloon(pos, l2, 3.1);
         }
 
     @Test
     public void testGetPosition (){
-        assertTrue(pos.equals(bal.getPosition()));
+        assertTrue(pos.equals(bal1.getPosition()));
     }
 
     @Test
     public void testGetLevel(){
-        assertEquals(l, bal.getLevel());
+        assertEquals(l1, bal1.getLevel());
     }
 
     @Test
     public void testGetSpeed(){
-        assertEquals(2.1, bal.getSpeed());
+        assertEquals(2.1, bal1.getSpeed());
     }
 
     @Test
-    public void testGetResistance(){
-        assertEquals(1, bal.getHealth());
+    public void testGetHealth(){
+        assertEquals(1, bal1.getHealth());
+        assertEquals(2, bal2.getHealth());
     }
+
+    @Test
+    public void testIsDestroyed(){
+        bal1.setHealth();
+        bal2.setHealth();
+        assertEquals(0, bal1.getHealth());
+        assertEquals(1, bal2.getHealth());
+        assertTrue(bal1.isDestroyed());
+        assertFalse(bal2.isDestroyed());
+    }
+
 
 
 }
