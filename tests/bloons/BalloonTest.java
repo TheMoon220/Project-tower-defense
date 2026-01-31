@@ -22,9 +22,15 @@ public class BalloonTest {
     public void testGetPosition (){
         assertTrue(pos.equals(bal.getPosition()));
     }
+
     @Test
     public void testGetLevel(){
         assertEquals(l, bal.getLevel());
+    }
+
+    @Test
+    public void testGetSpeed(){
+        assertEquals(2.1, bal.getSpeed());
     }
 
 }
