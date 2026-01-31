@@ -29,11 +29,13 @@ public class BalloonTest {
     @Test
     public void testGetLevel(){
         assertEquals(l1, bal1.getLevel());
+        assertEquals(l2, bal2.getLevel());
     }
 
     @Test
     public void testGetSpeed(){
         assertEquals(2.1, bal1.getSpeed());
+        assertEquals(3.1, bal2.getSpeed());
     }
 
     @Test
