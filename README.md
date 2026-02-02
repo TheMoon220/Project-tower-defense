@@ -193,6 +193,7 @@ Pour cette semaine qui est le debut du livrable 2, on a eu une reflexion sur les
 Avancer au maximum afin de fournir des algorithmes assurant le bon fonctionnement du livrable.
 
 Voici comment les taches ont été distribuées:
+
 **Mariama Séré Sylla** : assure l'implémentation de la classe balloon ainsi que toute méthode qu'elle jugera utile dans cette classe pouvant facilité aux autres l'utilisation de cette classe, en plus de l'énumeration Level.
 
 **Farmata Sall Sow** : s'occupe de faire le diagramme UML, en plus des analyses des autres membres du groupe... Elle s'assure de fournir une classe player, si possible améliorer classical board.
