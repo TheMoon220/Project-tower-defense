@@ -109,4 +109,43 @@ public class RandomBoard extends Board {
      balloon.setTrajectory(path);
      return balloon;
    }
+
+   /**
+    * Display board with balloons
+    * @param balloons a list of balloons to display
+    */
+   public void displayBoard(List<Balloon> balloons){
+      System.out.println("     ");
+      for(int x = 0; x < this.width; x++){
+         System.out.print((x % 10) + " ");
+      }
+      System.out.println();
+
+      for(int y = 0; y < this.height; y++){
+         System.out.print(String.format("%2d | ", y));
+         for(int x = 0; x < this.width; x++){
+            Position currentPos = new Position(x, y);
+            char symbol = '.';
+            for(List<Position> path : this.allPaths){
+               if(path.contains(currentPos)){
+                  symbol = 'X';
+                  break;
+               }
+            }
+
+            if(balloons != null){
+               for(Balloon balloon : balloons){
+                  int bx = (int) Math.round(balloon.getPosition().getX());
+                  int by = (int) Math.round(balloon.getPosition().getY());
+                  if(bx == x && by == y){
+                     symbol = 'B';
+                     break;
+                  }
+               }
+            }
+            System.out.print(symbol + " ");
+         }
+         System.out.println();
+      }
+   }
 }
