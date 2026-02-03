@@ -2,7 +2,6 @@ package bloons.board;
 
 import bloons.*;
 import bloons.utils.*;
-
 import java.util.*;
 
 /** the object RandomBoard the second board */
@@ -115,11 +114,11 @@ public class RandomBoard extends Board {
     * @param balloons a list of balloons to display
     */
    public void displayBoard(List<Balloon> balloons){
-      System.out.println("     ");
-      for(int x = 0; x < this.width; x++){
-         System.out.print((x % 10) + " ");
+      System.out.print("     ");
+      for (int x = 0; x < this.width; x++){
+         System.out.print((x % 10) + " "); 
       }
-      System.out.println();
+        System.out.println();
 
       for(int y = 0; y < this.height; y++){
          System.out.print(String.format("%2d | ", y));
