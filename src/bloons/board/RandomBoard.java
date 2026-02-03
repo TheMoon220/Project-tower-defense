@@ -76,4 +76,12 @@ public class RandomBoard extends Board {
             this.allPaths.add(path);
         }
     }
+
+    /** 
+     * get all generated paths
+     * @return allPaths
+     */
+    public List<List<Position>> getAllPaths(){
+       return this.allPaths;
+    }
 }
