@@ -19,5 +19,10 @@ public class Livrable2a {
             System.out.println("Les parametres doivent etre des entiers");
             return;
         }
+
+        System.out.println("=== Livrable 2a: Classical Board ===");
+        System.out.println("Board size: " + width + "x" + height);
+        System.out.println("Nombre de ballons " + nbBalloons);
+        System.out.println();
      }
 }
