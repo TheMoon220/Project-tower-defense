@@ -84,4 +84,15 @@ public class RandomBoard extends Board {
     public List<List<Position>> getAllPaths(){
        return this.allPaths;
     }
+
+    /**
+     * Get a specific path by index
+     * @return the path 
+     */
+    public List<Position> getPathAt(int index){
+        if(index < 0 || index >= this.allPaths.size()){
+            throw new IllegalArgumentException("Invalid path index: " + index);
+        }
+        return this.allPaths.get(index);
+    }
 }
