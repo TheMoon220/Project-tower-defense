@@ -1,7 +1,7 @@
 package bloons.board;
 
 import bloons.*;
-import bloons.utils.Direction;
+import bloons.utils.*;
 
 import java.util.*;
 
@@ -95,4 +95,18 @@ public class RandomBoard extends Board {
         }
         return this.allPaths.get(index);
     }
+
+   /**
+    * Create a balloon for a specific path
+    * @param pathIndex 
+    * @param level the level of the balloon
+    * @param speed the speed of the balloon
+    * @return a balloon
+    */
+   public Balloon createBalloonForPath(int pathIndex, Level level, double speed){
+     List<Position> path = this.getPathAt(pathIndex);
+     Balloon balloon = new Balloon(path.get(0), level, speed);
+     balloon.setTrajectory(path);
+     return balloon;
+   }
 }
