@@ -16,14 +16,14 @@ public enum Level {
     public int getResistance(){
         return resistance;
     }
- /**
-  * generate a random level
-  * @return a level
-  */
-    public Level genearaLevel(){
+   /**
+    * generate a random level
+    * @return a level
+    */
+    public static Level genearaLevel(){
         Random random=new Random(); 
         int n=random.nextInt(3);
         Level niv= values()[n];
         return niv;
-        }
+    }
 }

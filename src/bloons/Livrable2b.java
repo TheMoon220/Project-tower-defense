@@ -31,13 +31,13 @@ public class Livrable2b {
         List<Balloon> balloons = new ArrayList<>();
         Random random = new Random();
         for(int i = 0; i < numPaths; i++){
-            double speed = 0.01 + random.nextDouble() * 0.02; 
-            Balloon balloon = board.createBalloonForPath(i, Level.NIV1, speed);
+            //double speed = 0.01 + random.nextDouble() * 0.02; 
+            Balloon balloon = board.createBalloonForPath(i, Level.genearaLevel());
             balloons.add(balloon);
 
             System.out.println(
                 "Balloon " + i + 
-                " created with speed " + String.format("%.4f", speed)
+                " created with speed " + String.format("%.4f", balloon.getSpeed())
             );
         }
 
