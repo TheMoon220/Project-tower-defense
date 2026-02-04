@@ -18,10 +18,10 @@ public class Balloon {
     // progression in  the cell
     private double progress;
     //constuctor of Balloon
-    public Balloon(Position position, Level level,double  speed ){
+    public Balloon(Position position, Level level){
         this.position = position;
         this.level = level;
-        this.speed= speed;
+        this.speed= randomChoiceSpeed();
         this.health= level.getResistance();
         this.currentCellIndex=0;
         this.progress=0.0;
