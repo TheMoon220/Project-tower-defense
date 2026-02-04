@@ -97,11 +97,13 @@ java -jar mainLivrable1.jar
 ### Difficultés restant à résoudre
 
 ## Livrable 2
-Dans ce livrable l'objectif principal est de deplacer  pouvoir deplacer un ballon selon sont chemin (celui ci depandant du type de plateau .c'est dans ce livrable que le random board a pu etre complete suite a la creation des ballons
+Dans ce livrable l'objectif principal est de deplacer  pouvoir deplacer un ballon selon sont chemin (celui ci depandant du type de plateau .c'est dans ce livrable que le random board a pu etre completés suite a la creation des ballons
 
 **Modification apportees par rapport au livrable1:** ajout d'une quatrieme direction dans l'enum direction pour la 
 
-gestions des deux classes de board)
+gestions des deux classes de board,ajout de methode dans board et classicalBoard,des test pour le ballon, Code 
+
+complet de la classe ballon,
 
 ### Atteinte des objectifs
 Dans ce livrable differents aspect intervenant pour le bon deroulement de la progression du ballon dans la le plateau 
@@ -139,10 +141,10 @@ jar cvfm Livrable2a.jar manifest -C classes .
 ```
 
 ```bash
-jar cvfm Livrable2a.jar manifest -C classes .
+jar cvfm Livrable2b.jar manifest -C classes .
 ```
 
-**Lancer les jar**
+**Lancer les jar arg1,arg2 et arg3**
 
 ```bash
 java -jar Livrable2a.jar
@@ -155,6 +157,10 @@ java -jar Livrable2b.jar
 ```bash
 make docs
 ```
+
+**Lancer le programme MainLivrable1** ou **Lancer le MainLivrable1 avec les arguments (3 args)**
+
+
 
 ### Difficultés restant à résoudre
 
