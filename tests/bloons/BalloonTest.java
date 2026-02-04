@@ -1,6 +1,10 @@
 package bloons;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.*;
 
 import bloons.utils.Level;
@@ -56,6 +60,19 @@ public class BalloonTest {
     public void testRandomSpeed() {
         double v = bal2.getSpeed();
         assertTrue(v == 1.0 || v == 2.0 || v == 3.1);
+    }
+
+    @Test
+    public void testSetTrajectory() {
+        List<Position> path = new ArrayList<>();
+        path.add(new Position(0,0));
+        path.add(new Position(1,0));
+
+        bal1.setTrajectory(path);
+
+        assertEquals(0, bal1.getCurrentCellIndex());
+        assertEquals(0.0, bal1.getProgress());
+        assertEquals(path, bal1.getPath());
     }
 
 
