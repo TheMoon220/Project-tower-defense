@@ -1,5 +1,8 @@
 package bloons;
 
+import bloons.board.Board;
+import bloons.board.ClassicalBoard;
+
 public class Livrable2a {
     
      public static void main(String[] args){
@@ -24,5 +27,8 @@ public class Livrable2a {
         System.out.println("Board size: " + width + "x" + height);
         System.out.println("Nombre de ballons " + nbBalloons);
         System.out.println();
+
+        Board board = new ClassicalBoard(width, height);
+        board.displayBoard();
      }
 }

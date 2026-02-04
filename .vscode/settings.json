@@ -1,9 +1,10 @@
 {
     "java.project.sourcePaths": [
         ".",
-        "src"
+        "src",
+        "tests"
     ],
     "java.project.referencedLibraries": [
-        "junit-console.jar"
+        "/home/l2/khadim.beye.etu/Documents/projet/junit-console.jar"
     ]
 }

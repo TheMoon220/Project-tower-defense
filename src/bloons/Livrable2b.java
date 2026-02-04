@@ -1,7 +1,6 @@
 package bloons;
 
 import bloons.board.*;
-import bloons.utils.*;
 import java.util.*;
 
 /** the object Livrable2b, the main programm */
