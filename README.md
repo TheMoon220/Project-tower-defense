@@ -126,6 +126,16 @@ make tests
 make build
 ```
 
+**lancer tous les fichiers livrable2a et livrable2b**
+
+```bash
+java -classpath classes bloons.Livrable2a arg1 arg2 arg3
+```
+
+```bash
+java -classpath classes bloons.Livrable2b arg1 arg2 arg3
+```
+
 **Générer le jar**
 
 ```bash
@@ -139,10 +149,10 @@ jar cvfm livrable2b.jar manifest-2b -C classes .
 **Lancer les jar**
 
 ```bash
-java -jar Livrable2a.jar arg1 arg2 arg3
+java -jar livrable2a.jar arg1 arg2 arg3
 ```
 ```bash
-java -jar Livrable2b.jar arg1 arg2 arg3
+java -jar livrable2b.jar arg1 arg2 arg3
 ```
 **Générer la documentation**
 
