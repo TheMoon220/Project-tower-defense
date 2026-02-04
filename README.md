@@ -99,13 +99,14 @@ java -jar mainLivrable1.jar
 ## Livrable 2
 Dans ce livrable l'objectif principal est de deplacer  pouvoir deplacer un ballon selon sont chemin (celui ci depandant du type de plateau .c'est dans ce livrable que le random board a pu etre complete suite a la creation des ballons
 
-**Modification apportees parrapport au livrable1:** ajout d'une quatrieme direction dans l'enum direction pour la gestions des deux classes de board
+**Modification apportees par rapport au livrable1:** ajout d'une quatrieme direction dans l'enum direction pour la 
 
-
-)
+gestions des deux classes de board)
 
 ### Atteinte des objectifs
-Dans ce livrable differents aspect intervenant pour le bon deroulement de la progression du ballon dans la le plateau on été effectués
+Dans ce livrable differents aspect intervenant pour le bon deroulement de la progression du ballon dans la le plateau 
+
+on été effectués.
 
 - Le Deplacement d'un ballon  dans un plateau en suivant un chemin specifique
 
@@ -113,7 +114,43 @@ Dans ce livrable differents aspect intervenant pour le bon deroulement de la pro
 
  elle  vise à optimiser la structure du code, la cohérence des classes.
 
-- Organisation efficace du temps de travail pour respecter les délais du projet et la participation equitable des diferrent membres.
+- Organisation efficace du temps de travail pour respecter les délais du projet et la participation equitable des 
+
+ different membres.
+
+ ## Commandes :
+
+ **Lancer les tests avec junit**
+
+```bash
+make tests
+```
+
+**Compiler l'ensemble des classes .java en .class**
+
+```bash
+make build
+```
+
+**Générer le jar**
+
+```bash
+jar cvfm Livrable2a.jar manifest -C classes .
+```
+
+```bash
+jar cvfm Livrable2a.jar manifest -C classes .
+```
+
+**Lancer les jar**
+
+```bash
+java -jar Livrable2a.jar
+```
+```bash
+java -jar Livrable2b.jar
+```
+
 
 ### Difficultés restant à résoudre
 
