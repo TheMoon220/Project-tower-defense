@@ -51,7 +51,7 @@ public abstract class Board {
             Allballoons.add(balloon);
             System.out.println(
                 "Balloon " + i + 
-                " created with speed " + balloon.getSpeed()
+                " speed : " + balloon.getSpeed() + " helth : " + balloon.getHealth()
             );
         } 
     }
