@@ -141,7 +141,7 @@ jar cvfm Livrable2a.jar manifest -C classes .
 ```
 
 ```bash
-jar cvfm Livrable2b.jar manifest -C classes .
+jar cvfm Livrable2b.jar manifest-2b -C classes .
 ```
 
 **Lancer les jar arg1,arg2 et arg3**
@@ -280,13 +280,15 @@ Pour cette semaine on a proceder a la finalisations du livrable2 avec ajout de m
 
 methodes permettant le placement des ballon mais aussi l'ameriation de certaines algorithmes si necessaire
 
-**Mamadou Baïlo Sow** il complete le Random Board afiin d'y Placer des Ballons mais aussi de generer les differentes chemins .Il donne aussi le code complet de Livrable2b.java
+**Mamadou Baïlo Sow** il complete le Random Board afin d'y Placer des Ballons mais aussi de generer les differentes chemins .Il donne aussi le code complet de Livrable2b.java et fourni un algorithme de l'ajout d'un ballon dans un 
+
+plateau
 
 **khadim Beye** il est  chargé de tester les fonctionnalitées de  balloon et le code de la classe Livrable2a.java
 
 **Mairama Serre Sylla** Elle  s'est chargé  founir le code complet de ballon et le code de l'enum des differents 
 
-niveau d'un ballon .Elle s'est aussi charger de faire certaines choix jugée necessaire pour la bonne progression des 
+niveau d'un ballon .Elle s'est aussi charger de faire certaines choix jugés necessaire pour la bonne progression des 
 
 ballons
 
