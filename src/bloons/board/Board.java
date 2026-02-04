@@ -2,6 +2,8 @@ package bloons.board;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.logging.Level;
 
 import bloons.*;
 
@@ -45,8 +47,15 @@ public abstract class Board {
     */
 
     public void generateAllballoons(int n){
-        
-    }
+        Random random = new Random();
+        for(int i = 0; i < n; i++){
+            double speed = 0.01 + random.nextDouble() * 0.02; 
+            Balloon balloon =createBalloonForPath(i, Level.generateLevel, speed);
+            Allballoons.add(balloon);
+
+    }}
+
+    public abstract Balloon createBalloonForPath(int i ,Level l);
     public abstract List<Position> getPath();
     
     /**
