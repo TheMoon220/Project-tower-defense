@@ -35,6 +35,8 @@ public class Livrable2a {
         board.generateAllballoons(nbBalloons);
         System.out.println();
         board.displayBoard();
+        System.out.println();
+        board.displayPath();
         List <Balloon> balloons=board.getAllballoons();
 
         System.out.println("\n=== run simulation");
