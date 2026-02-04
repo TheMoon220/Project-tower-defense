@@ -134,8 +134,8 @@ public class RandomBoard extends Board {
 
             if(balloons != null){
                for(Balloon balloon : balloons){
-                  int bx = (int) Math.round(balloon.getPosition().getX());
-                  int by = (int) Math.round(balloon.getPosition().getY());
+                  int bx = (int) balloon.getPosition().getX();
+                  int by = (int) balloon.getPosition().getY();
                   if(bx == x && by == y){
                      symbol = 'B';
                      break;
