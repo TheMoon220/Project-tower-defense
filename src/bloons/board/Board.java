@@ -1,5 +1,6 @@
 package bloons.board;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import bloons.*;
@@ -12,6 +13,7 @@ public abstract class Board {
     protected int height;
     /** an attribute grid, that represent the cells in our board */
     protected Cell[][] grid;
+     private List<Balloon> Allballoons 
 
     /**
      * Builds a board wiht sizes width and height
@@ -28,6 +30,7 @@ public abstract class Board {
         this.width = width;
         this.height = height;
         this.grid = new Cell[width][height];
+        this.Allballoons=new ArrayList<>();
         for (int i=0; i<width; i++){
             for (int j=0; j<height; j++){
                 grid[i][j] = new Cell(new Position(i, j));
@@ -40,6 +43,10 @@ public abstract class Board {
     /** an abstract method to keep the position of a path
      *  @return a list of position
     */
+
+    public void generateAllballoons(int n){
+        
+    }
     public abstract List<Position> getPath();
     
     /**
