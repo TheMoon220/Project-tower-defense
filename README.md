@@ -97,6 +97,12 @@ java -jar mainLivrable1.jar
 ### Difficultés restant à résoudre
 
 ## Livrable 2
+Dans ce livrable l'objectif principal est de deplacer  pouvoir deplacer un ballon selon sont chemin (celui ci depandant du type de plateau .c'est dans ce livrable que le random board a pu etre complete suite a la creation des ballons
+
+**Modification apportees parrapport au livrable1:** ajout d'une quatrieme direction dans l'enum direction pour la gestions des deux classes de boards
+
+
+)
 
 ### Atteinte des objectifs
 
@@ -203,8 +209,15 @@ Voici comment les taches ont été distribuées:
 **Mamadou Baïllo SOW** : s'assure d'intégrer les ballons sur le random board suivant un chemin pour chaque.
 
 ## Semaine 4
+Pour cette semaine on a proceder a la finalisations du livrable2 avec ajout de methode et ameloriation des classes random et classical board
 
 ### Ce qui a été réalisé
+** s'assurer de la creation et du deplacement d'un ballons suivant son chemin
+
+**Placement de ballon dans Le chemein d'un classical board et s'assurer de leur deplacement dans le plateau
+
+-  Pour randomBoard :generations de chemin aleatoire  dans le pateau ,ajout d'un ballon dans ce dernier 
+-  Livrable2a et 2b servent a metrre en euvre le deplacement du 
 
 ### Difficultés rencontrées
 
