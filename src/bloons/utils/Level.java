@@ -21,9 +21,9 @@ public enum Level {
   * @return a level
   */
     public Level genearaLevel(){
-    Random random=new Random(); 
-    int n=random.nextInt(3);
-    Level niv= values()[n];
-    return niv;
-     }
+        Random random=new Random(); 
+        int n=random.nextInt(3);
+        Level niv= values()[n];
+        return niv;
+        }
 }
