@@ -1,5 +1,8 @@
 package bloons;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import bloons.board.Board;
 import bloons.board.ClassicalBoard;
 
@@ -32,5 +35,40 @@ public class Livrable2a {
         board.generateAllballoons(nbBalloons);
         System.out.println();
         board.displayBoard();
+        List <Balloon> balloons=board.getAllballoons();
+
+        System.out.println("\n=== run simulation");
+        long time = 0;
+        long deltaTime = 100;
+        while(!balloons.isEmpty()){
+            System.out.println();
+            System.out.println("time: " + time);
+            for(int i = 0; i < balloons.size(); i++){
+                Balloon b = balloons.get(i);
+                System.out.println(
+                    "Balloon " + i + " at (" + 
+                    String.format("%.2f", b.getPosition().getX()) + ", " + 
+                    String.format("%.2f", b.getPosition().getY()) + ")"
+                );
+            }
+            System.out.println();
+
+            List<Balloon> toRemove = new ArrayList<>();
+            for(int i = 0; i < balloons.size(); i++){
+                Balloon balloon = balloons.get(i);
+                balloon.moveBallon();
+                if(balloon.checkEndOfPath()){
+                    System.out.println(
+                        "Balloon " + i + " exited at time: " + time
+                    );
+                    toRemove.add(balloon);
+                }
+            }
+
+            balloons.removeAll(toRemove);
+            time += deltaTime;
+        }
+        System.out.println("\n=== All balloons finished ===");
+        System.out.println("Total simulation time: " + time);
      }
 }
