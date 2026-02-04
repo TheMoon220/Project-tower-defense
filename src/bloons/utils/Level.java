@@ -1,5 +1,7 @@
 package bloons.utils;
 
+import java.util.Random;
+
 public enum Level {
     NIV1(1), 
     NIV2(2), 
@@ -13,5 +15,15 @@ public enum Level {
     }
     public int getResistance(){
         return resistance;
+    }
+   /**
+    * generate a random level
+    * @return a level
+    */
+    public static Level generateLevel(){
+        Random random=new Random(); 
+        int n=random.nextInt(3);
+        Level niv= values()[n];
+        return niv;
     }
 }

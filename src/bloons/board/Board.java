@@ -1,6 +1,8 @@
 package bloons.board;
 
+import java.util.ArrayList;
 import java.util.List;
+import  bloons.utils.*;
 
 import bloons.*;
 
@@ -12,6 +14,7 @@ public abstract class Board {
     protected int height;
     /** an attribute grid, that represent the cells in our board */
     protected Cell[][] grid;
+     private List<Balloon> Allballoons ;
 
     /**
      * Builds a board wiht sizes width and height
@@ -28,6 +31,7 @@ public abstract class Board {
         this.width = width;
         this.height = height;
         this.grid = new Cell[width][height];
+        this.Allballoons=new ArrayList<>();
         for (int i=0; i<width; i++){
             for (int j=0; j<height; j++){
                 grid[i][j] = new Cell(new Position(i, j));
@@ -37,9 +41,22 @@ public abstract class Board {
     /** an abstract method for calculate the path on the board*/
     public abstract void calculPath();
 
-    /** an abstract method to keep the position of a path
-     *  @return a list of position
+    /** 
+     * ganerate balloons with given a parameter
+     * @param n an integer
     */
+    public void generateAllballoons(int n){
+        for(int i = 0; i < n; i++){
+            Balloon balloon =createBalloonForPath(i, Level.generateLevel());
+            Allballoons.add(balloon);
+            System.out.println(
+                "Balloon " + i + 
+                " created with speed " + balloon.getSpeed()
+            );
+        } 
+    }
+
+    public abstract Balloon createBalloonForPath(int i ,Level l);
     public abstract List<Position> getPath();
     
     /**
@@ -112,6 +129,12 @@ public abstract class Board {
             System.out.println("(" + p.getX() + "," + p.getY() + ")");
         }
         System.out.println();
+    }
+    public Cell[][] getGrid() {
+        return grid;
+    }
+    public List<Balloon> getAllballoons() {
+        return Allballoons;
     }
 }
 

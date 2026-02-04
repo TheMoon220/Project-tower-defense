@@ -3,6 +3,7 @@ package bloons.board;
 import bloons.*;
 import java.util.*;
 import bloons.utils.Direction;
+import bloons.utils.Level;
 
 /** the object ClassicalBoard for the board with a defnine path */
 public class ClassicalBoard extends Board {
@@ -70,4 +71,12 @@ public class ClassicalBoard extends Board {
     public List<Position> getPath(){
         return this.path; 
     }
+    
+   public Balloon createBalloonForPath(int pathIndex, Level level){
+
+      Balloon balloon = new Balloon(this.path.get(0),level);
+      balloon.setTrajectory(path);
+      return balloon;
+   }
+       
 }

@@ -99,12 +99,12 @@ public class RandomBoard extends Board {
     * Create a balloon for a specific path
     * @param pathIndex 
     * @param level the level of the balloon
-    * @param speed the speed of the balloon
+ 
     * @return a balloon
     */
-   public Balloon createBalloonForPath(int pathIndex, Level level, double speed){
+   public Balloon createBalloonForPath(int pathIndex, Level level){
      List<Position> path = this.getPathAt(pathIndex);
-     Balloon balloon = new Balloon(path.get(0), level, speed);
+     Balloon balloon = new Balloon(path.get(0), level);
      balloon.setTrajectory(path);
      return balloon;
    }
@@ -134,8 +134,8 @@ public class RandomBoard extends Board {
 
             if(balloons != null){
                for(Balloon balloon : balloons){
-                  int bx = (int) Math.round(balloon.getPosition().getX());
-                  int by = (int) Math.round(balloon.getPosition().getY());
+                  int bx = (int) balloon.getPosition().getX();
+                  int by = (int) balloon.getPosition().getY();
                   if(bx == x && by == y){
                      symbol = 'B';
                      break;

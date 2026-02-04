@@ -212,12 +212,13 @@ Voici comment les taches ont été distribuées:
 Pour cette semaine on a proceder a la finalisations du livrable2 avec ajout de methode et ameloriation des classes random et classical board
 
 ### Ce qui a été réalisé
-** s'assurer de la creation et du deplacement d'un ballons suivant son chemin
+s'assurer de la creation et du deplacement d'un ballons suivant son chemin
 
 **Placement de ballon dans Le chemein d'un classical board et s'assurer de leur deplacement dans le plateau
 
 -  Pour randomBoard :generations de chemin aleatoire  dans le pateau ,ajout d'un ballon dans ce dernier 
 -  Livrable2a et 2b servent a metrre en euvre le deplacement du 
+**Farmata Sall Sow**
 
 ### Difficultés rencontrées
 
