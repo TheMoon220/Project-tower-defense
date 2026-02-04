@@ -82,6 +82,16 @@ public class BalloonTest {
         });
     }
 
+     @Test
+    public void testMoveBalloon() {
+        List<Position> path = new ArrayList<>();
+        path.add(new Position(0,0));
+        path.add(new Position(1,0));
+        bal1.setTrajectory(path);
+        bal1.moveBallon();
+        assertTrue(bal1.getProgress() > 0);
+    }
+
 
 
 
