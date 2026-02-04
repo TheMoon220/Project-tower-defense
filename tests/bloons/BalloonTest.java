@@ -52,6 +52,13 @@ public class BalloonTest {
         assertFalse(bal2.isDestroyed());
     }
 
+    @Test
+    public void testRandomSpeed() {
+        double v = bal2.getSpeed();
+        assertTrue(v == 1.0 || v == 2.0 || v == 3.1);
+    }
+
+
 
 
 }
