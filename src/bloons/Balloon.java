@@ -1,6 +1,7 @@
 package bloons;
 import java.util.List;
 import bloons.utils.*;
+import java.util.*;
 //class Balloon
 public class Balloon {
     // path of the balloon
@@ -139,11 +140,16 @@ public class Balloon {
  
     }
     /**
-     * 
+     * chooses a random  speed freom a predefined list
+     * @return 
      */
-    public void randomChoiceSpeed(){
+    public double  randomChoiceSpeed(){
+        Random random = new Random();
+        double speeds[]=  {1.0,2.0 ,3.1};
+        int i = random.nextInt(speeds.length);
+        return speeds[i];
 
-    }
+       }
    
     /*
     *representztion of the ballon with a attribute
