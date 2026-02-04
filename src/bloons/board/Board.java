@@ -41,23 +41,19 @@ public abstract class Board {
     /** an abstract method for calculate the path on the board*/
     public abstract void calculPath();
 
-    /** an abstract method to keep the position of a path
-     *  @return a list of position
+    /** 
+     * ganerate balloons with given a parameter
+     * @param n an integer
     */
-
     public void generateAllballoons(int n){
         for(int i = 0; i < n; i++){
             Balloon balloon =createBalloonForPath(i, Level.generateLevel());
             Allballoons.add(balloon);
             System.out.println(
                 "Balloon " + i + 
-                " created with speed " + String.format("%.4f", balloon.getSpeed())
+                " created with speed " + balloon.getSpeed()
             );
-
-
-
-        }
-        
+        } 
     }
 
     public abstract Balloon createBalloonForPath(int i ,Level l);
