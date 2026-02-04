@@ -123,7 +123,7 @@ public class Balloon {
             return; 
         } 
         progress += speed;
-        // Passage at the next cell if progress >= 1
+        // Passage at the  next cell if progress >= 1
         checkNextCell();;
         // Calcul de la position réelle entre la cellule actuelle et la suivante
         updateBalloonPosition();
@@ -140,7 +140,7 @@ public class Balloon {
     }
 
     public void randomChoiceSpeed(){
-        
+
     }
    
     /*
