@@ -99,12 +99,21 @@ java -jar mainLivrable1.jar
 ## Livrable 2
 Dans ce livrable l'objectif principal est de deplacer  pouvoir deplacer un ballon selon sont chemin (celui ci depandant du type de plateau .c'est dans ce livrable que le random board a pu etre complete suite a la creation des ballons
 
-**Modification apportees parrapport au livrable1:** ajout d'une quatrieme direction dans l'enum direction pour la gestions des deux classes de boards
+**Modification apportees parrapport au livrable1:** ajout d'une quatrieme direction dans l'enum direction pour la gestions des deux classes de board
 
 
 )
 
 ### Atteinte des objectifs
+Dans ce livrable differents aspect intervenant pour le bon deroulement de la progression du ballon dans la le plateau on été effectués
+
+- Le Deplacement d'un ballon  dans un plateau en suivant un chemin specifique
+
+- Analyse et réévaluation des décisions antérieures dans le but d’améliorer et d’affiner les choix de modélisation,
+
+ elle  vise à optimiser la structure du code, la cohérence des classes.
+
+- Organisation efficace du temps de travail pour respecter les délais du projet et la participation equitable des diferrent membres.
 
 ### Difficultés restant à résoudre
 
@@ -160,7 +169,7 @@ Après une réfexion commune sur le sujet et les diagrammes UML faites:
 
 - La répartition du travail pour la semaine:
   
-**Mariama Séré SYLLA** : elle s'assure de faire les tests, et améliorer les diagrammes UML
+**Mariama Séré SYLLA** : elle s'est assure de faire les tests, et améliorer les diagrammes UML
 
 **Farmata Sall SOW** : elle s'assure de fournir le code de la classe ClassicalBoard surtout l'algorithme de calcul du chemin lié à cette classe et améliorer les algorithmes existants des autres classes ou ajouter des algorithmes si cela est nécessaire.
 
@@ -212,13 +221,27 @@ Voici comment les taches ont été distribuées:
 Pour cette semaine on a proceder a la finalisations du livrable2 avec ajout de methode et ameloriation des classes random et classical board
 
 ### Ce qui a été réalisé
-s'assurer de la creation et du deplacement d'un ballons suivant son chemin
+- la creation et le deplacement d'un ballons suivant son chemin
 
-**Placement de ballon dans Le chemein d'un classical board et s'assurer de leur deplacement dans le plateau
+- Placement de ballon dans Le chemein d'un classical board et s'assurer de leur deplacement dans le plateau
 
 -  Pour randomBoard :generations de chemin aleatoire  dans le pateau ,ajout d'un ballon dans ce dernier 
--  Livrable2a et 2b servent a metrre en euvre le deplacement du 
-**Farmata Sall Sow**
+
+-  Livrable2a et 2b servent a mettre en euvre le deplacement du ballon selon un tic d'horloge
+
+**Farmata Sall Sow**elle chargée de complete l'uml et le readme et de completer classicalBoard afin d'y ajouter  des 
+
+methodes permettant le placement des ballon mais aussi l'ameriation de certaines algorithmes si necessaire
+
+**Mamadou Baïlo Sow** il complete le Random Board afiin d'y Placer des Ballons mais aussi de generer les differentes chemins .Il donne aussi le code complet de Livrable2b.java
+
+**khadim Beye** il est  chargé de tester les fonctionnalitées de  balloon et le code de la classe Livrable2a.java
+
+**Mairama Serre Sylla** Elle  s'est chargé  founir le code complet de ballon et le code de l'enum des differents 
+
+niveau d'un ballon .Elle s'est aussi charger de faire certaines choix jugée necessaire pour la bonne progression des 
+
+ballons
 
 ### Difficultés rencontrées
 
