@@ -70,4 +70,5 @@ public class ClassicalBoard extends Board {
     public List<Position> getPath(){
         return this.path; 
     }
+    public voi
 }
