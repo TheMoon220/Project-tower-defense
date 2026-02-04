@@ -14,7 +14,7 @@ public abstract class Board {
     protected int height;
     /** an attribute grid, that represent the cells in our board */
     protected Cell[][] grid;
-     private List<Balloon> Allballoons ;
+    protected List<Balloon> Allballoons ;
 
     /**
      * Builds a board wiht sizes width and height
@@ -130,9 +130,11 @@ public abstract class Board {
         }
         System.out.println();
     }
-    public Cell[][] getGrid() {
-        return grid;
-    }
+
+
+    /** return la liste des ballons
+     * @return la liste des ballons
+     */
     public List<Balloon> getAllballoons() {
         return Allballoons;
     }
