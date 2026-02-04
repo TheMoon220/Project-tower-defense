@@ -62,7 +62,10 @@ public class Balloon {
      * @param health the health 
      */
     public void setHealth() {
-        this.health--; 
+        if (this.health>=1){
+            this.health--; 
+        }
+        
     }
 
     /** check if the balloon is destroy 

@@ -68,7 +68,6 @@ public class Livrable2b {
             System.out.println("Total simulation time: " + time);
         } catch(NumberFormatException e){
             System.out.println("Les arguments doivent etre des entiers");
-            return;
         }
     }
 }
