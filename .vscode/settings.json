@@ -5,6 +5,6 @@
         "tests"
     ],
     "java.project.referencedLibraries": [
-        "/home/l2/khadim.beye.etu/Documents/projet/junit-console.jar"
+        "junit-console.jar"
     ]
 }

@@ -75,6 +75,14 @@ public class BalloonTest {
         assertEquals(path, bal1.getPath());
     }
 
+    @Test
+    public void testSetTrajectoryException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            bal2.setTrajectory(new ArrayList<>());
+        });
+    }
+
+
 
 
 
