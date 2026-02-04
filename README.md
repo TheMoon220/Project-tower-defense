@@ -97,32 +97,24 @@ java -jar mainLivrable1.jar
 ### Difficultés restant à résoudre
 
 ## Livrable 2
-Dans ce livrable l'objectif principal est de deplacer  pouvoir deplacer un ballon selon sont chemin (celui ci depandant du type de plateau .c'est dans ce livrable que le random board a pu etre completés suite a la creation des ballons
+Une nouvelle branche **livrable2** a été créée. Pour ce livrable l'objectif principal est: assurer la création d'un ballon avec la classe **Balloon**, de faire deplacer ce ballon sur un chemin, générer une vitesse aléatoire pour chaque ballon.
 
-**Modification apportees par rapport au livrable1:** ajout d'une quatrieme direction dans l'enum direction pour la 
+Pour le bon fonctionne de ce livrable différentes classes ont été créée, une classe **Level** une énumeration qui spécifie le type du ballon notamment sa résistance. Deux classes de plus ont été ajouté **Livrable2a** pour le classical board notamment afficher et faire déplacer le ballon en fonction d'un tic d'horloge et **Livrable2b** pour le random board qui génère le ballon ou les ballons correspondant au nombre de chemin passé en argument, les faire déplacer jusqu'à ce qu'ils sortent du plateau.
 
-gestions des deux classes de board,ajout de methode dans board et classicalBoard,des test pour le ballon, Code 
-
-complet de la classe ballon,
+Modification apportée par rapport au livrable1: ajout d'une quatrieme direction dans l'énumeration **Direction** notamment une constante LEFT avec deux coordonnées afin d'être exploitée par les autres classes, le **RandomBoard** implémentation de nouvelles méthodes notamment une methode pour créer un ballon pour un chemin, qui est une methode abstraite de la super classe, le **ClassicalBoard** différentes méthodes chooseValidNeighborPosition comme son nom l'indique et d'autres méthode facilitant le bon fonctionnement de son programme principal, le **Board** des attributs son déclarés, de nouvelles methodes abstraites ajoutées.
 
 ### Atteinte des objectifs
-Dans ce livrable differents aspect intervenant pour le bon deroulement de la progression du ballon dans la le plateau 
-
-on été effectués.
+Dans ce livrable differents aspect intervenant pour le bon deroulement de la progression du ballon dans les plateaux ont été effectués.
 
 - Le Deplacement d'un ballon  dans un plateau en suivant un chemin specifique
 
-- Analyse et réévaluation des décisions antérieures dans le but d’améliorer et d’affiner les choix de modélisation,
+- Analyse et réévaluation des décisions antérieures dans le but d’améliorer et d’affiner les choix de modélisation, elle  vise à optimiser la structure du code, la cohérence des classes.
 
- elle  vise à optimiser la structure du code, la cohérence des classes.
+- Organisation efficace du temps de travail pour respecter les délais du projet et la participation équitable des differents membres du groupe.
 
-- Organisation efficace du temps de travail pour respecter les délais du projet et la participation equitable des 
+Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
 
- different membres.
-
- ## Commandes :
-
- **Lancer les tests avec junit**
+**Lancer les tests avec junit**
 
 ```bash
 make tests
@@ -137,31 +129,26 @@ make build
 **Générer le jar**
 
 ```bash
-jar cvfm Livrable2a.jar manifest -C classes .
+jar cvfm livrable2a.jar manifest -C classes .
 ```
 
 ```bash
-jar cvfm Livrable2b.jar manifest-2b -C classes .
+jar cvfm livrable2b.jar manifest-2b -C classes .
 ```
 
-**Lancer les jar arg1,arg2 et arg3**
+**Lancer les jar**
 
 ```bash
-java -jar Livrable2a.jar
+java -jar Livrable2a.jar arg1 arg2 arg3
 ```
 ```bash
-java -jar Livrable2b.jar
+java -jar Livrable2b.jar arg1 arg2 arg3
 ```
 **Générer la documentation**
 
 ```bash
 make docs
 ```
-
-**Lancer le programme MainLivrable1** ou **Lancer le MainLivrable1 avec les arguments (3 args)**
-
-
-
 ### Difficultés restant à résoudre
 
 ## Livrable 3
