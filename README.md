@@ -97,6 +97,9 @@ java -jar mainLivrable1.jar
 ### Difficultés restant à résoudre
 
 ## Livrable 2
+
+🔗 **Diagramme UML** : [Voir le PDF](./uml/uml2.pdf)
+
 Une nouvelle branche **livrable2** a été créée. Pour ce livrable l'objectif principal est: assurer la création d'un ballon avec la classe **Balloon**, de faire deplacer ce ballon sur un chemin, générer une vitesse aléatoire pour chaque ballon.
 
 Pour le bon fonctionne de ce livrable différentes classes ont été créée, une classe **Level** une énumeration qui spécifie le type du ballon notamment sa résistance. Deux classes de plus ont été ajouté **Livrable2a** pour le classical board notamment afficher et faire déplacer le ballon en fonction d'un tic d'horloge et **Livrable2b** pour le random board qui génère le ballon ou les ballons correspondant au nombre de chemin passé en argument, les faire déplacer jusqu'à ce qu'ils sortent du plateau.
