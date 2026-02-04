@@ -74,7 +74,9 @@ public class ClassicalBoard extends Board {
     
    public Balloon createBalloonForPath(int pathIndex, Level level){
 
-      return new Balloon(path.get(pathIndex),level);
+      Balloon balloon = new Balloon(this.path.get(0),level);
+      balloon.setTrajectory(path);
+      return balloon;
    }
        
 }
