@@ -29,6 +29,8 @@ public class Livrable2a {
         System.out.println();
 
         Board board = new ClassicalBoard(width, height);
+        board.generateAllballoons(nbBalloons);
+        System.out.println();
         board.displayBoard();
      }
 }
