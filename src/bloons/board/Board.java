@@ -3,7 +3,7 @@ package bloons.board;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Level;
+import  bloons.utils.*;
 
 import bloons.*;
 
@@ -15,7 +15,7 @@ public abstract class Board {
     protected int height;
     /** an attribute grid, that represent the cells in our board */
     protected Cell[][] grid;
-     private List<Balloon> Allballoons 
+     private List<Balloon> Allballoons ;
 
     /**
      * Builds a board wiht sizes width and height
@@ -49,11 +49,18 @@ public abstract class Board {
     public void generateAllballoons(int n){
         Random random = new Random();
         for(int i = 0; i < n; i++){
-            double speed = 0.01 + random.nextDouble() * 0.02; 
-            Balloon balloon =createBalloonForPath(i, Level.generateLevel, speed);
+            Balloon balloon =createBalloonForPath(i, Level.generateLevel());
             Allballoons.add(balloon);
+            System.out.println(
+                "Balloon " + i + 
+                " created with speed " + String.format("%.4f", balloon.getSpeed())
+            );
 
-    }}
+
+
+        }
+        
+    }
 
     public abstract Balloon createBalloonForPath(int i ,Level l);
     public abstract List<Position> getPath();
@@ -128,6 +135,12 @@ public abstract class Board {
             System.out.println("(" + p.getX() + "," + p.getY() + ")");
         }
         System.out.println();
+    }
+    public Cell[][] getGrid() {
+        return grid;
+    }
+    public List<Balloon> getAllballoons() {
+        return Allballoons;
     }
 }
 

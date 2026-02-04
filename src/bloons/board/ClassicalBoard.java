@@ -1,8 +1,9 @@
 package bloons.board;
 
 import bloons.*;
-import bloons.utils.Direction;
 import java.util.*;
+import bloons.utils.Direction;
+import bloons.utils.Level;
 
 /** the object ClassicalBoard for the board with a defnine path */
 public class ClassicalBoard extends Board {
@@ -70,4 +71,9 @@ public class ClassicalBoard extends Board {
     public List<Position> getPath(){
         return this.path; 
     }
+    
+   public Balloon createBalloonForPath(int pathIndex, Level level){
+      return new Balloon(null, null);
+   }
+       
 }

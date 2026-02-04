@@ -27,19 +27,8 @@ public class Livrable2b {
         System.out.println("the board without any paths");
         board.displayBoard();
         System.out.println();
-
-        List<Balloon> balloons = new ArrayList<>();
-        Random random = new Random();
-        for(int i = 0; i < numPaths; i++){
-            //double speed = 0.01 + random.nextDouble() * 0.02; 
-            Balloon balloon = board.createBalloonForPath(i, Level.genearaLevel());
-            balloons.add(balloon);
-
-            System.out.println(
-                "Balloon " + i + 
-                " created with speed " + String.format("%.4f", balloon.getSpeed())
-            );
-        }
+        board.generateAllballoons(numPaths);
+         List <Balloon> balloons=board.getAllballoons();
 
         System.out.println("\n=== run simulation");
         long time = 0;
