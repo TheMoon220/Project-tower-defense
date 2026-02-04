@@ -11,43 +11,46 @@ public class Livrable2b {
             System.out.println("for use it: java -classpath classes bloons.Livrable2b width height numPath");
             return;
         }
+        
 
-        int width = Integer.parseInt(args[0]);
-        int height = Integer.parseInt(args[1]);
-        int numPaths = Integer.parseInt(args[2]);
+        try{
+           int width = Integer.parseInt(args[0]);
+           int height = Integer.parseInt(args[1]);
+           int numPaths = Integer.parseInt(args[2]);
 
-        System.out.println("=== Livrable 2b: Random Board ===");
-        System.out.println("Board size: " + width + "x" + height);
-        System.out.println("Number of paths: " + numPaths);
-        System.out.println();
+           System.out.println("=== Livrable 2b: Random Board ===");
+           System.out.println("Board size: " + width + "x" + height);
+           System.out.println("Number of paths: " + numPaths);
+           System.out.println();
 
-        RandomBoard board = new RandomBoard(width, height);
-        board.generatePaths(numPaths);
-        System.out.println("the board without any paths");
-        board.displayBoard();
-        System.out.println();
-        board.generateAllballoons(numPaths);
-         List <Balloon> balloons=board.getAllballoons();
+           RandomBoard board = new RandomBoard(width, height);
+           board.generatePaths(numPaths);
+           System.out.println("the board without any paths");
+           board.displayBoard();
+           System.out.println();
+           board.generateAllballoons(numPaths);
+           List <Balloon> balloons=board.getAllballoons();
 
-        System.out.println("\n=== run simulation");
-        long time = 0;
-        long deltaTime = 100;
-        while(!balloons.isEmpty()){
-            board.displayBoard(balloons);
-            System.out.println();
-            System.out.println("time: " + time);
-            for(int i = 0; i < balloons.size(); i++){
+           System.out.println("\n=== run simulation");
+           long time = 0;
+           long deltaTime = 100;
+
+           while(!balloons.isEmpty()){
+              board.displayBoard(balloons);
+              System.out.println();
+              System.out.println("time: " + time);
+              for(int i = 0; i < balloons.size(); i++){
                 Balloon b = balloons.get(i);
                 System.out.println(
                     "Balloon " + i + " at (" + 
                     String.format("%.2f", b.getPosition().getX()) + ", " + 
                     String.format("%.2f", b.getPosition().getY()) + ")"
                 );
-            }
-            System.out.println();
+              }
+              System.out.println();
 
-            List<Balloon> toRemove = new ArrayList<>();
-            for(int i = 0; i < balloons.size(); i++){
+              List<Balloon> toRemove = new ArrayList<>();
+              for(int i = 0; i < balloons.size(); i++){
                 Balloon balloon = balloons.get(i);
                 balloon.moveBallon();
                 if(balloon.checkEndOfPath()){
@@ -56,12 +59,16 @@ public class Livrable2b {
                     );
                     toRemove.add(balloon);
                 }
-            }
+              }
 
-            balloons.removeAll(toRemove);
-            time += deltaTime;
+              balloons.removeAll(toRemove);
+              time += deltaTime;
+            }
+            System.out.println("\n=== All balloons finished ===");
+            System.out.println("Total simulation time: " + time);
+        } catch(NumberFormatException e){
+            System.out.println("Les arguments doivent etre des entiers");
+            return;
         }
-        System.out.println("\n=== All balloons finished ===");
-        System.out.println("Total simulation time: " + time);
     }
 }
