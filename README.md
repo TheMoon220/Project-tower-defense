@@ -150,7 +150,11 @@ java -jar Livrable2a.jar
 ```bash
 java -jar Livrable2b.jar
 ```
+**Générer la documentation**
 
+```bash
+make docs
+```
 
 ### Difficultés restant à résoudre
 
