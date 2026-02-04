@@ -29,13 +29,19 @@ public class Position {
     public double getY(){
         return this.y;
     }
-
+    /**
+     * set the x with the position x in param
+     * @param s the new x 
+     */
     public void setX(double s){
         this.x=s;
     }
-
-    public void setY(double y) {
-        this.y = y;
+     /**
+     * set the y with the position i in param
+     * @param i the new y
+     */
+    public void setY(double i) {
+        this.y = i;
     }
     /**
      * @param o an object
