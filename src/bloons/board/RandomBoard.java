@@ -6,6 +6,7 @@ import java.util.*;
 
 /** the object RandomBoard the second board */
 public class RandomBoard extends Board {
+    private List<List<Position>> allPaths; //a list of positions
 
     /**
      * Builds a board wiht sizes width and height
@@ -14,64 +15,136 @@ public class RandomBoard extends Board {
      */
     public RandomBoard(int width, int height){
         super(width, height);
-        this.calculPath();
+        this.allPaths = new ArrayList<>();
     }
 
     /** a method for calculate the path (horizontal or vertical) in the board*/
     @Override
     public void calculPath(){
-      this.getPath().clear();
+      this.allPaths.clear();
     }
 
-     /**
+    /**
      * get a empty path list
      * @return path a list of positions
-     */
+    */
     @Override
     public List<Position> getPath(){
         return new ArrayList<>();
     }
 
     /**
-     * a method that allows the appearance of a balloon
-     * @param level the level of the balloon
+     * Generate multiple paths
+     * @param numPaths number of paths to generate
      */
-    public Balloon spawnBalloon(Level level, double speed){
-       Random random = new Random();
-       int side = random.nextInt(4);
+    public void generatePaths(int numPaths){
+        this.allPaths.clear();
+        Random random = new Random();
+        int i;
+        for(i = 0; i < numPaths; i++){
+            Direction[] directions = Direction.values();
+            Direction direction = directions[random.nextInt(4)];
+            List<Position> path = new ArrayList<>();
+            double startX, startY;
 
-       double startX , startY;
-       List<Position> straightPath = new ArrayList<>();
+            switch(direction){
+                case DOWN: //top to down
+                   startX = random.nextInt(this.width);
+                   for(int y = 0; y < this.height; y++){
+                      path.add(new Position(startX, y));
+                   }
+                   break;
+                case TOP: //down to top
+                   startX = random.nextInt(this.width);
+                   for(int y = this.height - 1; y >= 0; y--){
+                      path.add(new Position(startX, y));
+                   }
+                   break;
+                case RIGHT: //left to right
+                   startY = random.nextInt(this.height);
+                   for(int x = 0; x < this.width; x++){
+                      path.add(new Position(x, startY));
+                   }
+                   break;
+                default: //right to left
+                   startY = random.nextInt(this.height);
+                   for(int x = this.width - 1; x >= 0; x--){
+                      path.add(new Position(x, startY));
+                   }
+            }
+            this.allPaths.add(path);
+        }
+    }
 
-       switch(side){
-          case 0: //top to down
-            startX = random.nextInt(this.width);
-            for(int y = 0; y < this.height; y++){
-              straightPath.add(new Position(startX, y));
-            }
-            break;
-          case 1: //down to top
-            startX = random.nextInt(this.width);
-            for(int y = this.height - 1; y >= 0; y--){
-              straightPath.add(new Position(startX, y));
-            }
-            break;
-          case 2: //left to right
-            startY = random.nextInt(this.height);
-            for(int x = 0; x < this.width; x++){
-              straightPath.add(new Position(x, startY));
-            }
-            break;
-          default: // right to left
-            startY = random.nextInt(this.height);
-            for(int x = this.width - 1; x >= 0; x--){
-              straightPath.add(new Position(x, startY));
-            }
+    /** 
+     * get all generated paths
+     * @return allPaths
+     */
+    public List<List<Position>> getAllPaths(){
+       return this.allPaths;
+    }
 
+    /**
+     * Get a specific path by index
+     * @return the path 
+     */
+    public List<Position> getPathAt(int index){
+        if(index < 0 || index >= this.allPaths.size()){
+            throw new IllegalArgumentException("Invalid path index: " + index);
+        }
+        return this.allPaths.get(index);
+    }
+
+   /**
+    * Create a balloon for a specific path
+    * @param pathIndex 
+    * @param level the level of the balloon
+    * @param speed the speed of the balloon
+    * @return a balloon
+    */
+   public Balloon createBalloonForPath(int pathIndex, Level level, double speed){
+     List<Position> path = this.getPathAt(pathIndex);
+     Balloon balloon = new Balloon(path.get(0), level, speed);
+     balloon.setTrajectory(path);
+     return balloon;
+   }
+
+   /**
+    * Display board with balloons
+    * @param balloons a list of balloons to display
+    */
+   public void displayBoard(List<Balloon> balloons){
+      System.out.print("     ");
+      for (int x = 0; x < this.width; x++){
+         System.out.print((x % 10) + " "); 
       }
-       
-      Balloon balloon = new Balloon(straightPath.get(0), level, speed);
-      balloon.setTrajectory(straightPath);
-      return balloon;
-}
+        System.out.println();
+
+      for(int y = 0; y < this.height; y++){
+         System.out.print(String.format("%2d | ", y));
+         for(int x = 0; x < this.width; x++){
+            Position currentPos = new Position(x, y);
+            char symbol = '.';
+            for(List<Position> path : this.allPaths){
+               if(path.contains(currentPos)){
+                  symbol = 'X';
+                  break;
+               }
+            }
+
+            if(balloons != null){
+               for(Balloon balloon : balloons){
+                  int bx = (int) Math.round(balloon.getPosition().getX());
+                  int by = (int) Math.round(balloon.getPosition().getY());
+                  if(bx == x && by == y){
+                     symbol = 'B';
+                     break;
+                  }
+               }
+            }
+            System.out.print(symbol + " ");
+         }
+         System.out.println();
+      }
+   }
 }

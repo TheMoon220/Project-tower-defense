@@ -149,5 +149,24 @@ public class Balloon {
     public String toString(){
         return "this ballon has a position "+ this.position +"a level"+ this.level+ "a speed" + this.speed ;
     }
+    /** return path
+     * @return path
+     */
+    public List<Position> getPath() {
+        return path;
+    }
+    /** return currentCellIndex
+     * @return currentCellIndex
+     */
+    public int getCurrentCellIndex() {
+        return currentCellIndex;
+    }
+    /**return progress
+     * @return progress
+     */
+    public double getProgress() {
+        return progress;
+    }
+    
 
 }

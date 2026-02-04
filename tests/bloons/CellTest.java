@@ -1,5 +1,4 @@
-package tests.bloons;
-import bloons.*;
+package bloons;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 public class CellTest {

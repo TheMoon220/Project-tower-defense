@@ -1,6 +1,9 @@
 package bloons;
 
 public class Player {
+
+    /** The profit of the player when a ballon have been broken */
+    public static final int PROFIT = 10;
     private int health;
     private int credit ;
     /**
@@ -33,7 +36,7 @@ public class Player {
      * change the player credit by diminishing the number of credit
      */
   public void setCredit(){
-    
+    this.credit += PROFIT;
   }
   /**
     * change the player credit by diminishing the number of credit

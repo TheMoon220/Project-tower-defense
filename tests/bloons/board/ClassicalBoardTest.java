@@ -1,7 +1,5 @@
-package tests.bloons.board;
-import bloons.board.*;
+package bloons.board;
 import bloons.*;
-import bloons.utils.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 public class ClassicalBoardTest {

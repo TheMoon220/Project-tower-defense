@@ -166,7 +166,7 @@ Après une réfexion commune sur le sujet et les diagrammes UML faites:
 
 ### Ce qui a été réalisé
 Voici ce qui a été réalisé pour la semaine:
-Pour cette semaine on a ou amélioerer les diagrammes uml des differentes entités du livrable. Nous avons pu implementer les methodes de calcule de chemin des differentes palateau de jeu ainsi que leurs methodes de test bien sùr. on a aussi modelisé un premier programme permettant d'afficher un plateau de jeu ainsi que son chemin.
+Pour cette semaine on a ou amélioerer les diagrammes uml des differentes entités du livrable. Nous avons pu implementer les methodes de calcule de chemin des differents palateau de jeu ainsi que leurs methodes de test bien sùr. on a aussi modelisé un premier programme permettant d'afficher un plateau de jeu ainsi que son chemin.
 
 ### Difficultés rencontrées
 
@@ -185,10 +185,22 @@ Pour cette semaine on a ou amélioerer les diagrammes uml des differentes entit�
 ## Semaine 3
 
 ### Ce qui a été réalisé
+Pour cette semaine qui est le debut du livrable 2, on a eu une reflexion sur les nouvelles classes à implémenter, un UML qui répond au cahier de charges. On s'est convenu que pour ce livrable, il faut une classe **Balloon** qui représente les ballons qui se deplaceront sur les deux plateaux, une classe **Level** représentant les trois types de ballons, ajouter les diférentes methodes que la personne en charge du développement d'une classe jugera nécessaire pour le bon fonctionnement du ce livrable.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+Avancer au maximum afin de fournir des algorithmes assurant le bon fonctionnement du livrable.
+
+Voici comment les taches ont été distribuées:
+
+**Mariama Séré Sylla** : assure l'implémentation de la classe balloon ainsi que toute méthode qu'elle jugera utile dans cette classe pouvant facilité aux autres l'utilisation de cette classe, en plus de l'énumeration Level.
+
+**Farmata Sall Sow** : s'occupe de faire le diagramme UML, en plus des analyses des autres membres du groupe... Elle s'assure de fournir une classe player, si possible améliorer classical board.
+
+**Khadim Beye** : il fournit les tests junit, de toutes methodes public dès lors qu'elles sont pertinente.
+
+**Mamadou Baïllo SOW** : s'assure d'intégrer les ballons sur le random board suivant un chemin pour chaque.
 
 ## Semaine 4
 
