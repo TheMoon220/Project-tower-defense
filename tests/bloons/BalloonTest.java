@@ -18,8 +18,8 @@ public class BalloonTest {
             pos = new Position(0, 2);
             l1 = Level.NIV1;
             l2 = Level.NIV2;
-            bal1 = new Balloon(pos, l1, 2.1);
-            bal2 = new Balloon(pos, l2, 3.1);
+            bal1 = new Balloon(pos, l1);
+            bal2 = new Balloon(pos, l2);
         }
 
     @Test
@@ -34,11 +34,7 @@ public class BalloonTest {
         assertEquals(l2, bal2.getLevel());
     }
 
-    @Test
-    public void testGetSpeed(){
-        assertEquals(2.1, bal1.getSpeed());
-        assertEquals(3.1, bal2.getSpeed());
-    }
+
 
     @Test
     public void testGetHealth(){
