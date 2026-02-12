@@ -1,12 +1,13 @@
 package bloons.utils;
 
 public enum  Projectile{
-    FLECHETTE(1) ,
-    FLECHETTEPOINTUE(2),
-    FLECHETTETRESPOINTUE(4),
-    AIGUILLE(1) ,
-    BOMBE(2),
-    EXTRABOMBE(2);
+
+    DART(1) ,
+    POINTEDDART(2),
+    VERYSHARPDART(4),
+    NEEDLE(1) ,
+    BOMB(2),
+    EXTRABOMB(2);
 
     private int niveauDegat;
      
