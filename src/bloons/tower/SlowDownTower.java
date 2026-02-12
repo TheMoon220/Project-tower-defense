@@ -18,5 +18,13 @@ public class SlowDownTower extends Tower {
     public void attackBallon (Balloon balloon){
 
     }
+/**
+ * allow to change the current projectile by a new projectile
+ * @param newProjectile the new projectile that replacing projectile
+ */
+    public void setProjectile(Projectile newProjectile){
+        this.projectile =newProjectile ;
+
+    }
 
 }
