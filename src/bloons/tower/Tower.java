@@ -32,7 +32,9 @@ public abstract class Tower {
     /**
      * to set the range of the tower during the evolution
      */
-  public  abstract   void setRange();
+  public     double getRange(){
+    return this.range ;
+  }
 
   
 /**
