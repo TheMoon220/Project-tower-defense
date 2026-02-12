@@ -1,7 +1,6 @@
 package bloons.utils;
-
 import java.util.Random;
-
+//the enum level
 public enum Level {
     NIV1(1), 
     NIV2(2), 
