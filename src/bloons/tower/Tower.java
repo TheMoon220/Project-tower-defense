@@ -52,7 +52,10 @@ public abstract class Tower {
   public double getCoast(){
     return this.coast ;
   }
-
+/**
+ * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
+ * @param ballon the ballon that can be attacckek by the tower
+ */
   public abstract void attackBallon(Balloon ballon);
   
 }
