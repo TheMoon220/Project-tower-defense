@@ -1,5 +1,6 @@
 package bloons;
 
+import bloons.balloon.Balloon;
 import bloons.board.*;
 import java.util.*;
 

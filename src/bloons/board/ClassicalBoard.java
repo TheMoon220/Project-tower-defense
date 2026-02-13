@@ -1,6 +1,8 @@
 package bloons.board;
 
 import bloons.*;
+import bloons.balloon.Balloon;
+
 import java.util.*;
 import bloons.utils.Direction;
 import bloons.utils.Level;

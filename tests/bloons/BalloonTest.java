@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.*;
 
+import bloons.balloon.Balloon;
 import bloons.utils.Level;
 
 public class BalloonTest {

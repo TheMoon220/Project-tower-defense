@@ -1,6 +1,6 @@
 package bloons.tower;
 
-import bloons.Balloon;
+import bloons.balloon.Balloon;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 

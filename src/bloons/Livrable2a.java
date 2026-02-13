@@ -3,6 +3,7 @@ package bloons;
 import java.util.ArrayList;
 import java.util.List;
 
+import bloons.balloon.Balloon;
 import bloons.board.Board;
 import bloons.board.ClassicalBoard;
 
