@@ -1,5 +1,8 @@
 package bloons.utils;
-
+//the enum effect 
 public enum Effect {
-    IMMEDIAT, DISTANCE
+    //immediat
+    IMMEDIAT,
+    //distance
+     DISTANCE;
 }
