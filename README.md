@@ -265,44 +265,52 @@ Voici comment les taches ont été distribuées:
 **Mamadou Baïllo SOW** : s'assure d'intégrer les ballons sur le random board suivant un chemin pour chaque.
 
 ## Semaine 4
-Pour cette semaine on a proceder a la finalisations du livrable2 avec ajout de methode et ameloriation des classes random et classical board
+Pour cette semaine on a proceder a la finalisations du livrable2 avec ajout de methode et ameloriation des classes random et classical board.
 
 ### Ce qui a été réalisé
-- la creation et le deplacement d'un ballons suivant son chemin
+- la creation et le deplacement d'un ballons suivant son chemin.
 
-- Placement de ballon dans Le chemein d'un classical board et s'assurer de leur deplacement dans le plateau
+- Placement de ballon dans Le chemein d'un classical board et s'assurer de leur deplacement dans le plateau.
 
--  Pour randomBoard :generations de chemin aleatoire  dans le pateau ,ajout d'un ballon dans ce dernier 
+-  Pour randomBoard :generations de chemin aleatoire  dans le pateau ,ajout d'un ballon dans ce dernier.
 
--  Livrable2a et 2b servent a mettre en euvre le deplacement du ballon selon un tic d'horloge
-
-**Farmata Sall Sow**elle chargée de complete l'uml et le readme et de completer classicalBoard afin d'y ajouter  des 
-
-methodes permettant le placement des ballon mais aussi l'ameriation de certaines algorithmes si necessaire
-
-**Mamadou Baïlo Sow** il complete le Random Board afin d'y Placer des Ballons mais aussi de generer les differentes chemins .Il donne aussi le code complet de Livrable2b.java et fourni un algorithme de l'ajout d'un ballon dans un 
-
-plateau
-
-**khadim Beye** il est  chargé de tester les fonctionnalitées de  balloon et le code de la classe Livrable2a.java
-
-**Mairama Serre Sylla** Elle  s'est chargé  founir le code complet de ballon et le code de l'enum des differents 
-
-niveau d'un ballon .Elle s'est aussi charger de faire certaines choix jugés necessaire pour la bonne progression des 
-
-ballons
+-  Livrable2a et 2b servent a mettre en euvre le deplacement du ballon selon un tic d'horloge.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+
+**Farmata Sall Sow**elle chargée de complete l'uml et le readme et de completer classicalBoard afin d'y ajouter des methodes permettant le placement des ballon mais aussi l'amélioration de certains algorithmes si nécessaire.
+
+**Mamadou Baïllo Sow** il complete le Random Board afin d'y Placer des Ballons mais aussi de générer les différents chemins .Il donne aussi le code complet de Livrable2b.java et fourni un algorithme de l'ajout d'un ballon dans un plateau.
+
+**khadim Beye** il est  chargé de tester les fonctionnalitées de  balloon et le code de la classe Livrable2a.java.
+
+**Mairama Serre Sylla** Elle  s'est chargé  founir le code complet de ballon et le code de l'enum des differents niveau d'un ballon .Elle s'est aussi charger de faire certaines choix jugés necessaire pour la bonne progression des ballons.
 
 ## Semaine 5
 
+Pour le livrable 3, l'objectif est de fournir créations des tours, la gestion des tirs pour chaque tour, intégration dans la gestion du temps. Après une réfexion de la part de chacun dans le groupe on s'est convenu d'utiliser une classe abstraite Tour que pourront hériter les autres classes pour chacune des tours. En plus de deux énumérations.
+
 ### Ce qui a été réalisé
+
+- création des deux énumerations: **Projectile** pour gérer les projectiles, et **Effect** pour gérer les effets.
+
+- Amélioration de la classe **RandomBoard** pour faire de telle sorte que le nombre de chemin n'excède pas la hauteur x la largeur.
+
+- partage des taches par membre de groupes qui seront detailées un peu plus bas.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+
+**Mariama Séré Sylla**: créée les classes suivantes ainsi que les algorithmes nécessaire: **Projectile**, **Effect** et quelques tours si besoin ou aider les autres dans leurs taches.
+
+**Farmata Sall Sow**: teste l'ensemble des méthodes public avec junit qui seront créées pour ce livrable, aide les autres dans leurs taches.
+
+**Khadim Beye**: créé quelques classes tours ainsi que des méthodes qui leurs sont associées. Si nécessaire aider les autres membres du groupe dans les taches.
+
+**Mamadou Baïllo Sow**: crées quelques classes tours ainsi que des méthodes qui leurs sont associées. Si nécessaire aider les autres membres du groupe dans les taches.
 
 ## Semaine 6
 

@@ -36,8 +36,14 @@ public class RandomBoard extends Board {
     /**
      * Generate multiple paths
      * @param numPaths number of paths to generate
+     * @exception IllegalArgumentException when the numPaths it's exceed the size
      */
     public void generatePaths(int numPaths){
+        int var = this.height * this.width;
+        if(var <= numPaths){
+           throw new IllegalArgumentException("the number must not exceed the size");
+        }
+
         this.allPaths.clear();
         Random random = new Random();
         int i;

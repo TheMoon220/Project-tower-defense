@@ -1,18 +1,24 @@
 package bloons.utils;
-
 import java.util.Random;
-
+//the enum level
 public enum Level {
+    //the level1
     NIV1(1), 
+    //the level2
     NIV2(2), 
+    //the level3
     NIV4(4);
     
-
+    //the resistance of the balloon
     private final int resistance ;
-
+    //the constructor of the level
     private Level(int resistance){
         this.resistance= resistance;
     }
+    /**
+     * the resistance of the balloon 
+     * @return the resistance 
+     */
     public int getResistance(){
         return resistance;
     }
