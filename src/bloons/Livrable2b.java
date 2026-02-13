@@ -6,7 +6,7 @@ import java.util.*;
 
 /** the object Livrable2b, the main programm */
 public class Livrable2b {
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
         // check arguments
         if(args.length != 3){
             System.out.println("for use it: java -classpath classes bloons.Livrable2b width height numPath");
@@ -35,6 +35,7 @@ public class Livrable2b {
            System.out.println("\n=== run simulation");
            long time = 0;
            long deltaTime = 100;
+           long start =System.nanoTime();
 
            while(!balloons.isEmpty()){
               board.displayBoard(balloons);
@@ -64,8 +65,10 @@ public class Livrable2b {
 
               balloons.removeAll(toRemove);
               time += deltaTime;
+              Thread.sleep(deltaTime);
             }
             System.out.println("\n=== All balloons finished ===");
+            System.out.println("Total simulation time: " +(System.nanoTime()-start)/1000000);
             System.out.println("Total simulation time: " + time);
         } catch(NumberFormatException e){
             System.out.println("Les arguments doivent etre des entiers");
