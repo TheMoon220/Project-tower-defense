@@ -62,12 +62,9 @@ public class Livrable2a {
                 Balloon balloon = balloons.get(i);
                 balloon.moveBallon();
                 if(balloon.checkEndOfPath()){
-                    System.out.println(
-                        "Balloon " + i + " exited at time: " + time
-                    );
+                    System.out.println("Balloon " + i + " exited at time: " + time);
                     toRemove.add(balloon);
                 }
-
             }
 
             balloons.removeAll(toRemove);
