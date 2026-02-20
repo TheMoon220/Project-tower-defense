@@ -1,4 +1,7 @@
 package bloons;
+
+import java.util.Objects;
+
 /** classe Position */
 public class Position {
     private double x;
@@ -56,5 +59,12 @@ public class Position {
             return false;
         }
     }
-    
+
+    /**
+     * an methode for the hashcode
+     */
+    @Override
+    public int hashCode() {
+      return Objects.hash(this.x, this.y);
+    }
 }
