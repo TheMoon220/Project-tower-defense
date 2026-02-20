@@ -59,7 +59,7 @@ public class Livrable2b {
                 Balloon balloon = balloons.get(i);
                 balloon.moveBallon();
                 if(balloon.checkEndOfPath()){
-                    long exit = (System.nanoTime() - start) / 1_000_000;
+                    long exit = (System.nanoTime() - start) / 1000000;
                     System.out.println(
                         "Balloon " + i + " exited at time: " + exit + " ms"
                     );
@@ -71,7 +71,7 @@ public class Livrable2b {
               //time += deltaTime;
               Thread.sleep(deltaTime);
             }
-            long total = (System.nanoTime() - start) / 1_000_000;
+            long total = (System.nanoTime() - start) / 1000000;
             System.out.println("\n=== All balloons finished ===");
             System.out.println("Total simulation time: " + total);
         } catch(NumberFormatException e){
