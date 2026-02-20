@@ -20,17 +20,19 @@ public class SlowDownTower extends Tower {
         this.projectile=projectile;
 
     }
-    /**
- * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
- * @param ballon the ballon that can be attacckek by the tower
- */
-    public void attackBallon (Balloon balloon){
 
+    /**
+     * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
+     * @param ballon the ballon that can be attacckek by the tower
+     */
+    public void attackBallon (Balloon balloon){
+        balloon.setHealth();
     }
-/**
- * allow to change the current projectile by a new projectile
- * @param newProjectile the new projectile that replacing projectile
- */
+
+    /**
+     * allow to change the current projectile by a new projectile
+     * @param newProjectile the new projectile that replacing projectile
+     */
     public void setProjectile(Projectile newProjectile){
         this.projectile =newProjectile ;
 
