@@ -12,6 +12,12 @@ public abstract class Tower {
     private Position position ;
     private double cadence ;
      
+    /** tower building
+     * @param coast the coast of tower
+     * @param range the range of tower 
+     * @param effect the effect of tower
+     * @param cadence the cadence of tower
+     */
     public Tower(double coast ,double range ,Effect effect ,double cadence){
         this.coast=coast ;
         this.range=range ;
@@ -57,5 +63,5 @@ public abstract class Tower {
     public abstract void attackBallon(Balloon ballon);
 
 
-    
+
 }
