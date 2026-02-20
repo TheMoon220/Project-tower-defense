@@ -3,9 +3,9 @@ package bloons.tower;
 import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Effect;
-import bloons.utils.Projectile;
 
 public abstract class Tower {
+
     protected double coast;
     protected double range;
     private  Effect effect ;
@@ -17,45 +17,45 @@ public abstract class Tower {
         this.range=range ;
         this.effect =effect ;
         this.cadence=cadence ;
-
-
     }
+
     /**
      * allow to get the tower effect
      * @return the tower effect
      */
-
     public Effect getEffect(){
       return this.effect ;
-
     }
+
     /**
      * to set the range of the tower during the evolution
      */
-  public     double getRange(){
-    return this.range ;
-  }
+    public double getRange(){
+      return this.range ;
+    }
 
   
-/**
+    /**
      * to set the cadence of the tower during the evolution
      */
-  public   void setCadence() {
-    this.cadence=cadence ;
-  }
+    public   void setCadence() {
+      this.cadence=cadence ;
+    }
   
-/**
+    /**
      * allow to get the tower effect
      * @return the tower effect
      */
+    public double getCoast(){
+      return this.coast ;
+    }
 
-  public double getCoast(){
-    return this.coast ;
-  }
-/**
- * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
- * @param ballon the ballon that can be attacckek by the tower
- */
-  public abstract void attackBallon(Balloon ballon);
-  
+    /**
+     * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
+     * @param ballon the ballon that can be attacckek by the tower
+     */
+    public abstract void attackBallon(Balloon ballon);
+
+
+    
 }
