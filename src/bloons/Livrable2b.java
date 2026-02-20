@@ -33,14 +33,17 @@ public class Livrable2b {
            List <Balloon> balloons=board.getAllballoons();
 
            System.out.println("\n=== run simulation");
-           long time = 0;
+    
            long deltaTime = 100;
            long start =System.nanoTime();
 
            while(!balloons.isEmpty()){
+              long time = System.nanoTime();
+              long tmp = (time - start) / 1000000;
+              
               board.displayBoard(balloons);
               System.out.println();
-              System.out.println("time: " + time);
+              System.out.println("time: " + tmp + " ms");
               for(int i = 0; i < balloons.size(); i++){
                 Balloon b = balloons.get(i);
                 System.out.println(
@@ -56,20 +59,21 @@ public class Livrable2b {
                 Balloon balloon = balloons.get(i);
                 balloon.moveBallon();
                 if(balloon.checkEndOfPath()){
+                    long exit = (System.nanoTime() - start) / 1_000_000;
                     System.out.println(
-                        "Balloon " + i + " exited at time: " + time
+                        "Balloon " + i + " exited at time: " + exit + " ms"
                     );
                     toRemove.add(balloon);
                 }
               }
 
               balloons.removeAll(toRemove);
-              time += deltaTime;
+              //time += deltaTime;
               Thread.sleep(deltaTime);
             }
+            long total = (System.nanoTime() - start) / 1_000_000;
             System.out.println("\n=== All balloons finished ===");
-            System.out.println("Total simulation time: " +(System.nanoTime()-start)/1000000);
-            System.out.println("Total simulation time: " + time);
+            System.out.println("Total simulation time: " + total);
         } catch(NumberFormatException e){
             System.out.println("Les arguments doivent etre des entiers");
         }
