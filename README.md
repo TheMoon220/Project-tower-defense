@@ -316,9 +316,19 @@ Pour le livrable 3, l'objectif est de fournir créations des tours, la gestion d
 
 ### Ce qui a été réalisé
 
+Création de différentes classes tours ainsi que deux programmes principaux (main).
+
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+
+**Mariama Séré Sylla**: 
+
+**Farmata Sall Sow**:
+
+**Khadim Beye**:
+
+**Mamadou Baïllo Sow**
 
 ## Semaine 7
 
