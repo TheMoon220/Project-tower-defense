@@ -117,12 +117,13 @@ public abstract class Tower {
  * @param ballon the ballon that can be attacckek by the tower
  */
   public abstract void attackBallon(Balloon ballon) throws InterruptedException;
+
   /**
    * chech if the distance between the ballon  and the tower position is equal to the distance of the range
    * @param B
    * @return
    */
-  public boolean Inrange(Balloon B){
+  public boolean isInrange(Balloon B){
 
       double dx=B.getPosition().getX()-position.getX();
       double dy=B.getPosition().getY()-position.getY();
@@ -133,7 +134,7 @@ public abstract class Tower {
     protected double calculDistance(Balloon B){
       double dx=B.getPosition().getX()-position.getX();
       double dy=B.getPosition().getY()-position.getY();
-      return Math.sqrt((dx*dx +dy*dy));
+      return Math.sqrt((dx*dx +dy*dy));//formule de la calcul d'une distance entre deux point de coordoonne x et y
     }
 /**
  * add the list of balloons
@@ -149,7 +150,7 @@ public abstract class Tower {
   public void getAllBalloonsInRange(){
         for(Balloon b :balloons){
           double d =  calculDistance(b);
-            if (this.Inrange(b)){
+            if (this.isInrange(b)){
                 balloonsInRange.put(b, d);
             }
         }
