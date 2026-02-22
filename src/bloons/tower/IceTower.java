@@ -20,6 +20,14 @@ public class IceTower extends Tower{
         this.timeLastAttack = 0;
     }
 
+    /**
+     * get the last shot
+     * @return timeLastAttack
+     */
+    public long getTimeLastAttack(){
+        return this.timeLastAttack;
+    }
+
     /** 
      * check if the balloon is in the range of the tower
      * @param b the balloon
