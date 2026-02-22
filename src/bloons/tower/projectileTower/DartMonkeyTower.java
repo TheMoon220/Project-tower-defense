@@ -1,10 +1,9 @@
 package bloons.tower.projectileTower;
 import bloons.balloon.*;
-import bloons.tower.Tower;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 
-public class DartMonkeyTower extends Tower {
+public class DartMonkeyTower extends ProjectileTower {
     private Projectile projectile ;
     public DartMonkeyTower(double coast ,double range ,Effect effect ,double cadence,Projectile projectile){
         super(coast, range, effect, cadence);
