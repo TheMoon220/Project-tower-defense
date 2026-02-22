@@ -2,8 +2,8 @@ package bloons.tower.projectileTower;
 
 import bloons.balloon.Balloon;
 import bloons.tower.Tower;
-import bloons.utils.Effect;
-import bloons.utils.Projectile;
+import bloons.utils.*;
+
 
 public class ProjectileTower extends Tower{
 
@@ -21,10 +21,17 @@ public class ProjectileTower extends Tower{
         this.projectile=projectile;
     }
 
-     @Override
-     public void attackBallon(Balloon ballon) throws InterruptedException {
+    @Override
+    public void attackBallon(Balloon ballon) throws InterruptedException {
       
-     }
+    }
+
+    /** return tower's prjetile
+     * @return tower's prjetile
+     */
+    public Projectile getProjectil(){
+        return this.projectile;
+    }
     
     
 }
