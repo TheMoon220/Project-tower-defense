@@ -75,5 +75,5 @@ public abstract class Tower {
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
      * @param ballon the ballon that can be attacckek by the tower
      */
-    public abstract void attackBallon(Balloon ballon);
+    public abstract void attackBallon(Balloon ballon); // devrait prendre un autre paramètre le currentTime
 }
