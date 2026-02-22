@@ -1,5 +1,6 @@
-package bloons.tower;
+package bloons.tower.projectileTower;
 import bloons.balloon.*;
+import bloons.tower.Tower;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 
