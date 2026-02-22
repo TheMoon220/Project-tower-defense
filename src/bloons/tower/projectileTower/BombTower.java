@@ -1,11 +1,10 @@
 package bloons.tower.projectileTower;
 
 import bloons.balloon.*;
-import bloons.tower.Tower;
 import bloons.utils.*;
 
 /** the object Bomb tower, the tower that sends bombs */
-public class BombTower extends Tower {
+public class BombTower extends ProjectileTower {
     
      /** 
      * the constructor of the class Tower
