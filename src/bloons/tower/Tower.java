@@ -8,9 +8,9 @@ public abstract class Tower {
 
     protected double cost; // the tower's cost 
     protected double range; // the range of the 
-    private  Effect effect ; // the effect when a balloon is hit
-    private Position position ; // the position of the tower
-    private double cadence ; // the cadence of the tower
+    protected Effect effect ; // the effect when a balloon is hit
+    protected Position position ; // the position of the tower
+    protected double cadence ; // the cadence of the tower
      
     /** tower building
      * @param coast the coast of tower
@@ -47,7 +47,7 @@ public abstract class Tower {
     public double getCadence(){
       return this.cadence;
     }
-    
+
     /**
      * to set the cadence of the tower during the evolution
      */
