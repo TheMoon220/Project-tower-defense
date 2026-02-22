@@ -26,8 +26,8 @@ public class ProjectileTower extends Tower{
       
     }
 
-    /** return tower's prjetile
-     * @return tower's prjetile
+    /** return tower's projectile
+     * @return tower's projectile
      */
     public Projectile getProjectil(){
         return this.projectile;

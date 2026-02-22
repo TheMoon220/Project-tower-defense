@@ -6,7 +6,7 @@ import bloons.utils.Effect;
 public class SlowDownTower extends Tower {
 
     /** Slow down tower building
-     * @param cost the coast of tower
+     * @param cost the cost of tower
      * @param range the range of tower 
      * @param effect the effect of tower
      * @param cadence the cadence of tower
