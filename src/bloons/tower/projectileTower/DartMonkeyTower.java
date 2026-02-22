@@ -22,10 +22,10 @@ public class DartMonkeyTower extends ProjectileTower {
      * @throws InterruptedException 
     */
     public void attackBallon (Balloon balloon) throws InterruptedException{
-        if(balloon.getLevel().getResistance()<this.projectile.getNiveauDegat()){
+        if(balloon.getHealth()<this.projectile.getNiveauDegat()){
             balloons.remove(balloon);
         }
-        balloon.getLevel().setResistance();
+        balloon.setHealth();;
         Thread.sleep((long) cadence);
     }
 
