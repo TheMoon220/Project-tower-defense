@@ -1,6 +1,5 @@
 package bloons.tower;
 
-import bloons.*;
 import bloons.balloon.*;
 import bloons.utils.*;
 
@@ -13,9 +12,16 @@ public class BombTower extends Tower {
      * @param range the tower's scope
      * @param effect the tower's impact
      * @param cadence the tower's cadence
-     * @param timeLastAttack store last shot
      */
     public BombTower(double cost ,double range ,Effect effect ,double cadence){
        super(cost, range, effect, cadence);
+    }
+
+     /**  
+     * attack all the balloons within the tower's range and freeze them
+     * @param balloon the ice balloon 
+     */ 
+    public void attackBallon(Balloon balloon){
+        //TO DO
     }
 }
