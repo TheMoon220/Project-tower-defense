@@ -9,7 +9,7 @@ public class ProjectileTower extends Tower{
 
     protected Projectile projectile;
 
-     /** Slow down tower building
+     /** constructor of a tower with projectile
      * @param cost the coast of tower
      * @param range the range of tower 
      * @param effect the effect of tower
