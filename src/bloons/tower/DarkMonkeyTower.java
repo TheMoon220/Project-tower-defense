@@ -1,6 +1,5 @@
 package bloons.tower;
-
-import bloons.Balloon;
+import bloons.balloon.*;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 
@@ -17,14 +16,7 @@ public class DarkMonkeyTower extends Tower {
      * @throws InterruptedException 
  */
     public void attackBallon (Balloon balloon) throws InterruptedException{
-        double min=0;
-        for(Balloon b:balloonsInRange.keySet()){
-             double min1=balloonsInRange.get(b);
-             if(balloonsInRange.get(b)<min1){
-                min1=balloonsInRange.get(b);
-                Balloon balloonToAttack=b ;
-             }
-        }
+       
         
         if(balloon.getLevel().getResistance()<this.projectile.getNiveauDegat()){
             balloons.remove(balloon);

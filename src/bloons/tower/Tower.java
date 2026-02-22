@@ -1,6 +1,8 @@
 package bloons.tower;
 
 
+
+import bloons.Balloon;
 import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Effect;
@@ -87,7 +89,7 @@ public abstract class Tower {
     /**
      * allow to get the tower effect
      * @return the tower effect
-<<<<<<< HEAD
+
      */
     public double getCost(){
       return this.cost ;
