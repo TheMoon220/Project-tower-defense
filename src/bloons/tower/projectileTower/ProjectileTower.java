@@ -7,7 +7,7 @@ import bloons.utils.Projectile;
 
 public class ProjectileTower extends Tower{
 
-    private Projectile projectile;
+    protected Projectile projectile;
 
      /** Slow down tower building
      * @param coast the coast of tower
