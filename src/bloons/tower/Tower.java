@@ -6,11 +6,11 @@ import bloons.utils.Effect;
 
 public abstract class Tower {
 
-    protected double coast;
-    protected double range;
-    private  Effect effect ;
-    private Position position ;
-    private double cadence ;
+    protected double cost; // the tower's cost 
+    protected double range; // the range of the 
+    private  Effect effect ; // the effect when a balloon is hit
+    private Position position ; // the position of the tower
+    private double cadence ; // the cadence of the tower
      
     /** tower building
      * @param coast the coast of tower
@@ -18,8 +18,8 @@ public abstract class Tower {
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      */
-    public Tower(double coast ,double range ,Effect effect ,double cadence){
-        this.coast=coast ;
+    public Tower(double cost ,double range ,Effect effect ,double cadence){
+        this.cost=cost ;
         this.range=range ;
         this.effect =effect ;
         this.cadence=cadence ;
@@ -40,11 +40,18 @@ public abstract class Tower {
       return this.range ;
     }
 
-  
+    /**
+     * get the cadence
+     * @return cadence
+     */
+    public double getCadence(){
+      return this.cadence;
+    }
+    
     /**
      * to set the cadence of the tower during the evolution
      */
-    public   void setCadence() {
+    public void setCadence(double cadence) {
       this.cadence=cadence ;
     }
   
@@ -52,8 +59,16 @@ public abstract class Tower {
      * allow to get the tower effect
      * @return the tower effect
      */
-    public double getCoast(){
-      return this.coast ;
+    public double getCost(){
+      return this.cost ;
+    }
+
+    /**
+     * get the position of the tower
+     * @return the position of the tower
+     */
+    public Position getPosition(){
+      return this.position;
     }
 
     /**
@@ -61,7 +76,4 @@ public abstract class Tower {
      * @param ballon the ballon that can be attacckek by the tower
      */
     public abstract void attackBallon(Balloon ballon);
-
-
-
 }
