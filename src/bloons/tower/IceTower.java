@@ -1,8 +1,7 @@
 package bloons.tower;
 
-import bloons.*;
-import bloons.utils.*;
 import bloons.balloon.*;
+import bloons.utils.*;
 
 /** the tower that freezes balloons */
 public class IceTower extends Tower{
@@ -16,5 +15,13 @@ public class IceTower extends Tower{
      */
     public IceTower(double coast ,double range ,Effect effect ,double cadence){
         super(coast,range,effect,cadence);
+    }
+
+    /**  
+     * attack all the balloons within the tower's range and freeze them
+     * @param balloon the ice balloon 
+     */    
+    public void attackBallon(Balloon balloon){
+       // TO DO
     }
 }
