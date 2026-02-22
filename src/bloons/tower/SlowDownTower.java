@@ -2,23 +2,18 @@ package bloons.tower;
 
 import bloons.balloon.Balloon;
 import bloons.utils.Effect;
-import bloons.utils.Projectile;
 
 public class SlowDownTower extends Tower {
 
-    private Projectile projectile;
-
     /** Slow down tower building
-     * @param coast the coast of tower
+     * @param cost the coast of tower
      * @param range the range of tower 
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      * @param projectile the projectile of tower
      */
-    public SlowDownTower(double coast ,double range ,Effect effect ,double cadence, Projectile projectile){
-        super(coast, range, effect, cadence);
-        this.projectile=projectile;
-
+    public SlowDownTower(double cost ,double range ,Effect effect ,double cadence){
+        super(cost, range, effect, cadence);
     }
 
     /**
@@ -27,15 +22,6 @@ public class SlowDownTower extends Tower {
      */
     public void attackBallon (Balloon balloon){
         balloon.setHealth();
-    }
-
-    /**
-     * allow to change the current projectile by a new projectile
-     * @param newProjectile the new projectile that replacing projectile
-     */
-    public void setProjectile(Projectile newProjectile){
-        this.projectile =newProjectile ;
-
     }
 
 }
