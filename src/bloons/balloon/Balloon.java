@@ -181,5 +181,11 @@ public class Balloon {
         return progress;
     }
     
-
+    /**
+     * set speed 
+     * @param s the new speed
+     */
+    public void setSpeed(double s){
+        this.speed = s;
+    }
 }
