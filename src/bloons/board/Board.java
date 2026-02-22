@@ -56,7 +56,12 @@ public abstract class Board {
             );
         } 
     }
-
+   /**
+    * create a balloon for an specific path
+    * @param i
+    * @param l the balloon level
+    * @return a balloon 
+    */
     public abstract Balloon createBalloonForPath(int i ,Level l);
     public abstract List<Position> getPath();
     

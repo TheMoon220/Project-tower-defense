@@ -31,7 +31,6 @@ public class Livrable2b {
            System.out.println();
            board.generateAllballoons(numPaths);
            List <Balloon> balloons=board.getAllballoons();
-
            System.out.println("\n=== run simulation");
     
            long deltaTime = 100;

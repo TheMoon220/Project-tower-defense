@@ -10,7 +10,7 @@ public enum Level {
     NIV4(4);
     
     //the resistance of the balloon
-    private final int resistance ;
+    private  int resistance ;
     //the constructor of the level
     private Level(int resistance){
         this.resistance= resistance;
@@ -21,6 +21,13 @@ public enum Level {
      */
     public int getResistance(){
         return resistance;
+    }
+     /**
+     * the resistance of the balloon 
+     * @return the resistance 
+     */
+    public void setResistance(){
+         resistance--;
     }
    /**
     * generate a random level
