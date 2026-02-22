@@ -71,7 +71,7 @@ public class IceTower extends Tower{
     @Override   
     public void attackBallon(Balloon balloon){ //devrait prendre un autre param pour le temp courant
        if(isInRange(balloon) && canAttack(0)){ 
-         freeze(balloon);
+         freeze(balloon); 
          updateLastAttackTime(0);
        }
     }
