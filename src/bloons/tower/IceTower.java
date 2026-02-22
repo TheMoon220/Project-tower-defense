@@ -36,7 +36,7 @@ public class IceTower extends Tower{
     private boolean isInRange(Balloon b){
         double x = b.getPosition().getX() - this.position.getX();
         double y = b.getPosition().getY() - this.position.getY();
-        return Math.sqrt(x * x + y * y) <= this.range * this.range;
+        return (x * x + y * y) <= this.range * this.range;
     }
 
     /** 
@@ -56,11 +56,23 @@ public class IceTower extends Tower{
        this.timeLastAttack = currTime;
     }
 
+    /**
+     * freeze a balloon
+     * @param b the balloon to freeze
+     */
+    public void freeze(Balloon b){
+        b.setSpeed(0);
+    }
+
     /**  
      * attack all the balloons within the tower's range and freeze them
      * @param balloon the ice balloon 
-     */    
-    public void attackBallon(Balloon balloon){
-       // TO DO
+     */ 
+    @Override   
+    public void attackBallon(Balloon balloon){ //devrait prendre un autre param pour le temp courant
+       if(isInRange(balloon) && canAttack(0)){ 
+         freeze(balloon);
+         updateLastAttackTime(0);
+       }
     }
 }
