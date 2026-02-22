@@ -13,8 +13,8 @@ public class BombTower extends ProjectileTower {
      * @param effect the tower's impact
      * @param cadence the tower's cadence
      */
-    public BombTower(double cost ,double range ,Effect effect ,double cadence){
-       super(cost, range, effect, cadence);
+    public BombTower(double cost ,double range ,Effect effect ,double cadence, Projectile projectile){
+       super(cost, range, effect, cadence, projectile);
     }
 
      /**  
