@@ -1,5 +1,6 @@
 package bloons.tower.projectileTower;
 
+import bloons.balloon.Balloon;
 import bloons.tower.Tower;
 import bloons.utils.Effect;
 
@@ -15,6 +16,11 @@ public class ProjectileTower extends Tower{
     public ProjectileTower(double cost, double range, Effect effect, double cadence) {
         super(cost, range, effect, cadence);
     }
+
+     @Override
+     public void attackBallon(Balloon ballon) throws InterruptedException {
+      
+     }
     
     
 }
