@@ -29,12 +29,15 @@ public class ProjectileTower extends Tower{
     */
     @Override
     public void attackBallon (Balloon balloon,long time) throws InterruptedException{
-        if(balloon.getHealth() < this.projectile.getNiveauDegat()){
-            balloons.remove(balloon);
-        }
-        if (canAttack(time)){
-            balloon.setHealth(balloon.getHealth() - this.projectile.getNiveauDegat());
-        } 
+       if(Inrange(balloon) && canAttack(time)){
+          int newHealth = balloon.getHealth() - this.projectile.getNiveauDegat();
+          balloon.setHealth(newHealth);
+          if(newHealth <= 0){
+            this.balloons.remove(balloon);
+          }
+
+          updateLastAttackTime(time);
+       }
     }
 
     /** return tower's projectile
