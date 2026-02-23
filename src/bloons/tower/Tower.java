@@ -14,9 +14,10 @@ public abstract class Tower {
     protected Effect effect ; // the effect when a balloon is hit
     protected Position position ; // the position of the tower
     protected double cadence ; // the cadence of the tower
+    protected long timeLastAttack ;
     
-    protected  List<Balloon> balloons ;
-    protected  List<Balloon > balloonsInRange ;
+    protected  List<Balloon> balloons ;// all balloons on path
+    protected  List<Balloon > balloonsInRange ;// all ballon in the tower range
     public double RANGE = range /60; //Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60)
      
     /** tower building
@@ -33,6 +34,7 @@ public abstract class Tower {
         this.cadence=cadence ;
         this.balloonsInRange=new ArrayList<>();
         this.position=position;
+        this.timeLastAttack = 0;
     }
 
     /**
@@ -85,8 +87,9 @@ public abstract class Tower {
     /**
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
      * @param ballon the ballon that can be attacckek by the tower
+     * @param the time waiting for attack
      */
-    public abstract void attackBallon(Balloon ballon) throws InterruptedException;
+    public abstract void attackBallon(Balloon ballon,long time) throws InterruptedException;
 
 
     /**
@@ -128,6 +131,14 @@ public abstract class Tower {
           balloonsInRange.add(b);
         }
       }
+    }
+   /** 
+     * check if the tower can attack
+     * @param currTime the current time
+     * @return true when can attack otherwise false
+     */
+    private boolean canAttack(long currTime){
+        return currTime - this.timeLastAttack >= this.cadence;
     }
 }
     
