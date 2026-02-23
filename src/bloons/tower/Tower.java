@@ -98,6 +98,10 @@ public abstract class Tower {
       return Math.sqrt((dx*dx +dy*dy))<=RANGE;
     }
 
+    /**
+     * an methode for calculate dhe distance between the balloon and the tower
+     * @return the distance
+     */
     protected double calculDistance(Balloon B){
       double dx=B.getPosition().getX()-position.getX();
       double dy=B.getPosition().getY()-position.getY();
