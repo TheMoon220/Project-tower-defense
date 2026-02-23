@@ -131,13 +131,28 @@ public abstract class Tower {
           balloonsInRange.add(b);
         }
       }
+    
+    }
+    /**
+     * update the last time attack
+     * @param currTime
+     */
+    public void updateLastAttackTime(long currTime){
+       this.timeLastAttack = currTime;
+    }
+    /**
+     * get the last shot
+     * @return timeLastAttack
+     */
+    public long getTimeLastAttack(){
+        return this.timeLastAttack;
     }
    /** 
      * check if the tower can attack
      * @param currTime the current time
      * @return true when can attack otherwise false
      */
-    private boolean canAttack(long currTime){
+    public boolean canAttack(long currTime){
         return currTime - this.timeLastAttack >= this.cadence;
     }
 }
