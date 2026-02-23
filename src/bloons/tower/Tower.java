@@ -123,10 +123,10 @@ public abstract class Tower {
      * allow to get all balloons in the tower range
     */  
     public void getAllBalloonsInRange(){
+      this.balloonsInRange.clear();
       for(Balloon b :balloons){
-        double d =  calculDistance(b);
         if (this.Inrange(b)){
-          balloonsInRange.add(b);
+          this.balloonsInRange.add(b);
         }
       }
     
