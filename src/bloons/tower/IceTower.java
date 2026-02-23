@@ -29,17 +29,6 @@ public class IceTower extends Tower{
     }
 
     /** 
-     * check if the balloon is in the range of the tower
-     * @param b the balloon
-     * @return true when is in the range otherwise false
-     */
-    private boolean isInRange(Balloon b){
-        double x = b.getPosition().getX() - this.position.getX();
-        double y = b.getPosition().getY() - this.position.getY();
-        return (x * x + y * y) <= this.range * this.range;
-    }
-
-    /** 
      * check if the tower can attack
      * @param currTime the current time
      * @return true when can attack otherwise false
