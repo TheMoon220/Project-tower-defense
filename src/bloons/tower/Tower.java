@@ -17,7 +17,7 @@ public abstract class Tower {
     
     protected  List<Balloon> balloons ;
     protected  Map<Balloon,Double > balloonsInRange ;
-    public double RANGE =60 *range ;
+    public double RANGE = range /60; //Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60)
      
     /** tower building
      * @param cost the coast of tower
