@@ -23,10 +23,7 @@ public class BombTower extends ProjectileTower {
      * @param balloon the ice balloon 
     */ 
     @Override
-    public void attackBallon(Balloon balloon){
-        long currTime = System.currentTimeMillis();
-        if(Inrange(balloon) && canAttack(currTime)){
-            // TO DO
-        }
+    public void attackBallon(Balloon balloon, long currTime) throws InterruptedException{
+        super.attackBallon(balloon, currTime);
     }
 }
