@@ -6,5 +6,10 @@ import bloons.utils.Projectile;
 
 public class SniperMonkeyTower extends ProjectileTower{
 
+    public SniperMonkeyTower(double cost, double range, Effect effect, double cadence, Position position,
+            Projectile projectile) {
+        super(cost, range, effect, cadence, position, projectile);
+    }
+
     
 }
