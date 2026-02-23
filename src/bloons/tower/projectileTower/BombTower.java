@@ -36,10 +36,18 @@ public class BombTower extends ProjectileTower {
         return currTime - this.timeLastAttack >= this.cadence;
     }
 
-     /**  
+    /**
+     * update the last time attack
+     * @param currTime
+     */
+    public void updateLastAttackTime(long currTime){
+       this.timeLastAttack = currTime;
+    }
+
+    /**  
      * attack all the balloons within the tower's range and freeze them
      * @param balloon the ice balloon 
-     */ 
+    */ 
     public void attackBallon(Balloon balloon){
         //TO DO
     }
