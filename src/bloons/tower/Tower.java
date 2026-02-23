@@ -16,7 +16,7 @@ public abstract class Tower {
     protected double cadence ; // the cadence of the tower
     
     protected  List<Balloon> balloons ;
-    protected  Map<Balloon,Double > balloonsInRange ;
+    protected  List<Balloon > balloonsInRange ;
     public double RANGE = range /60; //Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60)
      
     /** tower building
@@ -24,13 +24,14 @@ public abstract class Tower {
      * @param range the range of tower 
      * @param effect the effect of tower
      * @param cadence the cadence of tower
+     * @param position the position of the tower
      */
     public Tower(double cost ,double range ,Effect effect ,double cadence,Position position){
         this.cost=cost ;
         this.range=range ;
         this.effect =effect ;
         this.cadence=cadence ;
-        this.balloonsInRange=new HashMap<>();
+        this.balloonsInRange=new ArrayList<>();
         this.position=position;
     }
 
@@ -124,7 +125,7 @@ public abstract class Tower {
       for(Balloon b :balloons){
         double d =  calculDistance(b);
         if (this.Inrange(b)){
-          balloonsInRange.put(b, d);
+          balloonsInRange.add(b);
         }
       }
     }
