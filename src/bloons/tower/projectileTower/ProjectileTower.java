@@ -33,10 +33,7 @@ public class ProjectileTower extends Tower{
         }
         if (canAttack(time)){
             balloon.setHealth(this.projectile.getNiveauDegat());
-
-        }
-        
-        
+        } 
     }
 
     /** return tower's projectile
