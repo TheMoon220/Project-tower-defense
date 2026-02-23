@@ -6,8 +6,6 @@ import bloons.utils.*;
 
 /** the tower that freezes balloons */
 public class IceTower extends Tower{
-    private long timeLastAttack;
-
     /** 
      * the constructor of the class Tower
      * @param cost the tower's price
@@ -18,32 +16,6 @@ public class IceTower extends Tower{
      */
     public IceTower(double cost ,double range ,Effect effect ,double cadence,Position position){
         super(cost,range,effect,cadence,position);
-        this.timeLastAttack = 0;
-    }
-
-    /**
-     * get the last shot
-     * @return timeLastAttack
-     */
-    public long getTimeLastAttack(){
-        return this.timeLastAttack;
-    }
-
-    /** 
-     * check if the tower can attack
-     * @param currTime the current time
-     * @return true when can attack otherwise false
-     */
-    private boolean canAttack(long currTime){
-        return currTime - this.timeLastAttack >= this.cadence;
-    }
-
-    /**
-     * update the last time attack
-     * @param currTime
-     */
-    public void updateLastAttackTime(long currTime){
-       this.timeLastAttack = currTime;
     }
 
     /**
@@ -59,8 +31,7 @@ public class IceTower extends Tower{
      * @param balloon the ice balloon 
      */ 
     @Override   
-    public void attackBallon(Balloon balloon){ 
-       long currTime = System.currentTimeMillis();
+    public void attackBallon(Balloon balloon, long currTime){ 
        if(Inrange(balloon) && canAttack(currTime)){ 
           freeze(balloon); 
           updateLastAttackTime(currTime);
