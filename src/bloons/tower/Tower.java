@@ -17,7 +17,7 @@ public abstract class Tower {
     
     protected  List<Balloon> balloons ;
     protected  Map<Balloon,Double > balloonsInRange ;
-    public  double RANGE =60 *range ;
+    public double RANGE =60 *range ;
      
     /** tower building
      * @param cost the coast of tower
@@ -88,13 +88,13 @@ public abstract class Tower {
 
     /**
      * chech if the distance between the ballon  and the tower position is equal to the distance of the range
-     * @param B
-     * @return
+     * @param B the balloon
+     * @return true if is in range otherwise false
      */
     public boolean Inrange(Balloon B){
       double dx=B.getPosition().getX()-position.getX();
       double dy=B.getPosition().getY()-position.getY();
-      return   Math.sqrt((dx*dx +dy*dy))<=RANGE;
+      return Math.sqrt((dx*dx +dy*dy))<=RANGE;
     }
 
     protected double calculDistance(Balloon B){
