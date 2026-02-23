@@ -27,6 +27,15 @@ public class BombTower extends ProjectileTower {
       return this.timeLastAttack;
     }
 
+    /** 
+     * check if the tower can attack
+     * @param currTime the current time
+     * @return true when can attack otherwise false
+     */
+    private boolean canAttack(long currTime){
+        return currTime - this.timeLastAttack >= this.cadence;
+    }
+
      /**  
      * attack all the balloons within the tower's range and freeze them
      * @param balloon the ice balloon 
