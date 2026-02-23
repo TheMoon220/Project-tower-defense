@@ -1,5 +1,6 @@
 package bloons.tower.projectileTower;
 
+import bloons.Position;
 import bloons.balloon.*;
 import bloons.utils.*;
 
@@ -14,8 +15,8 @@ public class BombTower extends ProjectileTower {
      * @param effect the tower's impact
      * @param cadence the tower's cadence
      */
-    public BombTower(double cost ,double range ,Effect effect ,double cadence, Projectile projectile){
-       super(cost, range, effect, cadence, projectile);
+    public BombTower(double cost ,double range ,Effect effect ,double cadence,Position position, Projectile projectile){
+       super(cost, range, effect, cadence,position, projectile);
        this.timeLastAttack = 0;
     }
 
