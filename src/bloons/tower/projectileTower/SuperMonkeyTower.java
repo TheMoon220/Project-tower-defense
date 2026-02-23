@@ -6,8 +6,14 @@ import bloons.utils.Projectile;
 
 public class SuperMonkeyTower extends ProjectileTower{
 
-    public SuperMonkeyTower(double cost, double range, Effect effect, double cadence, Position position,
-            Projectile projectile) {
+    /** constructor of a tower with projectile
+     * @param cost the coast of tower
+     * @param range the range of tower 
+     * @param effect the effect of tower
+     * @param cadence the cadence of tower
+     * @param projectile the projectile of tower
+     */
+    public SuperMonkeyTower(double cost, double range, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, range, effect, cadence, position, projectile);
     }
     
