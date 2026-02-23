@@ -48,7 +48,11 @@ public class BombTower extends ProjectileTower {
      * attack all the balloons within the tower's range and freeze them
      * @param balloon the ice balloon 
     */ 
+    @Override
     public void attackBallon(Balloon balloon){
-        //TO DO
+        long currTime = System.currentTimeMillis();
+        if(Inrange(balloon) && canAttack(currTime)){
+            // TO DO
+        }
     }
 }
