@@ -58,6 +58,7 @@ public abstract class Tower {
 
     /**
     * to set the range of the tower during the evolution
+    * @return the range
     */
     public double getRange(){
       return this.range ;
