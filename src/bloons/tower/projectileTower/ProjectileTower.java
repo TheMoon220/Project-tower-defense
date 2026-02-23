@@ -20,7 +20,11 @@ public class ProjectileTower extends Tower{
         super(cost, range, effect, cadence);
         this.projectile=projectile;
     }
-
+    
+    /**
+     * a method for attack a balloon 
+     * @param ballon the ballon to attack
+     */
     @Override
     public void attackBallon(Balloon ballon) throws InterruptedException {
       
@@ -32,6 +36,4 @@ public class ProjectileTower extends Tower{
     public Projectile getProjectil(){
         return this.projectile;
     }
-    
-    
 }
