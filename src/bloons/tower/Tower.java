@@ -14,14 +14,13 @@ public abstract class Tower {
     protected Effect effect ; // the effect when a balloon is hit
     protected Position position ; // the position of the tower
     protected double cadence ; // the cadence of the tower
-    protected double coast;
     
     protected  List<Balloon> balloons ;
     protected  Map<Balloon,Double > balloonsInRange ;
     public  double RANGE =60 *range ;
      
     /** tower building
-     * @param coast the coast of tower
+     * @param cost the coast of tower
      * @param range the range of tower 
      * @param effect the effect of tower
      * @param cadence the cadence of tower
@@ -31,7 +30,8 @@ public abstract class Tower {
         this.range=range ;
         this.effect =effect ;
         this.cadence=cadence ;
-        this.balloonsInRange=new HashMap<>();}
+        this.balloonsInRange=new HashMap<>();
+    }
 
     /**
      * allow to get the tower effect
@@ -39,10 +39,8 @@ public abstract class Tower {
      */
     public Effect getEffect(){
       return this.effect ;
-    
     }
     
-
     /**
      * get the cadence
      * @return cadence
@@ -61,7 +59,7 @@ public abstract class Tower {
     /**
     * to set the range of the tower during the evolution
     */
-    public     double getRange(){
+    public double getRange(){
       return this.range ;
     }
   
@@ -79,14 +77,6 @@ public abstract class Tower {
      */
     public Position getPosition(){
       return this.position;
-    }
-
-    /**
-     * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
-     * @param ballon the ballon that can be attacckek by the tower
-     */
-    public double getCoast(){
-      return this.coast ;
     }
 
     /**
@@ -125,14 +115,12 @@ public abstract class Tower {
      * allow to get all balloons in the tower range
     */  
     public void getAllBalloonsInRange(){
-          for(Balloon b :balloons){
-            double d =  calculDistance(b);
-              if (this.Inrange(b)){
-                  balloonsInRange.put(b, d);
-              }
-          }
-
+      for(Balloon b :balloons){
+        double d =  calculDistance(b);
+        if (this.Inrange(b)){
+          balloonsInRange.put(b, d);
+        }
+      }
     }
-
 }
     
