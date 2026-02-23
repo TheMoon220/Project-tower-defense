@@ -9,14 +9,14 @@ public class IceTower extends Tower{
 
     /** 
      * the constructor of the class Tower
-     * @param coast the tower's price
+     * @param cost the tower's price
      * @param range the tower's scope
      * @param effect the tower's impact
      * @param cadence the tower's cadence
      * @param timeLastAttack store last shot
      */
-    public IceTower(double coast ,double range ,Effect effect ,double cadence){
-        super(coast,range,effect,cadence);
+    public IceTower(double cost ,double range ,Effect effect ,double cadence){
+        super(cost,range,effect,cadence);
         this.timeLastAttack = 0;
     }
 
@@ -50,7 +50,7 @@ public class IceTower extends Tower{
      * @param b the balloon to freeze
      */
     public void freeze(Balloon b){
-        b.setSpeed(0);
+       b.setSpeed(0);
     }
 
     /**  
@@ -59,9 +59,9 @@ public class IceTower extends Tower{
      */ 
     @Override   
     public void attackBallon(Balloon balloon){ //devrait prendre un autre param pour le temp courant
-       if(isInRange(balloon) && canAttack(0)){ 
-         freeze(balloon); 
-         updateLastAttackTime(0);
+       if(Inrange(balloon) && canAttack(0)){ 
+          freeze(balloon); 
+          updateLastAttackTime(0);
        }
     }
 }
