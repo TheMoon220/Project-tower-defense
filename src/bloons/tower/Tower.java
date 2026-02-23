@@ -14,24 +14,25 @@ public abstract class Tower {
     protected Effect effect ; // the effect when a balloon is hit
     protected Position position ; // the position of the tower
     protected double cadence ; // the cadence of the tower
-    protected double coast;
     
     protected  List<Balloon> balloons ;
     protected  Map<Balloon,Double > balloonsInRange ;
-    public  double RANGE =60 *range ;
+    public double RANGE = range /60; //Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60)
      
     /** tower building
-     * @param coast the coast of tower
+     * @param cost the coast of tower
      * @param range the range of tower 
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      */
-    public Tower(double cost ,double range ,Effect effect ,double cadence){
+    public Tower(double cost ,double range ,Effect effect ,double cadence,Position position){
         this.cost=cost ;
         this.range=range ;
         this.effect =effect ;
         this.cadence=cadence ;
-        this.balloonsInRange=new HashMap<>();}
+        this.balloonsInRange=new HashMap<>();
+        this.position=position;
+    }
 
     /**
      * allow to get the tower effect
@@ -39,10 +40,8 @@ public abstract class Tower {
      */
     public Effect getEffect(){
       return this.effect ;
-    
     }
     
-
     /**
      * get the cadence
      * @return cadence
@@ -60,8 +59,9 @@ public abstract class Tower {
 
     /**
     * to set the range of the tower during the evolution
+    * @return the range
     */
-    public     double getRange(){
+    public double getRange(){
       return this.range ;
     }
   
@@ -85,28 +85,24 @@ public abstract class Tower {
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
      * @param ballon the ballon that can be attacckek by the tower
      */
-    public double getCoast(){
-      return this.coast ;
-    }
-
-    /**
-     * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
-     * @param ballon the ballon that can be attacckek by the tower
-     */
     public abstract void attackBallon(Balloon ballon) throws InterruptedException;
 
 
     /**
      * chech if the distance between the ballon  and the tower position is equal to the distance of the range
-     * @param B
-     * @return
+     * @param B the balloon
+     * @return true if is in range otherwise false
      */
     public boolean Inrange(Balloon B){
       double dx=B.getPosition().getX()-position.getX();
       double dy=B.getPosition().getY()-position.getY();
-      return   Math.sqrt((dx*dx +dy*dy))<=RANGE;
+      return Math.sqrt((dx*dx +dy*dy))<=RANGE;
     }
 
+    /**
+     * an methode for calculate dhe distance between the balloon and the tower
+     * @return the distance
+     */
     protected double calculDistance(Balloon B){
       double dx=B.getPosition().getX()-position.getX();
       double dy=B.getPosition().getY()-position.getY();
@@ -125,14 +121,12 @@ public abstract class Tower {
      * allow to get all balloons in the tower range
     */  
     public void getAllBalloonsInRange(){
-          for(Balloon b :balloons){
-            double d =  calculDistance(b);
-              if (this.Inrange(b)){
-                  balloonsInRange.put(b, d);
-              }
-          }
-
+      for(Balloon b :balloons){
+        double d =  calculDistance(b);
+        if (this.Inrange(b)){
+          balloonsInRange.put(b, d);
+        }
+      }
     }
-
 }
     
