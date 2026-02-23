@@ -6,7 +6,6 @@ import bloons.utils.*;
 
 /** the object Bomb tower, the tower that sends bombs */
 public class BombTower extends ProjectileTower {
-    private long timeLastAttack;
     
      /** 
      * the constructor of the class Tower
@@ -17,32 +16,6 @@ public class BombTower extends ProjectileTower {
      */
     public BombTower(double cost ,double range ,Effect effect ,double cadence,Position position, Projectile projectile){
        super(cost, range, effect, cadence,position, projectile);
-       this.timeLastAttack = 0;
-    }
-
-    /**
-     * get the last shot
-     * @return timeLastAttack
-     */
-    public long getTimeLastAttack(){
-      return this.timeLastAttack;
-    }
-
-    /** 
-     * check if the tower can attack
-     * @param currTime the current time
-     * @return true when can attack otherwise false
-     */
-    private boolean canAttack(long currTime){
-        return currTime - this.timeLastAttack >= this.cadence;
-    }
-
-    /**
-     * update the last time attack
-     * @param currTime
-     */
-    public void updateLastAttackTime(long currTime){
-       this.timeLastAttack = currTime;
     }
 
     /**  
