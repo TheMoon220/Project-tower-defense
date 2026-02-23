@@ -58,10 +58,11 @@ public class IceTower extends Tower{
      * @param balloon the ice balloon 
      */ 
     @Override   
-    public void attackBallon(Balloon balloon){ //devrait prendre un autre param pour le temp courant
-       if(Inrange(balloon) && canAttack(0)){ 
+    public void attackBallon(Balloon balloon){ 
+       long currTime = System.currentTimeMillis();
+       if(Inrange(balloon) && canAttack(currTime)){ 
           freeze(balloon); 
-          updateLastAttackTime(0);
+          updateLastAttackTime(currTime);
        }
     }
 }
