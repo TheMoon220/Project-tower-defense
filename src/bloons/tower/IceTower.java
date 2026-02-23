@@ -1,5 +1,6 @@
 package bloons.tower;
 
+import bloons.Position;
 import bloons.balloon.*;
 import bloons.utils.*;
 
@@ -15,8 +16,8 @@ public class IceTower extends Tower{
      * @param cadence the tower's cadence
      * @param timeLastAttack store last shot
      */
-    public IceTower(double cost ,double range ,Effect effect ,double cadence){
-        super(cost,range,effect,cadence);
+    public IceTower(double cost ,double range ,Effect effect ,double cadence,Position position){
+        super(cost,range,effect,cadence,position);
         this.timeLastAttack = 0;
     }
 

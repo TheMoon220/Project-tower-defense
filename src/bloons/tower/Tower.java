@@ -25,12 +25,13 @@ public abstract class Tower {
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      */
-    public Tower(double cost ,double range ,Effect effect ,double cadence){
+    public Tower(double cost ,double range ,Effect effect ,double cadence,Position position){
         this.cost=cost ;
         this.range=range ;
         this.effect =effect ;
         this.cadence=cadence ;
         this.balloonsInRange=new HashMap<>();
+        this.position=position;
     }
 
     /**

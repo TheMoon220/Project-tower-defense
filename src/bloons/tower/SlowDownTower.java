@@ -1,5 +1,6 @@
 package bloons.tower;
 
+import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Effect;
 
@@ -12,8 +13,8 @@ public class SlowDownTower extends Tower {
      * @param cadence the cadence of tower
      * @param projectile the projectile of tower
      */
-    public SlowDownTower(double cost ,double range ,Effect effect ,double cadence){
-        super(cost, range, effect, cadence);
+    public SlowDownTower(double cost ,double range ,Effect effect ,double cadence,Position position){
+        super(cost, range, effect, cadence,position);
     }
 
     /**

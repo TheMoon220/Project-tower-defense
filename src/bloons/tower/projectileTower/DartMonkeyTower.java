@@ -1,4 +1,5 @@
 package bloons.tower.projectileTower;
+import bloons.Position;
 import bloons.balloon.*;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
@@ -12,8 +13,8 @@ public class DartMonkeyTower extends ProjectileTower {
      * @param cadence the cadence of tower
      * @param projectile the projectile of tower
      */
-    public DartMonkeyTower(double coast ,double range ,Effect effect ,double cadence,Projectile projectile){
-        super(coast, range, effect, cadence, projectile);
+    public DartMonkeyTower(double coast ,double range ,Effect effect ,double cadence,Position position,Projectile projectile){
+        super(coast, range, effect, cadence,position, projectile);
     }
 
     /** first the min of all balloonsiRrange is calulated and this one is the balloons to attack
