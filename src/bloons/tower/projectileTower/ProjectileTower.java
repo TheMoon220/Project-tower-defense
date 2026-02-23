@@ -22,13 +22,21 @@ public class ProjectileTower extends Tower{
         this.projectile=projectile;
     }
     
-    /**
-     * a method for attack a balloon 
-     * @param ballon the ballon to attack
-     */
-    @Override
-    public void attackBallon(Balloon ballon) throws InterruptedException {
-      
+    /** first the min of all balloonsiRrange is calulated and this one is the balloons to attack
+     * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
+     * @param ballon the ballon that can be attacckek by the tower
+     * @throws InterruptedException 
+    */
+    public void attackBallon (Balloon balloon,long time) throws InterruptedException{
+        if(balloon.getHealth()<this.projectile.getNiveauDegat()){
+            balloons.remove(balloon);
+        }
+        if (canAttack(time)){
+            balloon.setHealth();
+
+        }
+        
+        
     }
 
     /** return tower's projectile

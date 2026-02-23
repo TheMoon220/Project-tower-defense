@@ -27,7 +27,7 @@ public class DartMonkeyTower extends ProjectileTower {
             balloons.remove(balloon);
         }
         if (canAttack(time)){
-            balloon.setHealth(this.projectile.getNiveauDegat());
+            balloon.setHealth();
 
         }
         
