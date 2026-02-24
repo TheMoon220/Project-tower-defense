@@ -146,6 +146,7 @@ public abstract class Board {
     public List<Balloon> getAllballoons() {
         return Allballoons;
     }
+
     /**
      * generate two random towers of each Towers
      * @return a list of towers
@@ -173,5 +174,15 @@ public abstract class Board {
        }
        
        return towers;
+   }
+
+   /**
+    * show how the towers attack the balloons on the board
+    * @param towers the tower
+    * @param tmp the current time
+    * @throws InterruptedException an exception when the tmp don't match
+    */
+   public void processTowers(List<Tower> towers, long tmp) throws InterruptedException {
+      //TO DO
    }
 }
