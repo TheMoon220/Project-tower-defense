@@ -1,6 +1,6 @@
 package bloons.tower.projectileTower;
+
 import bloons.Position;
-import bloons.balloon.*;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 
@@ -16,10 +16,4 @@ public class DartMonkeyTower extends ProjectileTower {
     public DartMonkeyTower(double coast ,double range ,Effect effect ,double cadence,Position position,Projectile projectile){
         super(coast, range, effect, cadence,position, projectile);
     }
-
-    
-
-    
-    
-
 }
