@@ -21,8 +21,12 @@ public class SlowDownTower extends Tower {
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
      * @param ballon the ballon that can be attacckek by the tower
      */
-    public void attackBallon (Balloon balloon){
-        balloon.setHealth();
+    @Override
+    public void attackBallon (Balloon balloon, long currTime){
+        if(Inrange(balloon) && canAttack(currTime)){
+          double newSpeed = balloon.getSpeed() * 0.5; 
+          balloon.setSpeed(newSpeed);
+          updateLastAttackTime(currTime);
+        }
     }
-
 }
