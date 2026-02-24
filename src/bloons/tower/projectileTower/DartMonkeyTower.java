@@ -18,6 +18,7 @@ public class DartMonkeyTower extends ProjectileTower {
         super(coast, range, effect, cadence,position, projectile);
     }
 
+<<<<<<< HEAD
     /** first the min of all balloonsiRrange is calulated and this one is the balloons to attack
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
      * @param ballon the ballon that can be attacckek by the tower
@@ -27,4 +28,17 @@ public class DartMonkeyTower extends ProjectileTower {
     public void attackBallon (Balloon balloon,long time) throws InterruptedException{
         super.attackBallon(balloon, time);
     }
+=======
+    
+
+    /**
+     * allow to change the current projectile by a new projectile
+     * @param newProjectile the new projectile that replacing projectile
+     */
+    public void setProjectile(Projectile newProjectile){
+        this.projectile =newProjectile ;
+    }
+    
+
+>>>>>>> ef74c77 (Mis a jou)
 }
