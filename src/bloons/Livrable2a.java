@@ -75,7 +75,7 @@ public class Livrable2a {
 
         System.out.println("\n=== All balloons finished ===");
         System.out.println("Total simulation time: " +(System.nanoTime()-start)/1000000);
-        System.out.println("Total simulation time: " +time);
+        
 
      }
 } 
