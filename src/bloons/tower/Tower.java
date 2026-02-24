@@ -134,7 +134,7 @@ public abstract class Tower {
      * update the last time attack
      * @param currTime
      */
-    public void updateLastAttackTime(long currTime){
+    protected void updateLastAttackTime(long currTime){
       this.timeLastAttack = currTime;
     }
 
