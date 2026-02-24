@@ -1,12 +1,13 @@
 package bloons.board;
 
-import java.util.ArrayList;
-import java.util.List;
 import  bloons.utils.*;
 
 import bloons.*;
 import bloons.balloon.Balloon;
-import bloons.tower.Tower;
+import bloons.tower.*;
+import bloons.tower.projectileTower.*;
+
+import java.util.*;
 
 /** the object Board an abstract class for our game */
 public abstract class Board {
@@ -151,10 +152,26 @@ public abstract class Board {
      */
    public List<Tower> generateRandomTowers(){
        List<Tower> towers = new ArrayList<>();
+       Random rand = new Random();
+       
+       for (int i = 0; i < 2; i++){
+          Position pos1 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
+          Position pos2 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
+          Position pos3 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
+          Position pos4 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
+          Position pos5 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
+          Position pos6 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
+          Position pos7 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
 
-       //TO DO
-
+          towers.add(new IceTower(400,100,Effect.IMMEDIAT,1500,pos1));
+          towers.add(new SlowDownTower(500,100,Effect.IMMEDIAT,1500,pos2));
+          towers.add(new BombTower(600,150,Effect.DISTANCE,1800,pos3,Projectile.BOMB));
+          towers.add(new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos4, Projectile.DART));
+          towers.add(new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, pos5, Projectile.POINTEDDART));
+          towers.add(new SuperMonkeyTower(1200, 200, Effect.IMMEDIAT, 300, pos6, Projectile.VERYSHARPDART));
+          towers.add(new TackShooterTower(350, 80, Effect.IMMEDIAT, 1200, pos7, Projectile.NEEDLE));
+       }
+       
        return towers;
    }
 }
-
