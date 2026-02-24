@@ -2,6 +2,7 @@ package bloons.board;
 
 import bloons.*;
 import bloons.balloon.Balloon;
+import bloons.tower.Tower;
 import bloons.utils.Direction;
 import bloons.utils.Level;
 import java.util.*;
@@ -85,5 +86,16 @@ public class ClassicalBoard extends Board {
       Balloon balloon = new Balloon(this.path.get(0),level);
       balloon.setTrajectory(path);
       return balloon;
+   }
+
+   /**
+     * generate two random towers of each Towers
+     * @return a list of towers
+   */
+   @Override
+   public List<Tower> generateRandomPositionTowers(){
+      List<Tower> towers = new ArrayList<>();
+      //TO DO
+      return towers;
    }
 }
