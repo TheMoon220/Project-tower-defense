@@ -146,9 +146,15 @@ public abstract class Board {
         return Allballoons;
     }
     /**
-     * allow to buil an tower on the board and depanding one the type of the board the position that we can buil the tower is differente
-     * @param tower
+     * generate two random towers of each Towers
+     * @return a list of towers
      */
-   // public abstract void buildTower(Tower tower);
+   public List<Tower> generateRandomTowers(){
+       List<Tower> towers = new ArrayList<>();
+
+       //TO DO
+
+       return towers;
+   }
 }
 
