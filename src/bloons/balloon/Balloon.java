@@ -63,11 +63,8 @@ public class Balloon {
      * set the health with the health in param
      * @param health the health 
      */
-    public void setHealth(int n) {
-        if (this.health>0){
-            this.health -= n; 
-        }
-        
+    public void setHealth(int newHealth) {
+        this.health = newHealth;
     }
 
     /** check if the balloon is destroy 
