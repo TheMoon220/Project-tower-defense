@@ -51,18 +51,22 @@ private Balloon bal1;
        @Test 
        
        public void testBalloonInRange(){
-        AssertTrue(t1.balloonsInRange(bal3));
-        AssertFalse(t1.balloonsInRange(bal2));
-        AssertTrue(t3.balloonsInRange(bal2));
+        AssertTrue(t1.Inrange(bal3));
+        AssertFalse(t1.Inrange(bal2));
+        AssertTrue(t3.Inrange(bal2));
 
 
 
 
        }
       public void testCanAttack(){
+      AssertTrue(t1.canAttack((System.nanoTime())));
+      
 
       }
       public void aTTackBalloonDarkMonkeyTower(){
+        t1.attack(bal1);
+        Thread.wait(t1.getCadence());
 
       }
        public void aTTackBalloonIceTower(){
