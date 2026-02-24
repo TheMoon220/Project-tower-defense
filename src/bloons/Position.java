@@ -62,9 +62,19 @@ public class Position {
 
     /**
      * an methode for the hashcode
+     * @return the hash
      */
     @Override
     public int hashCode() {
       return Objects.hash(this.x, this.y);
+    }
+
+    /** 
+     * a descrition for the position
+     * @return string chain
+     */
+    @Override
+    public String toString() {
+      return "(" + (int)this.x + ", " + (int)this.y + ")";
     }
 }
