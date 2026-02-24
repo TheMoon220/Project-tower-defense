@@ -67,9 +67,15 @@ private Balloon bal1;
       public void aTTackBalloonDarkMonkeyTower(){
         t1.attack(bal1);
         Thread.wait(t1.getCadence());
+        t1.attackBallon(bal1,System.nanoTime());
+        AssertEquals(0,bal1.getHealth());
 
       }
        public void aTTackBalloonIceTower(){
+        t1.attack(bal1);
+        Thread.wait(t1.getCadence());
+        t1.attackBallon(bal1,System.nanoTime());
+        AssertEquals(0,bal1.getHealth());
 
       }
 
