@@ -4,6 +4,8 @@ import bloons.Position;
 import bloons.balloon.*;
 import bloons.utils.*;
 
+import java.util.*;
+
 /** the object Bomb tower, the tower that sends bombs */
 public class BombTower extends ProjectileTower {
     
@@ -19,11 +21,26 @@ public class BombTower extends ProjectileTower {
     }
 
     /**  
-     * attack all the balloons within the tower's range and freeze them
-     * @param balloon the ice balloon 
+     * attack the most advanced balloon in range and a random balloon nearby
+     * @param balloon the balloon 
+     * @param currTime the current TIme
     */ 
     @Override
     public void attackBallon(Balloon balloon, long currTime) throws InterruptedException{
-        super.attackBallon(balloon, currTime);
+        if(canAttack(currTime) && Inrange(balloon)){
+            super.attackBallon(balloon,currTime);
+
+            this.getAllBalloonsInRange();
+            this.balloonsInRange.remove(balloon);
+            if(!this.balloonsInRange.isEmpty()){
+               int size =this.balloonsInRange.size();
+               Balloon bal = this.balloonsInRange.get(new Random().nextInt(size));
+               int newHealth = bal.getHealth() - this.projectile.getNiveauDegat();
+               bal.setHealth(newHealth);
+
+               if (newHealth <= 0) 
+                  balloons.remove(bal);
+            }
+        }
     }
 }
