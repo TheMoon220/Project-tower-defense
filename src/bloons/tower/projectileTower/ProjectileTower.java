@@ -46,4 +46,12 @@ public class ProjectileTower extends Tower{
     public Projectile getProjectil(){
         return this.projectile;
     }
+
+    /**
+     * allow to change the current projectile by a new projectile
+     * @param newProjectile the new projectile that replacing projectile
+     */
+    public void setProjectile(Projectile newProjectile){
+        this.projectile =newProjectile ;
+    }
 }
