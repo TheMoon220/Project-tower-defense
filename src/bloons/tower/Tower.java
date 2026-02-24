@@ -162,4 +162,13 @@ public abstract class Tower {
     public List<Balloon> getBalloonsInRange() {
       return this.balloonsInRange;
     }
+
+    /**
+     * a description for each tower with his position on the board
+     * @return a string 
+     */
+    @Override
+    public String toString() {
+      return this.getClass().getSimpleName() + " at " + this.position;
+    }
 }
