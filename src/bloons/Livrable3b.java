@@ -9,13 +9,11 @@ public class Livrable3b {
             return;
         }
 
-        int width;
-        int height;
-        int nbBalloons;
         try{
-            width = Integer.parseInt(args[0]);
-            height = Integer.parseInt(args[1]);
-            nbBalloons = Integer.parseInt(args[2]);
+
+            int width = Integer.parseInt(args[0]);
+            int height = Integer.parseInt(args[1]);
+            int numPaths = Integer.parseInt(args[2]);
         } catch(NumberFormatException e){
             System.out.println("Les arguments doivent etre des entiers");
             return;
