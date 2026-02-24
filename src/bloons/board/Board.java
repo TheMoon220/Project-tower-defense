@@ -149,6 +149,6 @@ public abstract class Board {
      * allow to buil an tower on the board and depanding one the type of the board the position that we can buil the tower is differente
      * @param tower
      */
-    public abstract void buildTower(Tower tower);
+   // public abstract void buildTower(Tower tower);
 }
 
