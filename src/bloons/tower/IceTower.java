@@ -6,6 +6,7 @@ import bloons.utils.*;
 
 /** the tower that freezes balloons */
 public class IceTower extends Tower{
+    private double reelSpeed = -1; // an variable for the speed
     /** 
      * the constructor of the class Tower
      * @param cost the tower's price
@@ -29,12 +30,18 @@ public class IceTower extends Tower{
     /**  
      * attack all the balloons within the tower's range and freeze them
      * @param balloon the ice balloon 
+     * @param currTime the current time
      */ 
     @Override   
     public void attackBallon(Balloon balloon, long currTime){ 
        if(Inrange(balloon) && canAttack(currTime)){ 
-          freeze(balloon); 
-          updateLastAttackTime(currTime);
+         if(this.reelSpeed == -1)
+            this.reelSpeed = balloon.getSpeed();
+         freeze(balloon); 
+         updateLastAttackTime(currTime);
+       }else if(!Inrange(balloon) && reelSpeed != - 1){
+         balloon.setSpeed(this.reelSpeed);
+         this.reelSpeed = -1;
        }
     }
 }
