@@ -106,9 +106,9 @@ public class RandomBoard extends Board {
     * Create a balloon for a specific path
     * @param pathIndex 
     * @param level the level of the balloon
- 
     * @return a balloon
     */
+   @Override
    public Balloon createBalloonForPath(int pathIndex, Level level){
      List<Position> path = this.getPathAt(pathIndex);
      List<Position> pathcopy = new ArrayList<>();
@@ -119,6 +119,14 @@ public class RandomBoard extends Board {
      balloon.setTrajectory(pathcopy);
      return balloon;
    }
+
+   /**
+    * get all paths
+    * @return all paths
+    */
+    public List<List<Position>> getAllPath(){
+      return this.allPaths;
+    }
 
    /**
     * Display board with balloons
