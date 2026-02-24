@@ -321,14 +321,16 @@ Création de différentes classes tours ainsi que deux programmes principaux (ma
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+l'objectif est de finaliser le livrable avant le délai imparti, pour ce faire voilà comment
+les taches ont été partagées.
 
-**Mariama Séré Sylla**: 
+**Mariama Séré Sylla**: Elle donne l'implémentation de la ou des méthodes nécessaires dans l'un des plateaux afin qu'une tour soit construite, elle fait également un mainLivrable entre les deux mains. En plus de finalisé le diagramme UML.
 
-**Farmata Sall Sow**:
+**Farmata Sall Sow**: Elle doit fournir la classe abstraite **Tower** ainsi que les méthodes abstraites pour les autres tours héritantes et elle fournit également les méthodes de tests pour l'ensmble des méthodes publiques du package.
 
-**Khadim Beye**:
+**Khadim Beye**: Doit fournir plusieurs classes (ProjectileTower, SniperMonkeyTower, SuperMonkeyTower, TackShooterTower, DartMonkeyTower), il s'assure de corriger des erreurs si besoin aux différents algorithmes implémentés par les autres membres du groupe. 
 
-**Mamadou Baïllo Sow**
+**Mamadou Baïllo Sow**: Doit fournir différentes classes du package tour (IceTower, SlowDownTower, BombeTower), il s'assure de corriger des erreurs si besoin aux différents algorithmes implémentés par les autres membres du groupe. Ainsi qu'un des mainLivrable !
 
 ## Semaine 7
 
