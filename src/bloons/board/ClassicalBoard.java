@@ -79,6 +79,7 @@ public class ClassicalBoard extends Board {
     * @param level the level of the balloon
     * @return a balloon
     */
+   @Override
    public Balloon createBalloonForPath(int pathIndex, Level level){
 
       Balloon balloon = new Balloon(this.path.get(0),level);
