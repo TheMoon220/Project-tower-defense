@@ -154,4 +154,12 @@ public abstract class Tower {
     public boolean canAttack(long currTime){
       return currTime - this.timeLastAttack >= this.cadence;
     }
+
+    /**
+     * get the balloons around the range of the tower
+     * @return balloons in range
+     */
+    public List<Balloon> getBalloonsInRange() {
+      return this.balloonsInRange;
+    }
 }
