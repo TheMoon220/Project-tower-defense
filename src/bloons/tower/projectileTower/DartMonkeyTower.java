@@ -1,4 +1,5 @@
 package bloons.tower.projectileTower;
+
 import bloons.Position;
 import bloons.balloon.*;
 import bloons.utils.Effect;
@@ -22,25 +23,8 @@ public class DartMonkeyTower extends ProjectileTower {
      * @param ballon the ballon that can be attacckek by the tower
      * @throws InterruptedException 
     */
+   @Override
     public void attackBallon (Balloon balloon,long time) throws InterruptedException{
-        if(balloon.getHealth()<this.projectile.getNiveauDegat()){
-            balloons.remove(balloon);
-        }
-        if (canAttack(time)){
-            balloon.setHealth();
-
-        }
-        
-        
+        super.attackBallon(balloon, time);
     }
-
-    /**
-     * allow to change the current projectile by a new projectile
-     * @param newProjectile the new projectile that replacing projectile
-     */
-    public void setProjectile(Projectile newProjectile){
-        this.projectile =newProjectile ;
-    }
-    
-
 }
