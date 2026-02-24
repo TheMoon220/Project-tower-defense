@@ -96,9 +96,7 @@ public abstract class Tower {
      * @return true if is in range otherwise false
      */
     public boolean Inrange(Balloon B){
-      double dx=B.getPosition().getX()-position.getX();
-      double dy=B.getPosition().getY()-position.getY();
-      return Math.sqrt((dx*dx +dy*dy))<=RANGE;
+      return calculDistance(B)<=RANGE;
     }
 
     /**
