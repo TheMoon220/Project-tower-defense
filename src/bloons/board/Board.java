@@ -98,7 +98,7 @@ public abstract class Board {
     public Cell getCell(Position p) throws IndexOutOfBoundsException{  // j'ai ecrit cette fonction pour recuper la cellule a une position donnee
         int x=(int) p.getX();//je l'ai cate en int pour tester
         int y= (int) p.getY();
-        if( x<0||x>=grid.length ||  y<0 || y>grid[0].length){
+        if( x<0||x>=grid.length ||  y<0 || y>=grid[0].length){
             throw new IndexOutOfBoundsException("the position is incorect");
         }
         return this.grid[x][y];
