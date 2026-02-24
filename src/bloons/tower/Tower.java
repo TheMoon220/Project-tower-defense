@@ -155,4 +155,3 @@ public abstract class Tower {
       return currTime - this.timeLastAttack >= this.cadence;
     }
 }
-    
