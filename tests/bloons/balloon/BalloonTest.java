@@ -1,4 +1,4 @@
-package bloons;
+package bloons.balloon;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.*;
 
+import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Level;
 
