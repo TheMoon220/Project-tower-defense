@@ -231,9 +231,9 @@ java -jar livrable3a.jar arg1 arg2 arg3
 java -jar livrable3b.jar arg1 arg2 arg3
 ```
 **Générer la documentation**
-
 ```bash
 make docs
+```
 ### Difficultés restant à résoudre
 
 ## Livrable 4
