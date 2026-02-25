@@ -96,7 +96,7 @@ public class Balloon {
      *  Moves the balloon to the next cell 
      */
     public void checkNextCell(){
-        while (progress >= 1.0 && currentCellIndex < path.size()) {
+        while (progress >= 1.0 && currentCellIndex < path.size() - 1) {
             progress -= 1.0;  // on remet le progress à 0 pour dire qu'il est dans une nouvelle cellule 
             currentCellIndex++;
         } 
@@ -127,7 +127,7 @@ public class Balloon {
         } 
         progress += speed;
         // Passage at the  next cell if progress >= 1
-        checkNextCell();;
+        checkNextCell();
         // Calcul de la position réelle entre la cellule actuelle et la suivante
         updateBalloonPosition();
     }
