@@ -96,7 +96,7 @@ public abstract class Tower {
      * @return true if is in range otherwise false
      */
     public boolean Inrange(Balloon B){
-      return calculDistance(B)<=this.range;
+      return calculDistance(B)<=this.range/RANGE;
     }
 
     /**
