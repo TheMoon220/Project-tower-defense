@@ -25,7 +25,7 @@ Un lien vers une image de l'UML doit être fourni (une photo d'un diagramme UML 
 
 ## Livrable 1
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/uml.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/umllivrable1.pdf)
 
 Le premier livrable une nouvelle branche **livrable1** a été créée. Avec une approche objet pour ce projet, les concepts utilisés sont entre autres l'encapsulation, des exceptions pour quand des valeurs négatives sont saisies ou qu'une position donnée n'est dans le plateau et l'héritage notamment une classe abstraite **Board** qui concentre toutes les méthodes communes aux deux plateaux **ClassicalBoard** et **RandomBoard**. En plus d'une certaine méthode abstraite qui sont définit dans les deux classes correspondantes aux deux plateaux, puisque chacun des plateaux a des choses en plus que l'autre n'a pas c'est-à-dire dans le **ClassicalBoard** un chemin est défini d'avance selon les critères du sujet où les ballons suivront ce chemin definit jusqu'à la sortie et aucune tour ne sera posée sur les cellules traversées par ce chemin. le second plateau le **RandomBoard** est différent, chaque ballon définit sa trajectoire suivant où il est positionné au départ, de ce fait aucun chemin n'est definit d'avance car ce chemin dépendra du ballon (donc le prochain livrable) selon le sujet vue que potentiellement pour ce jeu tout le plateau est un chemin c'est-à-dire chaque cellule peut être traversée par un chemin suivant le ballon sans compter qu'elle peut contenir à la fois un ballon et une tour.
 
@@ -98,7 +98,7 @@ java -jar mainLivrable1.jar
 
 ## Livrable 2
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/uml2.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/umllivrable2.pdf)
 
 Une nouvelle branche **livrable2** a été créée. Pour ce livrable l'objectif principal est: assurer la création d'un ballon avec la classe **Balloon**, de faire deplacer ce ballon sur un chemin, générer une vitesse aléatoire pour chaque ballon.
 
@@ -166,7 +166,7 @@ make docs
 
 ## Livrable 3
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/uml3.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/umlLivrable3.pdf)
 
 Une nouvelle branche **livrable3** a été créée.
 Pour ce livrable l'objectif principal est: assurer la création des types de   **tours**  et la gestion de des tirs et l'integration dansla gestion de temps.
