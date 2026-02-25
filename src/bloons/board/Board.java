@@ -1,11 +1,9 @@
 package bloons.board;
 
-import  bloons.utils.*;
-
-import bloons.*;
+import  bloons.*;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
-
+import bloons.utils.*;
 import java.util.*;
 
 /** the object Board an abstract class for our game */
@@ -147,7 +145,7 @@ public abstract class Board {
     }
 
     /**
-     * generate two random towers of each Towers
+     * generate two random towers of each type of Towers
      * @return a list of towers
      */
     public abstract List<Tower> generateRandomPositionTowers();
