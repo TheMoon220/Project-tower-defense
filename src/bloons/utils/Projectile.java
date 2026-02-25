@@ -39,7 +39,3 @@ public enum  Projectile{
         this.niveauDegat= newNiveauDegat;
     }
 }
-
-
-
-
