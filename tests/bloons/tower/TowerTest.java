@@ -37,16 +37,26 @@ private Balloon bal1;
     @BeforeEach
      public void Before(){
    
-       pos1 = new Position(4, 4);
-       pos2 = new Position(4, 0);
+       pos1 = new Position(2, 4);
+       pos2 = new Position(2, 0);
+       ballons.add(bal1);
+       ballons.add(bal2);
+       ballons.add(bal3);
+       
+
+
+
 
            
-            bal1 = new Balloon(new Position(3, 3),Level.NIV1 );
+            bal1 = new Balloon(new Position(3, 3),Level.NIV2 );
             bal2 = new Balloon(new Position(2, 0),Level.NIV2 );
             bal3 = new Balloon(new Position(1, 2),Level.NIV2 );
 
             t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos1, Projectile.DART);
             t2=new IceTower(400,100,Effect.IMMEDIAT,1500,pos2);
+            t1.addBalloons(ballons);
+       t2.addBalloons(ballons);
+       
         }
        @Test 
        
@@ -56,18 +66,21 @@ private Balloon bal1;
         assertTrue(t2.Inrange(bal2));
 
        }
+       @Test
         public void testCanAttack(){
       assertTrue(t1.canAttack((System.currentTimeMillis())));
       assertTrue(t2.canAttack((System.currentTimeMillis())));
       
 
      }
-     /* 
+     
       @Test
       public void aTTackBalloonDarkMonkeyTower() throws InterruptedException{
         t1.attackBallon(bal1,System.currentTimeMillis());
         Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.currentTimeMillis());
+
+        
         assertEquals(0,bal1.getHealth());
 
       }
@@ -77,7 +90,7 @@ private Balloon bal1;
          Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.currentTimeMillis());
         assertEquals(0,bal1.getHealth());
-         Thread.sleep((long) t1.getCadence());
+         Thread.sleep((long) t1.getCadence()-200);
         assertFalse(t1.canAttack(System.currentTimeMillis()));
 
       }
@@ -96,7 +109,7 @@ private Balloon bal1;
         t2.attackBallon(bal2,System.currentTimeMillis());
        
         
-         Thread.sleep((long) t2.getCadence());
+         Thread.sleep((long) t2.getCadence()-100);
         assertFalse(t2.canAttack(System.currentTimeMillis()));
 
       }
@@ -109,6 +122,6 @@ private Balloon bal1;
         assertEquals(0,bal2.getSpeed());
 
       }
-    */
+    
     }
 
