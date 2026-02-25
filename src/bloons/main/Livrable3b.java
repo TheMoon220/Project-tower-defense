@@ -20,7 +20,7 @@ public class Livrable3b {
            int height = Integer.parseInt(args[1]);
            int numPaths = Integer.parseInt(args[2]);
 
-           System.out.println("=== Livrable 2b: Random Board ===");
+           System.out.println("=== Livrable 3b: Random Board ===");
            System.out.println("Board size: " + width + "x" + height);
            System.out.println("Number of paths: " + numPaths);
            System.out.println();
