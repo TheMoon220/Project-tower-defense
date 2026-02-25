@@ -326,7 +326,7 @@ les taches ont été partagées.
 
 **Mariama Séré Sylla**: Elle donne l'implémentation de la ou des méthodes nécessaires dans l'un des plateaux afin qu'une tour soit construite, elle fait également un mainLivrable entre les deux mains. En plus de finalisé le diagramme UML.
 
-**Farmata Sall Sow**: Elle doit fournir la classe abstraite **Tower** ainsi que les méthodes abstraites pour les autres tours héritantes et elle fournit également les méthodes de tests pour l'ensmble des méthodes publiques du package.
+**Farmata Sall Sow**: Elle doit fournir la classe abstraite **Tower** et de DartMonkeyTower ainsi que les méthodes abstraites pour les autres tours héritantes et elle fournit également les méthodes de tests pour l'ensmble des méthodes publiques du package.
 
 **Khadim Beye**: Doit fournir plusieurs classes (ProjectileTower, SniperMonkeyTower, SuperMonkeyTower, TackShooterTower, DartMonkeyTower), il s'assure de corriger des erreurs si besoin aux différents algorithmes implémentés par les autres membres du groupe. 
 
