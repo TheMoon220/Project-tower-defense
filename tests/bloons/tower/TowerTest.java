@@ -37,12 +37,12 @@ private Balloon bal1;
     @BeforeEach
      public void Before(){
    
-       pos1 = new Position(rand.nextInt(6), rand.nextInt(6));
-       pos2 = new Position(rand.nextInt(6), rand.nextInt(6));
+       pos1 = new Position(1, 4);
+       pos2 = new Position(4, 4);
 
            
             bal1 = new Balloon(new Position(3, 3),Level.NIV1 );
-            bal2 = new Balloon(new Position(0, 0),Level.NIV2 );
+            bal2 = new Balloon(new Position(2, 0),Level.NIV2 );
             bal3 = new Balloon(new Position(1, 2),Level.NIV2 );
 
             t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos1, Projectile.DART);
@@ -55,12 +55,10 @@ private Balloon bal1;
         AssertFalse(t1.Inrange(bal2));
         AssertTrue(t3.Inrange(bal2));
 
-
-
-
        }
       public void testCanAttack(){
       AssertTrue(t1.canAttack((System.nanoTime())));
+      AssertTrue(t2.canAttack((System.nanoTime())));
       
 
       }
@@ -69,13 +67,18 @@ private Balloon bal1;
         Thread.wait(t1.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
+        Thread.wait(t1.getCadence());
+        AssertFalse(t1.canAttack());
 
       }
+
        public void aTTackBalloonIceTower(){
         t1.attack(bal1);
         Thread.wait(t1.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
+        Thread.wait(t1.getCadence());
+        AssertFalse(t1.canAttack());
 
       }
 
