@@ -2,9 +2,9 @@ package bloons.board;
 
 import bloons.*;
 import bloons.balloon.Balloon;
-import bloons.tower.Tower;
-import bloons.utils.Direction;
-import bloons.utils.Level;
+import bloons.tower.*;
+import bloons.tower.projectileTower.*;
+import bloons.utils.*;
 import java.util.*;
 
 /** the object ClassicalBoard for the board with a defnine path */
