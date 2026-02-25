@@ -1,21 +1,14 @@
 package bloons.main;
-<<<<<<< HEAD
+
 import bloons.balloon.Balloon;
 import bloons.board.*;
 import bloons.tower.*;
-
-import java.util.*;
-=======
-
 import java.util.ArrayList;
 import java.util.List;
-import bloons.balloon.Balloon;
-import bloons.board.*;
-import bloons.tower.*;
->>>>>>> 1239c74487959847a0dc42652e49098f794a7069
+
 
 public class Livrable3a {
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
 
         if(args.length != 3){
             System.out.println("Exactly tree arguments are required");
@@ -83,8 +76,5 @@ public class Livrable3a {
 
         System.out.println("\n=== All balloons finished ===");
         System.out.println("Total simulation time: " +(System.nanoTime()-start)/1000000);
-        
-
      }
 } 
-    

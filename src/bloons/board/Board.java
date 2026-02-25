@@ -1,11 +1,9 @@
 package bloons.board;
 
-import  bloons.utils.*;
-
-import bloons.*;
+import  bloons.*;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
-
+import bloons.utils.*;
 import java.util.*;
 
 /** the object Board an abstract class for our game */
