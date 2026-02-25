@@ -1,14 +1,9 @@
 package bloons.main;
-
-import java.util.ArrayList;
-import java.util.List;
-import bloons.balloon.*;
 import bloons.balloon.Balloon;
 import bloons.board.*;
 import bloons.tower.*;
-import bloons.utils.*;
-import bloons.board.*;
-import bloons.*;
+
+import java.util.*;
 
 public class Livrable3a {
     public static void main(String[] args){
@@ -47,18 +42,16 @@ public class Livrable3a {
            } 
 
         System.out.println("\n=== run simulation");
-        long time = 0;
         long deltaTime = 100;
         long start =System.nanoTime();
-        while(!balloons.isEmpty()){
-            System.out.println();
-            System.out.println("time: " + time);
-            for(int i = 0; i < balloons.size(); i++){
-                Balloon b = balloons.get(i);
-               
-            }
-            System.out.println();
 
+        while(!balloons.isEmpty()){
+            long currentTime = (System.nanoTime()-start)/1000000;
+            System.out.println();
+            System.out.println("time: " + currentTime + " ms");
+            //tours attaquent
+            board.processTowers(towers, currentTime);
+            //deplacement des ballons
             List<Balloon> toRemove = new ArrayList<>();
             for(int i = 0; i < balloons.size(); i++){
                 Balloon balloon = balloons.get(i);
@@ -69,13 +62,13 @@ public class Livrable3a {
                     String.format("%.2f", balloon.getPosition().getY()) + ")"
                 );
                 if(balloon.checkEndOfPath()){
-                    System.out.println("Balloon " + i + " exited at time: " + time);
+                    System.out.println("Balloon " + i + " exited at time: " + currentTime);
                     toRemove.add(balloon);
                 }
             }
 
             balloons.removeAll(toRemove);
-            time += deltaTime;
+           
             Thread.sleep(deltaTime);
         }
 
