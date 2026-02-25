@@ -104,8 +104,8 @@ public abstract class Tower {
      * @return the distance
      */
     protected double calculDistance(Balloon B){
-      double dx=B.getPosition().getX()-position.getX();
-      double dy=B.getPosition().getY()-position.getY();
+      double dx = Math.abs( B.getPosition().getX()-position.getX() );
+      double dy = Math.abs( B.getPosition().getY()-position.getY() );
       return Math.sqrt((dx*dx +dy*dy));
     }
 
