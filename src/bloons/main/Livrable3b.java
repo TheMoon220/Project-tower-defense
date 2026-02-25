@@ -43,8 +43,8 @@ public class Livrable3b {
            long start =System.nanoTime();
 
            while(!balloons.isEmpty()){
-              long time = System.nanoTime();
-              long tmp = (time - start) / 1000000;
+
+              long tmp = (System.nanoTime()-start)/1000000;
               
               board.displayBoard(balloons);
               System.out.println();
@@ -69,7 +69,7 @@ public class Livrable3b {
                    toRemove.add(balloon);
                    continue;
                 }
-                
+
                 balloon.moveBallon();
                 if(balloon.checkEndOfPath()){
                     long exit = (System.nanoTime() - start) / 1000000;
