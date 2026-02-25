@@ -26,6 +26,7 @@ public class Livrable3a {
             System.out.println("Les arguments doivent etre des entiers");
             return;
         }
+        
         System.out.println("=== Livrable 3a: Classical Board ===");
         System.out.println("Board size: " + width + "x" + height);
         System.out.println("Nombre de ballons " + nbBalloons);
@@ -76,5 +77,7 @@ public class Livrable3a {
 
         System.out.println("\n=== All balloons finished ===");
         System.out.println("Total simulation time: " +(System.nanoTime()-start)/1000000);
-     }
-} 
+         
+     
+}
+}

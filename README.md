@@ -165,8 +165,25 @@ make docs
 ### Difficultés restant à résoudre
 
 ## Livrable 3
+Une nouvelle branche **livrable3** a été créée.
+ Pour ce livrable l'objectif principal est: assurer la création des types de   **tours**  et la gestion de des tirs et l'integration dansla gestion de temps  ,  
+
+Pour le bon fonctionne de ce livrable différentes classes ont été créée, une classe  **projectile** une énumeration qui spécifie le type de projectile  notamment son niveau de degat .
+une autre classe **Effect** qui  represente une enumeration pour les types d'effet. 
+sept classes qui reprensenteront les **tours** ; on a la classe principale **Tower** **IceTower**, **SlowDownTower**, **ProjectileTower**, **BombTower**,**DartMonkeyTower**,**SniperMonkeyTower**, **SuperMonkeyTower**, et **TackShooterTower** .Deux classes  main de plus ont été ajouté **Livrable3a** pour le classical board notamment qui ceera deux tours de chaque types et les placera de maniere aleatoire et produira un affichage explicite ,avec le temps , des qu'il y a un ballon touché;detruit; arreté ou rédemarré, un ballon ralenti ou un ballon qui sort  et,ensuite  **Livrable3b** pour le random board qui fera la meme chose , mais les tours peuvent etrz sur le chemin tout le contraire de primier board.
+
+Modification apportée par rapport au livrable2: le **RandomBoard** implémentation de nouvelles méthodes notamment une methode generer la liste des tours, qui est une methode abstraite de la super classe, le **ClassicalBoard**  implemente des nouvlelle methode pour le bon fonctionnement des tours , on la methode generateValidPosition qui genere une position valide et aleatoire pour une tour , une methode inpath qui verifie si une position se touve sur le chemin ou pas  , le **Board**  de nouvelles methodes abstraites ajoutées.
 
 ### Atteinte des objectifs
+Dans ce livrable differents aspect intervenant pour le bon deroulement de la progression de la tour  dans les plateaux ont été effectués.
+
+- La pose des tours.
+- l'attaque des ballons qui se trouve a la porte  d'une tour donnée.
+-la gestion du temps pour chaque tirs 
+- le calcul de la portée d'un ballon pour une tour
+- Analyse et réévaluation des décisions antérieures dans le but d’améliorer et d’affiner les choix de modélisation, elle  vise à optimiser la structure du code, la cohérence des classes.
+
+- Organisation efficace du temps de travail pour respecter les délais du projet et la participation équitable des differents membres du groupe.
 
 ### Difficultés restant à résoudre
 
