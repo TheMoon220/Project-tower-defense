@@ -4,6 +4,7 @@ import bloons.Position;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 
+/** the object TackShooterTower that send a projectile */
 public class TackShooterTower extends ProjectileTower{
 
     /** constructor of a tower with projectile
@@ -12,6 +13,7 @@ public class TackShooterTower extends ProjectileTower{
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      * @param projectile the projectile of tower
+     * @param position the position of the tower
      */
     public TackShooterTower(double cost, double range, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, range, effect, cadence, position, projectile);

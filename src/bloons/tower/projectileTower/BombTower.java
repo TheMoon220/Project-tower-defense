@@ -3,7 +3,6 @@ package bloons.tower.projectileTower;
 import bloons.Position;
 import bloons.balloon.*;
 import bloons.utils.*;
-
 import java.util.*;
 
 /** the object Bomb tower, the tower that sends bombs */
@@ -15,6 +14,8 @@ public class BombTower extends ProjectileTower {
      * @param range the tower's scope
      * @param effect the tower's impact
      * @param cadence the tower's cadence
+     * @param position the tower's position
+     * @param projectile the tower's projectile
      */
     public BombTower(double cost ,double range ,Effect effect ,double cadence,Position position, Projectile projectile){
        super(cost, range, effect, cadence,position, projectile);
@@ -24,6 +25,7 @@ public class BombTower extends ProjectileTower {
      * attack the most advanced balloon in range and a random balloon nearby
      * @param balloon the balloon 
      * @param currTime the current TIme
+     * @exception InterruptedException when current time is not valide
     */ 
     @Override
     public void attackBallon(Balloon balloon, long currTime) throws InterruptedException{

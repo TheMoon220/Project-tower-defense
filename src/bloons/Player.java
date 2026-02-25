@@ -1,5 +1,6 @@
 package bloons;
 
+/** the object player */
 public class Player {
 
     /** The profit of the player when a ballon have been broken */

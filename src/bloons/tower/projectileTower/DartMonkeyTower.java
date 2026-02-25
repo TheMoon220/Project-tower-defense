@@ -5,6 +5,7 @@ import bloons.balloon.*;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 
+/** the object DartMonkeyTower */
 public class DartMonkeyTower extends ProjectileTower {
 
      /** constructor of DartMonkeyTower
@@ -13,15 +14,16 @@ public class DartMonkeyTower extends ProjectileTower {
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      * @param projectile the projectile of tower
+     * @param position the position of the tower
      */
-    public DartMonkeyTower(double coast ,double range ,Effect effect ,double cadence,Position position,Projectile projectile){
-        super(coast, range, effect, cadence,position, projectile);
+    public DartMonkeyTower(double cost ,double range ,Effect effect ,double cadence,Position position,Projectile projectile){
+        super(cost, range, effect, cadence,position, projectile);
     }
 
     /** first the min of all balloonsiRrange is calulated and this one is the balloons to attack
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
-     * @param ballon the ballon that can be attacckek by the tower
-     * @throws InterruptedException 
+     * @param balloon the ballon that can be attacked by the tower
+     * @throws InterruptedException when the currentime is not valide
     */
    @Override
     public void attackBallon (Balloon balloon,long time) throws InterruptedException{

@@ -1,10 +1,10 @@
 package bloons.board;
 
 import bloons.*;
-import bloons.utils.*;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
 import bloons.tower.projectileTower.*;
+import bloons.utils.*;
 import java.util.*;
 
 
@@ -77,7 +77,7 @@ public class ClassicalBoard extends Board {
     
     /**
     * Create a balloon for a specific path
-    * @param pathIndex 
+    * @param pathIndex the path 
     * @param level the level of the balloon
     * @return a balloon
     */

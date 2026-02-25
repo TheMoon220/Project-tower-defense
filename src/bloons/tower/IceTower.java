@@ -13,7 +13,7 @@ public class IceTower extends Tower{
      * @param range the tower's scope
      * @param effect the tower's impact
      * @param cadence the tower's cadence
-     * @param timeLastAttack store last shot
+     * @param position the position of the tower
      */
     public IceTower(double cost ,double range ,Effect effect ,double cadence,Position position){
         super(cost,range,effect,cadence,position);

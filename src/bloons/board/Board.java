@@ -13,6 +13,7 @@ public abstract class Board {
     protected int height;
     /** an attribute grid, that represent the cells in our board */
     protected Cell[][] grid;
+    /** the attribute Allballoons on the board */
     protected List<Balloon> Allballoons ;
 
     /**
@@ -37,6 +38,7 @@ public abstract class Board {
             }
         }
     }
+
     /** an abstract method for calculate the path on the board*/
     public abstract void calculPath();
 
@@ -54,13 +56,19 @@ public abstract class Board {
             );
         } 
     }
+
    /**
     * create a balloon for an specific path
-    * @param i
+    * @param i the index 
     * @param l the balloon level
     * @return a balloon 
     */
     public abstract Balloon createBalloonForPath(int i ,Level l);
+
+    /** 
+     * an abstraction for the method getPath 
+     * @return a list of path
+    */
     public abstract List<Position> getPath();
     
     /**

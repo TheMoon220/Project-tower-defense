@@ -1,21 +1,26 @@
 package bloons.utils;
-//class projectile
+
+/** an object Projectile an enumeration */
 public enum  Projectile{
-    //the dart
+    /**  the dart */
     DART(1) ,
-    //thepointDart
+    /** thepointDart */
     POINTEDDART(2),
-    //thesharpDart
+    /** thesharpDart */
     VERYSHARPDART(4),
-    //the needle
+    /** the needle */
     NEEDLE(1) ,
-    //the bomb
+    /** the bomb */
     BOMB(2),
-    //extrabomb
+    /** //extrabomb */
     EXTRABOMB(2);
-    // the level of degat
+    /** the level of degat */
     private int niveauDegat;
-    //the constructor of the projectile
+    
+    /**
+     * the consturctor
+     * @param niveauDegat
+     */
     private Projectile(int niveauDegat){
         this.niveauDegat= niveauDegat;
     }

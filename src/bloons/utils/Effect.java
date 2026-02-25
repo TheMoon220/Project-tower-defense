@@ -1,8 +1,9 @@
 package bloons.utils;
-//the enum effect 
+
+/** the object Effect an enumeration */
 public enum Effect {
-    //immediat
+    /** when hit is immediate */
     IMMEDIAT,
-    //distance
+    /** when hit is a distance */
      DISTANCE;
 }

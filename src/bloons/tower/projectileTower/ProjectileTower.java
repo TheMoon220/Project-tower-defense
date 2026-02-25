@@ -5,9 +5,10 @@ import bloons.balloon.Balloon;
 import bloons.tower.Tower;
 import bloons.utils.*;
 
-
+/** the object ProjectileTower for the towers that send a projectile */
 public class ProjectileTower extends Tower{
-
+ 
+    /** the projectile */
     protected Projectile projectile;
 
      /** constructor of a tower with projectile
@@ -16,6 +17,7 @@ public class ProjectileTower extends Tower{
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      * @param projectile the projectile of tower
+     * @param position the position of the tower
      */
     public ProjectileTower(double cost, double range, Effect effect, double cadence,Position position, Projectile projectile) {
         super(cost, range, effect, cadence,position);
@@ -44,8 +46,8 @@ public class ProjectileTower extends Tower{
     
     /** first the min of all balloonsiRrange is calulated and this one is the balloons to attack
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
-     * @param ballon the ballon that can be attacckek by the tower
-     * @throws InterruptedException 
+     * @param balloon the ballon that can be attacked by the tower
+     * @throws InterruptedException when the time is not corrected 
     */
     @Override
     public void attackBallon (Balloon balloon,long time) throws InterruptedException{

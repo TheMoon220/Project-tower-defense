@@ -1,12 +1,13 @@
 package bloons.utils;
 import java.util.Random;
-//the enum level
+
+/** the object Level an enumeration */
 public enum Level {
-    //the level1
+    /** the level 3 */
     NIV1(1), 
-    //the level2
+    /** the level 2 */
     NIV2(2), 
-    //the level3
+   /** the level 2 */
     NIV4(4);
     
     //the resistance of the balloon
@@ -31,7 +32,7 @@ public enum Level {
     }
    /**
     * generate a random level
-    * @return a level
+    * @return niv a level
     */
     public static Level generateLevel(){
         Random random=new Random(); 

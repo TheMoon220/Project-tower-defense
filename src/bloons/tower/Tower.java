@@ -5,26 +5,28 @@ import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Effect;
 import java.util.*;
-import bloons.tower.IceTower;
-import bloons.tower.SlowDownTower;
-import bloons.tower.Tower;
-import bloons.tower.projectileTower.BombTower;
-import bloons.tower.projectileTower.DartMonkeyTower;
-import bloons.tower.projectileTower.SniperMonkeyTower;
-import bloons.tower.projectileTower.SuperMonkeyTower;
-import bloons.tower.projectileTower.TackShooterTower;
 
+/** the object Tower an abstract class for the towers */
 public abstract class Tower {
-    protected double cost; // the tower's cost 
-    protected double range; // the range of the 
-    protected Effect effect ; // the effect when a balloon is hit
-    protected Position position ; // the position of the tower
-    protected double cadence ; // the cadence of the tower
-    protected long timeLastAttack ;
-    
-    protected  List<Balloon> balloons ;// all balloons on path
-    protected  List<Balloon > balloonsInRange ;// all ballon in the tower range
-    public double RANGE=60; //Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60)
+    /** the tower's cost */
+    protected double cost;
+    /** the range of the */ 
+    protected double range; 
+    /** the effect when a balloon is hit */
+    protected Effect effect ; 
+    /** the position of the tower */
+    protected Position position ; 
+    /** the cadence of the tower */
+    protected double cadence ; 
+    /** the currentime */
+    protected long timeLastAttack ; 
+
+    /** all balloons on path */
+    protected  List<Balloon> balloons ; 
+    /** all ballon in the tower range */
+    protected  List<Balloon > balloonsInRange ;
+    /** Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60) */
+    public double RANGE=60; 
      
     /** tower building
      * @param cost the coast of tower
@@ -61,6 +63,7 @@ public abstract class Tower {
 
     /**
      * to set the cadence of the tower during the evolution
+     * @param cadence the cadence of the tower
      */
     public void setCadence(double cadence) {
       this.cadence=cadence ;
@@ -93,7 +96,8 @@ public abstract class Tower {
     /**
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
      * @param ballon the ballon that can be attacckek by the tower
-     * @param the time waiting for attack
+     * @param time waiting for attack
+     * @exception InterruptedException when currentime is not correct
      */
     public abstract void attackBallon(Balloon ballon,long time) throws InterruptedException;
 
@@ -109,6 +113,7 @@ public abstract class Tower {
 
     /**
      * an methode for calculate dhe distance between the balloon and the tower
+     * @param B the balloon
      * @return the distance
      */
     protected double calculDistance(Balloon B){
@@ -119,7 +124,7 @@ public abstract class Tower {
 
     /**
      * add the list of balloons
-     * @param theballoons
+     * @param theballoons to add
      */
     public void addBalloons(List<Balloon> theballoons){
       this.balloons=theballoons ;
@@ -140,7 +145,7 @@ public abstract class Tower {
     
     /**
      * update the last time attack
-     * @param currTime
+     * @param currTime the current time
      */
     protected void updateLastAttackTime(long currTime){
       this.timeLastAttack = currTime;

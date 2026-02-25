@@ -4,10 +4,11 @@ import java.util.List;
 import bloons.Position;
 import bloons.utils.*;
 import java.util.*;
-//class Balloon
+
+/** the object Balloon */
 public class Balloon {
     // path of the balloon
-     private List<Position> path;
+    private List<Position> path;
     // an attribute Position, that represent the ballon's position
     private   Position position;
     // an attribute level, that represent the ballon's level
@@ -19,7 +20,12 @@ public class Balloon {
     private int currentCellIndex ; // la première  case du chemin
     // progression in  the cell
     private double progress;
-    //constuctor of Balloon
+    
+    /**
+     * the constructor of the classe
+     * @param position the position
+     * @param level the level
+     */
     public Balloon(Position position, Level level){
         this.position = position;
         this.level = level;
@@ -54,14 +60,15 @@ public class Balloon {
 
     /**
      * the health of this health
-     * @return
+     * @return the health
      */
     public int getHealth(){
         return this.health;
     }
+
     /**
      * set the health with the health in param
-     * @param health the health 
+     * @param newHealth the health 
      */
     public void setHealth(int newHealth) {
         this.health = newHealth;
@@ -90,7 +97,7 @@ public class Balloon {
         this.path = path;
         this.currentCellIndex = 0;
         this.progress = 0.0;
-}
+    }
 
      /**
      *  Moves the balloon to the next cell 
@@ -99,9 +106,9 @@ public class Balloon {
         while (progress >= 1.0 && currentCellIndex < path.size() - 1) {
             progress -= 1.0;  // on remet le progress à 0 pour dire qu'il est dans une nouvelle cellule 
             currentCellIndex++;
-        } 
-          
+        }      
     }
+
     /**
      * update the ballon's position with the information path , currentCellIndex
      */
@@ -115,8 +122,9 @@ public class Balloon {
         position.setX(currentPosition.getX() + dx * progress);
         position.setY(currentPosition.getY() + dy * progress);
     }
+
     /**
-     *  move  the balloon within its current cell based on its speed.
+     * move  the balloon within its current cell based on its speed.
      * Calls checkNextCell() if the edge of the cell is reached to move
      * update the balloon's position with updateBalloon()
      * to the next cell in the path.
@@ -139,11 +147,11 @@ public class Balloon {
      */
     public boolean checkEndOfPath(){
         return currentCellIndex >= path.size() - 1 && progress>=1.0;
- 
     }
+
     /**
      * chooses a random  speed freom a predefined list
-     * @return 
+     * @return a random position
      */
     public double  randomChoiceSpeed(){
         Random random = new Random();
@@ -151,26 +159,29 @@ public class Balloon {
         int i = random.nextInt(speeds.length);
         return speeds[i];
 
-       }
+    }
    
-    /*
-    *representztion of the ballon with a attribute
+    /**
+     *representztion of the ballon with a attribute
      */
     public String toString(){
         return "this ballon has a position "+ this.position +"a level"+ this.level+ "a speed" + this.speed ;
     }
-    /** return path
+
+    /** get the path
      * @return path
      */
     public List<Position> getPath() {
         return path;
     }
+
     /** return currentCellIndex
      * @return currentCellIndex
-     */
+    */
     public int getCurrentCellIndex() {
         return currentCellIndex;
     }
+
     /**return progress
      * @return progress
      */

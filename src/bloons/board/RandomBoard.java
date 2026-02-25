@@ -2,8 +2,6 @@ package bloons.board;
 
 import bloons.*;
 import bloons.balloon.Balloon;
-import bloons.tower.IceTower;
-import bloons.tower.SlowDownTower;
 import bloons.tower.*;
 import bloons.tower.projectileTower.*;
 import bloons.utils.*;
@@ -11,7 +9,8 @@ import java.util.*;
 
 /** the object RandomBoard the second board */
 public class RandomBoard extends Board {
-    private final List<List<Position>> allPaths; //a list of positions
+   /** list of positions */
+    private final List<List<Position>> allPaths; 
 
     /**
      * Builds a board wiht sizes width and height
@@ -97,6 +96,7 @@ public class RandomBoard extends Board {
 
     /**
      * Get a specific path by index
+     * @param index the index
      * @return the path 
      */
     public List<Position> getPathAt(int index){
@@ -108,7 +108,7 @@ public class RandomBoard extends Board {
 
    /**
     * Create a balloon for a specific path
-    * @param pathIndex 
+    * @param pathIndex the index path
     * @param level the level of the balloon
     * @return a balloon
     */

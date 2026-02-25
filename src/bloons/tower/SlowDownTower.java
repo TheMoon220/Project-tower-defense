@@ -4,6 +4,7 @@ import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Effect;
 
+/** the object SlowDownTower that send a projectile */
 public class SlowDownTower extends Tower {
 
     /** Slow down tower building
@@ -12,6 +13,7 @@ public class SlowDownTower extends Tower {
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      * @param projectile the projectile of tower
+     * @param position the position of the tower
      */
     public SlowDownTower(double cost ,double range ,Effect effect ,double cadence,Position position){
         super(cost, range, effect, cadence,position);
@@ -19,7 +21,7 @@ public class SlowDownTower extends Tower {
 
     /**
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
-     * @param ballon the ballon that can be attacckek by the tower
+     * @param balloon the ballon that can be attacckek by the tower
      */
     @Override
     public void attackBallon (Balloon balloon, long currTime){

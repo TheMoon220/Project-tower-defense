@@ -5,14 +5,15 @@ import bloons.balloon.*;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 
+/** the object SniperMonkeyTower that send a projectile */
 public class SniperMonkeyTower extends ProjectileTower{
 
     /** constructor of a tower with projectile
      * @param cost the coast of tower
-     * @param range the range of tower 
      * @param effect the effect of tower
      * @param cadence the cadence of tower
      * @param projectile the projectile of tower
+     * @param position the position of the tower
      */
     public SniperMonkeyTower(double cost, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, Double.MAX_VALUE, effect, cadence, position, projectile);
@@ -20,7 +21,8 @@ public class SniperMonkeyTower extends ProjectileTower{
 
     /**
      * overload the method so that the range is always infinite
-     * @param b
+     * @param b the balloon
+     * @return true
      */
     @Override
     public boolean Inrange(Balloon b){
