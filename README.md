@@ -188,7 +188,52 @@ Dans ce livrable differents aspect intervenant pour le bon deroulement de la pro
 - Analyse et réévaluation des décisions antérieures dans le but d’améliorer et d’affiner les choix de modélisation, elle  vise à optimiser la structure du code, la cohérence des classes.
 
 - Organisation efficace du temps de travail pour respecter les délais du projet et la participation équitable des differents membres du groupe.
+Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
 
+**Lancer les tests avec junit**
+
+```bash
+make tests
+```
+
+**Compiler l'ensemble des classes .java en .class**
+
+```bash
+make build
+```
+
+**lancer tous les fichiers livrable2a et livrable2b**
+
+```bash
+java -classpath classes bloons.Livrable3a arg1 arg2 arg3
+```
+
+```bash
+java -classpath classes bloons.Livrable3b arg1 arg2 arg3
+```
+
+**Générer le jar**
+
+```bash
+jar cvfm livrable3a.jar manifest-3a -C classes .
+```
+
+```bash
+jar cvfm livrable3b.jar manifest-3b -C classes .
+```
+
+**Lancer les jar**
+
+```bash
+java -jar livrable3a.jar arg1 arg2 arg3
+```
+```bash
+java -jar livrable3b.jar arg1 arg2 arg3
+```
+**Générer la documentation**
+```bash
+make docs
+```
 ### Difficultés restant à résoudre
 
 ## Livrable 4
