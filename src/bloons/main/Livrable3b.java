@@ -3,7 +3,6 @@ package bloons.main;
 import bloons.balloon.Balloon;
 import bloons.board.*;
 import bloons.tower.*;
-
 import java.util.*;
 
 /** the object Livrable3b, the main programm */
@@ -66,6 +65,11 @@ public class Livrable3b {
               List<Balloon> toRemove = new ArrayList<>();
               for(int i = 0; i < balloons.size(); i++){
                 Balloon balloon = balloons.get(i);
+                if (balloon.isDestroyed()) {
+                   toRemove.add(balloon);
+                   continue;
+                }
+                
                 balloon.moveBallon();
                 if(balloon.checkEndOfPath()){
                     long exit = (System.nanoTime() - start) / 1000000;
