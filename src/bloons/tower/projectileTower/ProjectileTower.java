@@ -51,6 +51,9 @@ public class ProjectileTower extends Tower{
     public void attackBallon (Balloon balloon,long time) throws InterruptedException{
        if(Inrange(balloon) && canAttack(time)){
           int newHealth = balloon.getHealth() - this.projectile.getNiveauDegat();
+          if(newHealth<0){
+            newHealth=0 ;
+          }
           balloon.setHealth(newHealth);
           if(balloon.isDestroyed()){
             this.balloons.remove(balloon);
