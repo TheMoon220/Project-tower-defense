@@ -1,9 +1,9 @@
 package bloons.board;
-
-import  bloons.*;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
+import bloons.tower.projectileTower.ProjectileTower;
 import bloons.utils.*;
+import bloons.*;
 import java.util.*;
 
 /** the object Board an abstract class for our game */
@@ -152,26 +152,44 @@ public abstract class Board {
 
 
     /**
-     * add balloon on the tower and update them in the range 
+     * add balloons to the tower and update those within  range 
      * @param tower the tower 
      */
     private void prepareTower(Tower tower) {
-    tower.addBalloons(this.Allballoons);
-    tower.getAllBalloonsInRange();
+        tower.addBalloons(this.Allballoons);
+        tower.getAllBalloonsInRange();
 }
 
+    /**
+     * attack according to tower type
+     * @param tower 
+     * @param tmp
+     * @throws InterruptedException
+     */
+    private void attackTower(Tower tower, long tmp) throws InterruptedException {
+    if (tower instanceof bloons.tower.projectileTower.ProjectileTower) {
+        ProjectileTower pt = (ProjectileTower) tower;
+        Balloon target = pt.getBalloonClosestToExit();
+        if (target != null) {
+            int oldHealth = target.getHealth();
+            double oldSpeed = target.getSpeed();
 
-
-
-   /**
-    * show how the towers attack the balloons on the board
-    * @param towers the tower
-    * @param tmp the current time
-    * @throws InterruptedException an exception when the tmp don't match
-    */
-   public void processTowers(List<Tower> towers, long tmp) throws InterruptedException {
-     
+            pt.attackBallon(target, tmp);
+            displayBalloonEvents(target, oldHealth, oldSpeed, tmp);
         }
+    } else {
+        // IceTower ou SlowDownTower
+        for (Balloon b : tower.getBalloonsInRange()) {
+            int oldHealth = b.getHealth();
+            double oldSpeed = b.getSpeed();
+
+            tower.attackBallon(b, tmp);
+            displayBalloonEvents(b, oldHealth, oldSpeed, tmp);
+        }
+    }
+}
+
+   
 }
    
 
