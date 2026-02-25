@@ -2,13 +2,9 @@ package bloons.main;
 
 import java.util.ArrayList;
 import java.util.List;
-import bloons.balloon.*;
 import bloons.balloon.Balloon;
 import bloons.board.*;
 import bloons.tower.*;
-import bloons.utils.*;
-import bloons.board.*;
-import bloons.*;
 
 public class Livrable3a {
     public static void main(String[] args){
