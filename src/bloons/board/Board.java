@@ -1,7 +1,6 @@
 package bloons.board;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
-import bloons.tower.projectileTower.ProjectileTower;
 import bloons.utils.*;
 import bloons.*;
 import java.util.*;
@@ -150,9 +149,6 @@ public abstract class Board {
      */
     public abstract List<Tower> generateRandomPositionTowers();
 
-
-  
-
    /**
     * show how the towers attack the balloons on the board
     * @param towers the tower
@@ -160,8 +156,38 @@ public abstract class Board {
     * @throws InterruptedException an exception when the tmp don't match
     */
    public void processTowers(List<Tower> towers, long tmp) throws InterruptedException {
-     
+      for (Tower tower : towers) {
+        tower.getAllBalloonsInRange();
+        List<Balloon> inRange = tower.getBalloonsInRange();
+        if (!inRange.isEmpty()) {
+            Balloon target = inRange.get(0);
+            for (Balloon b : inRange) {
+                if (b.getCurrentCellIndex() > target.getCurrentCellIndex()) {
+                    target = b;
+                }
+            }
+            int healthBefore = target.getHealth();
+            double speedBefore = target.getSpeed();
+            tower.attackBallon(target, tmp);
+            if (target.getHealth() < healthBefore || target.getSpeed() != speedBefore) {
+                System.out.println(tower + " shoots at Balloon at " + target.getPosition());
+            }
+            if (target.getHealth() < healthBefore) {
+                System.out.println("time: " + tmp + " ms - Balloon touched (health: " + target.getHealth() + ")");
+            }
+            if (target.getHealth() <= 0) {
+                System.out.println("time: " + tmp + " ms - Balloon destroyed !");
+            }
+            if (target.getSpeed() == 0 && speedBefore > 0) {
+                System.out.println("time: " + tmp + " ms - Balloon frozen !");
+            }
+            if (target.getSpeed() < speedBefore && target.getSpeed() > 0) {
+                System.out.println("time: " + tmp + " ms - Balloon slowed !");
+            }
+            if (target.getSpeed() > 0 && speedBefore == 0) {
+                System.out.println("time: " + tmp + " ms - Balloon restarted !");
+            }
         }
+      }
+    }
 }
-   
-

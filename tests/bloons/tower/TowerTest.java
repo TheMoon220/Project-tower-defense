@@ -51,60 +51,64 @@ private Balloon bal1;
        @Test 
        
        public void testBalloonInRange(){
-        AssertTrue(t1.Inrange(bal1));
-        AssertFalse(t1.Inrange(bal2));
-        AssertTrue(t2.Inrange(bal2));
+        assertTrue(t1.Inrange(bal1));
+        assertFalse(t1.Inrange(bal2));
+        assertTrue(t2.Inrange(bal2));
 
        }
-      public void testCanAttack(){
-      AssertTrue(t1.canAttack((System.nanoTime())));
-      AssertTrue(t2.canAttack((System.nanoTime())));
+        public void testCanAttack(){
+      assertTrue(t1.canAttack((System.currentTimeMillis())));
+      assertTrue(t2.canAttack((System.currentTimeMillis())));
       
 
-      }
-      public void aTTackBalloonDarkMonkeyTower(){
-        t1.attackBallon(bal1,System.nanoTime());
+     }
+     /* 
+      @Test
+      public void aTTackBalloonDarkMonkeyTower() throws InterruptedException{
+        t1.attackBallon(bal1,System.currentTimeMillis());
         Thread.sleep((long) t1.getCadence());
-        t1.attackBallon(bal1,System.nanoTime());
-        AssertEquals(0,bal1.getHealth());
+        t1.attackBallon(bal1,System.currentTimeMillis());
+        assertEquals(0,bal1.getHealth());
 
       }
-       public void CanNotaTTackBalloonDarkMonkeyTower(){
-        t1.attackBallon(bal1,System.nanoTime());
+      @Test
+       public void CanNotaTTackBalloonDarkMonkeyTower() throws InterruptedException{
+        t1.attackBallon(bal1,System.currentTimeMillis());
          Thread.sleep((long) t1.getCadence());
-        t1.attackBallon(bal1,System.nanoTime());
-        AssertEquals(0,bal1.getHealth());
+        t1.attackBallon(bal1,System.currentTimeMillis());
+        assertEquals(0,bal1.getHealth());
          Thread.sleep((long) t1.getCadence());
-        AssertFalse(t1.canAttack(System.nanoTime()));
+        assertFalse(t1.canAttack(System.currentTimeMillis()));
 
       }
-
-       public void aTTackBalloonIceTower(){
-         t2.attackBallon(bal2,System.nanoTime());
+  @Test
+       public void aTTackBalloonIceTower() throws InterruptedException{
+         t2.attackBallon(bal2,System.currentTimeMillis());
         Thread.sleep((long) t2.getCadence());
-        t1.attackBallon(bal2,System.nanoTime());
-        AssertEquals(0,bal2.getSpeed());
+        t1.attackBallon(bal2,System.currentTimeMillis());
+        assertEquals(0,bal2.getSpeed());
 
       }
-      public void CanNotaTTackBalloonIceTower(){
-        t1.attack(bal1);
+      @Test
+      public void CanNotaTTackBalloonIceTower() throws InterruptedException{
+         t2.attackBallon(bal2,System.currentTimeMillis());
          Thread.sleep((long) t2.getCadence());
-        t2.attackBallon(bal2,System.nanoTime());
+        t2.attackBallon(bal2,System.currentTimeMillis());
        
         
          Thread.sleep((long) t2.getCadence());
-        AssertFalse(t2.canAttack(System.nanoTime()));
+        assertFalse(t2.canAttack(System.currentTimeMillis()));
 
       }
-
-      public void testFreezeBalloon(){
-        t2.attack(bal1);
-        Thread.wait(t2.getCadence());
-        t2.attackBallon(bal2,System.nanoTime());
-        Thread.wait(t2.getCadence());
-        AssertEquals(0,bal2.getSpeed());
+  @Test
+      public void testFreezeBalloon() throws InterruptedException{
+       t2.attackBallon(bal2,System.currentTimeMillis());
+        Thread.sleep((long) t2.getCadence());
+        t2.attackBallon(bal2,System.currentTimeMillis());
+        Thread.sleep((long) t2.getCadence());
+        assertEquals(0,bal2.getSpeed());
 
       }
-    
+    */
     }
 

@@ -53,7 +53,7 @@ public class Livrable3a {
             System.out.println();
             System.out.println("time: " + currentTime + " ms");
             //tours attaquent
-            board.processTowers(towers, currentTime);
+            //board.processTowers(towers, currentTime);
             //deplacement des ballons
             List<Balloon> toRemove = new ArrayList<>();
             for(int i = 0; i < balloons.size(); i++){
