@@ -101,11 +101,9 @@ public class ClassicalBoard extends Board {
 
    private Position generateValidPosition() {
       Random rand=new Random();
-     Position p=new Position(rand.nextInt(width),rand.nextInt(height)) ;
-     while(InPath(p)){
-      p=new Position(rand.nextInt(width),rand.nextInt(height)) ;
-
-
+      Position p=new Position(rand.nextInt(width),rand.nextInt(height)) ;
+      while(InPath(p)){
+         p=new Position(rand.nextInt(width),rand.nextInt(height)) ;
      }
      return p ;
    }
