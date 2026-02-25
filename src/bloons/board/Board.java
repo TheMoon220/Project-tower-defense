@@ -152,6 +152,19 @@ public abstract class Board {
      */
     public abstract List<Tower> generateRandomPositionTowers();
 
+
+    /**
+     * add balloon on the tower and update them in the range 
+     * @param tower the tower 
+     */
+    private void prepareTower(Tower tower) {
+    tower.addBalloons(this.Allballoons);
+    tower.getAllBalloonsInRange();
+}
+
+
+
+
    /**
     * show how the towers attack the balloons on the board
     * @param towers the tower
@@ -159,7 +172,8 @@ public abstract class Board {
     * @throws InterruptedException an exception when the tmp don't match
     */
    public void processTowers(List<Tower> towers, long tmp) throws InterruptedException {
-      //TO DO
-   }
-
+     
+        }
 }
+   
+
