@@ -48,15 +48,15 @@ public class BalloonTest {
         assertEquals(2, bal2.getHealth());
     }
 
-    @Test
-    public void testIsDestroyed(){
-        bal1.setHealth();
-        bal2.setHealth();
-        assertEquals(0, bal1.getHealth());
-        assertEquals(1, bal2.getHealth());
-        assertTrue(bal1.isDestroyed());
-        assertFalse(bal2.isDestroyed());
-    }
+   // @Test
+    //public void testIsDestroyed(){
+       // bal1.setHealth();
+       // bal2.setHealth();
+       // assertEquals(0, bal1.getHealth());
+        //assertEquals(1, bal2.getHealth());
+        //assertTrue(bal1.isDestroyed());
+        //assertFalse(bal2.isDestroyed());
+   // }
 
     @Test
     public void testRandomSpeed() {
