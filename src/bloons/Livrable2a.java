@@ -43,7 +43,7 @@ public class Livrable2a {
         System.out.println("\n=== run simulation");
         long time = 0;
         long deltaTime = 100;
-         long start =System.nanoTime();
+        long start =System.nanoTime();
         while(!balloons.isEmpty()){
             System.out.println();
             System.out.println("time: " + time);
