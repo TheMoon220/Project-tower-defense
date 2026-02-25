@@ -129,7 +129,7 @@ public abstract class Tower {
       }
     
     }
-
+    
     /**
      * update the last time attack
      * @param currTime

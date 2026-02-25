@@ -105,8 +105,23 @@ public class ClassicalBoard extends Board {
    @Override
    public List<Tower> generateRandomPositionTowers(){
       List<Tower> towers = new ArrayList<>();
-      Random rand = new Random();
-       
+      //TO DO
       return towers;
+   }
+
+   private Position generateValidPosition() {
+      Random rand=new Random();
+     Position p=new Position(rand.nextInt(width),rand.nextInt(height)) ;
+     while(!InPath(p)){
+      p=new Position(rand.nextInt(width),rand.nextInt(height)) ;
+
+
+     }
+     return p ;
+   }
+
+   private boolean InPath(Position p) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'InPath'");
    }
 }
