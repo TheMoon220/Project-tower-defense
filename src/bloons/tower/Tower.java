@@ -34,12 +34,19 @@ public abstract class Tower {
      * @param position the position of the tower
      */
     public Tower(double cost ,double range ,Effect effect ,double cadence,Position position){
-        this.cost=cost ;
+       //the cost
+      this.cost=cost ;
+      //the range
         this.range=range ;
+        // the effect 
         this.effect =effect ;
+        //the cadence 
         this.cadence=cadence ;
+        //the balloonsInRange
         this.balloonsInRange=new ArrayList<>();
+        // the position
         this.position=position;
+        //the timelastattack
         this.timeLastAttack = 0;
     }
 

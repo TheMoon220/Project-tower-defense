@@ -210,7 +210,7 @@ make tests
 **lancer tous les fichiers livrable2a et livrable2b**
 
 ```bash
-java -classpath classes bloons.Livrable3a arg1 arg2 arg3
+java -classpath classes bloons.main.Livrable3a arg1 arg2 arg3
 ```
 
 ```bash
