@@ -91,6 +91,7 @@ private Balloon bal1;
         Thread.wait(t2.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
+        
         Thread.wait(t2.getCadence());
         AssertFalse(t2.canAttack());
 
