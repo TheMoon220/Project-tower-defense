@@ -37,8 +37,8 @@ private Balloon bal1;
     @BeforeEach
      public void Before(){
    
-       pos1 = new Position(1, 4);
-       pos2 = new Position(4, 4);
+       pos1 = new Position(4, 4);
+       pos2 = new Position(4, 0);
 
            
             bal1 = new Balloon(new Position(3, 3),Level.NIV1 );
@@ -51,9 +51,9 @@ private Balloon bal1;
        @Test 
        
        public void testBalloonInRange(){
-        AssertTrue(t1.Inrange(bal3));
+        AssertTrue(t1.Inrange(bal1));
         AssertFalse(t1.Inrange(bal2));
-        AssertTrue(t3.Inrange(bal2));
+        AssertTrue(t2.Inrange(bal2));
 
        }
       public void testCanAttack(){
@@ -63,45 +63,46 @@ private Balloon bal1;
 
       }
       public void aTTackBalloonDarkMonkeyTower(){
-        t1.attack(bal1);
-        Thread.wait(t1.getCadence());
+        t1.attackBallon(bal1,System.nanoTime());
+        Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
 
       }
        public void CanNotaTTackBalloonDarkMonkeyTower(){
-        t1.attack(bal1);
-        Thread.wait(t1.getCadence());
+        t1.attackBallon(bal1,System.nanoTime());
+         Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
-        Thread.wait(t1.getCadence());
-        AssertFalse(t1.canAttack());
+         Thread.sleep((long) t1.getCadence());
+        AssertFalse(t1.canAttack(System.nanoTime()));
 
       }
 
        public void aTTackBalloonIceTower(){
-        t1.attack(bal1);
-        Thread.wait(t2.getCadence());
-        t1.attackBallon(bal1,System.nanoTime());
-        AssertEquals(0,bal1.getHealth());
+         t2.attackBallon(bal2,System.nanoTime());
+        Thread.sleep((long) t2.getCadence());
+        t1.attackBallon(bal2,System.nanoTime());
+        AssertEquals(0,bal2.getSpeed());
 
       }
       public void CanNotaTTackBalloonIceTower(){
         t1.attack(bal1);
-        Thread.wait(t2.getCadence());
-        t1.attackBallon(bal1,System.nanoTime());
-        AssertEquals(0,bal1.getHealth());
-        Thread.wait(t2.getCadence());
-        AssertFalse(t2.canAttack());
+         Thread.sleep((long) t2.getCadence());
+        t2.attackBallon(bal2,System.nanoTime());
+       
+        
+         Thread.sleep((long) t2.getCadence());
+        AssertFalse(t2.canAttack(System.nanoTime()));
 
       }
 
       public void testFreezeBalloon(){
         t2.attack(bal1);
         Thread.wait(t2.getCadence());
-        t2.attackBallon(bal1,System.nanoTime());
+        t2.attackBallon(bal2,System.nanoTime());
         Thread.wait(t2.getCadence());
-        AssertEquals(0,bal1.getSpeed());
+        AssertEquals(0,bal2.getSpeed());
 
       }
     

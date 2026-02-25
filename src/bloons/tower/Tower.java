@@ -5,6 +5,14 @@ import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Effect;
 import java.util.*;
+import bloons.tower.IceTower;
+import bloons.tower.SlowDownTower;
+import bloons.tower.Tower;
+import bloons.tower.projectileTower.BombTower;
+import bloons.tower.projectileTower.DartMonkeyTower;
+import bloons.tower.projectileTower.SniperMonkeyTower;
+import bloons.tower.projectileTower.SuperMonkeyTower;
+import bloons.tower.projectileTower.TackShooterTower;
 
 public abstract class Tower {
     protected double cost; // the tower's cost 
@@ -96,7 +104,7 @@ public abstract class Tower {
      * @return true if is in range otherwise false
      */
     public boolean Inrange(Balloon B){
-      return calculDistance(B)<=this.range;
+      return calculDistance(B)<=this.range/RANGE;
     }
 
     /**
@@ -104,8 +112,8 @@ public abstract class Tower {
      * @return the distance
      */
     protected double calculDistance(Balloon B){
-      double dx=B.getPosition().getX()-position.getX();
-      double dy=B.getPosition().getY()-position.getY();
+      double dx = Math.abs( B.getPosition().getX()-position.getX() );
+      double dy = Math.abs( B.getPosition().getY()-position.getY() );
       return Math.sqrt((dx*dx +dy*dy));
     }
 
@@ -129,7 +137,7 @@ public abstract class Tower {
       }
     
     }
-
+    
     /**
      * update the last time attack
      * @param currTime

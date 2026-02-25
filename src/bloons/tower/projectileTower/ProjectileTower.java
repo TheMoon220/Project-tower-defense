@@ -21,6 +21,26 @@ public class ProjectileTower extends Tower{
         super(cost, range, effect, cadence,position);
         this.projectile=projectile;
     }
+
+    
+    /** return the closest balloon to exit
+     * @return the closest balloon to exit
+     */
+    public Balloon getBalloonClosestToExit(){
+        Balloon ballon = this.balloonsInRange.get(0);
+        double maxDistance = -1;
+        for (Balloon b : this.balloonsInRange) {
+            if (b.isDestroyed()){
+                continue;
+            }
+            double distance = b.getCurrentCellIndex() + b.getProgress();
+            if (distance > maxDistance) {
+                maxDistance = distance;
+                ballon = b;
+            }
+        }
+        return ballon;
+    }
     
     /** first the min of all balloonsiRrange is calulated and this one is the balloons to attack
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
@@ -32,7 +52,7 @@ public class ProjectileTower extends Tower{
        if(Inrange(balloon) && canAttack(time)){
           int newHealth = balloon.getHealth() - this.projectile.getNiveauDegat();
           balloon.setHealth(newHealth);
-          if(newHealth <= 0){
+          if(balloon.isDestroyed()){
             this.balloons.remove(balloon);
           }
 
