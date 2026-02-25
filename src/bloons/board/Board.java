@@ -147,7 +147,7 @@ public abstract class Board {
     }
 
     /**
-     * generate two random towers of each Towers
+     * generate two random towers of each type of Towers
      * @return a list of towers
      */
     public abstract List<Tower> generateRandomPositionTowers();
@@ -161,4 +161,5 @@ public abstract class Board {
    public void processTowers(List<Tower> towers, long tmp) throws InterruptedException {
       //TO DO
    }
+
 }
