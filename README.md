@@ -207,7 +207,7 @@ make classes
 make tests
 ```
 
-**lancer tous les fichiers livrable2a et livrable2b**
+**lancer tous les fichiers livrable3a et livrable3b**
 
 ```bash
 java -classpath classes bloons.Livrable3a arg1 arg2 arg3
