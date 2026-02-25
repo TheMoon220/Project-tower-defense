@@ -14,6 +14,14 @@ TEST_FILES = $(shell find $(TESTS) -name "*.java")
 # Cible par défaut
 all: classes
 
+# Lancement de Livrable3a
+run3a: classes
+	$(JAVA) -classpath $(OUT) bloons.main.Livrable3a $(ARG1) $(ARG2) $(ARG3)
+
+# Lancement de Livrable3b
+run3b: classes
+	$(JAVA) -classpath $(OUT) bloons.main.Livrable3b $(ARG1) $(ARG2) $(ARG3)
+	
 # Compilation des classes
 classes:
 	@echo "Compilation des fichiers source..."
