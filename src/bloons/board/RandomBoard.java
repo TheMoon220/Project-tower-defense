@@ -4,12 +4,8 @@ import bloons.*;
 import bloons.balloon.Balloon;
 import bloons.tower.IceTower;
 import bloons.tower.SlowDownTower;
-import bloons.tower.Tower;
-import bloons.tower.projectileTower.BombTower;
-import bloons.tower.projectileTower.DartMonkeyTower;
-import bloons.tower.projectileTower.SniperMonkeyTower;
-import bloons.tower.projectileTower.SuperMonkeyTower;
-import bloons.tower.projectileTower.TackShooterTower;
+import bloons.tower.*;
+import bloons.tower.projectileTower.*;
 import bloons.utils.*;
 import java.util.*;
 
