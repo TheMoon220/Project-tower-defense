@@ -14,11 +14,8 @@ public class ClassicalBoardTest {
             this.p1= new Position(1.0, 5.0);
             this.p2=new Position(1.0, 0.0);
             this.cell1= new Cell(p1) ;
-            this.board= new ClassicalBoard(4,6) ;
-
-        
+            this.board= new ClassicalBoard(4,6) ; 
         }
-
     @Test
     public void wrongdimensionBoardShouldException()throws IllegalArgumentException{
         assertThrows(IllegalArgumentException.class,()-> new ClassicalBoard(-1, 7) );
