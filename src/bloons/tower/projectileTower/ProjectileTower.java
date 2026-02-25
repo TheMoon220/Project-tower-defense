@@ -32,7 +32,7 @@ public class ProjectileTower extends Tower{
        if(Inrange(balloon) && canAttack(time)){
           int newHealth = balloon.getHealth() - this.projectile.getNiveauDegat();
           balloon.setHealth(newHealth);
-          if(newHealth <= 0){
+          if(balloon.isDestroyed()){
             this.balloons.remove(balloon);
           }
 
