@@ -23,6 +23,9 @@ public class ProjectileTower extends Tower{
     }
 
     
+    /** return the closest balloon to exit
+     * @return the closest balloon to exit
+     */
     public Balloon getBalloonClosestToExit(){
         Balloon ballon = this.balloonsInRange.get(0);
         double maxDistance = -1;
