@@ -63,36 +63,36 @@ private Balloon bal1;
 
       }
       public void aTTackBalloonDarkMonkeyTower(){
-        t1.attack(bal1);
-        Thread.wait(t1.getCadence());
+        t1.attackBallon(bal1,System.nanoTime());
+        Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
 
       }
        public void CanNotaTTackBalloonDarkMonkeyTower(){
-        t1.attack(bal1);
-        Thread.wait(t1.getCadence());
+        t1.attackBallon(bal1,System.nanoTime());
+         Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
-        Thread.wait(t1.getCadence());
-        AssertFalse(t1.canAttack());
+         Thread.sleep((long) t1.getCadence());
+        AssertFalse(t1.canAttack(System.nanoTime()));
 
       }
 
        public void aTTackBalloonIceTower(){
-        t1.attack(bal1);
-        Thread.wait(t2.getCadence());
+         t1.attackBallon(bal1,System.nanoTime());
+        Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
 
       }
       public void CanNotaTTackBalloonIceTower(){
         t1.attack(bal1);
-        Thread.wait(t2.getCadence());
+         Thread.sleep((long) t2.getCadence());
         t1.attackBallon(bal1,System.nanoTime());
         AssertEquals(0,bal1.getHealth());
         
-        Thread.wait(t2.getCadence());
+         Thread.sleep((long) t2.getCadence());
         AssertFalse(t2.canAttack());
 
       }
