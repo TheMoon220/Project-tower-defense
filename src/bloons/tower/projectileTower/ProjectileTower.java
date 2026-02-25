@@ -21,6 +21,10 @@ public class ProjectileTower extends Tower{
         super(cost, range, effect, cadence,position);
         this.projectile=projectile;
     }
+
+    public Balloon getBalloonClosestToExit(){
+        
+    }
     
     /** first the min of all balloonsiRrange is calulated and this one is the balloons to attack
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
