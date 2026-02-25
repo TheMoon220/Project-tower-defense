@@ -2,9 +2,19 @@ package bloons.board;
 
 import bloons.*;
 import bloons.balloon.Balloon;
+import bloons.tower.IceTower;
+import bloons.tower.SlowDownTower;
 import bloons.tower.Tower;
+import bloons.tower.projectileTower.BombTower;
+import bloons.tower.projectileTower.DartMonkeyTower;
+import bloons.tower.projectileTower.SniperMonkeyTower;
+import bloons.tower.projectileTower.SuperMonkeyTower;
+import bloons.tower.projectileTower.TackShooterTower;
 import bloons.utils.Direction;
+import bloons.utils.Effect;
 import bloons.utils.Level;
+import bloons.utils.Projectile;
+
 import java.util.*;
 
 /** the object ClassicalBoard for the board with a defnine path */
@@ -95,7 +105,8 @@ public class ClassicalBoard extends Board {
    @Override
    public List<Tower> generateRandomPositionTowers(){
       List<Tower> towers = new ArrayList<>();
-      //TO DO
+      Random rand = new Random();
+       
       return towers;
    }
 }
