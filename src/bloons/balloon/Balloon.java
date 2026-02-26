@@ -1,6 +1,4 @@
 package bloons.balloon;
-import java.util.List;
-
 import bloons.Position;
 import bloons.utils.*;
 import java.util.*;
@@ -71,6 +69,9 @@ public class Balloon {
      * @param newHealth the health 
      */
     public void setHealth(int newHealth) {
+        if(newHealth < 0){
+            this.health = 0;
+        }
         this.health = newHealth;
     }
 
