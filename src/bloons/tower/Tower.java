@@ -183,4 +183,23 @@ public abstract class Tower {
     public String toString() {
       return this.getClass().getSimpleName() + " at " + this.position;
     }
+
+    /** return the closest balloon to exit
+     * @return the closest balloon to exit
+     */
+    public Balloon getBalloonClosestToExit(){
+        Balloon ballon = this.balloonsInRange.get(0);
+        double maxDistance = -1;
+        for (Balloon b : this.balloonsInRange) {
+            if (b.isDestroyed()){
+                continue;
+            }
+            double distance = b.getCurrentCellIndex() + b.getProgress();
+            if (distance > maxDistance) {
+                maxDistance = distance;
+                ballon = b;
+            }
+        }
+        return ballon;
+    }
 }
