@@ -168,12 +168,7 @@ public abstract class Board {
         tower.getAllBalloonsInRange();
         List<Balloon> inRange = tower.getBalloonsInRange();
         if (!inRange.isEmpty()) {
-            Balloon target = inRange.get(0);
-            for (Balloon b : inRange) {
-                if (b.getCurrentCellIndex() > target.getCurrentCellIndex()) {
-                    target = b;
-                }
-            }
+            Balloon target = tower.getBalloonClosestToExit();
             int healthBefore = target.getHealth();
             double speedBefore = target.getSpeed();
             tower.attackBallon(target, tmp);
