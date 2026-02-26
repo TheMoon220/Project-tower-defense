@@ -1,8 +1,8 @@
 package bloons.board;
+import bloons.*;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
 import bloons.utils.*;
-import bloons.*;
 import java.util.*;
 
 /** the object Board an abstract class for our game */
@@ -176,6 +176,9 @@ public abstract class Board {
                 System.out.println(tower + " shoots at Balloon at " + target.getPosition());
             }
             if (target.getHealth() < healthBefore) {
+                if(target.getHealth() < 0){
+                   target.setHealth(0);
+                }
                 System.out.println("time: " + tmp + " ms - Balloon touched (health: " + target.getHealth() + ")");
             }
             if (target.getHealth() <= 0) {
