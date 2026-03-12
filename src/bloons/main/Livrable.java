@@ -32,48 +32,53 @@ public  abstract class Livrable {
             int width = Integer.parseInt(args[0]);
             int height = Integer.parseInt(args[1]);
             int param = Integer.parseInt(args[2]);
+            System.out.println("Board size: " + width + "x" + height);
+            System.out.println();
 
             Board board = createBoard(width, height, param);
-
             initBoard(board, param);
-
             List<Balloon> balloons = board.getAllballoons();
             List<Tower> towers = board.generateRandomPositionTowers();
-
             for (Tower tower : towers) {
                 tower.addBalloons(balloons);
             }
-
+            System.out.println("\n=== run simulation");
             long deltaTime = 100;
             long start = System.nanoTime();
 
             while(!balloons.isEmpty()){
 
                 long currentTime = (System.nanoTime() - start) / 1000000;
-
+                System.out.println();
+                System.out.println("time: " + currentTime+ " ms");
+       
                 board.processTowers(towers, currentTime);
 
                 List<Balloon> toRemove = new ArrayList<>();
 
-                for(Balloon balloon : balloons){
-
+                for(int i = 0; i < balloons.size(); i++){
+                    Balloon balloon = balloons.get(i);
                     if(balloon.isDestroyed()){
                         toRemove.add(balloon);
                         continue;
                     }
-
                     balloon.moveBallon();
-
+                    System.out.println(
+                    "Balloon " + i + " at (" + 
+                    String.format("%.2f", balloon.getPosition().getX()) + ", " + 
+                    String.format("%.2f", balloon.getPosition().getY()) + ")"
+                );
                     if(balloon.checkEndOfPath()){
+                        System.out.println("Balloon " + i + " exited at time: " + currentTime);
                         toRemove.add(balloon);
                     }
                 }
-
                 balloons.removeAll(toRemove);
-
                 Thread.sleep(deltaTime);
             }
-
+            long total = (System.nanoTime() - start) / 1000000;
+            System.out.println("\n=== All balloons finished ===");
+            System.out.println("Total simulation time: " + total);
             System.out.println("Simulation finished");
 
         } catch(NumberFormatException e){

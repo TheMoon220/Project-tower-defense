@@ -1,12 +1,7 @@
 
 package bloons.main;
 
-import bloons.balloon.Balloon;
 import bloons.board.*;
-import bloons.tower.*;
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class Livrable3a  extends Livrable{
 
@@ -33,5 +28,15 @@ public class Livrable3a  extends Livrable{
         board.displayBoard();
         board.displayPath();
     }
+     /**
+     * Main method of Livrable3b.
+     *
+     * @param args program arguments
+     * @throws InterruptedException if simulation sleep is interrupted
+     */
+    public static void main(String[] args) throws InterruptedException{
+         System.out.println("=== Livrable 3a: Classical Board ===");
+        new Livrable3a().run(args);
 
+    }
 }
