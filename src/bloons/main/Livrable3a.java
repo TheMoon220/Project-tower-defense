@@ -21,8 +21,7 @@ public class Livrable3a  extends Livrable{
     protected Board createBoard(int width, int height, int nbBalloons){
         return new ClassicalBoard(width, height);
     }
-
-    /**
+     /**
      * Initializes the ClassicalBoard.
      * Generates balloons and displays the board and the path.
      *
@@ -35,13 +34,4 @@ public class Livrable3a  extends Livrable{
         board.displayPath();
     }
 
-    /**
-     * Main method of Livrable3a.
-     *
-     * @param args program arguments
-     * @throws InterruptedException if simulation sleep is interrupted
-     */
-    public static void main(String[] args) throws InterruptedException{
-        new Livrable3a().run(args);
-    }
 }
