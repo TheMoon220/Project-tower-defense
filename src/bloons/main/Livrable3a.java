@@ -8,77 +8,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Livrable3a {
-    public static void main(String[] args) throws InterruptedException{
+public class Livrable3a  extends Livrable{
 
-        if(args.length != 3){
-            System.out.println("Exactly tree arguments are required");
-            return;
-        }
+ /**
+     * Creates a ClassicalBoard.
+     *
+     * @param width width of the board
+     * @param height height of the board
+     * @param nbBalloons number of balloons to generate
+     * @return a ClassicalBoard instance
+     */
+    protected Board createBoard(int width, int height, int nbBalloons){
+        return new ClassicalBoard(width, height);
+    }
 
-        int width;
-        int height;
-        int nbBalloons;
-        try{
-            width = Integer.parseInt(args[0]);
-            height = Integer.parseInt(args[1]);
-            nbBalloons = Integer.parseInt(args[2]);
-        } catch(NumberFormatException e){
-            System.out.println("Les arguments doivent etre des entiers");
-            return;
-        }
-        
-        System.out.println("=== Livrable 3a: Classical Board ===");
-        System.out.println("Board size: " + width + "x" + height);
-        System.out.println("Nombre de ballons " + nbBalloons);
-        System.out.println();
-
-        Board board = new ClassicalBoard(width, height);
+    /**
+     * Initializes the ClassicalBoard.
+     * Generates balloons and displays the board and the path.
+     *
+     * @param board the board used in the simulation
+     * @param nbBalloons number of balloons to generate
+     */
+    protected void initBoard(Board board, int nbBalloons){
         board.generateAllballoons(nbBalloons);
-        System.out.println();
         board.displayBoard();
-        System.out.println();
         board.displayPath();
-        List <Balloon> balloons=board.getAllballoons();
-        List <Tower> towers= board.generateRandomPositionTowers();
-        for (Tower tower : towers) {
-              tower.addBalloons(balloons);
-           } 
+    }
 
-        System.out.println("\n=== run simulation");
-        long deltaTime = 100;
-        long start =System.nanoTime();
-
-        while(!balloons.isEmpty()){
-            long currentTime = (System.nanoTime()-start)/1000000;
-            System.out.println();
-            System.out.println("time: " + currentTime + " ms");
-            //tours attaquent
-            board.processTowers(towers, currentTime);
-            //deplacement des ballons
-            List<Balloon> toRemove = new ArrayList<>();
-            for(int i = 0; i < balloons.size(); i++){
-                Balloon balloon = balloons.get(i);
-                balloon.moveBallon();
-                 System.out.println(
-                    "Balloon " + i + " at (" + 
-                    String.format("%.2f", balloon.getPosition().getX()) + ", " + 
-                    String.format("%.2f", balloon.getPosition().getY()) + ")"
-                );
-                if(balloon.checkEndOfPath()){
-                    System.out.println("Balloon " + i + " exited at time: " + currentTime);
-                    toRemove.add(balloon);
-                }
-            }
-
-            balloons.removeAll(toRemove);
-           
-            Thread.sleep(deltaTime);
-        }
-
-        System.out.println("\n=== All balloons finished ===");
-        System.out.println("Total simulation time: " +(System.nanoTime()-start)/1000000);
-         
-     
-}
+    /**
+     * Main method of Livrable3a.
+     *
+     * @param args program arguments
+     * @throws InterruptedException if simulation sleep is interrupted
+     */
+    public static void main(String[] args) throws InterruptedException{
+        new Livrable3a().run(args);
+    }
 }
