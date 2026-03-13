@@ -36,5 +36,14 @@ public class Livrable3b extends Livrable {
         rb.generateAllballoons(numPaths);
     }
 
-   
+    /**
+     * Main method of Livrable3b.
+     *
+     * @param args program arguments
+     * @throws InterruptedException if simulation sleep is interrupted
+     */
+    public static void main(String[] args) throws InterruptedException{
+        System.out.println("=== Livrable 3a: Classical Board ===");
+        new Livrable3b().run(args);
+    }
 }
