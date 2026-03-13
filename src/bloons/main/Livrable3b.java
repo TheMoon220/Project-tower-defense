@@ -22,5 +22,19 @@ public class Livrable3b extends Livrable {
         return new RandomBoard(width, height);
     }
 
-    
+    /**
+     * Initializes the RandomBoard.
+     * Generates paths and balloons.
+     *
+     * @param board the board used in the simulation
+     * @param numPaths number of paths to generate
+     */
+    protected void initBoard(Board board, int numPaths){
+        RandomBoard rb = (RandomBoard) board;
+        rb.generatePaths(numPaths);
+        rb.displayBoard();
+        rb.generateAllballoons(numPaths);
+    }
+
+   
 }
