@@ -49,9 +49,15 @@ public  abstract class Livrable {
             while(!balloons.isEmpty()){
 
                 long currentTime = (System.nanoTime() - start) / 1000000;
+                
                 System.out.println();
                 System.out.println("time: " + currentTime+ " ms");
-       
+                if (board instanceof RandomBoard){
+                    RandomBoard rb = (RandomBoard) board;
+                    rb.displayBoard(balloons);
+                }else{
+                    board.displayBoard();
+                }
                 board.processTowers(towers, currentTime);
 
                 List<Balloon> toRemove = new ArrayList<>();
