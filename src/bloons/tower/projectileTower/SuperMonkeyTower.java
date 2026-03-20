@@ -18,4 +18,16 @@ public class SuperMonkeyTower extends ProjectileTower{
     public SuperMonkeyTower(double cost, double range, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, range, effect, cadence, position, projectile);
     } 
+
+    /**
+     * put evolutions for tower
+     */
+    public void putEvolutions(){
+        double oldRange = this.getRange();
+        double newRange = oldRange * 1.5;
+        this.setRange(newRange);
+
+        int oldPuissance = this.getProjectil().getNiveauDegat();
+        this.projectile.setNiveauDegat(oldPuissance + 2);
+    }
 }
