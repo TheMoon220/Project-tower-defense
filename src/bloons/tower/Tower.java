@@ -75,6 +75,13 @@ public abstract class Tower {
     public double getRange(){
       return this.range ;
     }
+
+    /**
+    * to set the range of the tower during the evolution
+    */
+    public void setRange(double newRange){
+      this.range = newRange ;
+    }
   
     /**
      * allow to get the tower effect
