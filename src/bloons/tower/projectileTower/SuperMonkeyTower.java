@@ -27,7 +27,13 @@ public class SuperMonkeyTower extends ProjectileTower{
         double newRange = oldRange * 1.5;
         this.setRange(newRange);
 
+        double oldCadance = this.getCadence();
+        double newCadance = oldCadance * 3;
+        this.setCadence(newCadance);
+
         int oldPuissance = this.getProjectil().getNiveauDegat();
         this.projectile.setNiveauDegat(oldPuissance + 2);
+
+        
     }
 }
