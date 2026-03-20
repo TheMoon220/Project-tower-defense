@@ -2,6 +2,7 @@ package bloons.board;
 import bloons.*;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
+import bloons.tower.projectileTower.*;
 import bloons.utils.*;
 import java.util.*;
 
@@ -195,5 +196,17 @@ public abstract class Board {
             }
         }
       }
+    }
+
+    /**
+     * evolute all towers in board
+     */
+    public void EvoluteAllTowers(){
+        List<Tower> towers = this.generateRandomPositionTowers();
+        for(Tower t : towers){
+            if (t instanceof ProjectileTower){
+                ((ProjectileTower)t).putEvolutions();
+            }
+        }
     }
 }
