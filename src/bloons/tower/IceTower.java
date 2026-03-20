@@ -6,7 +6,8 @@ import bloons.utils.*;
 
 /** the tower that freezes balloons */
 public class IceTower extends Tower{
-    private double reelSpeed = -1; // an variable for the speed
+   // an variable for the speed
+    private double reelSpeed = -1; 
     /** 
      * the constructor of the class Tower
      * @param cost the tower's price
