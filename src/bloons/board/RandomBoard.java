@@ -38,20 +38,38 @@ public class RandomBoard extends Board {
     }
 
     /**
+     * an methode for check if a path overlaps with existing paths
+     * @param paths to check
+     * @param usePositions the already used positions
+     * @return true if the path overlap otherwise false
+     */
+    private boolean hasOverLap(List<Position> paths,  List<List<Position>> usedPositions){
+      Set<Position> newPathSet = new HashSet<>(paths);
+      for(List<Position> p: usedPositions){
+         Set<Position> setPos = new HashSet<>(p);
+         if(setPos.equals(newPathSet)){
+            return true;
+         }
+      }
+
+      return false;
+    }
+
+    /**
      * Generate multiple paths
      * @param numPaths number of paths to generate
      * @exception IllegalArgumentException when the numPaths it's exceed the size
      */
     public void generatePaths(int numPaths){
-        int var = this.height * this.width;
+        int var = this.height + this.width;
         if(var <= numPaths){
            throw new IllegalArgumentException("the number must not exceed the size");
         }
 
         this.allPaths.clear();
         Random random = new Random();
-        int i;
-        for(i = 0; i < numPaths; i++){
+        int i = 0;
+        while(i < numPaths){
             Direction[] directions = Direction.values();
             Direction direction = directions[random.nextInt(4)];
             List<Position> path = new ArrayList<>();
@@ -82,7 +100,11 @@ public class RandomBoard extends Board {
                       path.add(new Position(x, startY));
                    }
             }
-            this.allPaths.add(path);
+            
+            if(!this.hasOverLap(path, this.allPaths)){
+               this.allPaths.add(path);
+               i++;
+            }
         }
     }
 
