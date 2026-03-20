@@ -47,7 +47,7 @@ public class BombTower extends ProjectileTower {
     }
 
     /**
-     * put evolution for tower
+     * put evolutions for tower
      */
     public void putEvolutions(){
         double oldRange = this.getRange();
@@ -60,6 +60,6 @@ public class BombTower extends ProjectileTower {
 
         this.setProjectile(Projectile.EXTRABOMB);
         int oldPuissance = this.getProjectil().getNiveauDegat();
-        this.getProjectil().setNiveauDegat(oldPuissance + 1);
-    };
+        this.projectile.setNiveauDegat(oldPuissance + 1);
+    }
 }
