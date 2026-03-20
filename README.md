@@ -405,12 +405,21 @@ les taches ont été partagées.
 **Mamadou Baïllo Sow**: Doit fournir différentes classes du package tour (IceTower, SlowDownTower, BombeTower), il s'assure de corriger des erreurs si besoin aux différents algorithmes implémentés par les autres membres du groupe. Ainsi qu'un des mainLivrable !
 
 ## Semaine 7
+Amélioration du livrable 3 afin de prendre en compte les détails apportés par la prof.
 
 ### Ce qui a été réalisé
+Création d'une nouvelle classe **Livrable.java** qui est une classe abstraite que héritera les deux programmes principaux **Livrable3.java** et **Livrable3.java**. Réflexion commune entre les membres du groupe concernant le livrable prochain, de nouvaux éléments apportés pour l'UML.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+- **Marima Séré Sylla**: s'occupe de faire le diagramme UML, ainsi que la création de la classe livrable pour le programme principale.
+
+- **Farmata Sall Sow**: elle fournit la documentation des algorithmes à mettre en place et vérifie le travail des autres pour d'éventuelles modifications.
+
+- **Khadim Beye**: Vérifie que le classical board fonctionne comme il faut, ainsi que les tests.
+
+- **Mamadou Baïllo Sow**: Vérifie que le Random board fonctionne comme il faut, et remplit le journal de bord.
 
 ## Semaine 8
 
