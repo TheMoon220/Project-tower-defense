@@ -18,5 +18,18 @@ public class TackShooterTower extends ProjectileTower{
     public TackShooterTower(double cost, double range, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, range, effect, cadence, position, projectile);
     }
+
+    /**
+     * put evolutions for tower
+     */
+    public void putEvolutions(){
+        double oldRange = this.getRange();
+        double newRange = oldRange * 1.20;
+        this.setRange(newRange);
+
+        double oldCadance = this.getCadence();
+        double newCadance = oldCadance * 1.25;
+        this.setCadence(newCadance);
+    }
     
 }
