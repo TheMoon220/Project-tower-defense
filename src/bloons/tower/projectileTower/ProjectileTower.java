@@ -62,5 +62,5 @@ public class ProjectileTower extends Tower{
     /**
      * put evolution for tower
      */
-    public void putEvolution(){};
+    public void putEvolutions(){};
 }
