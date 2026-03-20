@@ -29,4 +29,20 @@ public class DartMonkeyTower extends ProjectileTower {
     public void attackBallon (Balloon balloon,long time) throws InterruptedException{
         super.attackBallon(balloon, time);
     }
+
+    /**
+     * put evolutions for tower
+     */
+    public void putEvolutions(){
+        double oldRange = this.getRange();
+        double newRange = oldRange * 1.25;
+        this.setRange(newRange);
+
+        double oldCadance = this.getCadence();
+        double newCadance = oldCadance * 1.25;
+        this.setCadence(newCadance);
+
+        int oldPuissance = this.getProjectil().getNiveauDegat();
+        this.projectile.setNiveauDegat(oldPuissance + 1);
+    }
 }

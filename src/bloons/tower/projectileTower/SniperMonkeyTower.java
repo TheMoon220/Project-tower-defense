@@ -28,4 +28,16 @@ public class SniperMonkeyTower extends ProjectileTower{
     public boolean Inrange(Balloon b){
         return true;
     }
+
+    /**
+     * put evolutions for tower
+     */
+    public void putEvolutions(){
+        double oldCadance = this.getCadence();
+        double newCadance = oldCadance * 1.25;
+        this.setCadence(newCadance);
+
+        int oldPuissance = this.getProjectil().getNiveauDegat();
+        this.projectile.setNiveauDegat(oldPuissance + 2);
+    }
 }
