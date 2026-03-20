@@ -54,5 +54,9 @@ public class BombTower extends ProjectileTower {
         double newRange = oldRange * 1.5;
         this.setRange(newRange);
 
+        double oldCadance = this.getCadence();
+        double newCadance = oldCadance * 1.25;
+        this.setCadence(newCadance);
+
     };
 }
