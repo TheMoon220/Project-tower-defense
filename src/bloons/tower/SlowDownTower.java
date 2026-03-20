@@ -6,6 +6,8 @@ import bloons.utils.Effect;
 
 /** the object SlowDownTower that send a projectile */
 public class SlowDownTower extends Tower {
+    // an variable for the speed;
+    private double reelSpeed = -1;
 
     /** Slow down tower building
      * @param cost the cost of tower
@@ -26,9 +28,14 @@ public class SlowDownTower extends Tower {
     @Override
     public void attackBallon (Balloon balloon, long currTime){
         if(Inrange(balloon) && canAttack(currTime)){
-          double newSpeed = balloon.getSpeed() * 0.5; 
-          balloon.setSpeed(newSpeed);
+          if(this.reelSpeed == -1){
+            this.reelSpeed = balloon.getSpeed();
+          }
+          balloon.setSpeed(this.reelSpeed * 0.5);
           updateLastAttackTime(currTime);
+        } else if(!Inrange(balloon) && this.reelSpeed != -1){
+            balloon.setSpeed(reelSpeed);
+            this.reelSpeed = -1;
         }
     }
 }
