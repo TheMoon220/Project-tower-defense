@@ -48,6 +48,7 @@ public abstract class Board {
      * @param n an integer
     */
     public void generateAllballoons(int n){
+        //this.Allballoons.clear();
         for(int i = 0; i < n; i++){
             Balloon balloon =createBalloonForPath(i, Level.generateLevel());
             Allballoons.add(balloon);
