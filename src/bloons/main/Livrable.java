@@ -52,7 +52,7 @@ public  abstract class Livrable {
                 
                 System.out.println();
                 System.out.println("time: " + currentTime+ " ms");
-                if (board instanceof RandomBoard){
+                if(board instanceof RandomBoard){
                     RandomBoard rb = (RandomBoard) board;
                     rb.displayBoard(balloons);
                 }else{
