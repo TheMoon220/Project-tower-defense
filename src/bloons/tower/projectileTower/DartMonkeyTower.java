@@ -37,7 +37,7 @@ public class DartMonkeyTower extends ProjectileTower {
     public void putEvolutions(){
         switch (this.evolutionIndex) {
             case 1:
-                double newRange = this.getCadence() * 1.25;
+                double newRange = this.getRange() * 1.25;
                 this.setRange(newRange);
                 System.out.println("DartMonkeyTower : Range evolute to 25%");
                 break;
