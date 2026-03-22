@@ -53,4 +53,12 @@ public class BombTower extends ProjectileTower {
     public void putEvolutions(){
         
     }
+
+    /**
+     * remove evolutions for tower
+     */
+    @Override
+    public void removeEvolution(){
+        
+    }
 }
