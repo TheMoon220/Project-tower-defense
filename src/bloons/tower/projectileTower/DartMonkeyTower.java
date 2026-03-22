@@ -33,16 +33,28 @@ public class DartMonkeyTower extends ProjectileTower {
     /**
      * put evolutions for tower
      */
+    @Override
     public void putEvolutions(){
-        double oldRange = this.getRange();
-        double newRange = oldRange * 1.25;
-        this.setRange(newRange);
+        switch (this.evolutionIndex) {
+            case 1:
+                double newRange = this.getCadence() * 1.25;
+                this.setRange(newRange);
+                System.out.println("DartMonkeyTower : Range evolute to 25%");
+                break;
+            case 2:
+                double newCadance = this.getCadence() * 0.75;
+                this.setCadence(newCadance);
+                System.out.println("DartMonkeyTower : Cadance evolute to 25%");
+                break;
+            case 3:
+                int oldPuissance = this.getProjectil().getNiveauDegat();
+                this.projectile.setNiveauDegat(oldPuissance + 1);
+                System.out.println("DartMonkeyTower : Puissance evolute to 1");
+                break;
 
-        double oldCadance = this.getCadence();
-        double newCadance = oldCadance * 1.25;
-        this.setCadence(newCadance);
-
-        int oldPuissance = this.getProjectil().getNiveauDegat();
-        this.projectile.setNiveauDegat(oldPuissance + 1);
+            default:
+                return;
+        }
+        this.evolutionIndex++;
     }
 }
