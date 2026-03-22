@@ -26,7 +26,7 @@ public class SuperMonkeyTower extends ProjectileTower{
     public void putEvolutions(){
         switch (this.evolutionIndex) {
             case 1:
-                double newRange = this.getCadence() * 1.5;
+                double newRange = this.getRange() * 1.5;
                 this.setRange(newRange);
                 System.out.println("SuperMonkeyTower : Range evolutes to 50%");
                 break;
