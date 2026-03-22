@@ -16,6 +16,7 @@ public abstract class Board {
     protected Cell[][] grid;
     /** the attribute Allballoons on the board */
     protected List<Balloon> Allballoons ;
+    protected List<Tower> allTowers;
 
     /**
      * Builds a board wiht sizes width and height
@@ -33,6 +34,7 @@ public abstract class Board {
         this.height = height;
         this.grid = new Cell[width][height];
         this.Allballoons=new ArrayList<>();
+        this.allTowers = this.generateRandomPositionTowers();
         for (int i=0; i<width; i++){
             for (int j=0; j<height; j++){
                 grid[i][j] = new Cell(new Position(i, j));
@@ -203,8 +205,7 @@ public abstract class Board {
      * evolute all towers in board
      */
     public void EvoluteAllTowers(){
-        List<Tower> towers = this.generateRandomPositionTowers();
-        for(Tower t : towers){
+        for(Tower t : this.allTowers){
             if (t instanceof ProjectileTower){
                 ((ProjectileTower)t).putEvolutions();
             }
