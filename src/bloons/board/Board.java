@@ -208,4 +208,13 @@ public abstract class Board {
             t.putEvolutions();
         }
     }
+
+    /**
+     * remove evolution for all towers in board
+     */
+    public void removeEvolutionForTowers(){
+        for(Tower t : this.allTowers){
+            t.removeEvolution();
+        }
+    }
 }
