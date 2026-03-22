@@ -216,4 +216,9 @@ public abstract class Tower {
      * put evolution for tower
      */
     public abstract void putEvolutions();
+
+    /**
+     * remove evolution for tower
+     */
+    public abstract void removeEvolution();
 }
