@@ -70,7 +70,7 @@ public class SuperMonkeyTower extends ProjectileTower{
                 break;
             case 3:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 2);
-                System.out.println("SuperMonkeyTower : Puissance evolutes to 2");
+                System.out.println("SuperMonkeyTower : Puissance decreases to 2");
                 break;
         }
     }
