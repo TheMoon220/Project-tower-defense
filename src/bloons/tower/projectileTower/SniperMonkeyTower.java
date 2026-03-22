@@ -52,4 +52,29 @@ public class SniperMonkeyTower extends ProjectileTower{
         }
         this.evolutionIndex++;
     }
+
+     /**
+     * put evolutions for tower
+     */
+    @Override
+    public void removeEvolution(){
+        if (this.evolutionIndex == 1) {
+            System.out.println("SniperMonkeyTower : no change to remove");
+            return;
+        }
+        this.evolutionIndex--;
+        switch (this.evolutionIndex) {
+            case 1:
+                this.cadence/=1.25;
+                System.out.println("SniperMonkeyTower : Cadance decreases to 25%");
+                break;
+            case 2:
+                this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 2);
+                System.out.println("SniperMonkeyTower : Puissance decreases to 2");
+                break;
+            default:
+                System.out.println("SniperMonkeyTower : no change to remove");
+                return;
+        }
+    }
 }
