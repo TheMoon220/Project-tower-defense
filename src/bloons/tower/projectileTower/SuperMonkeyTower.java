@@ -41,6 +41,7 @@ public class SuperMonkeyTower extends ProjectileTower{
                 break;
 
             default:
+                System.out.println("SuperMonkeyTower : no possible evolution");
                 return;
         }
         this.evolutionIndex++;

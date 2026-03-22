@@ -42,7 +42,7 @@ public class DartMonkeyTower extends ProjectileTower {
                 System.out.println("DartMonkeyTower : Range evolute to 25%");
                 break;
             case 2:
-                double newCadance = this.getCadence() * 0.75;
+                double newCadance = this.getCadence() * 1.25;
                 this.setCadence(newCadance);
                 System.out.println("DartMonkeyTower : Cadance evolute to 25%");
                 break;
@@ -53,6 +53,7 @@ public class DartMonkeyTower extends ProjectileTower {
                 break;
 
             default:
+                System.out.println("DartMonkeyTower : no possible evolution");
                 return;
         }
         this.evolutionIndex++;
