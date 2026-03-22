@@ -26,6 +26,7 @@ public abstract class Tower {
     protected  List<Balloon > balloonsInRange ;
     /** Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60) */
     public double RANGE=60; 
+    protected int evolutionIndex;
      
     /** tower building
      * @param cost the coast of tower
@@ -42,6 +43,7 @@ public abstract class Tower {
         this.balloonsInRange=new ArrayList<>();
         this.position=position;
         this.timeLastAttack = 0;
+        this.evolutionIndex = 1;
     }
 
     /**
