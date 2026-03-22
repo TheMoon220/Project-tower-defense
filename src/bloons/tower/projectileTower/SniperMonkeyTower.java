@@ -54,7 +54,7 @@ public class SniperMonkeyTower extends ProjectileTower{
     }
 
      /**
-     * put evolutions for tower
+     * remove evolutions for tower
      */
     @Override
     public void removeEvolution(){
