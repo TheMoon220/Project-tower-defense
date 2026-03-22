@@ -32,12 +32,24 @@ public class SniperMonkeyTower extends ProjectileTower{
     /**
      * put evolutions for tower
      */
+    @Override
     public void putEvolutions(){
-        double oldCadance = this.getCadence();
-        double newCadance = oldCadance * 1.25;
-        this.setCadence(newCadance);
-
-        int oldPuissance = this.getProjectil().getNiveauDegat();
-        this.projectile.setNiveauDegat(oldPuissance + 2);
+        switch (this.evolutionIndex) {
+            case 1:
+                double oldCadance = this.getCadence();
+                double newCadance = oldCadance * 1.25;
+                this.setCadence(newCadance);
+                System.out.println("SniperMonkeyTower : Cadance evolute to 25%");
+                break;
+            case 2:
+                int oldPuissance = this.getProjectil().getNiveauDegat();
+                this.projectile.setNiveauDegat(oldPuissance + 2);
+                System.out.println("SniperMonkeyTower : Puissance evolute to 2");
+                break;
+            default:
+                System.out.println("SniperMonkeyTower : no possible evolution");
+                return;
+        }
+        this.evolutionIndex++;
     }
 }
