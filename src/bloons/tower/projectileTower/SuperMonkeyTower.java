@@ -23,17 +23,27 @@ public class SuperMonkeyTower extends ProjectileTower{
      * put evolutions for tower
      */
     public void putEvolutions(){
-        double oldRange = this.getRange();
-        double newRange = oldRange * 1.5;
-        this.setRange(newRange);
+        switch (this.evolutionIndex) {
+            case 1:
+                double newRange = this.getCadence() * 1.5;
+                this.setRange(newRange);
+                System.out.println("SuperMonkeyTower : Range evolutes to 50%");
+                break;
+            case 2:
+                double newCadance = this.getCadence() * 3;
+                this.setCadence(newCadance);
+                System.out.println("SuperMonkeyTower : Cadance evolutes to 200%");
+                break;
+            case 3:
+                int oldPuissance = this.getProjectil().getNiveauDegat();
+                this.projectile.setNiveauDegat(oldPuissance + 2);
+                System.out.println("SuperMonkeyTower : Puissance evolutes to 2");
+                break;
 
-        double oldCadance = this.getCadence();
-        double newCadance = oldCadance * 3;
-        this.setCadence(newCadance);
-
-        int oldPuissance = this.getProjectil().getNiveauDegat();
-        this.projectile.setNiveauDegat(oldPuissance + 2);
-
+            default:
+                return;
+        }
+        this.evolutionIndex++;
         
     }
 }
