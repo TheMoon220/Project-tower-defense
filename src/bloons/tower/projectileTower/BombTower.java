@@ -84,7 +84,7 @@ public class BombTower extends ProjectileTower {
     @Override
     public void removeEvolution(){
         if(this.evolutionIndex == 1) {
-            System.out.println("DartMonkeyTower : no change to remove");
+            System.out.println("BombTower : no change to remove");
             return;
         }
         this.evolutionIndex--;
@@ -105,10 +105,6 @@ public class BombTower extends ProjectileTower {
                 this.setProjectile(Projectile.BOMB);
                 System.out.println("BombTower : reinit projectile (Bomb)");
                 break;
-            default:
-                System.out.println("BombTower : no possible evolution");
-                return;
         }
-        
     }
 }
