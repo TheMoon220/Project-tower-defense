@@ -2,7 +2,6 @@ package bloons.board;
 import bloons.*;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
-import bloons.tower.projectileTower.*;
 import bloons.utils.*;
 import java.util.*;
 
@@ -206,9 +205,7 @@ public abstract class Board {
      */
     public void EvoluteAllTowers(){
         for(Tower t : this.allTowers){
-            if (t instanceof ProjectileTower){
-                ((ProjectileTower)t).putEvolutions();
-            }
+            t.putEvolutions();
         }
     }
 }
