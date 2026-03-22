@@ -50,4 +50,9 @@ public class IceTower extends Tower{
     public void putEvolutions() {
         System.out.println("IceTower : can't be evolute");
     }
+
+    @Override
+    public void removeEvolution() {
+        System.out.println("IceTower : no change to remove");
+    }
 }
