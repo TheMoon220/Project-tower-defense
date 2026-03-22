@@ -23,13 +23,22 @@ public class TackShooterTower extends ProjectileTower{
      * put evolutions for tower
      */
     public void putEvolutions(){
-        double oldRange = this.getRange();
-        double newRange = oldRange * 1.20;
-        this.setRange(newRange);
-
-        double oldCadance = this.getCadence();
-        double newCadance = oldCadance * 1.25;
-        this.setCadence(newCadance);
+        switch (this.evolutionIndex) {
+            case 1:
+                double newRange = this.getCadence() * 1.20;
+                this.setRange(newRange);
+                System.out.println("TackShooterTower : Range evolutes to 20%");
+                break;
+            case 2:
+                double newCadance = this.getCadence() * 1.25;
+                this.setCadence(newCadance);
+                System.out.println("TackShooterTower : Cadance evolutes to 25%");
+                break;
+            default:
+                System.out.println("TackShooterTower : no possible evolution");
+                return;
+        }
+        this.evolutionIndex++;
     }
     
 }
