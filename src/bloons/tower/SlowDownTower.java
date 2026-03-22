@@ -38,4 +38,9 @@ public class SlowDownTower extends Tower {
             this.reelSpeed = -1;
         }
     }
+
+    @Override
+    public void putEvolutions() {
+        System.out.println("SlowDownTower : can't be evolute");
+    }
 }
