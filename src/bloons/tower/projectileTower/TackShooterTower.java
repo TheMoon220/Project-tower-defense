@@ -26,7 +26,7 @@ public class TackShooterTower extends ProjectileTower{
     public void putEvolutions(){
         switch (this.evolutionIndex) {
             case 1:
-                double newRange = this.getCadence() * 1.20;
+                double newRange = this.getRange() * 1.20;
                 this.setRange(newRange);
                 System.out.println("TackShooterTower : Range evolutes to 20%");
                 break;
