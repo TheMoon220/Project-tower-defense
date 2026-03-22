@@ -59,6 +59,9 @@ public class DartMonkeyTower extends ProjectileTower {
         this.evolutionIndex++;
     }
 
+    /**
+     * remove evolutions for tower
+     */
     @Override
     public void removeEvolution() {
         if (this.evolutionIndex == 1) {
