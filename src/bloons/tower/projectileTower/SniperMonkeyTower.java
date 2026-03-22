@@ -72,9 +72,6 @@ public class SniperMonkeyTower extends ProjectileTower{
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 2);
                 System.out.println("SniperMonkeyTower : Puissance decreases to 2");
                 break;
-            default:
-                System.out.println("SniperMonkeyTower : no change to remove");
-                return;
         }
     }
 }
