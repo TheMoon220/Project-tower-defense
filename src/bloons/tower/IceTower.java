@@ -45,4 +45,9 @@ public class IceTower extends Tower{
          this.reelSpeed = -1;
        }
     }
+
+    @Override
+    public void putEvolutions() {
+        System.out.println("IceTower : can't be evolute");
+    }
 }
