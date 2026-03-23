@@ -3,8 +3,7 @@ package bloons.main;
 import bloons.board.*;
 
 /**
- * Simulation for Livrable 3b.
- *
+ * Simulation for Livrable 4b.
  * This simulation uses a RandomBoard.
  * Paths are generated randomly.
  */
@@ -35,17 +34,17 @@ public class Livrable4b extends Livrable {
         RandomBoard rb = (RandomBoard) board;
         rb.generatePaths(numPaths);
         rb.displayBoard();
-        rb.generateAllballoons(numPaths);
+        //rb.generateAllballoons(numPaths);
     }
 
     /**
-     * Main method of Livrable3b.
+     * Main method of Livrable4b.
      *
      * @param args program arguments
      * @throws InterruptedException if simulation sleep is interrupted
      */
     public static void main(String[] args) throws InterruptedException{
-        System.out.println("=== Livrable 3a: Classical Board ===");
+        System.out.println("=== Livrable 4b: Random Board ===");
         new Livrable4b().run(args);
     }
 }
