@@ -2,7 +2,11 @@
 package bloons.tower;
 import bloons.tower.IceTower;
 import bloons.tower.Tower ;
+import bloons.tower.projectileTower.*;
 import bloons.tower.projectileTower.DartMonkeyTower;
+import bloons.tower.projectileTower.SniperMonkeyTower;
+import bloons.tower.projectileTower.SuperMonkeyTower;
+import bloons.tower.projectileTower.TackShooterTower;
 import bloons.utils.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,9 +30,13 @@ private Balloon bal1;
     private Tower  t1;
     private Tower t2 ;
     private Tower t3 ;
+    private ProjectileTower t4 ;
+    private ProjectileTower  t5 ;
+    private ProjectileTower t6;
     private List<Balloon> ballons =new ArrayList<>();
     private Position pos1 ;
     private Position pos2 ;
+    private Position pos3;
     
 
 
@@ -37,6 +45,7 @@ private Balloon bal1;
    
        pos1 = new Position(2, 4);
        pos2 = new Position(2, 0);
+       pos3= new Position(0, 0);
        ballons.add(bal1);
        ballons.add(bal2);
        ballons.add(bal3);
@@ -51,6 +60,11 @@ private Balloon bal1;
       bal3 = new Balloon(new Position(1, 2),Level.NIV2 );
       t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos1, Projectile.DART);
       t2=new IceTower(400,100,Effect.IMMEDIAT,1500,pos2);
+      t3= new BombTower(600, 0, Effect.IMMEDIAT, 200, pos,Projectile.BOMB);
+      t4= new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, pos,Projectile.VERYSHARPDART );
+      t5= new SuperMonkeyTower(500, 100, Effect.IMMEDIAT, 1000, pos3, Projectile.POINTEDDART);
+      t6= new TackShooterTower(350, 80, Effect.IMMEDIAT, 1200, pos, Projectile.NEEDLE);
+      t3.addBalloons(ballons);
       t1.addBalloons(ballons);
       t2.addBalloons(ballons);
        
