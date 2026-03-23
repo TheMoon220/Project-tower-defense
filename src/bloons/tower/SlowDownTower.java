@@ -39,6 +39,9 @@ public class SlowDownTower extends Tower {
         }
     }
 
+    /**
+     * put any evolutions for tower
+     */
     @Override
     public void putEvolutions() {
         System.out.println("SlowDownTower : can't be evolute");
