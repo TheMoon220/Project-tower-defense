@@ -52,7 +52,7 @@ tests: classes
 # Lancement des tests
 runtests: tests
 	@echo "Exécution des tests..."
-	$(JAVA) -jar $(JUNIT) -classpath $(OUT) --scan-classpath
+	java -jar junit-console.jar -classpath tests:classes -scan-classpath
 	@echo "Tests terminés."
 
 # Nettoyage
