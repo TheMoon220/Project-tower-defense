@@ -279,9 +279,9 @@ Différentes classes ont été modifié afin de mettre en place toutes les nouve
 
 - Concernant le groupe, l'entente est globalement très bonne et chacun a donné du sien pour assurer le bon déroulement de ce livrable.
 
-Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
-
 ### Lancer le projet
+
+Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
 
 **Compiler l'ensemble des classes .java en .class**
 
