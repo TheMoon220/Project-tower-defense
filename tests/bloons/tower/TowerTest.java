@@ -153,13 +153,17 @@ private Balloon bal1;
 
   }
       @Test 
-        public void evoluteSniperMonkeyTower(){
+        public void evoluteCadenceSniperMonkeyTower(){
           double cadenceBefore = t4.getCadence();
+          t4.putEvolutions();
+          assertEquals(cadenceBefore * 1.25, t4.getCadence());
         }
  
       @Test 
-        public void evoluteSuperMonkeyTower(){
-
+        public void evoluteRangeSuperMonkeyTower(){
+           double rangeBefore = t5.getRange();
+           t5.putEvolutions();
+           assertEquals(rangeBefore * 1.50, t5.getRange());
         }
 
 }
