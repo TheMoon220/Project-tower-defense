@@ -160,6 +160,15 @@ private Balloon bal1;
           t3.putEvolutions(); // index 4
           assertEquals(Projectile.EXTRABOMB, t3.getProjectil());
       }
+       @Test
+    public void bombTower_removeEvolution_afterStep4_restoresProjectile() {
+        t3.putEvolutions(); // index 1
+        t3.putEvolutions(); // index 2
+        t3.putEvolutions(); // index 3
+        t3.putEvolutions();
+        t3.removeEvolution();
+        assertEquals(Projectile.BOMB, t3.getProjectil());
+    }
       @Test 
       public void evolutRangeTheDartMokeyTower(){
         double rangeBefore= t1.getRange();
