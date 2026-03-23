@@ -152,7 +152,7 @@ private Balloon bal1;
           assertEquals(Projectile.EXTRABOMB, t3.getProjectil());
       }
        @Test
-    public void bombTower_removeEvolution_afterStep4_restoresProjectile() {
+    public void bombTowerRemoveEvolutionRestoresProjectile() {
         t3.putEvolutions(); // index 1
         t3.putEvolutions(); // index 2
         t3.putEvolutions(); // index 3
@@ -197,7 +197,7 @@ private Balloon bal1;
            assertEquals(rangeBefore * 1.50, t5.getRange());
         }
         @Test
-    public void superMonkey_removeEvolution_afterStep3_restoresCadence() {
+    public void superMonkeyRemoveEvolutionRestoresCadence() {
         double cadenceBefore =t5.getCadence();
         t5.putEvolutions(); // 1
         t5.putEvolutions(); // 2
