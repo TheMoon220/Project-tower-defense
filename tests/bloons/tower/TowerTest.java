@@ -144,28 +144,51 @@ private Balloon bal1;
         assertEquals(rangeBefore * 1.50, t3.getRange());
        
   }
-  @Test
-public void bombTowerPutEvolutionsIncreasesCadence() {
-    double cadenceBefore = t3.getCadence();
-    t3.putEvolutions(); 
-    t3.putEvolutions();
-    t3.putEvolutions();
-    assertEquals(cadenceBefore * 1.25, t3.getCadence());
-}  
+      @Test
+      public void bombTowerPutEvolutionsIncreasesCadence() {
+        double cadenceBefore = t3.getCadence();
+        t3.putEvolutions(); 
+        t3.putEvolutions();
+        t3.putEvolutions();
+        assertEquals(cadenceBefore * 1.25, t3.getCadence());
+    }  
+      @Test
+      public void bombTowerPutEvolutionsChangesProjectile() {
+          t3.putEvolutions(); // index 1
+          t3.putEvolutions(); // index 2
+          t3.putEvolutions(); // index 3
+          t3.putEvolutions(); // index 4
+          assertEquals(Projectile.EXTRABOMB, t3.getProjectil());
+      }
       @Test 
-      public void evolutTheDartMokeyTower(){
+      public void evolutRangeTheDartMokeyTower(){
         double rangeBefore= t1.getRange();
         t1.putEvolutions();
         assertEquals(rangeBefore*1.25, t1.getRange());
         
 
   }
+     @Test
+    public void dartMonkeyRemoveEvolutionRestoresCadence() {
+        double cadenceBefore = t1.getCadence();
+        t1.putEvolutions(); // 1
+       t1.putEvolutions(); // 2 : cadence
+        t1.removeEvolution();
+        assertEquals(cadenceBefore, t1.getCadence());
+    }
       @Test 
         public void evoluteCadenceSniperMonkeyTower(){
           double cadenceBefore = t4.getCadence();
           t4.putEvolutions();
           assertEquals(cadenceBefore * 1.25, t4.getCadence());
         }
+      @Test
+        public void sniperMonkeyRremoveEvolutionRestoresCadence() {
+        double cadenceBefore = t4.getCadence();
+        t4.putEvolutions(); // 1
+        t4.removeEvolution();
+        assertEquals(cadenceBefore, t4.getCadence());
+    }
  
       @Test 
         public void evoluteRangeSuperMonkeyTower(){
