@@ -45,7 +45,7 @@ public  abstract class Livrable {
                 }else{
                     board.removeEvolutionForTowers(towers);
                 }
-
+                System.out.println();
                 board.generateAllballoons(param);
                 List<Balloon> balloons = board.getAllballoons();
                 for(Tower tower : towers){
@@ -67,6 +67,7 @@ public  abstract class Livrable {
                    }
 
                    board.processTowers(towers, currentTime);
+                   System.out.println();
                    List<Balloon> toRemove = new ArrayList<>();
                    for (int i = 0; i < balloons.size(); i++) {
                        Balloon balloon = balloons.get(i);
@@ -85,6 +86,7 @@ public  abstract class Livrable {
                    balloons.removeAll(toRemove);
                    Thread.sleep(deltaTime);
                 }
+                System.out.println();
                 System.out.println("=== Manche " + manche + " terminée ===");
                 //long total = (System.nanoTime() - start) / 1000000;
                 //System.out.println("\n=== All balloons finished ===");
