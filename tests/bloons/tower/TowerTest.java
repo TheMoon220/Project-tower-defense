@@ -141,9 +141,17 @@ private Balloon bal1;
       public void evoluteTheBombTower(){
         double rangeBefore = t3.getRange();
         t3.putEvolutions();
+        assertEquals(rangeBefore * 1.50, t3.getRange());
        
   }
-    
+  @Test
+public void bombTowerPutEvolutionsIncreasesCadence() {
+    double cadenceBefore = t3.getCadence();
+    t3.putEvolutions(); 
+    t3.putEvolutions();
+    t3.putEvolutions();
+    assertEquals(cadenceBefore * 1.25, t3.getCadence());
+}  
       @Test 
       public void evolutTheDartMokeyTower(){
         double rangeBefore= t1.getRange();
