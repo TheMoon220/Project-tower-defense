@@ -15,7 +15,7 @@ public abstract class Board {
     protected Cell[][] grid;
     /** the attribute Allballoons on the board */
     protected List<Balloon> Allballoons ;
-    protected List<Tower> allTowers;
+    //protected List<Tower> allTowers;
 
     /**
      * Builds a board wiht sizes width and height
@@ -33,7 +33,7 @@ public abstract class Board {
         this.height = height;
         this.grid = new Cell[width][height];
         this.Allballoons=new ArrayList<>();
-        this.allTowers = this.generateRandomPositionTowers();
+        //this.allTowers = this.generateRandomPositionTowers();
         for (int i=0; i<width; i++){
             for (int j=0; j<height; j++){
                 grid[i][j] = new Cell(new Position(i, j));
@@ -49,7 +49,7 @@ public abstract class Board {
      * @param n an integer
     */
     public void generateAllballoons(int n){
-        //this.Allballoons.clear();
+        this.Allballoons.clear();
         for(int i = 0; i < n; i++){
             Balloon balloon =createBalloonForPath(i, Level.generateLevel());
             Allballoons.add(balloon);
@@ -203,8 +203,8 @@ public abstract class Board {
     /**
      * evolute all towers in board
      */
-    public void EvoluteAllTowers(){
-        for(Tower t : this.allTowers){
+    public void EvoluteAllTowers(List<Tower> allTowers){
+        for(Tower t : allTowers){
             t.putEvolutions();
         }
     }
@@ -212,8 +212,8 @@ public abstract class Board {
     /**
      * remove evolution for all towers in board
      */
-    public void removeEvolutionForTowers(){
-        for(Tower t : this.allTowers){
+    public void removeEvolutionForTowers(List<Tower> allTowers){
+        for(Tower t : allTowers){
             t.removeEvolution();
         }
     }
