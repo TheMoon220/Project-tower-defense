@@ -26,19 +26,17 @@ public class Livrable4a  extends Livrable{
      */
     @Override
     protected void initBoard(Board board, int nbBalloons){
-        board.generateAllballoons(nbBalloons);
+       // board.generateAllballoons(nbBalloons);
         board.displayBoard();
         board.displayPath();
     }
      /**
-     * Main method of Livrable3b.
-     *
+     * Main method of Livrable4b.
      * @param args program arguments
      * @throws InterruptedException if simulation sleep is interrupted
      */
     public static void main(String[] args) throws InterruptedException{
-         System.out.println("=== Livrable 3a: Classical Board ===");
+        System.out.println("=== Livrable 4a: Classical Board ===");
         new Livrable4a().run(args);
-
     }
 }
