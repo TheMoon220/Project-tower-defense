@@ -19,7 +19,7 @@ private Balloon bal1;
     private Balloon bal2;
     private Balloon bal3;
     private Position pos;
-    private ProjectileTower  t1;
+    private Tower t1;
     private Tower t2 ;
     private Tower t3 ;
     private Tower  t4 ;
