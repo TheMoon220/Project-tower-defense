@@ -31,7 +31,7 @@ public class SuperMonkeyTower extends ProjectileTower{
                 System.out.println("SuperMonkeyTower : Range evolutes to 50%");
                 break;
             case 2:
-                double newCadance = this.getCadence() * 3;
+                double newCadance = this.getCadence() / 3;
                 this.setCadence(newCadance);
                 System.out.println("SuperMonkeyTower : Cadance evolutes to 200%");
                 break;
@@ -65,7 +65,7 @@ public class SuperMonkeyTower extends ProjectileTower{
                 System.out.println("SuperMonkeyTower : Range decreases to 50%");
                 break;
             case 2:
-                this.range/= 3;
+                this.cadence *= 3;
                 System.out.println("SuperMonkeyTower : Cadance decreases to 200%");
                 break;
             case 3:
