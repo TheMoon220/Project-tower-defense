@@ -246,7 +246,38 @@ make docs
 
 🔗 **Diagramme UML** : [Voir le PDF](./uml/umllivrable4.pdf)
 
+Une nouvelle branche a été créée pour ce livrable **livrable4**.
+Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau en plus de la gestion de manche, pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau, bien sûr les tours continuéront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
+
+Dans ce livrable surtout dans le dossier **src/main** de nouvelles classes ont été créés:
+- **Livrable** : est une classe abstraite qui implemente les méthodes communes des deux programmes principaux, notamment la gestion de manche, le processus des 
+tours, création et initialisation du plateau avec les chemins, générer les ballons dans le plateau, vérifier si un ballon est sorti du plateau sinon le faire 
+avancer.
+
+- **Livrable4a**: est une classe qui hérite de la classe Livrable et appelle juste la méthode commune **run()** où tout y est encapsuler déjà, en plus au début
+du jeu il affiche les positions parcourues par le chemin.
+
+- **Livrable4b**: est une classe qui hérite de la classe Livrable et appelle juste la méthode commune **run()** où tout y est encapsuler déjà, à la différence de l'autre lui il affiche le plateau à chaque tic d'horloge laissant apparaitre l'avancé des ballons dessus.
+
+Dans le dossier **uml** un nouveau pdf a été ajouté pour **umlLivrable4** qui est une construction de diagramme UML de tous les ficher du dossier **src**.
+A cela s'ajoute deux fichier manifests **manifest-4a** et **manifest-4b** qui permet de faire les fichier jars. 
+
+Différentes classes ont été modifié afin de mettre en place toutes les nouvelles information de ce livrable.
+- Pour les tours : de la classe **tower** deux signatures de méthodes ont été ajoutés, méthodes abstraites **putEvolutions** et **removeEvolutions**. Les cinq tours qui ont des évolutions font appelle à ces deux méthodes, ces tours sont entres autres: **BombeTower**, **SuperMonkeyTower**, **SniperMonkeyTower**, **TackShooterTower**, **DartMonkeyTower** où chacune de ces tours implémentent ces évolutions comme énnoncé dans le sujet et supprime aussi ces évolutions.
+
+- Dans la classe **Board** deux méthodes **EvoluteAllTowers** et **removeEvolutionForTowers** qui, faire et suppression de ces évolutions de manière généralisée.
+
 ### Atteinte des objectifs
+
+- Gestion de manche: de la manche 1 à 5 faire les évolutions de chaque tour c'est-à-dire pour chaque manche donnée faire une évolution et de la manche 6 à 10 supprimer une évolution de chaque tour si cela est possible jusqu'à atteindre la 10ème manche.
+
+- UML modifier et adapter pour prendre en compte les nouvelles informations de ce livrable.
+
+- Création d'une nouvelle classe **Livrable.java** qui généralise les algorithmes communs au deux programmes principaux.
+
+- Suppression des positions des ballons à chaque tick d'horloge. La position d'un ballon ne s'affiche que s'il y a une action soit par exemple si une tour tire sur un balloon.
+
+- Concernant le groupe, l'entente est globalement très bonne et chacun a donné du sien pour assurer le bon déroulement de ce livrable.
 
 Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
 
