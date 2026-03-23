@@ -244,7 +244,65 @@ make docs
 
 ## Livrable 4
 
+🔗 **Diagramme UML** : [Voir le PDF](./uml/umllivrable4.pdf)
+
 ### Atteinte des objectifs
+
+Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
+
+**Compiler l'ensemble des classes .java en .class**
+
+```bash
+make classes
+```
+
+```bash
+make tests
+```
+
+**Lancer les tests avec junit**
+
+```bash
+make runtests
+```
+
+**lancer tous les fichiers livrable4a et livrable4b**
+
+```bash
+java -classpath classes bloons.main.Livrable4a arg1 arg2 arg3
+```
+
+```bash
+java -classpath classes bloons.Livrable4b arg1 arg2 arg3
+```
+
+**Générer le jar**
+
+```bash
+jar cvfm livrable4a.jar manifest-4a -C classes .
+```
+
+```bash
+jar cvfm livrable4b.jar manifest-4b -C classes .
+```
+
+```bash
+make jar
+```
+
+**Lancer les jar**
+
+```bash
+java -jar livrable4a.jar arg1 arg2 arg3
+```
+```bash
+java -jar livrable4b.jar arg1 arg2 arg3
+```
+**Générer la documentation**
+
+```bash
+make docs
+```
 
 ### Difficultés restant à résoudre
 
