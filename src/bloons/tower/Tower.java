@@ -197,7 +197,7 @@ public abstract class Tower {
      * @return the closest balloon to exit
      */
     public Balloon getBalloonClosestToExit(){
-        Balloon ballon = this.balloonsInRange.get(0);
+        Balloon ballon = null;
         double maxDistance = -1;
         for (Balloon b : this.balloonsInRange) {
             if (b.isDestroyed()){

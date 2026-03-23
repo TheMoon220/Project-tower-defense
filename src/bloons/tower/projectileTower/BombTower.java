@@ -53,23 +53,20 @@ public class BombTower extends ProjectileTower {
     public void putEvolutions(){
         switch (this.evolutionIndex) {
             case 1:
-                double newRange = this.getRange() * 1.50;
-                this.setRange(newRange);
+                this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() + 1);
+                System.out.println("BombTower : Puissance evolute to 1");
+                break;
+            case 2: 
+                this.setRange(this.getRange() * 1.50);
                 System.out.println("BombTower : Range evolute to 50%");
                 break;
-            case 2:
-                double newCadance = this.getCadence() * 1.25;
-                this.setCadence(newCadance);
-                System.out.println("BombTower : Cadance evolute to 25%");
-                break;
-            case 3:
-                int oldPuissance = this.getProjectil().getNiveauDegat();
-                this.projectile.setNiveauDegat(oldPuissance + 1);
-                System.out.println("BombTower : Puissance evolute to 1");
+            case 3: 
+                this.setCadence(this.getCadence() * 0.75);
+                System.out.println("BombTower : Cadence evolute to 25%");
                 break;
             case 4:
                 this.setProjectile(Projectile.EXTRABOMB);
-                System.out.println("BombTower : new projectile (EstraBomb)");
+                System.out.println("BombTower : new projectile (ExtraBomb)");
                 break;
             default:
                 System.out.println("BombTower : no possible evolution");
