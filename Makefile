@@ -15,12 +15,12 @@ TEST_FILES = $(shell find $(TESTS) -name "*.java")
 all: classes
 
 # Lancement de Livrable3a
-run3a: classes
-	$(JAVA) -classpath $(OUT) bloons.main.Livrable3a $(ARG1) $(ARG2) $(ARG3)
+run4a: classes
+	$(JAVA) -classpath $(OUT) bloons.main.Livrable4a $(ARG1) $(ARG2) $(ARG3)
 
 # Lancement de Livrable3b
-run3b: classes
-	$(JAVA) -classpath $(OUT) bloons.main.Livrable3b $(ARG1) $(ARG2) $(ARG3)
+run4b: classes
+	$(JAVA) -classpath $(OUT) bloons.main.Livrable4b $(ARG1) $(ARG2) $(ARG3)
 	
 # Compilation des classes
 classes:
@@ -39,8 +39,8 @@ docs:
 # Création des jars
 jar: classes
 	@echo "Création des jars..."
-	jar cvfm livrable3a.jar manifest-3a -C $(OUT) .
-	jar cvfm livrable3b.jar manifest-3b -C $(OUT) .
+	jar cvfm livrable4a.jar manifest-4a -C $(OUT) .
+	jar cvfm livrable4b.jar manifest-4b -C $(OUT) .
 	@echo "Jars créés."
 
 # Compilation des tests
