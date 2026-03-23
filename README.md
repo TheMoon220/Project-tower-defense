@@ -247,7 +247,7 @@ make docs
 🔗 **Diagramme UML** : [Voir le PDF](./uml/umllivrable4.pdf)
 
 Une nouvelle branche a été créée pour ce livrable **livrable4**.
-Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau en plus de la gestion de manche, pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau, bien sûr les tours continuéront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
+Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau en plus de la gestion de manche, pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau si cela est possible, bien sûr les tours continueront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
 
 Dans ce livrable surtout dans le dossier **src/main** de nouvelles classes ont été créés:
 - **Livrable** : est une classe abstraite qui implemente les méthodes communes des deux programmes principaux, notamment la gestion de manche, le processus des 
@@ -269,7 +269,7 @@ Différentes classes ont été modifié afin de mettre en place toutes les nouve
 
 ### Atteinte des objectifs
 
-- Gestion de manche: de la manche 1 à 5 faire les évolutions de chaque tour c'est-à-dire pour chaque manche donnée faire une évolution et de la manche 6 à 10 supprimer une évolution de chaque tour si cela est possible jusqu'à atteindre la 10ème manche.
+- Gestion de manche: de la manche 1 à 5 faire les évolutions de chaque tour si c'est possible c'est-à-dire pour chaque manche donnée faire une évolution et de la manche 6 à 10 supprimer une évolution de chaque tour si cela est possible jusqu'à atteindre la 10ème manche.
 
 - UML modifier et adapter pour prendre en compte les nouvelles informations de ce livrable.
 
@@ -280,6 +280,8 @@ Différentes classes ont été modifié afin de mettre en place toutes les nouve
 - Concernant le groupe, l'entente est globalement très bonne et chacun a donné du sien pour assurer le bon déroulement de ce livrable.
 
 Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
+
+### Lancer le projet
 
 **Compiler l'ensemble des classes .java en .class**
 
