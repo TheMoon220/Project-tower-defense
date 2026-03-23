@@ -1,7 +1,5 @@
  
 package bloons.tower;
-import bloons.tower.IceTower;
-import bloons.tower.*;
 import bloons.tower.projectileTower.*;
 import bloons.utils.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,10 +21,10 @@ private Balloon bal1;
     private Position pos;
     private ProjectileTower  t1;
     private Tower t2 ;
-    private ProjectileTower t3 ;
-    private ProjectileTower t4 ;
-    private ProjectileTower  t5 ;
-    private ProjectileTower t6;
+    private Tower t3 ;
+    private Tower  t4 ;
+    private Tower   t5 ;
+    private Tower  t6;
     private List<Balloon> ballons =new ArrayList<>();
     private Position pos1 ;
     private Position pos2 ;
@@ -132,6 +130,7 @@ private Balloon bal1;
       public void evoluteTheBombTower(){
         double rangeBefore = t3.getRange();
         t3.putEvolutions();
+        t3.putEvolutions();
         assertEquals(rangeBefore * 1.50, t3.getRange());
        
   }
@@ -149,7 +148,7 @@ private Balloon bal1;
           t3.putEvolutions(); // index 2
           t3.putEvolutions(); // index 3
           t3.putEvolutions(); // index 4
-          assertEquals(Projectile.EXTRABOMB, t3.getProjectil());
+          assertEquals(Projectile.EXTRABOMB,((ProjectileTower) t3).getProjectil());
       }
        @Test
     public void bombTowerRemoveEvolutionRestoresProjectile() {
@@ -158,7 +157,7 @@ private Balloon bal1;
         t3.putEvolutions(); // index 3
         t3.putEvolutions();
         t3.removeEvolution();
-        assertEquals(Projectile.BOMB, t3.getProjectil());
+        assertEquals(Projectile.BOMB,((ProjectileTower) t3).getProjectil());
     }
       @Test 
       public void evolutRangeTheDartMokeyTower(){
