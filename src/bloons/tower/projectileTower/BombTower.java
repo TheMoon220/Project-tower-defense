@@ -100,7 +100,7 @@ public class BombTower extends ProjectileTower {
                 break;
             case 4:
                 this.setProjectile(Projectile.BOMB);
-                System.out.println("BombTower : reinit projectile (Bomb)");
+                System.out.println("BombTower : reinitialise projectile (Bomb)");
                 break;
         }
     }
