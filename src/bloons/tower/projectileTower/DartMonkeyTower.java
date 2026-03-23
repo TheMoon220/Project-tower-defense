@@ -74,7 +74,7 @@ public class DartMonkeyTower extends ProjectileTower {
                  System.out.println("DartMonkeyTower : Range decreases to 25%");
                 break;
             case 2:
-                this.cadence /= 1.25;
+                this.cadence /= 0.75;
                  System.out.println("DartMonkeyTower : Cadence decreases to 25%");
                 break;
             case 3:

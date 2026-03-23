@@ -91,7 +91,7 @@ public class BombTower extends ProjectileTower {
                 System.out.println("BombTower : Range decreases to 50%");
                 break;
             case 2:
-                this.cadence /= 1.25;
+                this.cadence /= 0.75;
                 System.out.println("BombTower : Cadance decreases to 25%");
                 break;
             case 3:
