@@ -47,6 +47,9 @@ public class SlowDownTower extends Tower {
         System.out.println("SlowDownTower : can't be evolute");
     }
 
+     /**
+     * remove any evolutions for tower
+     */
     @Override
     public void removeEvolution() {
         System.out.println("SlowDownTower : no change to remove");
