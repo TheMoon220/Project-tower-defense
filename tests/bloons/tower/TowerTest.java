@@ -37,16 +37,16 @@ private Balloon bal1;
     @BeforeEach
      public void Before(){
    
-       pos1 = new Position(2, 4);
-       pos2 = new Position(2, 0);
-       pos3= new Position(0, 0);
-       pos  = new Position(1, 1);
+      pos1 = new Position(2, 4);
+      pos2 = new Position(2, 0);
+      pos3= new Position(0, 0);
+      pos  = new Position(1, 1);
       bal1 = new Balloon(new Position(3, 3),Level.NIV2 );
       bal2 = new Balloon(new Position(2, 0),Level.NIV2 );
       bal3 = new Balloon(new Position(1, 2),Level.NIV2 );
-       ballons.add(bal1);
-       ballons.add(bal2);
-       ballons.add(bal3);
+      ballons.add(bal1);
+      ballons.add(bal2);
+      ballons.add(bal3);
    
       t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos1, Projectile.DART);
       t2=new IceTower(400,100,Effect.IMMEDIAT,1500,pos2);
@@ -69,8 +69,8 @@ private Balloon bal1;
        }
        @Test
         public void testCanAttack(){
-      assertTrue(t1.canAttack((System.currentTimeMillis())));
-      assertTrue(t2.canAttack((System.currentTimeMillis())));
+        assertTrue(t1.canAttack((System.currentTimeMillis())));
+        assertTrue(t2.canAttack((System.currentTimeMillis())));
       
 
      }
@@ -80,8 +80,6 @@ private Balloon bal1;
         t1.attackBallon(bal1,System.currentTimeMillis());
         Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.currentTimeMillis());
-
-        
         assertEquals(0,bal1.getHealth());
 
       }
