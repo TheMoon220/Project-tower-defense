@@ -37,7 +37,7 @@ public class SniperMonkeyTower extends ProjectileTower{
         switch (this.evolutionIndex) {
             case 1:
                 double oldCadance = this.getCadence();
-                double newCadance = oldCadance * 1.25;
+                double newCadance = oldCadance * 0.75;
                 this.setCadence(newCadance);
                 System.out.println("SniperMonkeyTower : Cadance evolute to 25%");
                 break;
@@ -65,7 +65,7 @@ public class SniperMonkeyTower extends ProjectileTower{
         this.evolutionIndex--;
         switch (this.evolutionIndex) {
             case 1:
-                this.cadence/=1.25;
+                this.cadence/=0.75;
                 System.out.println("SniperMonkeyTower : Cadance decreases to 25%");
                 break;
             case 2:
