@@ -31,7 +31,7 @@ public class TackShooterTower extends ProjectileTower{
                 System.out.println("TackShooterTower : Range evolutes to 20%");
                 break;
             case 2:
-                double newCadance = this.getCadence() * 0.75;
+                double newCadance = this.getCadence() * 1.25;
                 this.setCadence(newCadance);
                 System.out.println("TackShooterTower : Cadance evolutes to 25%");
                 break;
@@ -58,7 +58,7 @@ public class TackShooterTower extends ProjectileTower{
                 System.out.println("TackShooterTower : Range decreases to 20%");
                 break;
             case 2:
-                this.cadence /= 0.75;
+                this.cadence /= 1.25;
                 System.out.println("TackShooterTower : Cadance decreases to 25%");
                 break;
         }

@@ -61,7 +61,7 @@ public class BombTower extends ProjectileTower {
                 System.out.println("BombTower : Range evolute to 50%");
                 break;
             case 3: 
-                this.setCadence(this.getCadence() * 0.75);
+                this.setCadence(this.getCadence() * 1.25);
                 System.out.println("BombTower : Cadence evolute to 25%");
                 break;
             case 4:
@@ -91,7 +91,7 @@ public class BombTower extends ProjectileTower {
                 System.out.println("BombTower : Range decreases to 50%");
                 break;
             case 2:
-                this.cadence /= 0.75;
+                this.cadence /= 1.25;
                 System.out.println("BombTower : Cadance decreases to 25%");
                 break;
             case 3:
