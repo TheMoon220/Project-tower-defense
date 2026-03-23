@@ -205,6 +205,15 @@ private Balloon bal1;
            t5.putEvolutions();
            assertEquals(rangeBefore * 1.50, t5.getRange());
         }
+        @Test
+    public void superMonkey_removeEvolution_afterStep3_restoresCadence() {
+        double cadenceBefore =t5.getCadence();
+        t5.putEvolutions(); // 1
+        t5.putEvolutions(); // 2
+        t5.putEvolutions(); // 3
+        t5.removeEvolution();
+        assertEquals(cadenceBefore, t5.getCadence());
+    }
 
 }
 
