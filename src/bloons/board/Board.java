@@ -174,6 +174,7 @@ public abstract class Board {
             Balloon target = tower.getBalloonClosestToExit();
             int healthBefore = target.getHealth();
             double speedBefore = target.getSpeed();
+            if(target == null) continue;
             tower.attackBallon(target, tmp);
             if (target.getHealth() < healthBefore || target.getSpeed() != speedBefore) {
                 System.out.println(tower + " shoots at Balloon at " + target.getPosition());
