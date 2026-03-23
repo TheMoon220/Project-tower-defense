@@ -1,9 +1,9 @@
-
+ 
 package bloons.tower;
 import bloons.tower.IceTower;
 import bloons.tower.Tower ;
 import bloons.tower.projectileTower.DartMonkeyTower;
-
+import bloons.utils.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
@@ -13,9 +13,7 @@ import org.junit.jupiter.api.*;
 
 import bloons.Position;
 import bloons.balloon.Balloon;
-import bloons.utils.Effect;
 import bloons.utils.Level;
-import bloons.utils.Projectile;
 
 
 public class TowerTest {
@@ -49,14 +47,13 @@ private Balloon bal1;
 
 
            
-            bal1 = new Balloon(new Position(3, 3),Level.NIV2 );
-            bal2 = new Balloon(new Position(2, 0),Level.NIV2 );
-            bal3 = new Balloon(new Position(1, 2),Level.NIV2 );
-
-            t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos1, Projectile.DART);
-            t2=new IceTower(400,100,Effect.IMMEDIAT,1500,pos2);
-            t1.addBalloons(ballons);
-       t2.addBalloons(ballons);
+      bal1 = new Balloon(new Position(3, 3),Level.NIV2 );
+      bal2 = new Balloon(new Position(2, 0),Level.NIV2 );
+      bal3 = new Balloon(new Position(1, 2),Level.NIV2 );
+      t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos1, Projectile.DART);
+      t2=new IceTower(400,100,Effect.IMMEDIAT,1500,pos2);
+      t1.addBalloons(ballons);
+      t2.addBalloons(ballons);
        
         }
        @Test 
@@ -121,6 +118,10 @@ private Balloon bal1;
         t2.attackBallon(bal2,System.currentTimeMillis());
         Thread.sleep((long) t2.getCadence());
         assertEquals(0,bal2.getSpeed());
+
+      }
+  @Test
+      public void towerCanEvolute(){
 
       }
     
