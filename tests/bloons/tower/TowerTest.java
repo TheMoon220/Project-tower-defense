@@ -1,7 +1,7 @@
  
 package bloons.tower;
 import bloons.tower.IceTower;
-import bloons.tower.Tower ;
+import bloons.tower.*;
 import bloons.tower.projectileTower.*;
 import bloons.tower.projectileTower.DartMonkeyTower;
 import bloons.tower.projectileTower.SniperMonkeyTower;
@@ -27,9 +27,9 @@ private Balloon bal1;
     private Position pos;
     private Level l1;
     private Level l2;
-    private Tower  t1;
+    private ProjectileTower  t1;
     private Tower t2 ;
-    private Tower t3 ;
+    private ProjectileTower t3 ;
     private ProjectileTower t4 ;
     private ProjectileTower  t5 ;
     private ProjectileTower t6;
@@ -105,7 +105,7 @@ private Balloon bal1;
         assertFalse(t1.canAttack(System.currentTimeMillis()));
 
       }
-  @Test
+      @Test
        public void aTTackBalloonIceTower() throws InterruptedException{
          t2.attackBallon(bal2,System.currentTimeMillis());
         Thread.sleep((long) t2.getCadence());
@@ -124,7 +124,7 @@ private Balloon bal1;
         assertFalse(t2.canAttack(System.currentTimeMillis()));
 
       }
-  @Test
+      @Test
       public void testFreezeBalloon() throws InterruptedException{
        t2.attackBallon(bal2,System.currentTimeMillis());
         Thread.sleep((long) t2.getCadence());
@@ -133,30 +133,31 @@ private Balloon bal1;
         assertEquals(0,bal2.getSpeed());
 
       }
-  @Test
+      @Test
       public void towerCanEvolute(){
-
 
       }
 
-  @Test
-  public void evoluteTheBombTower(){
-
+      @Test
+      public void evoluteTheBombTower(){
+        t3.putEvolutions();
+        assertTrue(t3.inRange());
+        assertEquals(t3.getNiveauDegat());
   }
     
-  @Test 
-  public void evolutTheDartMokeyTower(){
+      @Test 
+      public void evolutTheDartMokeyTower(){
 
   }
- @Test 
-  public void evoluteSniperMonkeyTower(){
+      @Test 
+        public void evoluteSniperMonkeyTower(){
 
-  }
+        }
  
- @Test 
-  public void evoluteSuperMonkeyTower(){
+      @Test 
+        public void evoluteSuperMonkeyTower(){
 
-  }
+        }
 
-    }
+}
 
