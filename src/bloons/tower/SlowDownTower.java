@@ -14,7 +14,6 @@ public class SlowDownTower extends Tower {
      * @param range the range of tower 
      * @param effect the effect of tower
      * @param cadence the cadence of tower
-     * @param projectile the projectile of tower
      * @param position the position of the tower
      */
     public SlowDownTower(double cost ,double range ,Effect effect ,double cadence,Position position){
