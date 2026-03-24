@@ -4,13 +4,17 @@ import bloons.board.*;
 import bloons.tower.*;
 import java.util.*;
 
+/** the object Livrable an abstract class */
 public  abstract class Livrable {
+    /** the default constructor of the class livrable */
+    public Livrable() { }
+
     /**
      * Create the appropriate board type.
      * @param width the width of the board 
      * @param height the height of the board 
-     * @param param  
-     * @return
+     * @param param  the number of balloon for classical and number of paths for random
+     * @return a board
      */
     protected abstract Board createBoard(int width, int height, int param);
 
@@ -21,6 +25,12 @@ public  abstract class Livrable {
      * @param param additional parameter for initialization
      */
     protected abstract void initBoard(Board board, int param);
+
+    /**
+     * the methode for run the main programm
+     * @param args the arguments
+     * @exception InterruptedException when an error 
+     */
     public  void run(String[] args) throws InterruptedException{
         // check arguments
         if(args.length != 3){

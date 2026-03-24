@@ -3,7 +3,11 @@ package bloons.main;
 
 import bloons.board.*;
 
+/** the object Livrable4a that inherite Livrable */
 public class Livrable4a  extends Livrable{
+
+    /** the default constructor of the class livrable */
+    public Livrable4a() { }
 
     /**
      * Creates a ClassicalBoard.
