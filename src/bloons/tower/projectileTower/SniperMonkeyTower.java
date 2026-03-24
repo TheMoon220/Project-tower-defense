@@ -1,9 +1,8 @@
 package bloons.tower.projectileTower;
-
 import bloons.Position;
 import bloons.balloon.*;
-import bloons.utils.Effect;
-import bloons.utils.Projectile;
+import bloons.utils.*;
+
 
 /** the object SniperMonkeyTower that send a projectile */
 public class SniperMonkeyTower extends ProjectileTower{

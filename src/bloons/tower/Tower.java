@@ -9,6 +9,7 @@ import java.util.*;
 public abstract class Tower {
     /** the tower's cost */
     protected double cost;
+    
     /** the range of the */ 
     protected double range; 
     /** the effect when a balloon is hit */
