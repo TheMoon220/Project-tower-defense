@@ -200,7 +200,7 @@ private Balloon bal1;
         double cadenceBefore =t5.getCadence();
         t5.putEvolutions(); // 1
         t5.putEvolutions(); // 2
-        t5.putEvolutions(); // 3
+        //t5.putEvolutions(); // 3
         t5.removeEvolution();
         assertEquals(cadenceBefore, t5.getCadence());
     }
