@@ -32,6 +32,11 @@ public  abstract class Livrable {
             int width = Integer.parseInt(args[0]);
             int height = Integer.parseInt(args[1]);
             int param = Integer.parseInt(args[2]);
+
+            if(height < 5 && width < 5){
+                throw new IllegalArgumentException("please try a again !");
+            }
+            
             System.out.println("Board size: " + width + "x" + height);
             System.out.println();
 
