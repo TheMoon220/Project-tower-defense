@@ -59,6 +59,7 @@ runtests: tests
 	java -jar junit-console.jar -classpath classes --select-class=bloons.tower.TowerTest
 	java -jar junit-console.jar -classpath classes --select-class=bloons.CellTest
 	java -jar junit-console.jar -classpath classes --select-class=bloons.PositionTest
+	java -jar junit-console.jar -classpath classes --select-class=bloons.board.ClassicalBoardTest
 	$(JAVA) -jar $(JUNIT) -classpath $(OUT) --scan-classpath
 	@echo "Tests terminés."
 

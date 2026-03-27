@@ -1,6 +1,13 @@
 package bloons.board;
 import bloons.*;
+import bloons.balloon.Balloon;
+import bloons.utils.*;
+
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.HashSet;
+import java.util.List;
+
 import org.junit.jupiter.api.*;
  public class RandomBoardTest{
     private Position p1;
@@ -32,8 +39,6 @@ import org.junit.jupiter.api.*;
 
     }
 
-
-
     @Test
 
     public void  cellAtPositionPAtTheBoard(){
@@ -46,11 +51,45 @@ import org.junit.jupiter.api.*;
         assertThrows(IndexOutOfBoundsException.class,()-> this.board.getCell(new Position(-1, 4)));
     }
 
+    @Test
+    public void generatePathsCreatesCorrectNumberOfPaths(){
+        board.generatePaths(3);
+        assertEquals(3, board.getAllPaths().size());
+    }
+
+    @Test
+    public void generatePathsThrowsExceptionWhenTooManyPaths(){
+        assertThrows(IllegalArgumentException.class, () -> board.generatePaths(10)); // 4+6=10
+    }
+
+    @Test
+    public void generatePathsNoOverlap(){
+       board.generatePaths(3);
+       List<List<Position>> paths = board.getAllPaths();
+       for(int i = 0; i < paths.size(); i++){
+           for(int j = i + 1; j < paths.size(); j++){
+              assertNotEquals(new HashSet<>(paths.get(i)), new HashSet<>(paths.get(j)));
+            }
+        }
+    }
+
+    @Test
+    public void getPathAtValidIndex(){
+       board.generatePaths(3);
+       assertNotNull(board.getPathAt(0));
+    }
+
+    @Test
+    public void getPathAtInvalidIndexThrowsException(){
+       board.generatePaths(3);
+       assertThrows(IllegalArgumentException.class, () -> board.getPathAt(5));
+    }
+
+    @Test
+    public void createBalloonForPathIsCorrect(){
+      board.generatePaths(2);
+      Balloon b = board.createBalloonForPath(0, Level.NIV1);
+      assertNotNull(b);
+      assertNotNull(b.getPath());
+    }
 }
-
-
-
-
-
-
-
