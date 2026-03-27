@@ -18,7 +18,5 @@ public class CellTest {
     public void correctcellPosition(){
         assertEquals(p1, cell1.getPos());
         assertNotEquals(p2, cell1.getPos());
-    }
-
-    
+    } 
 }

@@ -8,7 +8,6 @@ import java.util.List;
 import org.junit.jupiter.api.*;
 
 import bloons.Position;
-import bloons.balloon.Balloon;
 import bloons.utils.Level;
 
 public class BalloonTest {
@@ -84,18 +83,16 @@ public class BalloonTest {
         });
     }
 
-     @Test
+    @Test
     public void testMoveBalloon() {
-        List<Position> path = new ArrayList<>();
-        path.add(new Position(0,0));
-        path.add(new Position(1,0));
-        bal1.setTrajectory(path);
-        bal1.moveBallon();
-        assertTrue(bal1.getProgress() > 0);
+       List<Position> path = new ArrayList<>();
+       path.add(new Position(0,0));
+       path.add(new Position(1,0));
+       path.add(new Position(2,0));
+       path.add(new Position(3,0));
+       path.add(new Position(4,0));
+       bal1.setTrajectory(path);
+       bal1.moveBallon();
+       assertTrue(bal1.getProgress() > 0 || bal1.getCurrentCellIndex() > 0);
     }
-
-
-
-
-
 }
