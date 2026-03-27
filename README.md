@@ -515,10 +515,18 @@ Création d'une nouvelle classe **Livrable.java** qui est une classe abstraite q
 ## Semaine 8
 
 ### Ce qui a été réalisé
+Finaliser le livrable 3 et reflexion sur la prochaine livrable 4.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+- **Marima Séré Sylla**: s'occupe de faire le diagramme UML, ainsi que les tests des differentes methodes et verification du travail des autres .  
+
+- **Farmata Sall Sow**: elle fournit la documentation des algorithmes à mettre en place et vérifie le travail des autres pour d'éventuelles modifications.
+
+- **Khadim Beye**: s'occupe de fournir les differentes methodes pour l'ajout et la suppression d'evolution des tours.   
+
+- **Mamadou Baïllo Sow**: s'occupe de fournir les classes Livrable4a et Livrable4b pour le programme principal.
 
 ## Semaine 9
 
