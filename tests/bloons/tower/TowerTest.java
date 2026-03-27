@@ -29,9 +29,7 @@ private Balloon bal1;
     private Position pos1 ;
     private Position pos2 ;
     private Position pos3;
-    
-
-
+  
     @BeforeEach
      public void Before(){
    

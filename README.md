@@ -520,7 +520,7 @@ Finaliser le livrable 3 et reflexion sur la prochaine livrable 4.
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
-- **Marima Séré Sylla**: s'occupe de faire le diagramme UML, ainsi que les tests des differentes methodes et verification du travail des autres .  
+- **Marima Séré Sylla**: s'occupe de faire le diagramme UML, ainsi que les tests des différentes méthodes et vérification du travail des autres .  
 
 - **Farmata Sall Sow**: elle fournit la documentation des algorithmes à mettre en place et vérifie le travail des autres pour d'éventuelles modifications.
 
