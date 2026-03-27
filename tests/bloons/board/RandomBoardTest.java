@@ -1,6 +1,7 @@
 package bloons.board;
 import bloons.*;
 import bloons.balloon.Balloon;
+import bloons.tower.Tower;
 import bloons.utils.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -91,5 +92,29 @@ import org.junit.jupiter.api.*;
       Balloon b = board.createBalloonForPath(0, Level.NIV1);
       assertNotNull(b);
       assertNotNull(b.getPath());
+    }
+
+    @Test
+    public void generateRandomPositionTowersCreatesCorrectNumberOfTowers(){
+       List<Tower> towers = board.generateRandomPositionTowers();
+       assertEquals(14, towers.size()); 
+    }
+
+    @Test
+    public void generateRandomPositionTowersNotNull(){
+      List<Tower> towers = board.generateRandomPositionTowers();
+      assertNotNull(towers);
+      for(Tower t : towers){
+         assertNotNull(t);
+      }
+    }
+
+    @Test
+    public void generateRandomPositionTowerPositionsAreInBoard(){
+      List<Tower> towers = board.generateRandomPositionTowers();
+      for(Tower t : towers){
+        assertTrue(t.getPosition().getX() >= 0 && t.getPosition().getX() < board.getWidth());
+        assertTrue(t.getPosition().getY() >= 0 && t.getPosition().getY() < board.getHeight());
+      }
     }
 }
