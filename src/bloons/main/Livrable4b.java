@@ -9,6 +9,9 @@ import bloons.board.*;
  */
 public class Livrable4b extends Livrable {
 
+    /** the default constructor of the class livrable */
+    public Livrable4b() { }
+
     /**
      * Creates a RandomBoard.
      *

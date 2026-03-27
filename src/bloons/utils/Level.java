@@ -25,7 +25,6 @@ public enum Level {
     }
      /**
      * the resistance of the balloon 
-     * @return the resistance 
      */
     public void setResistance(){
          resistance--;

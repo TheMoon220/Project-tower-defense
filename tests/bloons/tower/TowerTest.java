@@ -29,9 +29,7 @@ private Balloon bal1;
     private Position pos1 ;
     private Position pos2 ;
     private Position pos3;
-    
-
-
+  
     @BeforeEach
      public void Before(){
    
@@ -46,12 +44,12 @@ private Balloon bal1;
       ballons.add(bal2);
       ballons.add(bal3);
    
-      t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos1, Projectile.DART);
-      t2=new IceTower(400,100,Effect.IMMEDIAT,1500,pos2);
-      t3= new BombTower(600, 150, Effect.DISTANCE, 1800, pos3,Projectile.BOMB);
-      t4= new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, pos2,Projectile.VERYSHARPDART );
-      t5= new SuperMonkeyTower(500, 100, Effect.IMMEDIAT, 1000, pos3, Projectile.POINTEDDART);
-      t6= new TackShooterTower(350, 80, Effect.IMMEDIAT, 1200, pos, Projectile.NEEDLE);
+      t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 100, pos1, Projectile.DART);
+      t2=new IceTower(400,100,Effect.IMMEDIAT,150,pos2);
+      t3= new BombTower(600, 150, Effect.DISTANCE, 180, pos3,Projectile.BOMB);
+      t4= new SniperMonkeyTower(500, Effect.IMMEDIAT, 200, pos2,Projectile.VERYSHARPDART );
+      t5= new SuperMonkeyTower(500, 100, Effect.IMMEDIAT, 100, pos3, Projectile.POINTEDDART);
+      t6= new TackShooterTower(350, 80, Effect.IMMEDIAT, 120, pos, Projectile.NEEDLE);
       t3.addBalloons(ballons);
       t1.addBalloons(ballons);
       t2.addBalloons(ballons);
@@ -87,7 +85,7 @@ private Balloon bal1;
          Thread.sleep((long) t1.getCadence());
         t1.attackBallon(bal1,System.currentTimeMillis());
         assertEquals(0,bal1.getHealth());
-         Thread.sleep((long) t1.getCadence()-200);
+         Thread.sleep((long) t1.getCadence()-100);
         assertFalse(t1.canAttack(System.currentTimeMillis()));
 
       }
@@ -200,8 +198,7 @@ private Balloon bal1;
         double cadenceBefore =t5.getCadence();
         t5.putEvolutions(); // 1
         t5.putEvolutions(); // 2
-        t5.putEvolutions(); // 3
-        double cadenceAfterEvolution = t5.getCadence()  ;
+        //t5.putEvolutions(); // 3
         t5.removeEvolution();
         assertEquals(cadenceBefore, t5.getCadence());
     }

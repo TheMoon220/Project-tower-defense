@@ -27,6 +27,7 @@ public abstract class Tower {
     protected  List<Balloon > balloonsInRange ;
     /** Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60) */
     public double RANGE=60; 
+    /** an attribute evolutionIndex for the tower */
     protected int evolutionIndex;
      
     /** tower building
@@ -81,6 +82,7 @@ public abstract class Tower {
 
     /**
     * to set the range of the tower during the evolution
+    * @param newRange the new range
     */
     public void setRange(double newRange){
       this.range = newRange ;

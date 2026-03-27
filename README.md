@@ -244,7 +244,7 @@ make docs
 
 ## Livrable 4
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/umllivrable4.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/umlLivrable4.pdf)
 
 Une nouvelle branche a été créée pour ce livrable **livrable4**.
 Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau en plus de la gestion de manche, pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau si cela est possible, bien sûr les tours continueront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
