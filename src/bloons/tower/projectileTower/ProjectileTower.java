@@ -60,10 +60,10 @@ public class ProjectileTower extends Tower{
     }
 
     /**
-     * put evolution for tower
+     * apply evolution for tower
      */
     @Override
-    public void putEvolutions(){}
+    public void applyEvolution(Evolution evo){}
 
     @Override
     public void removeEvolution(){}
