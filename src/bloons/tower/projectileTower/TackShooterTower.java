@@ -46,21 +46,18 @@ public class TackShooterTower extends ProjectileTower{
      * remove evolutions for tower
      */
     @Override
-    public void removeEvolution(){
-        if (this.evolutionIndex == 1) {
-            System.out.println("TackShooterTower : no change to remove");
-            return;
-        }
-        this.evolutionIndex--;
-        switch (this.evolutionIndex) {
-            case 1:
+    public void removeEvolutionEffect(Evolution evo){
+        switch (evo) {
+            case RANGE:
                 this.range /= 1.20;
                 System.out.println("TackShooterTower : Range decreases to 20%");
                 break;
-            case 2:
+            case CADANCE:
                 this.cadence /= 1.25;
                 System.out.println("TackShooterTower : Cadance decreases to 25%");
                 break;
+            default:
+                return;
         }
     }
     
