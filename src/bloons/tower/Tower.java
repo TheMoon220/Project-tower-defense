@@ -233,7 +233,7 @@ public abstract class Tower {
     }
 
     public abstract void applyEvolution(Evolution evo);
-    
+    public abstract void removeEvolutionEffect(Evolution evo);
 
     /**
      * remove evolution for tower
