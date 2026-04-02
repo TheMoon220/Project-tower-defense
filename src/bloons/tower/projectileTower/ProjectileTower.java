@@ -66,5 +66,5 @@ public class ProjectileTower extends Tower{
     public void applyEvolution(Evolution evo){}
 
     @Override
-    public void removeEvolution(){}
+    public void removeEvolutionEffect(Evolution evo){}
 }
