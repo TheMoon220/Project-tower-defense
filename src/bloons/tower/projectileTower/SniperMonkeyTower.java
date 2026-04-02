@@ -43,7 +43,7 @@ public class SniperMonkeyTower extends ProjectileTower{
             case POWER:
                 int oldPuissance = this.getProjectil().getNiveauDegat();
                 this.projectile.setNiveauDegat(oldPuissance + 2);
-                System.out.println("SniperMonkeyTower : Puissance evolute to 2");
+                System.out.println("SniperMonkeyTower : Power evolute to 2");
                 break;
             default:
                 System.out.println("SniperMonkeyTower : no possible evolution");
@@ -63,7 +63,7 @@ public class SniperMonkeyTower extends ProjectileTower{
                 break;
             case PROJECTILE:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 2);
-                System.out.println("SniperMonkeyTower : Puissance decreases to 2");
+                System.out.println("SniperMonkeyTower : Power decreases to 2");
                 break;
             default:
                 return;
