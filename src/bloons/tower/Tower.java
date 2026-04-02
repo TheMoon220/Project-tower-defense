@@ -223,7 +223,14 @@ public abstract class Tower {
     /**
      * put evolution for tower
      */
-    public abstract void putEvolutions();
+    public void putEvolutions(){
+      if (appliedEvolutions.size() >= possibleEvolutions.size()) {
+        return;
+      }
+      Evolution next = possibleEvolutions.get(appliedEvolutions.size());
+      appliedEvolutions.push(next);
+      applyEvolution(next);
+    }
 
     /**
      * remove evolution for tower
