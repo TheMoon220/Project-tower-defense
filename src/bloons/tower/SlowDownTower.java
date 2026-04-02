@@ -57,4 +57,7 @@ public class SlowDownTower extends Tower {
 
     @Override
     public void applyEvolution(Evolution evo){}
+
+    @Override
+    public void removeEvolutionEffect(Evolution evo){}
 }
