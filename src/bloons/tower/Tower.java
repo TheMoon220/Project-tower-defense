@@ -232,6 +232,8 @@ public abstract class Tower {
       applyEvolution(next);
     }
 
+    public abstract void applyEvolution(Evolution evo);
+
     /**
      * remove evolution for tower
      */
