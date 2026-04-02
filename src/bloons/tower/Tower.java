@@ -233,9 +233,16 @@ public abstract class Tower {
     }
 
     public abstract void applyEvolution(Evolution evo);
+    
 
     /**
      * remove evolution for tower
      */
-    public abstract void removeEvolution();
+    public void removeEvolution(){
+      if (appliedEvolutions.isEmpty()) {
+        return;
+      }
+      Evolution last = appliedEvolutions.pop();
+      removeEvolutionEffect(last);
+    }
 }
