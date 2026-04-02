@@ -54,13 +54,13 @@ public class BombTower extends ProjectileTower {
         switch (evo) {
             case POWER:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() + 1);
-                System.out.println("BombTower : Puissance evolute to 1");
+                System.out.println("BombTower : Power evolute to 1");
                 break;
             case RANGE: 
                 this.setRange(this.getRange() * 1.50);
                 System.out.println("BombTower : Range evolute to 50%");
                 break;
-            case CADENCE: 
+            case CADANCE: 
                 this.setCadence(this.getCadence() * 1.25);
                 System.out.println("BombTower : Cadence evolute to 25%");
                 break;
@@ -78,26 +78,22 @@ public class BombTower extends ProjectileTower {
      * remove evolutions for tower
      */
     @Override
-    public void removeEvolution(){
-        if(this.evolutionIndex == 1) {
-            System.out.println("BombTower : no change to remove");
-            return;
-        }
-        this.evolutionIndex--;
-        switch (this.evolutionIndex) {
-            case 1:
+    public void removeEvolutionEffect(Evolution evo){
+          
+        switch (evo) {
+            case RANGE:
                 this.range /= 1.5;
                 System.out.println("BombTower : Range decreases to 50%");
                 break;
-            case 2:
+            case CADANCE:
                 this.cadence /= 1.25;
                 System.out.println("BombTower : Cadance decreases to 25%");
                 break;
-            case 3:
+            case POWER:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 1);
-                System.out.println("BombTower : Puissance decreases to 1");
+                System.out.println("BombTower : Power decreases to 1");
                 break;
-            case 4:
+            case PROJECTILE:
                 this.setProjectile(Projectile.BOMB);
                 System.out.println("BombTower : reinitialise projectile (Bomb)");
                 break;
