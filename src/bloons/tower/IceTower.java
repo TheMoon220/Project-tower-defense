@@ -61,4 +61,7 @@ public class IceTower extends Tower{
     public void removeEvolution() {
         System.out.println("IceTower : no change to remove");
     }
+
+    @Override
+    public void applyEvolution(Evolution evo){}
 }
