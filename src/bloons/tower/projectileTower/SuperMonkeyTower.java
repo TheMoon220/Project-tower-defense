@@ -2,6 +2,7 @@ package bloons.tower.projectileTower;
 
 import bloons.Position;
 import bloons.utils.Effect;
+import bloons.utils.Evolution;
 import bloons.utils.Projectile;
 
 /** the object SuperMonkeyTower that send a projectile */
@@ -23,19 +24,19 @@ public class SuperMonkeyTower extends ProjectileTower{
      * put evolutions for tower
      */
     @Override
-    public void putEvolutions(){
-        switch (this.evolutionIndex) {
-            case 1:
+    public void applyEvolution(Evolution evo){
+        switch (evo) {
+            case RANGE:
                 double newRange = this.getRange() * 1.5;
                 this.setRange(newRange);
                 System.out.println("SuperMonkeyTower : Range evolutes to 50%");
                 break;
-            case 2:
+            case CADANCE:
                 double newCadance = this.getCadence() * 3;
                 this.setCadence(newCadance);
                 System.out.println("SuperMonkeyTower : Cadance evolutes to 200%");
                 break;
-            case 3:
+            case POWER:
                 int oldPuissance = this.getProjectil().getNiveauDegat();
                 this.projectile.setNiveauDegat(oldPuissance + 2);
                 System.out.println("SuperMonkeyTower : Puissance evolutes to 2");
@@ -45,7 +46,6 @@ public class SuperMonkeyTower extends ProjectileTower{
                 System.out.println("SuperMonkeyTower : no possible evolution");
                 return;
         }
-        this.evolutionIndex++;
         
     }
 
