@@ -49,7 +49,7 @@ public class DartMonkeyTower extends ProjectileTower {
             case POWER:
                 int oldPuissance = this.getProjectil().getNiveauDegat();
                 this.projectile.setNiveauDegat(oldPuissance + 1);
-                System.out.println("DartMonkeyTower : Puissance evolute to 1");
+                System.out.println("DartMonkeyTower : Power evolute to 1");
                 break;
 
             default:
@@ -74,7 +74,7 @@ public class DartMonkeyTower extends ProjectileTower {
                 break;
             case POWER:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 1);
-                System.out.println("DartMonkeyTower : Puissance decreases to 1");
+                System.out.println("DartMonkeyTower : Power decreases to 1");
                 break;
             default:
                 return;
