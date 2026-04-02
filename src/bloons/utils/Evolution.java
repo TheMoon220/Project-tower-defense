@@ -3,8 +3,8 @@ package bloons.utils;
 public enum Evolution {
 
     RANGE,
-    SPEED,
     POWER,
+    CADENCE,
     PROJECTILE
     
 }
