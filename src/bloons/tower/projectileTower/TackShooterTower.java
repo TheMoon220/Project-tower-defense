@@ -2,6 +2,7 @@ package bloons.tower.projectileTower;
 
 import bloons.Position;
 import bloons.utils.Effect;
+import bloons.utils.Evolution;
 import bloons.utils.Projectile;
 
 /** the object TackShooterTower that send a projectile */
@@ -23,14 +24,14 @@ public class TackShooterTower extends ProjectileTower{
      * put evolutions for tower
      */
     @Override
-    public void putEvolutions(){
-        switch (this.evolutionIndex) {
-            case 1:
+    public void applyEvolution(Evolution evo){
+        switch (evo) {
+            case RANGE:
                 double newRange = this.getRange() * 1.20;
                 this.setRange(newRange);
                 System.out.println("TackShooterTower : Range evolutes to 20%");
                 break;
-            case 2:
+            case CADANCE:
                 double newCadance = this.getCadence() * 1.25;
                 this.setCadence(newCadance);
                 System.out.println("TackShooterTower : Cadance evolutes to 25%");
@@ -39,7 +40,6 @@ public class TackShooterTower extends ProjectileTower{
                 System.out.println("TackShooterTower : no possible evolution");
                 return;
         }
-        this.evolutionIndex++;
     }
 
      /**
