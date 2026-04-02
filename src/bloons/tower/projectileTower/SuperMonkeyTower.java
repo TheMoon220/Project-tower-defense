@@ -39,7 +39,7 @@ public class SuperMonkeyTower extends ProjectileTower{
             case POWER:
                 int oldPuissance = this.getProjectil().getNiveauDegat();
                 this.projectile.setNiveauDegat(oldPuissance + 2);
-                System.out.println("SuperMonkeyTower : Puissance evolutes to 2");
+                System.out.println("SuperMonkeyTower : Power evolutes to 2");
                 break;
 
             default:
