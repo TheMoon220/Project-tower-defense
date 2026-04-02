@@ -53,25 +53,23 @@ public class SuperMonkeyTower extends ProjectileTower{
      * remove evolutions for tower
      */
     @Override
-    public void removeEvolution(){
-        if (this.evolutionIndex == 1) {
-            System.out.println("SuperMonkeyTower : no change to remove");
-            return;
-        }
-        this.evolutionIndex--;
-        switch (this.evolutionIndex) {
-            case 1:
+    public void removeEvolutionEffect(Evolution evo){
+
+        switch (evo) {
+            case RANGE:
                 this.range /= 1.5;
                 System.out.println("SuperMonkeyTower : Range decreases to 50%");
                 break;
-            case 2:
+            case CADANCE:
                 this.cadence /= 3;
                 System.out.println("SuperMonkeyTower : Cadance decreases to 200%");
                 break;
-            case 3:
+            case POWER:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 2);
                 System.out.println("SuperMonkeyTower : Puissance decreases to 2");
                 break;
+            default:
+                return;
         }
     }
 
