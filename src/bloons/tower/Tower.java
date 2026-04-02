@@ -27,8 +27,7 @@ public abstract class Tower {
     protected  List<Balloon > balloonsInRange ;
     /** Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60) */
     public double RANGE=60; 
-    /** an attribute evolutionIndex for the tower */
-    protected int evolutionIndex;
+    
      
     /** tower building
      * @param cost the coast of tower
