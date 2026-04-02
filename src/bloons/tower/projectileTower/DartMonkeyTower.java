@@ -3,6 +3,7 @@ package bloons.tower.projectileTower;
 import bloons.Position;
 import bloons.balloon.*;
 import bloons.utils.Effect;
+import bloons.utils.Evolution;
 import bloons.utils.Projectile;
 
 /** the object DartMonkeyTower */
@@ -34,18 +35,18 @@ public class DartMonkeyTower extends ProjectileTower {
      * put evolutions for tower
      */
     @Override
-    public void putEvolutions(){
-        switch (this.evolutionIndex) {
-            case 1:
+    public void applyEvolution(Evolution evo){
+        switch (evo) {
+            case RANGE:
                 double newRange = this.getRange() * 1.25;
                 this.setRange(newRange);
                 System.out.println("DartMonkeyTower : Range evolute to 25%");
                 break;
-            case 2:
+            case CADANCE:
                 this.setCadence(this.getCadence() * 1.25);
                 System.out.println("DartMonkeyTower : Cadance evolute to 25%");
                 break;
-            case 3:
+            case POWER:
                 int oldPuissance = this.getProjectil().getNiveauDegat();
                 this.projectile.setNiveauDegat(oldPuissance + 1);
                 System.out.println("DartMonkeyTower : Puissance evolute to 1");
@@ -55,29 +56,23 @@ public class DartMonkeyTower extends ProjectileTower {
                 System.out.println("DartMonkeyTower : no possible evolution");
                 return;
         }
-        this.evolutionIndex++;
     }
 
     /**
      * remove evolutions for tower
      */
     @Override
-    public void removeEvolution() {
-        if (this.evolutionIndex == 1) {
-            System.out.println("DartMonkeyTower : no change to remove");
-            return;
-        }
-        this.evolutionIndex--;
-        switch (this.evolutionIndex) {
-            case 1:
+    public void removeEvolutionEffect(Evolution evo) {
+        switch (evo) {
+            case RANGE:
                 this.range /= 1.25;
                  System.out.println("DartMonkeyTower : Range decreases to 25%");
                 break;
-            case 2:
+            case CADANCE:
                 this.cadence /= 1.25;
                  System.out.println("DartMonkeyTower : Cadence decreases to 25%");
                 break;
-            case 3:
+            case POWER:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 1);
                 System.out.println("DartMonkeyTower : Puissance decreases to 1");
                 break;
