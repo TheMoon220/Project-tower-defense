@@ -66,7 +66,7 @@ public class SuperMonkeyTower extends ProjectileTower{
                 break;
             case POWER:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 2);
-                System.out.println("SuperMonkeyTower : Puissance decreases to 2");
+                System.out.println("SuperMonkeyTower : Power decreases to 2");
                 break;
             default:
                 return;
