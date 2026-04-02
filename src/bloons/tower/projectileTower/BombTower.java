@@ -47,24 +47,24 @@ public class BombTower extends ProjectileTower {
     }
 
     /**
-     * put evolutions for tower
+     * apply evolutions for tower
      */
     @Override
-    public void putEvolutions(){
-        switch (this.evolutionIndex) {
-            case 1:
+    public void applyEvolution(Evolution evo){
+        switch (evo) {
+            case POWER:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() + 1);
                 System.out.println("BombTower : Puissance evolute to 1");
                 break;
-            case 2: 
+            case RANGE: 
                 this.setRange(this.getRange() * 1.50);
                 System.out.println("BombTower : Range evolute to 50%");
                 break;
-            case 3: 
+            case CADENCE: 
                 this.setCadence(this.getCadence() * 1.25);
                 System.out.println("BombTower : Cadence evolute to 25%");
                 break;
-            case 4:
+            case PROJECTILE:
                 this.setProjectile(Projectile.EXTRABOMB);
                 System.out.println("BombTower : new projectile (ExtraBomb)");
                 break;
@@ -72,7 +72,6 @@ public class BombTower extends ProjectileTower {
                 System.out.println("BombTower : no possible evolution");
                 return;
         }
-        this.evolutionIndex++;
     }
 
     /**
