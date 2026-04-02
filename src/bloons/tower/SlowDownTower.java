@@ -3,6 +3,7 @@ package bloons.tower;
 import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Effect;
+import bloons.utils.Evolution;
 
 /** the object SlowDownTower that send a projectile */
 public class SlowDownTower extends Tower {
@@ -53,4 +54,7 @@ public class SlowDownTower extends Tower {
     public void removeEvolution() {
         System.out.println("SlowDownTower : no change to remove");
     }
+
+    @Override
+    public void applyEvolution(Evolution evo){}
 }
