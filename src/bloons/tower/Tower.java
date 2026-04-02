@@ -224,12 +224,12 @@ public abstract class Tower {
      * put evolution for tower
      */
     public void putEvolutions(){
-      if (appliedEvolutions.size() >= possibleEvolutions.size()) {
+      if (this.appliedEvolutions.size() >= this.possibleEvolutions.size()) {
         return;
       }
-      Evolution next = possibleEvolutions.get(appliedEvolutions.size());
-      appliedEvolutions.push(next);
-      applyEvolution(next);
+      Evolution next = this.possibleEvolutions.get(this.appliedEvolutions.size());
+      this.appliedEvolutions.push(next);
+      this.applyEvolution(next);
     }
 
     public abstract void applyEvolution(Evolution evo);
@@ -239,10 +239,10 @@ public abstract class Tower {
      * remove evolution for tower
      */
     public void removeEvolution(){
-      if (appliedEvolutions.isEmpty()) {
+      if (this.appliedEvolutions.isEmpty()) {
         return;
       }
-      Evolution last = appliedEvolutions.pop();
-      removeEvolutionEffect(last);
+      Evolution last = this.appliedEvolutions.pop();
+      this.removeEvolutionEffect(last);
     }
 }
