@@ -32,15 +32,15 @@ public class SniperMonkeyTower extends ProjectileTower{
      * put evolutions for tower
      */
     @Override
-    public void putEvolutions(){
-        switch (this.evolutionIndex) {
-            case 1:
+    public void applyEvolution(Evolution evo){
+        switch (evo) {
+            case CADANCE:
                 double oldCadance = this.getCadence();
                 double newCadance = oldCadance * 1.25;
                 this.setCadence(newCadance);
                 System.out.println("SniperMonkeyTower : Cadance evolute to 25%");
                 break;
-            case 2:
+            case POWER:
                 int oldPuissance = this.getProjectil().getNiveauDegat();
                 this.projectile.setNiveauDegat(oldPuissance + 2);
                 System.out.println("SniperMonkeyTower : Puissance evolute to 2");
@@ -49,18 +49,13 @@ public class SniperMonkeyTower extends ProjectileTower{
                 System.out.println("SniperMonkeyTower : no possible evolution");
                 return;
         }
-        this.evolutionIndex++;
     }
 
      /**
      * remove evolutions for tower
      */
     @Override
-    public void removeEvolution(){
-        if (this.evolutionIndex == 1) {
-            System.out.println("SniperMonkeyTower : no change to remove");
-            return;
-        }
+    public void removeEvolutionEffect(Evolution){
         this.evolutionIndex--;
         switch (this.evolutionIndex) {
             case 1:
