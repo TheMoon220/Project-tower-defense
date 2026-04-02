@@ -76,6 +76,8 @@ public class DartMonkeyTower extends ProjectileTower {
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 1);
                 System.out.println("DartMonkeyTower : Puissance decreases to 1");
                 break;
+            default:
+                return;
         }
     }
 
