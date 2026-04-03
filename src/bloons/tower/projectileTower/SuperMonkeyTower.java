@@ -1,5 +1,7 @@
 package bloons.tower.projectileTower;
 
+import java.util.List;
+
 import bloons.Position;
 import bloons.utils.Effect;
 import bloons.utils.Evolution;
@@ -18,6 +20,7 @@ public class SuperMonkeyTower extends ProjectileTower{
      */
     public SuperMonkeyTower(double cost, double range, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, range, effect, cadence, position, projectile);
+        this.possibleEvolutions = List.of(Evolution.RANGE, Evolution.CADANCE,Evolution.POWER);
     } 
 
     /**
