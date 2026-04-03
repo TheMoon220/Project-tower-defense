@@ -49,6 +49,7 @@ private Balloon bal1;
       evo3= Evolution.PROJECTILE;
       evo4= Evolution.RANGE;
       t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 100, pos1, Projectile.DART);
+      t1.possibleEvolutions.add(evo1);
       t2=new IceTower(400,100,Effect.IMMEDIAT,150,pos2);
       t3= new BombTower(600, 150, Effect.DISTANCE, 180, pos3,Projectile.BOMB);
       t4= new SniperMonkeyTower(500, Effect.IMMEDIAT, 200, pos2,Projectile.VERYSHARPDART );
@@ -123,16 +124,12 @@ private Balloon bal1;
       }
       @Test
       public void towerCanEvolute(){
-        double rangeBefore = t1.getRange();
         t1.putEvolutions();
         Evolution v= t1.appliedEvolutions.pop();
         assertEquals(evo1,v);
-        //assertNotEquals(t1.getRange(), rangeBefore);
       }
     @Test
     public void towerCanEvolute2(){
-        double rangeBefore = t1.getRange();
-        t1.possibleEvolutions.push(evo1);
         t1.applyEvolution(evo1);                     // applique evo1
         t1.appliedEvolutions.push(evo1);             // push manuellement
         Evolution v = t1.appliedEvolutions.pop();
