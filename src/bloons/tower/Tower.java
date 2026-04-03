@@ -225,7 +225,7 @@ public abstract class Tower {
      */
     public void putEvolutions(){
       if (this.appliedEvolutions.size() >= this.possibleEvolutions.size()) {
-        System.out.println("No possible evolution");
+        System.out.println(this.getClass().getSimpleName()  + " : No possible evolution");
         return;
       }
       Evolution next = this.possibleEvolutions.get(this.appliedEvolutions.size());
@@ -241,7 +241,7 @@ public abstract class Tower {
      */
     public void removeEvolution(){
       if (this.appliedEvolutions.isEmpty()) {
-        System.out.println("No change to remove");
+        System.out.println(this.getClass().getSimpleName() + " : No change to remove");
         return;
       }
       Evolution last = this.appliedEvolutions.pop();
