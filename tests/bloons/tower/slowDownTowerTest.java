@@ -1,5 +1,5 @@
 package bloons.tower;
 
-public class slowDownTowerTest {
+public class slowDownTowerTest extends TowerTest{
     
 }
