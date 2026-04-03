@@ -1,5 +1,5 @@
 package bloons.tower;
 
-public class slowDownTower {
+public class slowDownTowerTest {
     
 }
