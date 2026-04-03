@@ -17,7 +17,7 @@ private Balloon bal1;
     private Position pos;
     private Tower t1;
     private Tower t2 ;
-    private Tower t3 ;
+    private ProjectileTower t3 ;
     private Tower  t4 ;
     private Tower   t5 ;
     private Tower  t6;
@@ -52,8 +52,8 @@ private Balloon bal1;
       t1.possibleEvolutions.add(evo1);
       t2=new IceTower(400,100,Effect.IMMEDIAT,150,pos2);
       t3= new BombTower(600, 150, Effect.DISTANCE, 180, pos3,Projectile.BOMB);
-      t3.possibleEvolutions.add(evo1);
       t3.possibleEvolutions.add(evo2);
+      t3.possibleEvolutions.add(evo1);
       t3.possibleEvolutions.add(evo3);
       t4= new SniperMonkeyTower(500, Effect.IMMEDIAT, 200, pos2,Projectile.VERYSHARPDART );
       t4.possibleEvolutions.add(evo1);
@@ -146,18 +146,27 @@ private Balloon bal1;
     }
       @Test
       public void evoluteTheBombTower(){
-        double rangeBefore = t3.getRange();
+        Projectile projectileDegatBefore= t3.getProjectil();
+        int beforeNiveauDegat= projectileDegatBefore.getNiveauDegat();
         t3.putEvolutions();
-        t3.putEvolutions();
-        assertEquals(rangeBefore * 1.50, t3.getRange());
+        Projectile projectileDegatafter= t3.getProjectil();
+        int  afterNiveauDegat= projectileDegatafter.getNiveauDegat();
+        assertEquals(beforeNiveauDegat+1, afterNiveauDegat);
+        //assertEquals(rangeBefore * 1.50, t3.getRange());
        
   }
       @Test
       public void bombTowerPutEvolutionsIncreasesCadence() {
         double cadenceBefore = t3.getCadence();
+        Projectile projectileBefore= t3.getProjectil();
         t3.putEvolutions(); 
+        assertEquals(cadenceBefore * 1.25, t3.getCadence());
+
         t3.putEvolutions();
+        assertEquals(cadenceBefore * 1.25, t3.getCadence());
+
         t3.putEvolutions();
+        Projectile projrctil
         assertEquals(cadenceBefore * 1.25, t3.getCadence());
     }  
       @Test
