@@ -25,7 +25,12 @@ private Balloon bal1;
     private Position pos1 ;
     private Position pos2 ;
     private Position pos3;
-  
+    private Evolution evo1;
+    private Evolution evo2;
+    private Evolution evo3;
+    private Evolution evo4;
+
+    
     @BeforeEach
      public void Before(){
    
@@ -39,7 +44,10 @@ private Balloon bal1;
       ballons.add(bal1);
       ballons.add(bal2);
       ballons.add(bal3);
-   
+      evo1= Evolution.CADANCE;
+      evo2= Evolution.POWER;
+      evo3= Evolution.PROJECTILE;
+      evo4= Evolution.RANGE;
       t1=new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 100, pos1, Projectile.DART);
       t2=new IceTower(400,100,Effect.IMMEDIAT,150,pos2);
       t3= new BombTower(600, 150, Effect.DISTANCE, 180, pos3,Projectile.BOMB);
