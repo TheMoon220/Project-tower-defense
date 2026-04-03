@@ -158,16 +158,19 @@ private Balloon bal1;
       @Test
       public void bombTowerPutEvolutionsIncreasesCadence() {
         double cadenceBefore = t3.getCadence();
+         Projectile projectileDegatBefore= t3.getProjectil();
+        int beforeNiveauDegat= projectileDegatBefore.getNiveauDegat();
+        t3.putEvolutions();
+        Projectile projectileDegatafter= t3.getProjectil();
+        int  afterNiveauDegat= projectileDegatafter.getNiveauDegat();
         Projectile projectileBefore= t3.getProjectil();
-        t3.putEvolutions(); 
-        assertEquals(cadenceBefore * 1.25, t3.getCadence());
-
+        assertEquals(beforeNiveauDegat+1, afterNiveauDegat);
         t3.putEvolutions();
         assertEquals(cadenceBefore * 1.25, t3.getCadence());
-
         t3.putEvolutions();
-        Projectile projrctil
-        assertEquals(cadenceBefore * 1.25, t3.getCadence());
+        Projectile projectileAfter= t3.getProjectil();
+        assertNotEquals( projectileAfter,projectileBefore);
+        assertEquals(Projectile.EXTRABOMB, projectileAfter);
     }  
       @Test
       public void bombTowerPutEvolutionsChangesProjectile() {
