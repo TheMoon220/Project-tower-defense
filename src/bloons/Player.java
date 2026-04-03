@@ -60,6 +60,15 @@ public class Player {
     this.credit -= amnt;
   }
 
+  /**
+   * check if the player has enough credit
+   * @param cost the cost of a tower
+   * @return true when he has credit otherwise false
+   */
+  public boolean canAfford(int cost){
+    return this credit >= cost;
+  }
+
   /**represente a player to String
    *@return a stringg of player
   */
