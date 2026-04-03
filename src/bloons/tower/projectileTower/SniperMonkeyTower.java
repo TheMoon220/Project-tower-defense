@@ -16,6 +16,8 @@ public class SniperMonkeyTower extends ProjectileTower{
      */
     public SniperMonkeyTower(double cost, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, Double.MAX_VALUE, effect, cadence, position, projectile);
+        this.possibleEvolutions.add(Evolution.CADANCE);
+        this.possibleEvolutions.add(Evolution.POWER);
     }
 
     /**
@@ -61,7 +63,7 @@ public class SniperMonkeyTower extends ProjectileTower{
                 this.cadence /= 1.25;
                 System.out.println("SniperMonkeyTower : Cadance decreases to 25%");
                 break;
-            case PROJECTILE:
+            case POWER:
                 this.projectile.setNiveauDegat(this.projectile.getNiveauDegat() - 2);
                 System.out.println("SniperMonkeyTower : Power decreases to 2");
                 break;
