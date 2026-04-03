@@ -52,6 +52,14 @@ public class Player {
     this.health--;
   }
 
+  /**
+   * remove the old amount 
+   * @param amnt the new amount
+   */
+  public void removeCredit(int amnt){
+    this.credit -= amnt;
+  }
+
   /**represente a player to String
    *@return a stringg of player
   */
