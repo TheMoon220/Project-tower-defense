@@ -5,7 +5,13 @@ public class Player {
 
     /** The profit of the player when a ballon have been broken */
     public static final int PROFIT = 10;
+    /** the credit of the player */
+    public static final int CREDIT = 2500;
+    /** the life of the player */
+    public static final int HEALTH = 20;
+    /** the variable health */
     private int health;
+    /** the variable credit */
     private int credit ;
     /**
      * build an player with an health an credit 
@@ -14,8 +20,8 @@ public class Player {
      */
     
        public Player(int health,int credit){
-        this.credit=credit;
-        this.health=health;
+        this.credit = Player.CREDIT;
+        this.health = Player.HEALTH;
     }
 /**
  * allow to get the player current health
@@ -25,6 +31,7 @@ public class Player {
      return this.health;
 
     }
+    
     /**
      * allow to get the current credit of the player
      * @return the credit
@@ -39,17 +46,19 @@ public class Player {
   public void setCredit(){
     this.credit += PROFIT;
   }
+
   /**
-    * change the player credit by diminishing the number of credit
-   *
+   * change the player credit by diminishing the number of credit
    */
-  public void setHealth(){
-    this.health--;
+  public void setHealth(int health){
+    if(health > 0)
+      this.health--;
   }
-/**represente a player to String
- *@return a stringg of player
- */
+
+  /**represente a player to String
+   *@return a stringg of player
+  */
   public String toString(){
-    return "Player(credit: "+this.credit + ",  health: "+this.health + ")";
+    return "Player lives: "+this.credit + "\n" + "Player health: " + this.health + "\n";
   }
 }
