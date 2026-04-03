@@ -1,5 +1,7 @@
 package bloons.tower.projectileTower;
 
+import java.util.List;
+
 import bloons.Position;
 import bloons.utils.Effect;
 import bloons.utils.Evolution;
@@ -18,8 +20,6 @@ public class TackShooterTower extends ProjectileTower{
      */
     public TackShooterTower(double cost, double range, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, range, effect, cadence, position, projectile);
-        this.possibleEvolutions.add(Evolution.RANGE);
-        this.possibleEvolutions.add(Evolution.CADANCE);
     }
 
     /**
