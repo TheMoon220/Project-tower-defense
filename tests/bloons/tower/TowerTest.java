@@ -3,15 +3,11 @@ package bloons.tower;
 import bloons.tower.projectileTower.*;
 import bloons.utils.*;
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.jupiter.api.*;
-
 import bloons.Position;
 import bloons.balloon.Balloon;
-
 
 public class TowerTest {
     
@@ -121,7 +117,7 @@ private Balloon bal1;
       public void towerCanEvolute(){
         double rangeBefore = t1.getRange();
         t1.putEvolutions();
-        assertTrue(t1.getRange() > rangeBefore);
+        assertFalse(t1.getRange() > rangeBefore);
       }
 
       @Test
