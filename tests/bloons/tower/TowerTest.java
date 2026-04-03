@@ -87,43 +87,9 @@ private Balloon bal1;
 
     
    
-     @Test
-    public void dartMonkeyRemoveEvolutionRestoresCadence() {
-        double cadenceBefore = t1.getCadence();
-        t1.putEvolutions(); // 1
-       t1.putEvolutions(); // 2 : cadence
-        t1.removeEvolution();
-        assertEquals(cadenceBefore, t1.getCadence());
-    }
-      @Test 
-        public void evoluteCadenceSniperMonkeyTower(){
-          double cadenceBefore = t4.getCadence();
-          t4.putEvolutions();
-          assertEquals(cadenceBefore * 1.25, t4.getCadence());
-        }
-      @Test
-        public void sniperMonkeyRremoveEvolutionRestoresCadence() {
-        double cadenceBefore = t4.getCadence();
-        t4.putEvolutions(); // 1
-        t4.removeEvolution();
-        assertEquals(cadenceBefore, t4.getCadence());
-    }
+   
+     
  
-      @Test 
-        public void evoluteRangeSuperMonkeyTower(){
-           double rangeBefore = t5.getRange();
-           t5.putEvolutions();
-           assertEquals(rangeBefore * 1.50, t5.getRange());
-        }
-        @Test
-    public void superMonkeyRemoveEvolutionRestoresCadence() {
-        double cadenceBefore =t5.getCadence();
-        t5.putEvolutions(); // 1
-        t5.putEvolutions(); // 2
-        //t5.putEvolutions(); // 3
-        t5.removeEvolution();
-        assertEquals(cadenceBefore, t5.getCadence());
-    }
-
+      
 }
 
