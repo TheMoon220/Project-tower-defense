@@ -172,14 +172,7 @@ private Balloon bal1;
         assertNotEquals( projectileAfter,projectileBefore);
         assertEquals(Projectile.EXTRABOMB, projectileAfter);
     }  
-      @Test
-      public void bombTowerPutEvolutionsChangesProjectile() {
-          t3.putEvolutions(); // index 1
-          t3.putEvolutions(); // index 2
-          t3.putEvolutions(); // index 3
-          t3.putEvolutions(); // index 4
-          assertEquals(Projectile.EXTRABOMB,((ProjectileTower) t3).getProjectil());
-      }
+    
        @Test
     public void bombTowerRemoveEvolutionRestoresProjectile() {
         t3.putEvolutions(); // index 1
