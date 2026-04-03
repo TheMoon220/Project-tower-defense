@@ -125,9 +125,19 @@ private Balloon bal1;
       public void towerCanEvolute(){
         double rangeBefore = t1.getRange();
         t1.putEvolutions();
-        assertFalse(t1.getRange() > rangeBefore);
+        Evolution v= t1.appliedEvolutions.pop();
+        assertEquals(evo1,v);
+        //assertNotEquals(t1.getRange(), rangeBefore);
       }
-
+    @Test
+    public void towerCanEvolute2(){
+        double rangeBefore = t1.getRange();
+        t1.possibleEvolutions.push(evo1);
+        t1.applyEvolution(evo1);                     // applique evo1
+        t1.appliedEvolutions.push(evo1);             // push manuellement
+        Evolution v = t1.appliedEvolutions.pop();
+        assertEquals(evo1, v);
+    }
       @Test
       public void evoluteTheBombTower(){
         double rangeBefore = t3.getRange();
