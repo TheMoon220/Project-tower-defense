@@ -66,7 +66,7 @@ public class Player {
    * @return true when he has credit otherwise false
    */
   public boolean canAfford(int cost){
-    return this credit >= cost;
+    return this.credit >= cost;
   }
 
   /**represente a player to String
