@@ -212,6 +212,13 @@ public abstract class Board {
     }
 
     /**
+     * evolute one towers in board
+     */
+    public void EvoluteOneTower(){
+        
+    }
+
+    /**
      * remove evolution for all towers in board
      * @param allTowers all the towers in board
      */
