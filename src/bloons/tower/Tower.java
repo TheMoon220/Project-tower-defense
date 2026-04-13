@@ -228,7 +228,9 @@ public abstract class Tower {
         System.out.println(this.getClass().getSimpleName()  + " : No possible evolution");
         return;
       }
-      Evolution next = this.possibleEvolutions.get(this.appliedEvolutions.size());
+      List<Evolution> evolutions = new ArrayList<>(this.possibleEvolutions.keySet());
+      Evolution next = evolutions.get(this.appliedEvolutions.size());
+      
       this.appliedEvolutions.push(next);
       this.applyEvolution(next);
     }
