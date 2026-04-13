@@ -237,4 +237,11 @@ public abstract class Board {
             t.removeEvolution();
         }
     }
+
+    /**
+     * remove evolution for one tower in board
+     */
+    public void removeEvolutionForOneTower(){
+        
+    }
 }
