@@ -27,4 +27,18 @@ public abstract class BoardView {
         this.canvas = new Canvas(board.getWidth() * CELL_SIZE, board.getHeight() * CELL_SIZE);
         this.gc = canvas.getGraphicsContext2D();
     }
+
+    /**
+     * draw the grid
+     */
+    protected void drawGrid(){
+        for (int x = 0; x < this.board.getWidth(); x++) {
+            for(int y = 0; y < this.board.getHeight(); y++){
+                this.gc.setFill(Color.GREEN);
+                this.gc.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+                this.gc.setStroke(Color.DARKGREEN);
+                this.gc.strokeRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+            }
+        }
+    }
 }
