@@ -217,7 +217,15 @@ public abstract class Board {
      * evolute one towers in board
      */
     public void EvoluteOneTower(){
-        
+        Random random = new Random();
+        int i = random.nextInt(this.allTowers.size());
+        Tower tower = this.allTowers.get(i);
+        while (this.evolutedTowers.contains(tower)) {
+            i = random.nextInt(this.allTowers.size());
+            tower = this.allTowers.get(i);
+        }
+        tower.putEvolutions();
+        this.evolutedTowers.add(tower);
     }
 
     /**
