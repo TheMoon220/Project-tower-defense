@@ -44,6 +44,14 @@ public abstract class Board {
         }
     }
 
+
+    /**
+     * @return board's player
+     */
+    Player getPlayer(){
+        return this.player;
+    }
+
     /** an abstract method for calculate the path on the board*/
     public abstract void calculPath();
 
