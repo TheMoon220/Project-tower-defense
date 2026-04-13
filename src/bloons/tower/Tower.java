@@ -2,6 +2,7 @@ package bloons.tower;
 
 import bloons.Position;
 import bloons.balloon.Balloon;
+import bloons.board.Board;
 import bloons.utils.Effect;
 import bloons.utils.Evolution;
 
@@ -230,7 +231,12 @@ public abstract class Tower {
       }
       List<Evolution> evolutions = new ArrayList<>(this.possibleEvolutions.keySet());
       Evolution next = evolutions.get(this.appliedEvolutions.size());
-      
+      int cost = possibleEvolutions.get(next);
+      if (Board.PLAYER.getCredit() < cost) {
+        System.out.println("Credi not enough for evoluting " + next + " of " + this.getClass().getSimpleName());
+        return;
+      }
+      Board.PLAYER.removeCredit(cost);
       this.appliedEvolutions.push(next);
       this.applyEvolution(next);
     }
