@@ -62,4 +62,14 @@ public abstract class BoardView {
             );
         }
     }
+
+    /**
+     * the method draw with a given parameter
+     * @param balloons the balloons
+     */
+    public void draw(List<Balloon> balloons){
+        this.drawGrid();
+        this.drawPath();
+        this.drawBalloons(balloons);
+    }
 }
