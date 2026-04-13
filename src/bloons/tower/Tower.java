@@ -2,6 +2,7 @@ package bloons.tower;
 
 import bloons.Position;
 import bloons.balloon.Balloon;
+import bloons.board.Board;
 import bloons.utils.Effect;
 import bloons.utils.Evolution;
 
@@ -30,7 +31,7 @@ public abstract class Tower {
     /** Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60) */
     public double RANGE=60; 
 
-    protected List<Evolution> possibleEvolutions;
+    protected Map<Evolution, Integer> possibleEvolutions;
     protected Deque<Evolution> appliedEvolutions; 
 
      
@@ -49,7 +50,7 @@ public abstract class Tower {
         this.balloonsInRange=new ArrayList<>();
         this.position=position;
         this.timeLastAttack = 0;
-        this.possibleEvolutions = new ArrayList<>();
+        this.possibleEvolutions = new LinkedHashMap<>();
         this.appliedEvolutions = new ArrayDeque<>();
     }
 
@@ -241,7 +242,14 @@ public abstract class Tower {
         System.out.println(this.getClass().getSimpleName()  + " : No possible evolution");
         return;
       }
-      Evolution next = this.possibleEvolutions.get(this.appliedEvolutions.size());
+      List<Evolution> evolutions = new ArrayList<>(this.possibleEvolutions.keySet());
+      Evolution next = evolutions.get(this.appliedEvolutions.size());
+      int cost = possibleEvolutions.get(next);
+      if (Board.PLAYER.getCredit() < cost) {
+        System.out.println("Credi not enough for evoluting " + next + " of " + this.getClass().getSimpleName());
+        return;
+      }
+      Board.PLAYER.removeCredit(cost);
       this.appliedEvolutions.push(next);
       this.applyEvolution(next);
     }

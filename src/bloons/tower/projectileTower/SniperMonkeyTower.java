@@ -16,8 +16,8 @@ public class SniperMonkeyTower extends ProjectileTower{
      */
     public SniperMonkeyTower(double cost, Effect effect, double cadence, Position position, Projectile projectile) {
         super(cost, Double.MAX_VALUE, effect, cadence, position, projectile);
-        this.possibleEvolutions.add(Evolution.CADANCE);
-        this.possibleEvolutions.add(Evolution.POWER);
+        this.possibleEvolutions.put(Evolution.CADANCE, 200);
+        this.possibleEvolutions.put(Evolution.POWER, 300);
     }
 
     /**

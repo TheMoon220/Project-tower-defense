@@ -5,8 +5,13 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/** is the main programm of our game */
 public class GameApp extends Application{
   
+    /**
+     * an method for start the game
+     * @param stage the stage
+     */
     @Override
     public void start(Stage stage){
         BorderPane root = new BorderPane();
@@ -16,6 +21,7 @@ public class GameApp extends Application{
         stage.show();
     }
 
+    /** the main programm */
     public static void main(String[] args){
         launch(args);
     }

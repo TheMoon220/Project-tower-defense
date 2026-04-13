@@ -56,9 +56,9 @@ public  abstract class Livrable {
             for(int manche = 1; manche <= 10; manche ++){
                 System.out.println("\n=== Manche " + manche + " ===");
                 if(manche <= 5){
-                    board.EvoluteAllTowers(towers);
+                    board.EvoluteOneTower();
                 }else{
-                    board.removeEvolutionForTowers(towers);
+                    board.removeEvolutionForOneTower();
                 }
                 System.out.println();
                 board.generateAllballoons(param);

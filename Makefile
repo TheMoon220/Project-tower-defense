@@ -6,6 +6,8 @@ OUT = classes
 JUNIT = junit-console.jar
 TESTS = tests
 DOC_DIR = docs
+JAVAFX = /usr/share/openjfx/lib
+JAVAFX_MODS = javafx.controls,javafx.fxml
 
 # Recherche des fichiers Java
 SRC_FILES = $(shell find $(SRC) -name "*.java")
@@ -28,6 +30,17 @@ classes:
 	@mkdir -p $(OUT)
 	$(JAVAC) -sourcepath $(SRC) -d $(OUT) $(SRC_FILES)
 	@echo "Compilation terminée."
+
+# Compilation avec JavaFX
+classes-gui: classes
+	@echo "Compilation avec JavaFX..."
+	$(JAVAC) --module-path $(JAVAFX) --add-modules $(JAVAFX_MODS) -classpath $(OUT) -sourcepath $(SRC) -d $(OUT) $(SRC_FILES)
+	@echo "Compilation terminée."
+
+# Lancement avec JavaFX
+run-gui: classes-gui
+	@echo "Lancement de l'interface graphique..."
+	$(JAVA) --module-path $(JAVAFX) --add-modules $(JAVAFX_MODS) -classpath $(OUT) bloons.interface_g.main.GameApp
 
 # Génération de la javadoc
 docs:
