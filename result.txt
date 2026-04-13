@@ -1,0 +1,2140 @@
+=== Livrable 4b: Random Board ===
+Board size: 12x12
+
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | . . . . . . . . . . . . 
+ 1 | . . . . . . . . . . . . 
+ 2 | . . . . . . . . . . . . 
+ 3 | . . . . . . . . . . . . 
+ 4 | . . . . . . . . . . . . 
+ 5 | . . . . . . . . . . . . 
+ 6 | . . . . . . . . . . . . 
+ 7 | . . . . . . . . . . . . 
+ 8 | . . . . . . . . . . . . 
+ 9 | . . . . . . . . . . . . 
+10 | . . . . . . . . . . . . 
+11 | . . . . . . . . . . . . 
+
+=== Manche 1 ===
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : Puissance evolute to 1
+DartMonkeyTower : Range evolute to 25%
+SniperMonkeyTower : Cadance evolute to 25%
+SuperMonkeyTower : Range evolutes to 50%
+TackShooterTower : Range evolutes to 20%
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : Puissance evolute to 1
+DartMonkeyTower : Range evolute to 25%
+SniperMonkeyTower : Cadance evolute to 25%
+SuperMonkeyTower : Range evolutes to 50%
+TackShooterTower : Range evolutes to 20%
+Balloon 0 speed : 1.0 helth : 1
+Balloon 1 speed : 1.0 helth : 2
+Balloon 2 speed : 1.0 helth : 2
+Balloon 3 speed : 2.0 helth : 4
+Balloon 4 speed : 2.0 helth : 2
+Balloon 5 speed : 1.0 helth : 4
+Balloon 6 speed : 3.1 helth : 2
+Balloon 7 speed : 3.1 helth : 2
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 133 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | B X X B X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X B . . . X . . . X . . 
+ 4 | X X X X X X X X X X B X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . B . . . B . . 
+10 | X B X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 258 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | B X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X B . . . X . . . X . . 
+ 7 | X X B X X B X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X B X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 375 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | B X . . . X . . . X . . 
+ 4 | X X X X X X X X B X X X 
+ 5 | X X . . . B . . . B . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X B X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X B . . . X . . . X . . 
+10 | X X X B X X X X X X X X 
+11 | X X . . . X . . . X . . 
+SuperMonkeyTower at (7, 6) shoots at Balloon at (5, 5)
+time: 375 ms - Balloon touched (health: 0)
+time: 375 ms - Balloon destroyed !
+SuperMonkeyTower at (3, 0) shoots at Balloon at (0, 3)
+time: 375 ms - Balloon touched (health: 0)
+time: 375 ms - Balloon destroyed !
+Balloon 4 exited at time: 394 ms
+Balloon 5 exited at time: 396 ms
+
+time: 496 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . B . . 
+ 4 | X X X X X X X B X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X B X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X B X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 604 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X B X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X B X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 3 exited at time: 618 ms
+
+time: 718 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+SuperMonkeyTower at (7, 6) shoots at Balloon at (6, 7)
+time: 718 ms - Balloon touched (health: 0)
+time: 718 ms - Balloon destroyed !
+SuperMonkeyTower at (3, 0) shoots at Balloon at (5, 4)
+time: 718 ms - Balloon touched (health: 0)
+time: 718 ms - Balloon destroyed !
+
+time: 835 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X B X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 950 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X B X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1065 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+SuperMonkeyTower at (7, 6) shoots at Balloon at (9, 10)
+time: 1065 ms - Balloon touched (health: 0)
+time: 1065 ms - Balloon destroyed !
+=== Manche 1 terminée ===
+
+=== Manche 2 ===
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : Range evolute to 50%
+DartMonkeyTower : Cadance evolute to 25%
+SniperMonkeyTower : Puissance evolute to 2
+SuperMonkeyTower : Cadance evolutes to 200%
+TackShooterTower : Cadance evolutes to 25%
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : Range evolute to 50%
+DartMonkeyTower : Cadance evolute to 25%
+SniperMonkeyTower : Puissance evolute to 2
+SuperMonkeyTower : Cadance evolutes to 200%
+TackShooterTower : Cadance evolutes to 25%
+Balloon 0 speed : 1.0 helth : 2
+Balloon 1 speed : 3.1 helth : 2
+Balloon 2 speed : 1.0 helth : 2
+Balloon 3 speed : 2.0 helth : 2
+Balloon 4 speed : 1.0 helth : 1
+Balloon 5 speed : 1.0 helth : 1
+Balloon 6 speed : 1.0 helth : 4
+Balloon 7 speed : 1.0 helth : 1
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 120 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | B B X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X B X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . B . . . X . . 
+10 | X X X B X X X X X B X X 
+11 | X X . . . X . . . X . . 
+
+time: 241 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X B X X X X X X X X X 
+ 2 | B B . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X B X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . B . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 358 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X B X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | B B . . . X . . . X . . 
+ 4 | X X X X X X X X B X X X 
+ 5 | X X . . . B . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X B X X X X X X X X 
+ 8 | X X . . . X . . . B . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+Balloon 1 exited at time: 376 ms
+
+time: 476 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X B X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . X . . 
+ 4 | B B X X X X X B X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X B X X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 589 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X B X X X X X 
+ 5 | B B . . . X . . . X . . 
+ 6 | X X . . . X . . . B . . 
+ 7 | X X X X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 2 exited at time: 601 ms
+
+time: 701 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . X . . . B . . 
+ 6 | B B . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 821 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X B X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X B X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B B X X X X X B X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+DartMonkeyTower at (6, 7) shoots at Balloon at (7, 7)
+time: 821 ms - Balloon touched (health: 1)
+SuperMonkeyTower at (3, 0) shoots at Balloon at (4, 4)
+time: 821 ms - Balloon touched (health: 0)
+time: 821 ms - Balloon destroyed !
+
+time: 936 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X B X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . B . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B X X X 
+ 8 | B B . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+TackShooterTower at (8, 2) shoots at Balloon at (9, 3)
+time: 936 ms - Balloon touched (health: 0)
+time: 936 ms - Balloon destroyed !
+TackShooterTower at (0, 7) shoots at Balloon at (0, 8)
+time: 936 ms - Balloon touched (health: 0)
+time: 936 ms - Balloon destroyed !
+
+time: 1058 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X B . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1170 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X B X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X B X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+SuperMonkeyTower at (7, 6) shoots at Balloon at (10, 7)
+time: 1170 ms - Balloon touched (health: 0)
+time: 1170 ms - Balloon destroyed !
+
+time: 1296 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X B 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X B . . . X . . . X . . 
+Balloon 0 exited at time: 1315 ms
+Balloon 1 exited at time: 1316 ms
+=== Manche 2 terminée ===
+
+=== Manche 3 ===
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : Cadence evolute to 25%
+DartMonkeyTower : Puissance evolute to 1
+SniperMonkeyTower : no possible evolution
+SuperMonkeyTower : Puissance evolutes to 2
+TackShooterTower : no possible evolution
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : Cadence evolute to 25%
+DartMonkeyTower : Puissance evolute to 1
+SniperMonkeyTower : no possible evolution
+SuperMonkeyTower : Puissance evolutes to 2
+TackShooterTower : no possible evolution
+Balloon 0 speed : 1.0 helth : 2
+Balloon 1 speed : 3.1 helth : 2
+Balloon 2 speed : 1.0 helth : 2
+Balloon 3 speed : 2.0 helth : 1
+Balloon 4 speed : 2.0 helth : 1
+Balloon 5 speed : 3.1 helth : 1
+Balloon 6 speed : 2.0 helth : 1
+Balloon 7 speed : 1.0 helth : 1
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 117 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X B X X X X X X X X X X 
+ 2 | X B . . . X . . . X . . 
+ 3 | B X . . . X . . . X . . 
+ 4 | X X X X X X X X X X B X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . B . . . B . . 
+10 | X X X B X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 232 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X B X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X B X X X X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | B X . . . X . . . X . . 
+ 7 | X X B X X B X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 344 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X B X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X B X X X 
+ 5 | X X . . . B . . . B . . 
+ 6 | X B . . . X . . . X . . 
+ 7 | X X X B X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | B X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+Balloon 1 exited at time: 354 ms
+Balloon 5 exited at time: 354 ms
+
+time: 455 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X B X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . B . . 
+ 4 | X X X X X X X B X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X B X X X X X X X 
+ 8 | X B . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 567 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X B X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X B X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 2 exited at time: 578 ms
+Balloon 3 exited at time: 578 ms
+Balloon 4 exited at time: 578 ms
+
+time: 679 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 797 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X B X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X B X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X B X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 911 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X B X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X B X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1028 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X B X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+SuperMonkeyTower at (3, 0) shoots at Balloon at (2, 4)
+time: 1028 ms - Balloon touched (health: 0)
+time: 1028 ms - Balloon destroyed !
+
+time: 1144 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X B X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1260 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X B 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X B 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 0 exited at time: 1278 ms
+Balloon 1 exited at time: 1278 ms
+=== Manche 3 terminée ===
+
+=== Manche 4 ===
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : new projectile (ExtraBomb)
+DartMonkeyTower : no possible evolution
+SniperMonkeyTower : no possible evolution
+SuperMonkeyTower : no possible evolution
+TackShooterTower : no possible evolution
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : new projectile (ExtraBomb)
+DartMonkeyTower : no possible evolution
+SniperMonkeyTower : no possible evolution
+SuperMonkeyTower : no possible evolution
+TackShooterTower : no possible evolution
+Balloon 0 speed : 2.0 helth : 4
+Balloon 1 speed : 1.0 helth : 4
+Balloon 2 speed : 1.0 helth : 4
+Balloon 3 speed : 2.0 helth : 2
+Balloon 4 speed : 3.1 helth : 1
+Balloon 5 speed : 2.0 helth : 1
+Balloon 6 speed : 3.1 helth : 4
+Balloon 7 speed : 2.0 helth : 2
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 117 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X B X X X X X X X X X 
+ 2 | B X . . . X . . . X . . 
+ 3 | X B . . . X . . . X . . 
+ 4 | X X X X X X X X X X B X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X B X X X X X X X X X 
+ 8 | X X . . . X . . . B . . 
+ 9 | X X . . . B . . . X . . 
+10 | X B X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 231 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X B X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | B X X X X X X X X B X X 
+ 5 | X X . . . X . . . B . . 
+ 6 | X B . . . X . . . X . . 
+ 7 | X X X X B B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X B X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 343 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X X . . . X . . . B . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X B X X X 
+ 5 | X X . . . B . . . X . . 
+ 6 | B X . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X B . . . X . . . X . . 
+10 | X X X B X X X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 4 exited at time: 349 ms
+Balloon 6 exited at time: 349 ms
+
+time: 449 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X B X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . X . . 
+ 4 | X X X X X X X B X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B X X X 
+ 8 | B X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X B X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 563 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X X B X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X B X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X B X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 0 exited at time: 573 ms
+Balloon 3 exited at time: 573 ms
+Balloon 4 exited at time: 573 ms
+Balloon 5 exited at time: 573 ms
+
+time: 674 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 786 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X B X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X B X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 897 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X B X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X B X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1009 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X B X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+
+time: 1114 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X B X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X B X 
+11 | X X . . . X . . . X . . 
+
+time: 1219 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | B X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X B 
+11 | X X . . . X . . . X . . 
+SuperMonkeyTower at (3, 0) shoots at Balloon at (0, 4)
+time: 1219 ms - Balloon touched (health: 0)
+time: 1219 ms - Balloon destroyed !
+Balloon 0 exited at time: 1224 ms
+=== Manche 4 terminée ===
+
+=== Manche 5 ===
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : no possible evolution
+DartMonkeyTower : no possible evolution
+SniperMonkeyTower : no possible evolution
+SuperMonkeyTower : no possible evolution
+TackShooterTower : no possible evolution
+IceTower : can't be evolute
+SlowDownTower : can't be evolute
+BombTower : no possible evolution
+DartMonkeyTower : no possible evolution
+SniperMonkeyTower : no possible evolution
+SuperMonkeyTower : no possible evolution
+TackShooterTower : no possible evolution
+Balloon 0 speed : 1.0 helth : 2
+Balloon 1 speed : 3.1 helth : 2
+Balloon 2 speed : 3.1 helth : 4
+Balloon 3 speed : 1.0 helth : 2
+Balloon 4 speed : 3.1 helth : 2
+Balloon 5 speed : 1.0 helth : 1
+Balloon 6 speed : 3.1 helth : 4
+Balloon 7 speed : 1.0 helth : 2
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 113 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | B B X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X B . . . X . . . X . . 
+ 4 | X X X X X X X X B X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X X X X X X 
+ 8 | X X . . . X . . . B . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X B X B X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 224 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X B X X X X X X X X X 
+ 2 | B X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . X . . . B . . 
+ 6 | X B . . . X . . . X . . 
+ 7 | X X B X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . B . . . X . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 335 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X B X X X X X X X X 
+ 2 | X X . . . X . . . B . . 
+ 3 | B X . . . X . . . X . . 
+ 4 | X X B X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X B X X X X X X X X 
+ 8 | X X . . . B . . . X . . 
+ 9 | X B . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+Balloon 1 exited at time: 346 ms
+Balloon 2 exited at time: 346 ms
+Balloon 4 exited at time: 346 ms
+Balloon 6 exited at time: 346 ms
+
+time: 446 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X B X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | B X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X B B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 555 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | B X . . . X . . . X . . 
+ 6 | X X . . . B . . . X . . 
+ 7 | X X X X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 664 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . B . . . X . . 
+ 6 | B X . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 774 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X B X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X B X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 876 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X B X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B X X X 
+ 8 | B X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 978 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . B . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | B X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1093 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X X B X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1198 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . B . . . X . . 
+ 1 | X X X X X X X X X X X B 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X B 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | B X . . . X . . . X . . 
+Balloon 0 exited at time: 1208 ms
+Balloon 1 exited at time: 1208 ms
+Balloon 2 exited at time: 1208 ms
+Balloon 3 exited at time: 1208 ms
+=== Manche 5 terminée ===
+
+=== Manche 6 ===
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : reinitialise projectile (Bomb)
+DartMonkeyTower : Puissance decreases to 1
+SniperMonkeyTower : Puissance decreases to 2
+SuperMonkeyTower : Puissance decreases to 2
+TackShooterTower : Cadance decreases to 25%
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : reinitialise projectile (Bomb)
+DartMonkeyTower : Puissance decreases to 1
+SniperMonkeyTower : Puissance decreases to 2
+SuperMonkeyTower : Puissance decreases to 2
+TackShooterTower : Cadance decreases to 25%
+Balloon 0 speed : 2.0 helth : 2
+Balloon 1 speed : 3.1 helth : 4
+Balloon 2 speed : 2.0 helth : 4
+Balloon 3 speed : 2.0 helth : 1
+Balloon 4 speed : 1.0 helth : 1
+Balloon 5 speed : 3.1 helth : 4
+Balloon 6 speed : 1.0 helth : 2
+Balloon 7 speed : 2.0 helth : 4
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 105 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X B B X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | B X . . . X . . . X . . 
+ 4 | X X X X X X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X B X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . B . . . X . . 
+10 | X X X B X X X X X B X X 
+11 | X X . . . X . . . X . . 
+
+time: 216 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X B X X X X X X X 
+ 2 | X B . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X B X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | B X . . . X . . . X . . 
+ 7 | X X X X B B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . B . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 322 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X B . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . B . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . B . . 
+ 9 | B X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+Balloon 1 exited at time: 325 ms
+Balloon 5 exited at time: 325 ms
+
+time: 425 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X B X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . X . . 
+ 4 | X B X B X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 527 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X X B X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X B X X X X X X X X X X 
+ 5 | X B . . . X . . . X . . 
+ 6 | X X . . . X . . . B . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 0 exited at time: 529 ms
+Balloon 1 exited at time: 529 ms
+Balloon 2 exited at time: 529 ms
+Balloon 5 exited at time: 529 ms
+
+time: 629 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . B . . 
+ 6 | X B . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 737 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 843 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . B . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X B . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 945 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . B . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X B . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1053 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X B X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1158 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . B . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X B . . . X . . . X . . 
+Balloon 0 exited at time: 1168 ms
+Balloon 1 exited at time: 1169 ms
+=== Manche 6 terminée ===
+
+=== Manche 7 ===
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : Puissance decreases to 1
+DartMonkeyTower : Cadence decreases to 25%
+SniperMonkeyTower : Cadance decreases to 25%
+SuperMonkeyTower : Cadance decreases to 200%
+TackShooterTower : Range decreases to 20%
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : Puissance decreases to 1
+DartMonkeyTower : Cadence decreases to 25%
+SniperMonkeyTower : Cadance decreases to 25%
+SuperMonkeyTower : Cadance decreases to 200%
+TackShooterTower : Range decreases to 20%
+Balloon 0 speed : 1.0 helth : 1
+Balloon 1 speed : 1.0 helth : 4
+Balloon 2 speed : 2.0 helth : 2
+Balloon 3 speed : 2.0 helth : 1
+Balloon 4 speed : 2.0 helth : 4
+Balloon 5 speed : 3.1 helth : 2
+Balloon 6 speed : 3.1 helth : 2
+Balloon 7 speed : 1.0 helth : 2
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 117 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X B X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | B B . . . X . . . X . . 
+ 4 | X X X X X X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . B . . . B . . 
+10 | X B X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 228 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X B X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X B X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | B B . . . X . . . X . . 
+ 7 | X X B X X B X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X B X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 331 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X B X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . B . . . B . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X B X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | B B . . . X . . . X . . 
+10 | X X X B X X X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 5 exited at time: 334 ms
+Balloon 6 exited at time: 334 ms
+
+time: 434 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X B X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . B . . 
+ 4 | X X X B X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X B X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X B X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 541 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X B X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X B X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 2 exited at time: 549 ms
+Balloon 3 exited at time: 549 ms
+Balloon 4 exited at time: 549 ms
+
+time: 649 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 758 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X B X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X B X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X B X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 866 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X B X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X B X X X 
+11 | X X . . . X . . . X . . 
+
+time: 971 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+
+time: 1079 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X B X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X B X 
+11 | X X . . . X . . . X . . 
+
+time: 1189 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X B 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X B 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X B 
+11 | X X . . . X . . . X . . 
+Balloon 0 exited at time: 1195 ms
+Balloon 1 exited at time: 1195 ms
+Balloon 2 exited at time: 1196 ms
+=== Manche 7 terminée ===
+
+=== Manche 8 ===
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : Cadance decreases to 25%
+DartMonkeyTower : Range decreases to 25%
+SniperMonkeyTower : no change to remove
+SuperMonkeyTower : Range decreases to 50%
+TackShooterTower : no change to remove
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : Cadance decreases to 25%
+DartMonkeyTower : Range decreases to 25%
+SniperMonkeyTower : no change to remove
+SuperMonkeyTower : Range decreases to 50%
+TackShooterTower : no change to remove
+Balloon 0 speed : 1.0 helth : 1
+Balloon 1 speed : 1.0 helth : 1
+Balloon 2 speed : 3.1 helth : 2
+Balloon 3 speed : 2.0 helth : 1
+Balloon 4 speed : 3.1 helth : 2
+Balloon 5 speed : 3.1 helth : 2
+Balloon 6 speed : 2.0 helth : 2
+Balloon 7 speed : 2.0 helth : 4
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 109 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X B X X X X X X X X X 
+ 2 | X B . . . X . . . X . . 
+ 3 | B X . . . X . . . X . . 
+ 4 | X X X X X X X X B X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X X X X X X 
+ 8 | X X . . . X . . . B . . 
+ 9 | X X . . . B . . . X . . 
+10 | X B X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 211 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X B X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X B X X X B X X X X X X 
+ 5 | X X . . . X . . . B . . 
+ 6 | B X . . . X . . . X . . 
+ 7 | X X B X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X B X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 319 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X X . . . X . . . B . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X B X X X X X X X X X 
+ 5 | X X . . . B . . . X . . 
+ 6 | X B . . . X . . . X . . 
+ 7 | X X X B X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | B X . . . X . . . X . . 
+10 | X X X B X X X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 2 exited at time: 321 ms
+Balloon 4 exited at time: 321 ms
+Balloon 5 exited at time: 321 ms
+
+time: 421 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X B X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X B X X X X X X X 
+ 8 | X B . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X B X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 523 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X X B X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X B X X X B X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 2 exited at time: 531 ms
+Balloon 3 exited at time: 531 ms
+Balloon 4 exited at time: 531 ms
+
+time: 631 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 739 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X B X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X B X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 845 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X B X X X 
+11 | X X . . . X . . . X . . 
+
+time: 955 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+
+time: 1063 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X B X 
+11 | X X . . . X . . . X . . 
+
+time: 1171 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X B 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X B 
+11 | X X . . . X . . . X . . 
+Balloon 0 exited at time: 1179 ms
+Balloon 1 exited at time: 1180 ms
+=== Manche 8 terminée ===
+
+=== Manche 9 ===
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : Range decreases to 50%
+DartMonkeyTower : no change to remove
+SniperMonkeyTower : no change to remove
+SuperMonkeyTower : no change to remove
+TackShooterTower : no change to remove
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : Range decreases to 50%
+DartMonkeyTower : no change to remove
+SniperMonkeyTower : no change to remove
+SuperMonkeyTower : no change to remove
+TackShooterTower : no change to remove
+Balloon 0 speed : 1.0 helth : 4
+Balloon 1 speed : 3.1 helth : 2
+Balloon 2 speed : 3.1 helth : 1
+Balloon 3 speed : 2.0 helth : 2
+Balloon 4 speed : 1.0 helth : 4
+Balloon 5 speed : 3.1 helth : 2
+Balloon 6 speed : 1.0 helth : 4
+Balloon 7 speed : 3.1 helth : 1
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 107 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X B X B X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | B X . . . X . . . X . . 
+ 4 | X X X X X X X X B X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . B . . . X . . 
+10 | X X X B X X X X X B X X 
+11 | X X . . . X . . . X . . 
+
+time: 212 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X B . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | B X . . . X . . . X . . 
+ 7 | X X B X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . B . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 318 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X B . . . X . . . X . . 
+ 4 | X X B X X X X X X X X X 
+ 5 | X X . . . B . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X B X X X X X X X X 
+ 8 | X X . . . X . . . B . . 
+ 9 | B X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+Balloon 1 exited at time: 324 ms
+Balloon 2 exited at time: 324 ms
+Balloon 5 exited at time: 325 ms
+Balloon 7 exited at time: 325 ms
+
+time: 425 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . X . . 
+ 4 | X B X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X B X X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 535 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X B . . . X . . . X . . 
+ 6 | X X . . . X . . . B . . 
+ 7 | X X X X X B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 1 exited at time: 539 ms
+
+time: 639 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . B . . 
+ 6 | X B . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 748 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X B X X X X X B X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 852 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . B . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B X X X 
+ 8 | X B . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 963 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . B . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X B X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X B . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1071 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X B X X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 1179 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . B . . 
+ 1 | X X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X B 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X X 
+11 | X B . . . X . . . X . . 
+Balloon 0 exited at time: 1188 ms
+Balloon 1 exited at time: 1188 ms
+Balloon 2 exited at time: 1188 ms
+=== Manche 9 terminée ===
+
+=== Manche 10 ===
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : no change to remove
+DartMonkeyTower : no change to remove
+SniperMonkeyTower : no change to remove
+SuperMonkeyTower : no change to remove
+TackShooterTower : no change to remove
+IceTower : no change to remove
+SlowDownTower : no change to remove
+BombTower : no change to remove
+DartMonkeyTower : no change to remove
+SniperMonkeyTower : no change to remove
+SuperMonkeyTower : no change to remove
+TackShooterTower : no change to remove
+Balloon 0 speed : 2.0 helth : 1
+Balloon 1 speed : 1.0 helth : 1
+Balloon 2 speed : 1.0 helth : 2
+Balloon 3 speed : 2.0 helth : 4
+Balloon 4 speed : 1.0 helth : 1
+Balloon 5 speed : 2.0 helth : 2
+Balloon 6 speed : 2.0 helth : 4
+Balloon 7 speed : 1.0 helth : 1
+
+time: 0 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | B B . . . X . . . X . . 
+ 1 | B X X X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X X B 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | B X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B X X X X X X X X X X X 
+11 | X X . . . B . . . B . . 
+
+time: 110 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X B X X X X X X X X X X 
+ 2 | B B . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X X X B X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X B X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . B . . . X . . 
+10 | X B X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+
+time: 218 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X B X X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | B B X X X X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X B B X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . B . . 
+10 | X X B X X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 328 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X B X X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X X X B X X X 
+ 5 | X X . . . B . . . X . . 
+ 6 | B B . . . X . . . X . . 
+ 7 | X X X X X X B X X X X X 
+ 8 | X X . . . X . . . B . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X B X X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 441 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X B X X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . B . . . X . . 
+ 4 | X X X X X X X B X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X B B X X 
+ 8 | B B . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X B X X X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 551 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X B X X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X X B X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . B . . 
+ 7 | X X X X X X X X X X B X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | B B X X X B X X X X X X 
+11 | X X . . . X . . . X . . 
+Balloon 0 exited at time: 559 ms
+Balloon 3 exited at time: 559 ms
+Balloon 5 exited at time: 560 ms
+Balloon 6 exited at time: 560 ms
+
+time: 660 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X B X X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X X B X X X X X X 
+ 5 | X X . . . X . . . B . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X B X X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 769 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X B X X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X X X B X X X X B X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X B X X X X 
+11 | X X . . . X . . . X . . 
+
+time: 874 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X B X X X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . B . . 
+ 4 | X X X B X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X B X X X 
+11 | X X . . . X . . . X . . 
+
+time: 981 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B X X 
+ 2 | X X . . . X . . . B . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X X B X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X B X X 
+11 | X X . . . X . . . X . . 
+
+time: 1090 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . X . . 
+ 1 | X X X X X X X X X B B X 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | X B X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X B X 
+11 | X X . . . X . . . X . . 
+
+time: 1198 ms
+     0 1 2 3 4 5 6 7 8 9 0 1 
+ 0 | X X . . . X . . . B . . 
+ 1 | X X X X X X X X X X X B 
+ 2 | X X . . . X . . . X . . 
+ 3 | X X . . . X . . . X . . 
+ 4 | B X X X X X X X X X X X 
+ 5 | X X . . . X . . . X . . 
+ 6 | X X . . . X . . . X . . 
+ 7 | X X X X X X X X X X X X 
+ 8 | X X . . . X . . . X . . 
+ 9 | X X . . . X . . . X . . 
+10 | X X X X X X X X X X X B 
+11 | X X . . . X . . . X . . 
+Balloon 0 exited at time: 1205 ms
+Balloon 1 exited at time: 1205 ms
+Balloon 2 exited at time: 1205 ms
+Balloon 3 exited at time: 1206 ms
+=== Manche 10 terminée ===
