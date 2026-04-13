@@ -228,15 +228,11 @@ public abstract class Board {
         this.evolutedTowers.add(tower);
     }
 
-    /**
-     * remove evolution for all towers in board
-     * @param allTowers all the towers in board
-     */
-    public void removeEvolutionForTowers(List<Tower> allTowers){
-        for(Tower t : allTowers){
-            t.removeEvolution();
-        }
-    }
+    //public void removeEvolutionForTowers(List<Tower> allTowers){
+    //   for(Tower t : allTowers){
+    //        t.removeEvolution();
+    //    }
+    //}
 
     /**
      * remove evolution for one tower in board
