@@ -5,7 +5,6 @@ import bloons.balloon.Balloon;
 import bloons.board.Board;
 import bloons.utils.Effect;
 import bloons.utils.Evolution;
-
 import java.util.*;
 
 /** the object Tower an abstract class for the towers */
@@ -120,7 +119,7 @@ public abstract class Tower {
      * get a evolution possible 
      * @return
      */
-    public List<Evolution> getPossibleEvolutions(){
+    public Map<Evolution, Integer> getPossibleEvolutions(){
       return this.possibleEvolutions;
     }
     /**
