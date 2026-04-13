@@ -1,5 +1,9 @@
 package bloons.interface_g.main;
 
+import java.util.ArrayList;
+
+import bloons.board.RandomBoard;
+import bloons.interface_g.board.RandomBoardView;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -14,7 +18,14 @@ public class GameApp extends Application{
      */
     @Override
     public void start(Stage stage){
+        RandomBoard board = new RandomBoard(10, 10);
+        board.generatePaths(5);
+        RandomBoardView boardView = new RandomBoardView(board);
+        boardView.draw(new ArrayList<>());
+
         BorderPane root = new BorderPane();
+        root.setCenter(boardView.getCanvas());
+
         Scene scene = new Scene(root, 800, 600);
         stage.setTitle("Bloons Tower Defense");
         stage.setScene(scene);

@@ -1,4 +1,4 @@
-package interface_g.bloons.board;
+package bloons.interface_g.board;
 
 import bloons.balloon.Balloon;
 import bloons.board.Board;
