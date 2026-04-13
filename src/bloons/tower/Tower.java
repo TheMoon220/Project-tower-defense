@@ -30,7 +30,7 @@ public abstract class Tower {
     /** Range is the the range that choosen on an specifique echelle (every cell is corresponding to 60) */
     public double RANGE=60; 
 
-    protected List<Evolution> possibleEvolutions;
+    protected Map<Evolution, Integer> possibleEvolutions;
     protected Deque<Evolution> appliedEvolutions; 
 
      
@@ -49,7 +49,7 @@ public abstract class Tower {
         this.balloonsInRange=new ArrayList<>();
         this.position=position;
         this.timeLastAttack = 0;
-        this.possibleEvolutions = new ArrayList<>();
+        this.possibleEvolutions = new LinkedHashMap<>();
         this.appliedEvolutions = new ArrayDeque<>();
     }
 
