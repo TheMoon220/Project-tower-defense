@@ -41,4 +41,25 @@ public abstract class BoardView {
             }
         }
     }
+
+    /** an method for draw the path */
+    protected abstract void drawPath();
+
+    /**
+     * an method for draw the balloons
+     * @param balloons a list of balloons
+     */
+    public void drawBalloons(List<Balloon> balloons){
+        this.gc.setFill(Color.RED);
+        for(Balloon b: balloons){
+            int balX = (int) Math.round(b.getPosition().getX());
+            int balY = (int) Math.round(b.getPosition().getY());
+            this.gc.fillOval(
+                balX * CELL_SIZE + 10,
+                balY * CELL_SIZE + 10,
+                CELL_SIZE - 20,
+                CELL_SIZE - 20
+            );
+        }
+    }
 }
