@@ -72,4 +72,12 @@ public abstract class BoardView {
         this.drawPath();
         this.drawBalloons(balloons);
     }
+
+    /**
+     * get the canvas
+     * @return the canvas
+     */
+    public Canvas getCanvas(){
+        return this.canvas;
+    }
 }
