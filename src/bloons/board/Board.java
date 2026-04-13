@@ -17,6 +17,7 @@ public abstract class Board {
     protected List<Balloon> Allballoons ;
     protected List<Tower> allTowers;
     protected List<Tower> evolutedTowers;
+    protected Player player;
 
 
     /**
@@ -30,7 +31,7 @@ public abstract class Board {
         if(height <=0 || width <= 0) {
             throw new IllegalArgumentException("Invalide size, please try again !");
         }
-
+        player = new Player();
         this.width = width;
         this.height = height;
         this.grid = new Cell[width][height];
