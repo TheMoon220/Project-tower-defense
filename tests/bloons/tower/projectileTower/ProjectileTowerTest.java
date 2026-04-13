@@ -2,16 +2,16 @@ package bloons.tower.projectileTower;
 
 import bloons.tower.projectileTower.*;
 import bloons.utils.*;
-import tests.bloons.tower.TowerTest;
+import bloons.tower.TowerTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.*;
-import bloons.Position.*;
+import bloons.Position;
 import bloons.balloon.*;
 
-public class ProjectileTowerTest  extends TowerTest{
+public  abstract class ProjectileTowerTest  extends TowerTest{
     
       @Test
       public void towerCanEvolute(){

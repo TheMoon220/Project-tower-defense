@@ -12,10 +12,11 @@ import bloons.Position;
 import bloons.balloon.Balloon;
 import bloons.utils.Projectile;
 
-public class BombTowerTest {
+public class BombTowerTest extends ProjectileTowerTest{
     
      @Test
-      public void evoluteTheBombTower(){
+      public void evoluteTheBombTower() {
+        
         Projectile projectileDegatBefore= t3.getProjectil();
         int beforeNiveauDegat= projectileDegatBefore.getNiveauDegat();
         t3.putEvolutions();

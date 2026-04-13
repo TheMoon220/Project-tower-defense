@@ -2,10 +2,17 @@ package bloons.tower;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-
+import bloons.utils.*;
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.jupiter.api.*;
+import bloons.Position;
+import bloons.balloon.Balloon;
 public class iceTowerTest  extends TowerTest{
     @Test
-       public void aTTackBalloonIceTower() throws InterruptedException{
+      public void aTTackBalloonIceTower() throws InterruptedException{
+      super.Before();
          t2.attackBallon(bal2,System.currentTimeMillis());
         Thread.sleep((long) t2.getCadence());
         t1.attackBallon(bal2,System.currentTimeMillis());

@@ -1,8 +1,15 @@
 package bloons.tower.projectileTower;
-
+import bloons.tower.projectileTower.*;
+import bloons.utils.*;
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.jupiter.api.*;
+import bloons.Position;
+import bloons.balloon.Balloon;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SuperMonkeyTowerTest {
+public class SuperMonkeyTowerTest  extends ProjectileTowerTest{
 
     @Test 
         public void evoluteRangeSuperMonkeyTower(){
