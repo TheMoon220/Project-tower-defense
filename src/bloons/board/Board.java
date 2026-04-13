@@ -242,6 +242,10 @@ public abstract class Board {
      * remove evolution for one tower in board
      */
     public void removeEvolutionForOneTower(){
-        
+        Random random = new Random();
+        int i = random.nextInt(this.evolutedTowers.size());
+        Tower tower = this.evolutedTowers.get(i);
+        tower.removeEvolution();
+        this.evolutedTowers.remove(i);
     }
 }
