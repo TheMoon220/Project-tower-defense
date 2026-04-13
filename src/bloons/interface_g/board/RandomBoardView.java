@@ -12,6 +12,7 @@ public class RandomBoardView extends BoardView{
 
     /**
      * the constructor of the class
+     * @param board the type of board
      */
     public RandomBoardView(RandomBoard board){
         super(board);
