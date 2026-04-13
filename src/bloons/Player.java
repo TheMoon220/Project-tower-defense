@@ -49,7 +49,9 @@ public class Player {
    * decrease the player's life
    */
   public void loseLife(){
-    this.health--;
+     if(this.health > 0){
+      this.health--;
+     }
   }
 
   /**

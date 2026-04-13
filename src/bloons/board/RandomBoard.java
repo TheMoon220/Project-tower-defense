@@ -160,7 +160,6 @@ public class RandomBoard extends Board {
      */
     @Override
     public List<Tower> generateRandomPositionTowers(){
-       List<Tower> towers = new ArrayList<>();
        Random rand = new Random();
        
        for (int i = 0; i < 2; i++){
@@ -172,16 +171,16 @@ public class RandomBoard extends Board {
           Position pos6 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
           Position pos7 = new Position(rand.nextInt(this.width), rand.nextInt(this.height));
 
-          towers.add(new IceTower(400,100,Effect.IMMEDIAT,1500,pos1));
-          towers.add(new SlowDownTower(500,100,Effect.IMMEDIAT,1500,pos2));
-          towers.add(new BombTower(600,150,Effect.DISTANCE,1800,pos3,Projectile.BOMB));
-          towers.add(new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos4, Projectile.DART));
-          towers.add(new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, pos5, Projectile.POINTEDDART));
-          towers.add(new SuperMonkeyTower(1200, 200, Effect.IMMEDIAT, 300, pos6, Projectile.VERYSHARPDART));
-          towers.add(new TackShooterTower(350, 80, Effect.IMMEDIAT, 1200, pos7, Projectile.NEEDLE));
+          this.allTowers.add(new IceTower(400,100,Effect.IMMEDIAT,1500,pos1));
+          this.allTowers.add(new SlowDownTower(500,100,Effect.IMMEDIAT,1500,pos2));
+          this.allTowers.add(new BombTower(600,150,Effect.DISTANCE,1800,pos3,Projectile.BOMB));
+          this.allTowers.add(new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos4, Projectile.DART));
+          this.allTowers.add(new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, pos5, Projectile.POINTEDDART));
+          this.allTowers.add(new SuperMonkeyTower(1200, 200, Effect.IMMEDIAT, 300, pos6, Projectile.VERYSHARPDART));
+          this.allTowers.add(new TackShooterTower(350, 80, Effect.IMMEDIAT, 1200, pos7, Projectile.NEEDLE));
        }
        
-       return towers;
+       return this.allTowers;
    }
 
    /**

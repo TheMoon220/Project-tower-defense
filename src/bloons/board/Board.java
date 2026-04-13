@@ -15,7 +15,7 @@ public abstract class Board {
     protected Cell[][] grid;
     /** the attribute Allballoons on the board */
     protected List<Balloon> Allballoons ;
-    //protected List<Tower> allTowers;
+    protected List<Tower> allTowers;
 
     /**
      * Builds a board wiht sizes width and height
