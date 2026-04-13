@@ -19,9 +19,9 @@ public class DartMonkeyTower extends ProjectileTower {
      */
     public DartMonkeyTower(double cost ,double range ,Effect effect ,double cadence,Position position,Projectile projectile){
         super(cost, range, effect, cadence,position, projectile);
-        this.possibleEvolutions.add(Evolution.RANGE);
-        this.possibleEvolutions.add(Evolution.POWER);
-        this.possibleEvolutions.add(Evolution.CADANCE);
+        this.possibleEvolutions.put(Evolution.RANGE, 100);
+        this.possibleEvolutions.put(Evolution.POWER, 250);
+        this.possibleEvolutions.put(Evolution.CADANCE, 150);
     }
 
     /** first the min of all balloonsiRrange is calulated and this one is the balloons to attack
