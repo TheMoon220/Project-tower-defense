@@ -203,15 +203,11 @@ public abstract class Board {
       }
     }
 
-    /**
-     * evolute all towers in board
-     * @param allTowers all the towers on the board
-     */
-    public void EvoluteAllTowers(List<Tower> allTowers){
-        for(Tower t : allTowers){
-            t.putEvolutions();
-        }
-    }
+    //public void EvoluteAllTowers(List<Tower> allTowers){
+    //    for(Tower t : allTowers){
+    //        t.putEvolutions();
+    //    }
+    //}
 
     /**
      * evolute one towers in board
