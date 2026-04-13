@@ -16,6 +16,8 @@ public abstract class Board {
     /** the attribute Allballoons on the board */
     protected List<Balloon> Allballoons ;
     protected List<Tower> allTowers;
+    protected List<Tower> evolutedTowers;
+
 
     /**
      * Builds a board wiht sizes width and height
