@@ -19,10 +19,10 @@ public class BombTower extends ProjectileTower {
      */
     public BombTower(double cost ,double range ,Effect effect ,double cadence,Position position, Projectile projectile){
        super(cost, range, effect, cadence,position, projectile);
-       this.possibleEvolutions.add(Evolution.POWER);
-       this.possibleEvolutions.add(Evolution.RANGE);
-       this.possibleEvolutions.add(Evolution.CADANCE);
-       this.possibleEvolutions.add(Evolution.PROJECTILE);
+       this.possibleEvolutions.put(Evolution.POWER, 200);
+       this.possibleEvolutions.put(Evolution.RANGE, 250);
+       this.possibleEvolutions.put(Evolution.CADANCE, 300);
+       this.possibleEvolutions.put(Evolution.PROJECTILE, 400);
     }
 
     /**  

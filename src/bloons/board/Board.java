@@ -16,6 +16,9 @@ public abstract class Board {
     /** the attribute Allballoons on the board */
     protected List<Balloon> Allballoons ;
     protected List<Tower> allTowers;
+    protected List<Tower> evolutedTowers;
+    public static Player PLAYER;
+
 
     /**
      * Builds a board wiht sizes width and height
@@ -28,7 +31,7 @@ public abstract class Board {
         if(height <=0 || width <= 0) {
             throw new IllegalArgumentException("Invalide size, please try again !");
         }
-
+        PLAYER = new Player();
         this.width = width;
         this.height = height;
         this.grid = new Cell[width][height];
@@ -40,6 +43,7 @@ public abstract class Board {
             }
         }
     }
+
 
     /** an abstract method for calculate the path on the board*/
     public abstract void calculPath();
@@ -201,23 +205,41 @@ public abstract class Board {
       }
     }
 
-    /**
-     * evolute all towers in board
-     * @param allTowers all the towers on the board
-     */
-    public void EvoluteAllTowers(List<Tower> allTowers){
-        for(Tower t : allTowers){
-            t.putEvolutions();
-        }
-    }
+    //public void EvoluteAllTowers(List<Tower> allTowers){
+    //    for(Tower t : allTowers){
+    //        t.putEvolutions();
+    //    }
+    //}
 
     /**
-     * remove evolution for all towers in board
-     * @param allTowers all the towers in board
+     * evolute one towers in board
      */
-    public void removeEvolutionForTowers(List<Tower> allTowers){
-        for(Tower t : allTowers){
-            t.removeEvolution();
+    public void EvoluteOneTower(){
+        Random random = new Random();
+        int i = random.nextInt(this.allTowers.size());
+        Tower tower = this.allTowers.get(i);
+        while (this.evolutedTowers.contains(tower)) {
+            i = random.nextInt(this.allTowers.size());
+            tower = this.allTowers.get(i);
         }
+        tower.putEvolutions();
+        this.evolutedTowers.add(tower);
+    }
+
+    //public void removeEvolutionForTowers(List<Tower> allTowers){
+    //   for(Tower t : allTowers){
+    //        t.removeEvolution();
+    //    }
+    //}
+
+    /**
+     * remove evolution for one tower in board
+     */
+    public void removeEvolutionForOneTower(){
+        Random random = new Random();
+        int i = random.nextInt(this.evolutedTowers.size());
+        Tower tower = this.evolutedTowers.get(i);
+        tower.removeEvolution();
+        this.evolutedTowers.remove(i);
     }
 }
