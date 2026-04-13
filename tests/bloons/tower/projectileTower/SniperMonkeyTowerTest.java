@@ -7,7 +7,7 @@ import java.util.List;
 import org.junit.jupiter.api.*;
 import bloons.Position;
 import bloons.balloon.Balloon;
-public class SniperMonkeyTowerTest {
+public class SniperMonkeyTowerTest extends ProjectileTowerTest {
     @Test 
         public void evoluteCadenceSniperMonkeyTower(){
           double cadenceBefore = t4.getCadence();
