@@ -1,24 +1,24 @@
 package bloons.tower.projectileTower;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.*;
 import bloons.utils.Projectile;
 
 public class BombTowerTest extends ProjectileTowerTest {
   @Test
-  public void aTTackBalloonBombTowerReducesHealth() throws InterruptedException {
+  public void aTTackBalloonReducesHealth() throws InterruptedException {
    int before = bal2.getHealth();
    t3.attackBallon(bal2,System.currentTimeMillis());
    assertTrue(bal2.getHealth()<before);
   }
 
   @Test
-  public void CanNotaTTackBalloonBombTower() throws InterruptedException {
-    t3.attackBallon(bal2, System.currentTimeMillis());
-    assertFalse(t3.canAttack(System.currentTimeMillis()));
+  public void CanNotaTTackImmediatelyAfterAttack() throws InterruptedException {
+     long time = System.currentTimeMillis();
+    t3.attackBallon(bal2, time);
+    assertFalse(t3.canAttack(time));
 
   }
   @Test
