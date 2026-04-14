@@ -50,12 +50,12 @@ public abstract class TowerTest {
     evoProjectile = Evolution.PROJECTILE;
     evoRange = Evolution.RANGE;
     t1 = new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 100, pos1, Projectile.DART);
-    t1.possibleEvolutions.put(evoCadence,1);
+    t1.possibleEvolutions.put(evoCadence,200);
     t2 = new IceTower(400, 100, Effect.IMMEDIAT, 150, pos2);
     t3 = new BombTower(600, 150, Effect.DISTANCE, 180, pos3, Projectile.BOMB);
-    t3.possibleEvolutions.put(evoPower,1);
-    t3.possibleEvolutions.put(evoCadence,2);
-    t3.possibleEvolutions.put(evoProjectile,1);
+    t3.possibleEvolutions.put(evoPower,600);
+    t3.possibleEvolutions.put(evoCadence,600);
+    t3.possibleEvolutions.put(evoProjectile,600);
     t4 = new SniperMonkeyTower(500, Effect.IMMEDIAT, 200, pos2, Projectile.VERYSHARPDART);
     t4.possibleEvolutions.put(evoCadence,3);
     t4.possibleEvolutions.put(evoPower,2);

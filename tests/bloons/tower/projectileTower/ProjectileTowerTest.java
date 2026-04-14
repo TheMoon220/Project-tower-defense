@@ -11,13 +11,13 @@ public  abstract class ProjectileTowerTest  extends TowerTest{
       public void towerCanEvolute(){
         t1.putEvolutions();
         Evolution v= t1.getAppliedEvolutions().pop();
-        assertEquals(evo1,v);
+        assertEquals(evoCadence,v);
       }
     @Test
     public void towerCanEvolute2(){
-        t1.applyEvolution(evo1);                     // applique evo1
-        t1.getAppliedEvolutions().push(evo1);             // push manuellement
+        t1.applyEvolution(evoCadence);                     // applique evo1
+        t1.getAppliedEvolutions().push(evoCadence);             // push manuellement
         Evolution v = t1.getAppliedEvolutions().pop();
-        assertEquals(evo1, v);
+        assertEquals(evoCadence, v);
     }
 }
