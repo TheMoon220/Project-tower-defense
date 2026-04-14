@@ -57,11 +57,11 @@ public abstract class TowerTest {
     t3.possibleEvolutions.put(evoCadence,600);
     t3.possibleEvolutions.put(evoProjectile,600);
     t4 = new SniperMonkeyTower(500, Effect.IMMEDIAT, 200, pos2, Projectile.VERYSHARPDART);
-    t4.possibleEvolutions.put(evoCadence,3);
-    t4.possibleEvolutions.put(evoPower,2);
+    t4.possibleEvolutions.put(evoCadence,500);
+    t4.possibleEvolutions.put(evoPower,500);
     t5 = new SuperMonkeyTower(500, 100, Effect.IMMEDIAT, 100, pos3, Projectile.POINTEDDART);
-    t5.possibleEvolutions.put(evoProjectile,2);
-    t5.possibleEvolutions.put(evoRange,1);
+    t5.possibleEvolutions.put(evoProjectile,500);
+    t5.possibleEvolutions.put(evoRange,500);
     t6 = new TackShooterTower(350, 80, Effect.IMMEDIAT, 120, pos, Projectile.NEEDLE);
     t6.possibleEvolutions.put(evoCadence,4);
     t6.possibleEvolutions.put(evoPower,3);

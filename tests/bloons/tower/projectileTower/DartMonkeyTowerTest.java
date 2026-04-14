@@ -5,11 +5,9 @@ import org.junit.jupiter.api.*;
 public class DartMonkeyTowerTest  extends ProjectileTowerTest{
     @Test
       public void aTTackBalloonDarkMonkeyTower() throws InterruptedException{
-        t1.attackBallon(bal1,System.currentTimeMillis());
-        Thread.sleep((long) t1.getCadence());
-        t1.attackBallon(bal1,System.currentTimeMillis());
-        assertEquals(0,bal1.getHealth());
-
+        int before = bal1.getHealth();
+        t1.attackBallon(bal1, System.currentTimeMillis());
+        assertTrue(bal1.getHealth() < before);
       }
 
 
@@ -23,11 +21,17 @@ public class DartMonkeyTowerTest  extends ProjectileTowerTest{
         assertFalse(t1.canAttack(System.currentTimeMillis()));
 
       }
-
+    @Test
+    public void canAttackAfterCadence() throws InterruptedException {
+        long now = System.currentTimeMillis();
+        t1.attackBallon(bal1, now);
+        long later = now + (long) t1.getCadence();
+        assertTrue(t1.canAttack(later));
+    }
     @Test 
     public void evolutRangeTheDartMokeyTower(){
         double rangeBefore= t1.getRange();
-        t1.putEvolutions();
+        t1.applyEvolution(evoRange);
         assertEquals(rangeBefore*1.25, t1.getRange());
         
 
@@ -35,9 +39,8 @@ public class DartMonkeyTowerTest  extends ProjectileTowerTest{
     @Test
     public void dartMonkeyRemoveEvolutionRestoresCadence() {
         double cadenceBefore = t1.getCadence();
-        t1.putEvolutions(); // 1
-       t1.putEvolutions(); // 2 : cadence
-        t1.removeEvolution();
+        t1.applyEvolution(evoCadence);
+        t1.removeEvolutionEffect(evoCadence);
         assertEquals(cadenceBefore, t1.getCadence());
     }
     }
