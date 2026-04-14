@@ -6,5 +6,6 @@
     ],
     "java.project.referencedLibraries": [
         "junit-console.jar"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }

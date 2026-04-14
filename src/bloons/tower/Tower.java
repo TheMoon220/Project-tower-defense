@@ -120,10 +120,10 @@ public abstract class Tower {
      * get a evolution possible 
      * @return
      */
-    public List<Evolution> getPossibleEvolutions(){
+    public Map<Evolution,Integer> getPossibleEvolutions(){
       return this.possibleEvolutions;
     }
-    /**
+    /** 
      * attack the ballon when this one is one this range(portee) and probably change the the ballon ballon caracteristic 
      * @param ballon the ballon that can be attacckek by the tower
      * @param time waiting for attack

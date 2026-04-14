@@ -22,6 +22,7 @@ public abstract class TowerTest {
   protected Tower t4;
   protected Tower t5;
   protected Tower t6;
+   protected Tower t7;
   protected List<Balloon> ballons = new ArrayList<>();
   protected Position pos1;
   protected Position pos2;
@@ -49,25 +50,26 @@ public abstract class TowerTest {
     evo3 = Evolution.PROJECTILE;
     evo4 = Evolution.RANGE;
     t1 = new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 100, pos1, Projectile.DART);
-    t1.possibleEvolutions.add(evo1);
+    t1.possibleEvolutions.put(evo1,1);
     t2 = new IceTower(400, 100, Effect.IMMEDIAT, 150, pos2);
     t3 = new BombTower(600, 150, Effect.DISTANCE, 180, pos3, Projectile.BOMB);
-    t3.possibleEvolutions.add(evo2);
-    t3.possibleEvolutions.add(evo1);
-    t3.possibleEvolutions.add(evo3);
+    t3.possibleEvolutions.put(evo2,1);
+    t3.possibleEvolutions.put(evo1,2);
+    t3.possibleEvolutions.put(evo3,1);
     t4 = new SniperMonkeyTower(500, Effect.IMMEDIAT, 200, pos2, Projectile.VERYSHARPDART);
-    t4.possibleEvolutions.add(evo1);
-    t4.possibleEvolutions.add(evo2);
+    t4.possibleEvolutions.put(evo1,3);
+    t4.possibleEvolutions.put(evo2,2);
     t5 = new SuperMonkeyTower(500, 100, Effect.IMMEDIAT, 100, pos3, Projectile.POINTEDDART);
-    t5.possibleEvolutions.add(evo3);
-    t5.possibleEvolutions.add(evo4);
+    t5.possibleEvolutions.put(evo3,2);
+    t5.possibleEvolutions.put(evo4,1);
     t6 = new TackShooterTower(350, 80, Effect.IMMEDIAT, 120, pos, Projectile.NEEDLE);
-    t6.possibleEvolutions.add(evo1);
-    t6.possibleEvolutions.add(evo2);
+    t6.possibleEvolutions.put(evo1,4);
+    t6.possibleEvolutions.put(evo2,3);
+    t7= new SlowDownTower(500, 100, Effect.IMMEDIAT, 1500, pos);
     t3.addBalloons(ballons);
     t1.addBalloons(ballons);
     t2.addBalloons(ballons);
-
+    t7.addBalloons(ballons);
   }
 
   @Test
