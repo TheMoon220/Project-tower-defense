@@ -1,4 +1,4 @@
-package interface_g.bloons.board;
+package bloons.interface_g.board;
 
 import bloons.balloon.Balloon;
 import bloons.board.Board;
@@ -40,5 +40,44 @@ public abstract class BoardView {
                 this.gc.strokeRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
             }
         }
+    }
+
+    /** an method for draw the path */
+    protected abstract void drawPath();
+
+    /**
+     * an method for draw the balloons
+     * @param balloons a list of balloons
+     */
+    public void drawBalloons(List<Balloon> balloons){
+        this.gc.setFill(Color.RED);
+        for(Balloon b: balloons){
+            int balX = (int) Math.round(b.getPosition().getX());
+            int balY = (int) Math.round(b.getPosition().getY());
+            this.gc.fillOval(
+                balX * CELL_SIZE + 10,
+                balY * CELL_SIZE + 10,
+                CELL_SIZE - 20,
+                CELL_SIZE - 20
+            );
+        }
+    }
+
+    /**
+     * the method draw with a given parameter
+     * @param balloons the balloons
+     */
+    public void draw(List<Balloon> balloons){
+        this.drawGrid();
+        this.drawPath();
+        this.drawBalloons(balloons);
+    }
+
+    /**
+     * get the canvas
+     * @return the canvas
+     */
+    public Canvas getCanvas(){
+        return this.canvas;
     }
 }
