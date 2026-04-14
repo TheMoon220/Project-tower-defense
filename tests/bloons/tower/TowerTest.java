@@ -27,10 +27,10 @@ public abstract class TowerTest {
   protected Position pos1;
   protected Position pos2;
   protected Position pos3;
-  protected Evolution evo1;
-  protected Evolution evo2;
-  protected Evolution evo3;
-  protected Evolution evo4;
+  protected Evolution evoCadence;
+  protected Evolution evoPower;
+  protected Evolution evoProjectile;
+  protected Evolution evoRange;
 
   @BeforeEach
   public void Before() {
@@ -45,26 +45,26 @@ public abstract class TowerTest {
     ballons.add(bal1);
     ballons.add(bal2);
     ballons.add(bal3);
-    evo1 = Evolution.CADANCE;
-    evo2 = Evolution.POWER;
-    evo3 = Evolution.PROJECTILE;
-    evo4 = Evolution.RANGE;
+    evoCadence = Evolution.CADANCE;
+    evoPower = Evolution.POWER;
+    evoProjectile = Evolution.PROJECTILE;
+    evoRange = Evolution.RANGE;
     t1 = new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 100, pos1, Projectile.DART);
-    t1.possibleEvolutions.put(evo1,1);
+    t1.possibleEvolutions.put(evoCadence,1);
     t2 = new IceTower(400, 100, Effect.IMMEDIAT, 150, pos2);
     t3 = new BombTower(600, 150, Effect.DISTANCE, 180, pos3, Projectile.BOMB);
-    t3.possibleEvolutions.put(evo2,1);
-    t3.possibleEvolutions.put(evo1,2);
-    t3.possibleEvolutions.put(evo3,1);
+    t3.possibleEvolutions.put(evoPower,1);
+    t3.possibleEvolutions.put(evoCadence,2);
+    t3.possibleEvolutions.put(evoProjectile,1);
     t4 = new SniperMonkeyTower(500, Effect.IMMEDIAT, 200, pos2, Projectile.VERYSHARPDART);
-    t4.possibleEvolutions.put(evo1,3);
-    t4.possibleEvolutions.put(evo2,2);
+    t4.possibleEvolutions.put(evoCadence,3);
+    t4.possibleEvolutions.put(evoPower,2);
     t5 = new SuperMonkeyTower(500, 100, Effect.IMMEDIAT, 100, pos3, Projectile.POINTEDDART);
-    t5.possibleEvolutions.put(evo3,2);
-    t5.possibleEvolutions.put(evo4,1);
+    t5.possibleEvolutions.put(evoProjectile,2);
+    t5.possibleEvolutions.put(evoRange,1);
     t6 = new TackShooterTower(350, 80, Effect.IMMEDIAT, 120, pos, Projectile.NEEDLE);
-    t6.possibleEvolutions.put(evo1,4);
-    t6.possibleEvolutions.put(evo2,3);
+    t6.possibleEvolutions.put(evoCadence,4);
+    t6.possibleEvolutions.put(evoPower,3);
     t7= new SlowDownTower(500, 100, Effect.IMMEDIAT, 1500, pos);
     t3.addBalloons(ballons);
     t1.addBalloons(ballons);

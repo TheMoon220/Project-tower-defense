@@ -4,26 +4,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.jupiter.api.*;
+
+import bloons.utils.Evolution;
 import bloons.utils.Projectile;
 
 public class BombTowerTest extends ProjectileTowerTest{
      @Test
       public void evoluteTheBombTower() {
-        Projectile projectileDegatBefore= t3.getProjectil();
-        int beforeNiveauDegat= projectileDegatBefore.getNiveauDegat();
-        t3.applyEvolution(evo1);;
-        Projectile projectileDegatafter= t3.getProjectil();
-        int  afterNiveauDegat= projectileDegatafter.getNiveauDegat();
-        assertEquals(beforeNiveauDegat+1, afterNiveauDegat);
-        //assertEquals(rangeBefore * 1.50, t3.getRange());
-       
+        Projectile projectileBefore = t3.getProjectil();
+        int before = projectileBefore.getNiveauDegat();
+        t3.applyEvolution(evoPower);
+        int after = t3.getProjectil().getNiveauDegat();
+        assertEquals(before + 1, after);
   }
         @Test
       public void bombTowerPutEvolutionsIncreasesCadence() {
         double cadenceBefore = t3.getCadence();
          Projectile projectileDegatBefore= t3.getProjectil();
         int beforeNiveauDegat= projectileDegatBefore.getNiveauDegat();
-        t3.putEvolutions();
+        t3.applyEvolution(evoCadence);
         Projectile projectileDegatafter= t3.getProjectil();
         int  afterNiveauDegat= projectileDegatafter.getNiveauDegat();
         Projectile projectileBefore= t3.getProjectil();
