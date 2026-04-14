@@ -19,7 +19,7 @@ public abstract class TowerTest {
   protected Tower t1;
   protected Tower t2;
   protected ProjectileTower t3;
-  protected Tower t4;
+  protected ProjectileTower t4;
   protected Tower t5;
   protected Tower t6;
    protected Tower t7;
