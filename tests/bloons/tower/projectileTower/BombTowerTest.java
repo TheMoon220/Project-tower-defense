@@ -48,10 +48,7 @@ public class BombTowerTest extends ProjectileTowerTest {
 
   @Test
   public void bombTowerRemoveEvolutionRestoresProjectile() {
-    // t3.applyEvolution(evoCadence);
-    // t3.applyEvolution(evoPower);
     t3.applyEvolution(evoProjectile);
-    // t3.applyEvolution(evoRange);
     t3.removeEvolutionEffect(evoProjectile);
     assertEquals(Projectile.BOMB,  t3.getProjectil());
   }

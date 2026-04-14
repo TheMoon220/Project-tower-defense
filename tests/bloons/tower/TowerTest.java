@@ -63,8 +63,8 @@ public abstract class TowerTest {
     t5.possibleEvolutions.put(evoProjectile,500);
     t5.possibleEvolutions.put(evoRange,500);
     t6 = new TackShooterTower(350, 80, Effect.IMMEDIAT, 120, pos, Projectile.NEEDLE);
-    t6.possibleEvolutions.put(evoCadence,4);
-    t6.possibleEvolutions.put(evoPower,3);
+    t6.possibleEvolutions.put(evoCadence,350);
+    t6.possibleEvolutions.put(evoPower,350);
     t7= new SlowDownTower(500, 100, Effect.IMMEDIAT, 1500, pos);
     t3.addBalloons(ballons);
     t1.addBalloons(ballons);
