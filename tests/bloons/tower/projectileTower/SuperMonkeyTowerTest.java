@@ -3,26 +3,26 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 public class SuperMonkeyTowerTest  extends ProjectileTowerTest{
     @Test 
-        public void evoluteRangeSuperMonkeyTower(){
+        public void evoluteRange(){
            double rangeBefore = t5.getRange();
            t5.applyEvolution(evoRange);
            assertEquals(rangeBefore * 1.50, t5.getRange());
         }
     @Test 
-        public void evoluteCadenceSuperMonkeyTower(){
+        public void evoluteCadence(){
            double cadenceBefore =t5.getCadence();
            t5.applyEvolution(evoCadence);
            assertEquals(cadenceBefore*3, t5.getCadence());
         }
     @Test
-    public void superMonkeyRemoveEvolutionRestoresCadence() {
+    public void RemoveEvolutionRestoresCadence() {
         double cadenceBefore =t5.getCadence();
         t5.applyEvolution(evoCadence);
         t5.removeEvolutionEffect(evoCadence);
         assertEquals(cadenceBefore, t5.getCadence());
     }
     @Test
-    public void superMonkeyRemoveEvolutionRestoresRange() {
+    public void RemoveEvolutionRestoresRange() {
         double rangeBefore =t5.getRange();
         t5.applyEvolution(evoRange);
         t5.removeEvolutionEffect(evoRange);
