@@ -1,10 +1,7 @@
 package bloons.tower.projectileTower;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
-import bloons.tower.projectileTower.*;
-import bloons.tower.*;
-import bloons.utils.Evolution;
-import bloons.utils.Projectile;
+
 public class SniperMonkeyTowerTest extends ProjectileTowerTest {
     @Test 
         public void evoluteCadenceSniperMonkeyTower(){
