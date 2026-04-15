@@ -245,8 +245,6 @@ public abstract class Board {
         this.evolutedTowers.add(tower);
     }
 
- 
-
     /**
      * remove evolution for one tower in board
      */
@@ -256,5 +254,21 @@ public abstract class Board {
         Tower tower = this.evolutedTowers.get(i);
         tower.removeEvolution();
         this.evolutedTowers.remove(i);
+    }
+
+    /**
+     * get all the towers on the board
+     * @return the list of tours
+    */
+    public List<Tower> getAllTowers() {
+      return this.allTowers;
+    }
+
+    /**
+     * get the towers that have upgrades
+     * @return the list of advanced towers
+    */
+    public List<Tower> getEvolutedTowers() {
+      return this.evolutedTowers;
     }
 }
