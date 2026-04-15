@@ -210,41 +210,121 @@ public abstract class Board {
       }
     }
 
-    //public void EvoluteAllTowers(List<Tower> allTowers){
-    //    for(Tower t : allTowers){
-    //        t.putEvolutions();
-    //    }
-    //}
+    /**
+     * Generates a valid position for placing a tower
+     * @return a valid position
+    */
+    public abstract Position getValidTowerPosition();  
+
+    /**
+     * Checks if a position is already occupied by a tower
+     * @param pos the position to check
+     * @return true if a tower is already present
+    */
+    public boolean isPositionOccupiedByTower(Position pos) {
+      for (Tower t : allTowers) {
+        if (t.getPosition().equals(pos)) {
+            return true;
+        }
+      }
+      return false;
+    }
+
+    /**
+     * Adds a tower to the board
+     * @param tower the tower to add
+     * @exception IllegalArgumentException when the number isn't an integer
+    */
+    public void addTower(Tower tower) {
+       if (tower == null) {
+          throw new IllegalArgumentException("Cannot add null tower");
+        }
+        
+       Position pos = tower.getPosition();
+       if (isPositionOccupiedByTower(pos)) {
+          System.out.println("Warning: Position " + pos + " already has a tower!");
+          return;
+       }
+       this.allTowers.add(tower);
+       System.out.println(tower + " has been added to the board.");
+    }
+
+    /**
+     * Remove one tower from the board
+     * @param tower the tower to be removed
+     * @exception IllegalArgumentException when the number isn't an integer
+    */
+    public void removeTower(Tower tower) {
+      if (tower == null) {
+         throw new IllegalArgumentException("Cannot remove null tower");
+      }
+      if (this.allTowers.remove(tower)) {
+         // If the tower had any upgrades, we remove them too.
+          this.evolutedTowers.remove(tower);
+          System.out.println(tower + " has been removed from the board.");
+      } else {
+          System.out.println("Tower not found on the board.");
+      }
+    }
 
     /**
      * evolute one towers in board
      */
     public void EvoluteOneTower(){
-        Random random = new Random();
-        int i = random.nextInt(this.allTowers.size());
-        Tower tower = this.allTowers.get(i);
-        while (this.evolutedTowers.contains(tower)) {
-            i = random.nextInt(this.allTowers.size());
-            tower = this.allTowers.get(i);
-        }
-        tower.putEvolutions();
-        this.evolutedTowers.add(tower);
-    }
+       if (this.allTowers.isEmpty()) {
+         System.out.println("No towers to evolve!");
+         return;
+       }
 
-    //public void removeEvolutionForTowers(List<Tower> allTowers){
-    //   for(Tower t : allTowers){
-    //        t.removeEvolution();
-    //    }
-    //}
+       List<Tower> evolvableTowers = new ArrayList<>();
+       for (Tower t : this.allTowers) {
+          if (t.getAppliedEvolutions().size() < t.getPossibleEvolutions().size()) {
+             evolvableTowers.add(t);
+          }
+       }
+
+       if (evolvableTowers.isEmpty()) {
+          System.out.println("No tower can evolve further!");
+          return;
+       }
+
+        Random random = new Random();
+        Tower tower = evolvableTowers.get(random.nextInt(evolvableTowers.size()));
+        tower.putEvolutions();
+        if (!this.evolutedTowers.contains(tower))
+           this.evolutedTowers.add(tower);
+    }
 
     /**
      * remove evolution for one tower in board
      */
     public void removeEvolutionForOneTower(){
+        if (this.evolutedTowers.isEmpty()) {
+          System.out.println("No tower has evolutions to remove!");
+          return;
+        }
+
         Random random = new Random();
         int i = random.nextInt(this.evolutedTowers.size());
         Tower tower = this.evolutedTowers.get(i);
         tower.removeEvolution();
-        this.evolutedTowers.remove(i);
+        if (tower.getAppliedEvolutions().isEmpty())
+          this.evolutedTowers.remove(i);
+    }
+
+    /**
+     * get all the towers on the board
+     * @return the list of tours
+    */
+    public List<Tower> getAllTowers() {
+      return this.allTowers;
+    }
+
+    /**
+     * get the towers that have upgrades
+     * @return the list of advanced towers
+    */
+    public List<Tower> getEvolutedTowers() {
+      return this.evolutedTowers;
     }
 }

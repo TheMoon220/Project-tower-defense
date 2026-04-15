@@ -127,7 +127,7 @@ public class ClassicalBoard extends Board {
      return p ;
    }
    /**
-    * ccheck if the position p not in the path
+    * check if the position p not in the path
     * @param p
     * @return true when position not in path
     */
@@ -139,5 +139,19 @@ public class ClassicalBoard extends Board {
          }
       }
       return false ;
+   }
+
+   /**
+    * Generates a valid position for placing a tower
+    * @return a valid position
+   */
+   @Override
+   public Position getValidTowerPosition() {
+      Random rand = new Random();
+      Position p;
+      do {
+        p = new Position(rand.nextInt(width), rand.nextInt(height));
+      } while (getPath().contains(p) || isPositionOccupiedByTower(p));
+      return p;
    }
 }
