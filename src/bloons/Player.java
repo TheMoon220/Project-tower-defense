@@ -46,6 +46,14 @@ public class Player {
   }
 
   /**
+   * add a specific amount of credit to the player
+   * @param amount the amount to add
+   */
+  public void addCredit(int amount){
+    this.credit += amount;
+  }
+
+  /**
    * decrease the player's life
    */
   public void loseLife(){
