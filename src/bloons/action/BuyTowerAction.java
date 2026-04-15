@@ -1,8 +1,8 @@
 package bloons.action;
 
-import bloons.tower.Tower;
 import bloons.Position;
 import bloons.board.Board;
+import bloons.tower.Tower;
 
 /** Action of purchasing and placing a tower */
 public class BuyTowerAction implements Action{
@@ -54,6 +54,25 @@ public class BuyTowerAction implements Action{
         System.out.println("Bought " + tower + " for " + (int) tower.getCost() + 
                          " credits. Remaining: " + Board.PLAYER.getCredit());
         return true;
+    }
+
+     /**
+     * Returns a textual description of the action
+     * @return description
+     */
+    @Override
+    public String getDescription() {
+        return "Buy " + tower.getClass().getSimpleName() + " at " + position + 
+               " (cost: " + (int) tower.getCost() + ")";
+    }
+    
+     /**
+     * Returns the cost of the action (if applicable)
+     * @return the cost, or 0 if the action has no cost
+     */
+    @Override
+    public int getCost() {
+        return (int) tower.getCost();
     }
 
 }
