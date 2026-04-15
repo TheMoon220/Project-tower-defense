@@ -142,8 +142,8 @@ public class ClassicalBoard extends Board {
    }
 
    /**
-    * Génère une position valide pour placer une tour
-    * @return une position valide
+    * Generates a valid position for placing a tower
+    * @return a valid position
    */
    @Override
    public Position getValidTowerPosition() {
