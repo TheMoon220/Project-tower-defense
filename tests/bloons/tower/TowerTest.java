@@ -10,7 +10,7 @@ import org.junit.jupiter.api.*;
 import bloons.Position;
 import bloons.balloon.Balloon;
 
-public abstract class TowerTest {
+public  class TowerTest {
 
   protected Balloon bal1;
   protected Balloon bal2;

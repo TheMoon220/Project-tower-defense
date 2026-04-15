@@ -5,7 +5,8 @@
         "tests"
     ],
     "java.project.referencedLibraries": [
-        "junit-console.jar"
+        "c:\\Users\\maria\\OneDrive\\Dokument\\L2 INFO\\s4\\projet\\l2s4-projet-2026\\junit-console.jar",
+        "c:\\Users\\maria\\Downloads\\javafx-sdk-21\\lib\\*.jar"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }

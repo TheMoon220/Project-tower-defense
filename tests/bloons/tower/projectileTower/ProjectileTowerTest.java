@@ -5,13 +5,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
 
-public  abstract class ProjectileTowerTest  extends TowerTest{
+public  class ProjectileTowerTest  extends TowerTest{
       
       @Test
       public void towerCanEvolute(){
-        t1.putEvolutions();
-        Evolution v= t1.getAppliedEvolutions().pop();
-        assertEquals(evoCadence,v);
+        double before = t1.getCadence();
+        t1.applyEvolution(evoCadence);
+        assertEquals(before*1.25,t1.getCadence());
       }
     @Test
     public void towerCanEvolute2(){
