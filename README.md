@@ -531,26 +531,66 @@ Finaliser le livrable 3 et reflexion sur la prochaine livrable 4.
 ## Semaine 9
 
 ### Ce qui a été réalisé
+modification de certaines méthodes afin de prendre en compte les remarques de la prof.
+rearrangement de l'architecture du projet.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+
+- **Mariama Séré Sylla**: s'occupe de faire les tests et s'assure qu'ils se lancent sans comble.
+
+- **Farmata Sall Sow**: donne la signature des méthodes à implémenter ainsi que leurs documentations la javadoc.
+
+- **Khadim Beye**: s'occupe de la modification des méthodes d'application et suppréssion des évolutions des tours.
+
+- **Mamadou Baïllo Sow**: s'occupe des programmes principaux (Livrable4a et Livrable4b).
 
 ## Semaine 10
 
+Réflexion sur le livrable 5, choix des modèles d'implémentation sur les différents alogorithme à mettre en place et ainsi que les élements à mettre dans l'UML.
+
 ### Ce qui a été réalisé
 
+- modification de l'uml afin de mettre en place et de modifier les relations entre les entités.
+
+- l'implémentation de la classe joueur communement évoquer dans le sujet.
+
+- Séparation des classes de tests, de ce fait chaque classe a son équivalent de test.
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+
+- **Mariama Séré Sylla**: s'occupe de faire les tests et s'assure qu'ils se lancent sans comble ainsi que de l'uml.
+
+- **Farmata Sall Sow**: donne la signature des méthodes à implémenter ainsi que leurs documentations la javadoc.
+
+- **Khadim Beye**: s'occupe de la modification des méthodes d'application, suppréssion des évolutions des tours pour le livrable 5 et aide pour l'implémentation des action du joueur.
+
+- **Mamadou Baïllo Sow**: s'occupe du programme principal (Livrable5), aide pour l'implémentation des actions du joueur.
 
 ## Semaine 11
 
+Finaliser le livrable en suivant les consignes données par la prof afin de rendre un livrable propre.
+
 ### Ce qui a été réalisé
+- Modification des méthodes finalisés.
+
+- tests en cours de finalisations.
+
+- correction de certains bug.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour la semaine et répartition du travail par membre
+
+- **Mariama Séré Sylla**: s'occupe de faire les tests et s'assure qu'ils se lancent sans comble ainsi que de l'uml.
+
+- **Farmata Sall Sow**: donne la signature des méthodes à implémenter ainsi que leurs documentations la javadoc.
+
+- **Khadim Beye**: s'occupe de la modification des méthodes d'application, suppréssion des évolutions des tours pour le livrable 5 et aide pour l'implémentation des action du joueur.
+
+- **Mamadou Baïllo Sow**: s'occupe du programme principal (Livrable5), aide pour l'implémentation des actions du joueur.
 
 ## Semaine 12
 
