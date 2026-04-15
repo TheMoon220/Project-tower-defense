@@ -2,7 +2,6 @@ package bloons.board;
 import bloons.*;
 import bloons.balloon.Balloon;
 import bloons.tower.*;
-import bloons.tower.projectileTower.ProjectileTower;
 import bloons.utils.*;
 import java.util.*;
 
@@ -224,7 +223,7 @@ public abstract class Board {
         Random random = new Random();
         int i = random.nextInt(this.allTowers.size());
         Tower tower = this.allTowers.get(i);
-        while (this.evolutedTowers.contains(tower) && !(tower instanceof ProjectileTower)) {
+        while (this.evolutedTowers.contains(tower) && !tower.canBeEvolute()) {
             i = random.nextInt(this.allTowers.size());
             tower = this.allTowers.get(i);
         }
