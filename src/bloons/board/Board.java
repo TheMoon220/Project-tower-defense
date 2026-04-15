@@ -15,8 +15,11 @@ public abstract class Board {
     protected Cell[][] grid;
     /** the attribute Allballoons on the board */
     protected List<Balloon> Allballoons ;
+    /** the list of towers on the board */
     protected List<Tower> allTowers;
+    /** the evoluted towers on the board */
     protected List<Tower> evolutedTowers;
+    /** the player */
     public static Player PLAYER;
 
 
@@ -31,12 +34,14 @@ public abstract class Board {
         if(height <=0 || width <= 0) {
             throw new IllegalArgumentException("Invalide size, please try again !");
         }
+
         PLAYER = new Player();
         this.width = width;
         this.height = height;
         this.grid = new Cell[width][height];
-        this.Allballoons=new ArrayList<>();
-        //this.allTowers = new ArrayList<>();
+        this.Allballoons = new ArrayList<>();
+        this.allTowers = new ArrayList<>();
+        this.evolutedTowers = new ArrayList<>();
         for (int i=0; i<width; i++){
             for (int j=0; j<height; j++){
                 grid[i][j] = new Cell(new Position(i, j));
