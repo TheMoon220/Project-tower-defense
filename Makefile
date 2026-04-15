@@ -73,7 +73,7 @@ runtests: tests
 	-java -jar junit-console.jar -classpath classes --select-class=bloons.CellTest
 	-java -jar junit-console.jar -classpath classes --select-class=bloons.PositionTest
 	-java -jar junit-console.jar -classpath classes --select-class=bloons.board.ClassicalBoardTest
-	$(JAVA) -jar $(JUNIT) -classpath $(OUT) --scan-classpath
+	$(JAVA) -jar $(JUNIT) -classpath $(OUT) --select-package=bloons
 	@echo "Tests terminés."
 
 # Nettoyage

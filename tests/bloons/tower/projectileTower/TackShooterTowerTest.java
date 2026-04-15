@@ -25,6 +25,6 @@ public class TackShooterTowerTest extends ProjectileTowerTest {
         t6.applyEvolution(evoRange);
         assertEquals(before * 1.20, t6.getRange());
         t6.removeEvolutionEffect(evoRange);
-        assertEquals(before, t6.getCadence());
+        assertEquals(before, t6.getRange());
     }
 }

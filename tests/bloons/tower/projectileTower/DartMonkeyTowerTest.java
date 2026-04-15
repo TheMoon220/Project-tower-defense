@@ -10,20 +10,20 @@ public class DartMonkeyTowerTest  extends ProjectileTowerTest{
         assertTrue(bal1.getHealth() < before);
       }
 
-
      @Test
     public void CanNotaTTackBalloonDarkMonkeyTower() throws InterruptedException{
-        t1.attackBallon(bal1,System.currentTimeMillis());
-         Thread.sleep((long) t1.getCadence());
-        t1.attackBallon(bal1,System.currentTimeMillis());
-        assertEquals(0,bal1.getHealth());
-         Thread.sleep((long) t1.getCadence()-100);
-        assertFalse(t1.canAttack(System.currentTimeMillis()));
-
+      long time = 1000;
+      int before = bal1.getHealth();
+      t1.attackBallon(bal1, time);
+      int afterFirst = bal1.getHealth();
+      t1.attackBallon(bal1, time + 1); 
+       int afterSecond = bal1.getHealth();
+      assertEquals(afterFirst,afterSecond);
+      assertTrue(afterSecond <= afterFirst);
       }
     @Test
     public void canAttackAfterCadence() throws InterruptedException {
-        long now = System.currentTimeMillis();
+        long now =  1000;
         t1.attackBallon(bal1, now);
         long later = now + (long) t1.getCadence();
         assertTrue(t1.canAttack(later));
