@@ -341,7 +341,77 @@ make docs
 
 ## Livrable 5
 
+🔗 **Diagramme UML** : [Voir le PDF](./uml/umlLivrable4.pdf)
+
+Une nouvelle branche a été créée pour ce livrable **livrable5**.
+Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau via les actions. pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau si cela est possible via les actions, bien sûr les tours continueront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau via les actions. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
+
+Dans ce livrable de nouvelles classes ont été créé pour le bon déroulement du livrable: 
+- Dans le package action on a 3 trois classes: **Action** une classe de type interface qui regroupe toutes les actions, **BuyTowerAction** une classe pour acheter une tour, **UpgradeTowerAction** qui permet de faire évoluer une tour, **DowngradeTowerAction** qui est une classe qui permet de supprimer une évolution. De plus un seul programme principal **Livrable5** qui est le programme qui respect les exigences énoncées dans l'email. Et le fichier **manifest-5** permettant de générer le jar.
+
+Plusieurs fichiers ont été modifiée:
+- la classe **Board** afin de rajouter des méthodes permettant le bon déroulement du projet.
+- la classe **tower** afin de définir certaines methodes coherentes.
+- la classe **Player** rajouter d'autres méthodes comme addCredit, toString...
+
 ### Atteinte des objectifs
+
+- Gestion de manche: de la manche 1 à 5 faire les évolutions de chaque tour si c'est possible c'est-à-dire pour chaque manche donnée faire une évolution via les actions et de la manche 6 à 10 supprimer une évolution de chaque tour si cela est possible jusqu'à atteindre la 10ème manche encore avec les actions.
+
+- UML modifier et adapter pour prendre en compte les nouvelles informations de ce livrable.
+
+- Création d'une nouvelle classe **Livrable5.java** en plus de celles qui exitent déjà qui généralise les algorithmes communs au deux programmes principaux.
+
+- Suppression des positions des ballons à chaque tick d'horloge. La position d'un ballon ne s'affiche que s'il y a une action soit par exemple si une tour tire sur un balloon.
+
+- Concernant le groupe, l'entente est globalement très bonne et chacun a donné du sien pour assurer le bon déroulement de ce livrable.
+
+### Lancer le projet
+
+Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
+
+**Compiler l'ensemble des classes .java en .class**
+
+```bash
+make classes
+```
+
+```bash
+make tests
+```
+
+**Lancer les tests avec junit**
+
+```bash
+make runtests
+```
+
+**lancer tous les fichiers livrable4a et livrable4b**
+
+```bash
+java -classpath classes bloons.main.Livrable5 arg1 arg2 arg3
+```
+
+**Générer le jar**
+
+```bash
+jar cvfm livrable4a.jar manifest-5 -C classes .
+```
+
+```bash
+make jar
+```
+
+**Lancer les jar**
+
+```bash
+java -jar livrable5.jar arg1 arg2 arg3
+```
+**Générer la documentation**
+
+```bash
+make docs
+```
 
 ### Difficultés restant à résoudre
 
