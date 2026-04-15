@@ -8,16 +8,14 @@ public class SuperMonkeyTowerTest  extends ProjectileTowerTest{
     @Test 
         public void evoluteRangeSuperMonkeyTower(){
            double rangeBefore = t5.getRange();
-           t5.putEvolutions();
+           t5.applyEvolution(evoRange);
            assertEquals(rangeBefore * 1.50, t5.getRange());
         }
-        @Test
+    @Test
     public void superMonkeyRemoveEvolutionRestoresCadence() {
         double cadenceBefore =t5.getCadence();
-        t5.putEvolutions(); // 1
-        t5.putEvolutions(); // 2
-        //t5.putEvolutions(); // 3
-        t5.removeEvolution();
+        t5.applyEvolution(evoCadence);
+        t5.removeEvolutionEffect(evoCadence);
         assertEquals(cadenceBefore, t5.getCadence());
     }
 
