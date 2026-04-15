@@ -210,11 +210,7 @@ public abstract class Board {
       }
     }
 
-    //public void EvoluteAllTowers(List<Tower> allTowers){
-    //    for(Tower t : allTowers){
-    //        t.putEvolutions();
-    //    }
-    //}
+  
 
     /**
      * evolute one towers in board
@@ -231,11 +227,7 @@ public abstract class Board {
         this.evolutedTowers.add(tower);
     }
 
-    //public void removeEvolutionForTowers(List<Tower> allTowers){
-    //   for(Tower t : allTowers){
-    //        t.removeEvolution();
-    //    }
-    //}
+ 
 
     /**
      * remove evolution for one tower in board
