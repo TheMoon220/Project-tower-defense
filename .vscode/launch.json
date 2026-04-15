@@ -5,8 +5,9 @@
             "type": "java",
             "name": "Launch JavaFX",
             "request": "launch",
-            "mainClass": "bloons.Main",
-            "vmArgs": "--module-path C:\\Users\\maria\\Downloads\\javafx-sdk-21\\lib --add-modules javafx.controls,javafx.fxml"
+            "mainClass": "bloons.main.Livrable",
+            "vmArgs": "--module-path C:\\Users\\maria\\Downloads\\openjfx-21.0.10_windows-x64_bin-sdk\\javafx-sdk-21.0.10\\lib --add-modules javafx.controls,javafx.fxml",
+            "console": "integratedTerminal"
         }
     ]
 }

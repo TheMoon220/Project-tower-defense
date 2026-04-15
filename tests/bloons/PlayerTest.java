@@ -22,14 +22,14 @@ public class PlayerTest {
     
     @Test
     public void testGetCredit() {
-        assertEquals(600, p1.getCredit());
-        assertEquals(250, p2.getCredit());
+        assertEquals(2500, p1.getCredit());
+        assertEquals(2500, p2.getCredit());
     }
 
     @Test
     public void testSetHealth() {
         p1.loseLife();
-        assertEquals(39, p1.getHealth()); // le niveau de vie decremente de 1
+        assertEquals(19, p1.getHealth()); // le niveau de vie decremente de 1
     }
     @Test
     public void testSetCredit(){
