@@ -271,15 +271,28 @@ public abstract class Board {
      * evolute one towers in board
      */
     public void EvoluteOneTower(){
+       if (this.allTowers.isEmpty()) {
+         System.out.println("No towers to evolve!");
+         return;
+       }
+
+       List<Tower> evolvableTowers = new ArrayList<>();
+       for (Tower t : this.allTowers) {
+          if (t.getAppliedEvolutions().size() < t.getPossibleEvolutions().size()) {
+             evolvableTowers.add(t);
+          }
+       }
+
+       if (evolvableTowers.isEmpty()) {
+          System.out.println("No tower can evolve further!");
+          return;
+       }
+
         Random random = new Random();
-        int i = random.nextInt(this.allTowers.size());
-        Tower tower = this.allTowers.get(i);
-        while (this.evolutedTowers.contains(tower) && !tower.canBeEvolute()) {
-            i = random.nextInt(this.allTowers.size());
-            tower = this.allTowers.get(i);
-        }
+        Tower tower = evolvableTowers.get(random.nextInt(evolvableTowers.size()));
         tower.putEvolutions();
-        this.evolutedTowers.add(tower);
+        if (!this.evolutedTowers.contains(tower))
+           this.evolutedTowers.add(tower);
     }
 
     /**
