@@ -299,11 +299,17 @@ public abstract class Board {
      * remove evolution for one tower in board
      */
     public void removeEvolutionForOneTower(){
+        if (this.evolutedTowers.isEmpty()) {
+          System.out.println("No tower has evolutions to remove!");
+          return;
+        }
+
         Random random = new Random();
         int i = random.nextInt(this.evolutedTowers.size());
         Tower tower = this.evolutedTowers.get(i);
         tower.removeEvolution();
-        this.evolutedTowers.remove(i);
+        if (tower.getAppliedEvolutions().isEmpty())
+          this.evolutedTowers.remove(i);
     }
 
     /**
