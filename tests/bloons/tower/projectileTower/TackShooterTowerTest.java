@@ -5,10 +5,10 @@ import org.junit.jupiter.api.*;
 
 public class TackShooterTowerTest extends ProjectileTowerTest {
     @Test
-    public void evolutecadance() {
+    public void evoluteRange() {
         double rangeBefore = t6.getRange();
         t6.applyEvolution(evoRange);
-        assertEquals(rangeBefore * 1.50, t6.getRange());
+        assertEquals(rangeBefore * 1.20, t6.getRange());
     }
 
     @Test
@@ -20,11 +20,11 @@ public class TackShooterTowerTest extends ProjectileTowerTest {
     }
 
     @Test
-    public void CadenceEvolutionAndRemoval() {
-        double before = t6.getCadence();
-        t6.applyEvolution(evoCadence);
-        assertEquals(before * 1.25, t6.getCadence());
-        t6.removeEvolutionEffect(evoCadence);
+    public void RangeEvolutionAndRemoval() {
+        double before = t6.getRange();
+        t6.applyEvolution(evoRange);
+        assertEquals(before * 1.20, t6.getRange());
+        t6.removeEvolutionEffect(evoRange);
         assertEquals(before, t6.getCadence());
     }
 }

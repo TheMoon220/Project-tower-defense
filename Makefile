@@ -31,6 +31,17 @@ classes:
 	$(JAVAC) -sourcepath $(SRC) -d $(OUT) $(SRC_FILES)
 	@echo "Compilation terminée."
 
+# Compilation avec JavaFX
+classes-gui: classes
+	@echo "Compilation avec JavaFX..."
+	$(JAVAC) --module-path $(JAVAFX) --add-modules $(JAVAFX_MODS) -classpath $(OUT) -sourcepath $(SRC) -d $(OUT) $(SRC_FILES)
+	@echo "Compilation terminée."
+
+# Lancement avec JavaFX
+run-gui: classes-gui
+	@echo "Lancement de l'interface graphique..."
+	$(JAVA) --module-path $(JAVAFX) --add-modules $(JAVAFX_MODS) -classpath $(OUT) bloons.interface_g.main.GameApp
+
 # Génération de la javadoc
 docs:
 	@echo "Génération de la javadoc..."
