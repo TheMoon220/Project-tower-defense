@@ -211,10 +211,24 @@ public abstract class Board {
     }
 
     /**
-     * Génère une position valide pour placer une tour
-     * @return une position valide
+     * Generates a valid position for placing a tower
+     * @return a valid position
     */
     public abstract Position getValidTowerPosition();  
+
+    /**
+     * Checks if a position is already occupied by a tower
+     * @param pos the position to check
+     * @return true if a tower is already present
+    */
+    public boolean isPositionOccupiedByTower(Position pos) {
+      for (Tower t : allTowers) {
+        if (t.getPosition().equals(pos)) {
+            return true;
+        }
+      }
+      return false;
+    }
 
     /**
      * evolute one towers in board
