@@ -36,7 +36,7 @@ public abstract class Board {
         this.height = height;
         this.grid = new Cell[width][height];
         this.Allballoons=new ArrayList<>();
-        //this.allTowers = this.generateRandomPositionTowers();
+        //this.allTowers = new ArrayList<>();
         for (int i=0; i<width; i++){
             for (int j=0; j<height; j++){
                 grid[i][j] = new Cell(new Position(i, j));
