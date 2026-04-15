@@ -49,7 +49,7 @@ public class ClassicalBoard extends Board {
      * @return true if the position is valid otherwise false.
      */
     public boolean isValid(Position P){
-       return P.getY()>0 && P.getY()<this.height && !path.contains(P);
+       return P.getY()>=0 && P.getY()<this.height && !path.contains(P);
     }
 
     /**
@@ -135,10 +135,10 @@ public class ClassicalBoard extends Board {
    private boolean InPath(Position p) {
       for (Position p1:path){
          if(p.equals(p1)){
-            return false ;
+            return true ;
          }
       }
-      return true ;
+      return false ;
    }
 
    /**

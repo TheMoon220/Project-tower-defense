@@ -267,11 +267,4 @@ public abstract class Tower {
       Evolution last = this.appliedEvolutions.pop();
       this.removeEvolutionEffect(last);
     }
-
-    /**
-     * @return true if tower can be evolute
-     */
-    public boolean canBeEvolute(){
-      return true;
-    }
 }

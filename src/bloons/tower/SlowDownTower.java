@@ -60,12 +60,4 @@ public class SlowDownTower extends Tower {
 
     @Override
     public void removeEvolutionEffect(Evolution evo){}
-
-    /**
-     * @return true if tower can be evolute
-     */
-    @Override
-    public boolean canBeEvolute(){
-      return false;
-    }
 }
