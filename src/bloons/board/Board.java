@@ -219,7 +219,7 @@ public abstract class Board {
         Random random = new Random();
         int i = random.nextInt(this.allTowers.size());
         Tower tower = this.allTowers.get(i);
-        while (this.evolutedTowers.contains(tower)) {
+        while (this.evolutedTowers.contains(tower) && !tower.canBeEvolute()) {
             i = random.nextInt(this.allTowers.size());
             tower = this.allTowers.get(i);
         }
