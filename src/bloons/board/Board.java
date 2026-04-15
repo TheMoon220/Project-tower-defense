@@ -210,7 +210,11 @@ public abstract class Board {
       }
     }
 
-  
+    /**
+     * Génère une position valide pour placer une tour
+     * @return une position valide
+    */
+    public abstract Position getValidTowerPosition();  
 
     /**
      * evolute one towers in board
