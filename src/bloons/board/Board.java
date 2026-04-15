@@ -231,6 +231,43 @@ public abstract class Board {
     }
 
     /**
+     * Adds a tower to the board
+     * @param tower the tower to add
+     * @exception IllegalArgumentException when the number isn't an integer
+    */
+    public void addTower(Tower tower) {
+       if (tower == null) {
+          throw new IllegalArgumentException("Cannot add null tower");
+        }
+        
+       Position pos = tower.getPosition();
+       if (isPositionOccupiedByTower(pos)) {
+          System.out.println("Warning: Position " + pos + " already has a tower!");
+          return;
+       }
+       this.allTowers.add(tower);
+       System.out.println(tower + " has been added to the board.");
+    }
+
+    /**
+     * Remove one tower from the board
+     * @param tower the tower to be removed
+     * @exception IllegalArgumentException when the number isn't an integer
+    */
+    public void removeTower(Tower tower) {
+      if (tower == null) {
+         throw new IllegalArgumentException("Cannot remove null tower");
+      }
+      if (this.allTowers.remove(tower)) {
+         // If the tower had any upgrades, we remove them too.
+          this.evolutedTowers.remove(tower);
+          System.out.println(tower + " has been removed from the board.");
+      } else {
+          System.out.println("Tower not found on the board.");
+      }
+    }
+
+    /**
      * evolute one towers in board
      */
     public void EvoluteOneTower(){
