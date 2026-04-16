@@ -278,7 +278,10 @@ public abstract class Board {
 
        List<Tower> evolvableTowers = new ArrayList<>();
        for (Tower t : this.allTowers) {
-          if (t.getAppliedEvolutions().size() < t.getPossibleEvolutions().size()) {
+          //if (t.getAppliedEvolutions().size() < t.getPossibleEvolutions().size()) {
+            // evolvableTowers.add(t);
+          //}
+          if(!t.getPossibleEvolutions().isEmpty()){
              evolvableTowers.add(t);
           }
        }
