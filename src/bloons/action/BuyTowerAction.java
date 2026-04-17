@@ -44,7 +44,7 @@ public class BuyTowerAction implements Action{
         // check if the player has enough credit
         if (Board.PLAYER.getCredit() < tower.getCost()) {
             System.out.println("Not enough credits! Need " + tower.getCost() + 
-                             ", have " + Board.PLAYER.getCredit() + ", for the tower " + tower.getClass().getSimpleName());
+                              ", for buying " + tower.getClass().getSimpleName() + ", have " + Board.PLAYER.getCredit());
             return false;
         }
         
