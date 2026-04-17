@@ -24,7 +24,5 @@ public interface Action {
      * Returns the cost of the action (if applicable)
      * @return the cost, or 0 if the action has no cost
      */
-    default int getCost() {
-        return 0;
-    }
+    public int getCost();
 }
