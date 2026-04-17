@@ -69,4 +69,13 @@ public class UpgradeTowerAction implements Action {
     public String getDescription() {
         return "Upgrade " + tower.getClass().getSimpleName() + " at " + tower.getPosition();
     }
+
+    /**
+     * Returns the cost of the action (if applicable)
+     * @return the cost, or 0 if the action has no cost
+     */
+    @Override
+    public int getCost(){
+        return 0;
+    }
 }
