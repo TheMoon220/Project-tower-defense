@@ -19,6 +19,11 @@ public class DowngradeTowerAction implements Action {
         this.tower = tower;
     }
     
+    /**
+     * Perform the action on the board
+     * @param board the game board
+     * @return true if the action was successful, false otherwise
+     */
     @Override
     public boolean execute(Board board) {
         // Vérifier que la tour est sur le plateau
@@ -51,5 +56,14 @@ public class DowngradeTowerAction implements Action {
     @Override
     public String getDescription() {
         return "Downgrade " + tower.getClass().getSimpleName() + " at " + tower.getPosition();
+    }
+
+    /**
+     * Returns the cost of the action (if applicable)
+     * @return the cost, or 0 if the action has no cost
+     */
+    @Override
+    public int getCost(){
+        return 0;
     }
 }
