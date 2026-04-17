@@ -45,7 +45,8 @@ public class UpgradeTowerAction implements Action {
         // check the credits
         if (Board.PLAYER.getCredit() < cost) {
             System.out.println("Not enough credits! Need " + cost + 
-                             ", have " + Board.PLAYER.getCredit());
+                             ", have " + Board.PLAYER.getCredit() + 
+                             ", for upgrading " + tower.getClass().getSimpleName() + ", with the evolution: " + nextEvolution);
             return false;
         }
         
