@@ -2,6 +2,7 @@ package bloons.action;
 
 import bloons.board.Board;
 import bloons.tower.Tower;
+import java.util.*;
 
 /**
  * Action d'évolution d'une tour
@@ -75,7 +76,12 @@ public class UpgradeTowerAction implements Action {
      * @return the cost, or 0 if the action has no cost
      */
     @Override
-    public int getCost(){
-        return 0;
+    public int getCost() {
+        if (tower.getAppliedEvolutions().size() >= tower.getPossibleEvolutions().size()) {
+            return 0; // no evolution possible
+        }
+        var evolutions = new ArrayList<>(tower.getPossibleEvolutions().keySet());
+        var nextEvolution = evolutions.get(tower.getAppliedEvolutions().size());
+        return tower.getPossibleEvolutions().get(nextEvolution);
     }
-}
+}    
