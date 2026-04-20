@@ -75,4 +75,26 @@ public class ActionTest {
 
         assertEquals("My Custom Action", action.getDescription());
     }
+
+    @Test 
+    public void testActionGetCost(){
+        Action action = new Action() {
+            @Override
+            public boolean execute(Board board){
+                return true;
+            }
+
+            @Override
+            public String getDescription(){
+                return "Costly Action";
+            }
+
+            @Override
+            public int getCost(){
+                return 250;
+            }
+        };
+
+        assertEquals(250, action.getCost());
+    }
 }
