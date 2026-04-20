@@ -119,4 +119,28 @@ public class ActionTest {
 
         assertEquals(0, action.getCost());
     }
+
+    @Test 
+    public void testActionAllMethodsTogether(){
+        Action action = new Action() {
+            @Override 
+            public boolean execute(Board board){
+                return board != null;
+            }
+
+            @Override 
+            public String getDescription(){
+                return "Complete Action Test";
+            }
+
+            @Override
+            public int getCost(){
+                return 100;
+            }
+        };
+
+        assertEquals("Complete Action Test", action.getDescription());
+        assertEquals(100, action.getCost());
+        assertFalse(action.execute(null));
+    }
 }
