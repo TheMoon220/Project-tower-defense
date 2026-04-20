@@ -52,4 +52,27 @@ public class ActionTest {
 
         assertFalse(action.execute(null));
     }
+
+    @Test 
+    public void testActionGetDescription(){
+        Action action = new Action(){
+            @Override
+            public boolean execute(Board board){
+                return true;
+            }
+
+            @Override
+            public String getDescription(){
+                return "My Custom Action";
+            }
+
+            @Override
+            public int getCost(){
+                return 50;
+            }
+
+        };
+
+        assertEquals("My Custom Action", action.getDescription());
+    }
 }
