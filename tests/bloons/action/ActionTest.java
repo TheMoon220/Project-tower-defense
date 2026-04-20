@@ -97,4 +97,26 @@ public class ActionTest {
 
         assertEquals(250, action.getCost());
     }
+
+    @Test 
+    public void testActionGetCostZero(){
+        Action action = new Action() {
+            @Override 
+            public boolean execute(Board board){
+                return true;
+            }
+
+            @Override 
+            public String getDescription(){
+                return "Free Action";
+            }
+
+            @Override 
+            public int getCost(){
+                return 0;
+            } 
+        };
+
+        assertEquals(0, action.getCost());
+    }
 }
