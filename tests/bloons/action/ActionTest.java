@@ -75,4 +75,72 @@ public class ActionTest {
 
         assertEquals("My Custom Action", action.getDescription());
     }
+
+    @Test 
+    public void testActionGetCost(){
+        Action action = new Action() {
+            @Override
+            public boolean execute(Board board){
+                return true;
+            }
+
+            @Override
+            public String getDescription(){
+                return "Costly Action";
+            }
+
+            @Override
+            public int getCost(){
+                return 250;
+            }
+        };
+
+        assertEquals(250, action.getCost());
+    }
+
+    @Test 
+    public void testActionGetCostZero(){
+        Action action = new Action() {
+            @Override 
+            public boolean execute(Board board){
+                return true;
+            }
+
+            @Override 
+            public String getDescription(){
+                return "Free Action";
+            }
+
+            @Override 
+            public int getCost(){
+                return 0;
+            } 
+        };
+
+        assertEquals(0, action.getCost());
+    }
+
+    @Test 
+    public void testActionAllMethodsTogether(){
+        Action action = new Action() {
+            @Override 
+            public boolean execute(Board board){
+                return board != null;
+            }
+
+            @Override 
+            public String getDescription(){
+                return "Complete Action Test";
+            }
+
+            @Override
+            public int getCost(){
+                return 100;
+            }
+        };
+
+        assertEquals("Complete Action Test", action.getDescription());
+        assertEquals(100, action.getCost());
+        assertFalse(action.execute(null));
+    }
 }
