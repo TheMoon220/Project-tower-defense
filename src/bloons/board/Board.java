@@ -211,10 +211,17 @@ public abstract class Board {
     }
 
     /**
-     * Generates a valid position for placing a tower
-     * @return a valid position
-    */
-    public abstract Position getValidTowerPosition();  
+    * Generates a valid position for placing a tower
+    * @return a valid position
+   */
+   public Position getValidTowerPosition() {
+      Random rand = new Random();
+      Position p;
+      do {
+        p = new Position(rand.nextInt(width), rand.nextInt(height));
+      } while (getPath().contains(p) || isPositionOccupiedByTower(p));
+      return p;
+   }
 
     /**
      * Checks if a position is already occupied by a tower
