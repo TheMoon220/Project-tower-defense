@@ -222,17 +222,5 @@ public class RandomBoard extends Board {
       }
    }
 
-   /**
-    * Generates a valid position for placing a tower
-    * @return a valid position
-   */
-   @Override
-   public Position getValidTowerPosition() {
-      Random rand = new Random();
-      Position p;
-      do {
-        p = new Position(rand.nextInt(width), rand.nextInt(height));
-      } while (getPath().contains(p) || isPositionOccupiedByTower(p));
-      return p;
-   }
+   
 }
