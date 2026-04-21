@@ -23,4 +23,10 @@ public class BuyTowerActionTest {
         testTower = new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, validPosition, Projectile.DART);
         initialCredits = Board.PLAYER.getCredit();
     }
+
+    @AfterEach
+    public void tearDown(){
+        Board.PLAYER.removeCredit(Board.PLAYER.getCredit());
+        Board.PLAYER.addCredit(2500);
+    }
 }
