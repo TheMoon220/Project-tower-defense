@@ -9,6 +9,7 @@ import bloons.Position;
 import bloons.tower.*;
 import bloons.tower.projectileTower.*;
 import bloons.utils.*;
+import bloons.action.*;
 
 public class BuyTowerActionTest {
     private Board board;
@@ -37,5 +38,15 @@ public class BuyTowerActionTest {
         assertTrue(action.execute(board));
         assertEquals(initialCredit - 200, Board.PLAYER.getCredit());
         assertTrue(board.getAllTowers().contains(testTower));
+    }
+
+    @Test
+    public void testExecuteInvalidPositionOutOfBounds(){
+        Position invalidPos = new Position(-1, -1);
+        BuyTowerAction action = new BuyTowerAction(testTower, invalidPos);
+
+        assertFalse(action.execute(board));
+        assertEquals(initialCredits, Board.PLAYER.getCredit());
+        assertFalse(board.getAllTowers().contains(testTower));
     }
 }
