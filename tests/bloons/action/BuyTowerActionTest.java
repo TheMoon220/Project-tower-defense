@@ -60,4 +60,15 @@ public class BuyTowerActionTest {
         assertFalse(secondAction.execute(board));
         assertEquals(initialCredits - 200, Board.PLAYER.getCredit());
     }
+
+    @Test 
+    public void testExecuteNotEnoughCredits(){
+        Board.PLAYER.removeCredit(initialCredits);
+        assertEquals(0, Board.PLAYER.getCredit());
+
+        BuyTowerAction action = new BuyTowerAction(testTower, validPosition);
+
+        assertFalse(action.execute(board));
+        assertFalse(board.getAllTowers().contains(testTower));
+    }
 }
