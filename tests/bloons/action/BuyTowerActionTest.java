@@ -49,4 +49,15 @@ public class BuyTowerActionTest {
         assertEquals(initialCredits, Board.PLAYER.getCredit());
         assertFalse(board.getAllTowers().contains(testTower));
     }
+
+    @Test
+    public void testExecutePositionAlreadyOccupied(){
+        BuyTowerAction firstAction = new BuyTowerAction(testTower, validPosition);
+        firstAction.execute(board);
+        Tower secondTower = new BombTower(600, 150, Effect.DISTANCE, 1800, validPosition, Projectile.BOMB);
+        BuyTowerAction secondAction = new BuyTowerAction(secondTower, validPosition);
+
+        assertFalse(secondAction.execute(board));
+        assertEquals(initialCredits - 200, Board.PLAYER.getCredit());
+    }
 }
