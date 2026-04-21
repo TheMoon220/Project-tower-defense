@@ -133,12 +133,7 @@ public class ClassicalBoard extends Board {
     */
 
    private boolean InPath(Position p) {
-      for (Position p1:path){
-         if(p.equals(p1)){
-            return true ;
-         }
-      }
-      return false ;
+      return this.path.contains(p);
    }
 
    /**
