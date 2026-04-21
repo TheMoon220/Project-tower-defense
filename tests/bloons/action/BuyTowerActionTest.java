@@ -29,4 +29,13 @@ public class BuyTowerActionTest {
         Board.PLAYER.removeCredit(Board.PLAYER.getCredit());
         Board.PLAYER.addCredit(2500);
     }
+
+    @Test 
+    public void testExecuteSuccess(){
+        BuyTowerAction action = new BuyTowerAction(testTower, validPosition);
+
+        assertTrue(action.execute(board));
+        assertEquals(initialCredit - 200, Board.PLAYER.getCredit());
+        assertTrue(board.getAllTowers().contains(testTower));
+    }
 }
