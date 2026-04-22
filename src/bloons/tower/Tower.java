@@ -279,6 +279,10 @@ public abstract class Tower {
      */
     public void resellTower(Tower tower){
       double costs= tower.getCost() * 0.5;
-      while ()
+      while (!tower.possibleEvolutions.isEmpty()){
+        Evolution evo = tower.appliedEvolutions.pop();
+        costs += tower.possibleEvolutions.getOrDefault(evo, 0) * 0.5;
+        tower.removeEvolutionEffect(evo);
+      }
     }
 }
