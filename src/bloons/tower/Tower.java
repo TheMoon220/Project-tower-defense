@@ -270,7 +270,7 @@ public abstract class Tower {
     /**
      * check if the tower has an evolution
      */
-    public abstract boolean hasAnEvolution(Tower tower);
+    public abstract boolean hasAnEvolution();
     /**
      * resell  the tower
      * @param tower
