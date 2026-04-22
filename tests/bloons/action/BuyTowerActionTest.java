@@ -101,4 +101,14 @@ public class BuyTowerActionTest {
         BuyTowerAction expensiveAction = new BuyTowerAction(expensiveTower, validPosition);
         assertEquals(600, expensiveAction.getCost());
     }
+
+    @Test
+    public void testGetDescription(){
+        BuyTowerAction action = new BuyTowerAction(testTower, validPosition);
+        String description = action.getDescription();
+
+        assertTrue(description.contains("DartMonkeyTower"));
+        assertTrue(description.contains("cost: 200"));
+        assertTrue(description.contains(validPosition.toString()));
+    }
 }
