@@ -1,26 +1,15 @@
 package bloons.main;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-import bloons.action.BuyTowerAction;
-import bloons.action.UpgradeTowerAction;
+import bloons.action.*;
+import bloons.*;
 import bloons.balloon.Balloon;
-import bloons.board.Board;
-import bloons.board.ClassicalBoard;
-import bloons.tower.IceTower;
-import bloons.tower.SlowDownTower;
-import bloons.tower.Tower;
-import bloons.tower.projectileTower.BombTower;
-import bloons.tower.projectileTower.DartMonkeyTower;
-import bloons.tower.projectileTower.SniperMonkeyTower;
-import bloons.tower.projectileTower.SuperMonkeyTower;
-import bloons.tower.projectileTower.TackShooterTower;
-import bloons.utils.Effect;
-import bloons.utils.Input;
-import bloons.utils.Projectile;
-
+import bloons.board.*;
+import bloons.tower.*;
+import bloons.tower.projectileTower.*;
+import bloons.utils.*;
 public class Livrable6 extends Livrable {
     
     @Override
@@ -194,7 +183,7 @@ public class Livrable6 extends Livrable {
                     long currentTime = (System.nanoTime() - start) / 1000000;
                     
                     displayDuringRound(board, currentTime, balloons);
-                    
+
                     board.processTowers(board.getAllTowers(), currentTime);
 
                     List<Balloon> toRemove = new ArrayList<>();
