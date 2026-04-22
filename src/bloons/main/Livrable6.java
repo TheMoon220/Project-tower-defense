@@ -218,4 +218,11 @@ public class Livrable6 extends Livrable {
         
             
     }
+
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("=== Livrable final: Classical Board ===");
+        new Livrable6().run(args);
+    }
+
+
 }
