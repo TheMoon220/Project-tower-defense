@@ -142,4 +142,15 @@ public class UpgradeTowerActionTest {
         action.execute(board);
         assertEquals(evolutions.get(1), testTower.getAppliedEvolutions().peek());
     }
+
+    @Test 
+    public void testApplyEvolutionChangesTowerProperties(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+
+        double oldRange = testTower.getRange();
+        double oldCadence = testTower.getCadence();
+        action.execute(board);
+        boolean s = (testTower.getRange() != oldRange) || (testTower.getCadence() != oldCadence);
+        assertFalse(testTower.getAppliedEvolutions().isEmpty());
+    }
 }
