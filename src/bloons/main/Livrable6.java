@@ -32,7 +32,7 @@ public class Livrable6 extends Livrable {
         System.out.println("Player lives : " + Board.PLAYER.getHealth());
     }
 
-    private void buyTower(Board board) {
+    private void displayTowers(){
         System.out.println("\n--- ALL TOWERS ---");
         System.out.println("1. DartMonkey Tower (cost : 200)");
         System.out.println("2. TackShooter Tower (cost : 350)");
@@ -42,6 +42,10 @@ public class Livrable6 extends Livrable {
         System.out.println("6. Bomb Tower (cost : 600)");
         System.out.println("7. SuperMonkey Tower (cost : 1200)");
         System.out.println("8. Cancel");
+    }
+
+    private void buyTower(Board board) {
+        this.displayTowers();
         System.out.print("Choice : ");
 
         try {
@@ -79,7 +83,6 @@ public class Livrable6 extends Livrable {
                     t = new SuperMonkeyTower(1200, 200, Effect.IMMEDIAT, 300, pos, Projectile.VERYSHARPDART); 
                     break;
             }
-
             if (t != null){
                 new BuyTowerAction(t, pos).execute(board);
             } 
