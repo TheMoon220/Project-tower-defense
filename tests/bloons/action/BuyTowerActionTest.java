@@ -132,4 +132,10 @@ public class BuyTowerActionTest {
         assertEquals(3, board.getAllTowers().size());
         assertEquals(initialCredits - 200 - 400 - 600, Board.PLAYER.getCredit());
     }
+
+    @Test 
+    public void testExecuteWithNullTower(){
+        BuyTowerAction action = new BuyTowerAction(testTower, validPosition);
+        assertNotNull(action);
+    }
 }
