@@ -36,7 +36,7 @@ public class BuyTowerActionTest {
         BuyTowerAction action = new BuyTowerAction(testTower, validPosition);
 
         assertTrue(action.execute(board));
-        assertEquals(initialCredit - 200, Board.PLAYER.getCredit());
+        assertEquals(initialCredits - 200, Board.PLAYER.getCredit());
         assertTrue(board.getAllTowers().contains(testTower));
     }
 
@@ -70,5 +70,25 @@ public class BuyTowerActionTest {
 
         assertFalse(action.execute(board));
         assertFalse(board.getAllTowers().contains(testTower));
+    }
+
+    @Test
+    public void testExecuteWithDifferentTowers(){
+        Position pos1 = ((ClassicalBoard) board).getValidTowerPosition();
+        Tower iceTower = new IceTower(400, 100, Effect.IMMEDIAT, 1500, pos1);
+        BuyTowerAction action1 = new BuyTowerAction(iceTower, pos1);
+
+        assertTrue(action1.execute(board));
+        assertTrue(board.getAllTowers().contains(iceTower));
+
+        Position pos2 = ((ClassicalBoard) board).getValidTowerPosition();
+        Tower bombTower = new BombTower(600,150,Effect.DISTANCE,1800,pos2,Projectile.BOMB);
+        BuyTowerAction action2 = new BuyTowerAction(bombTower, pos2);
+
+        assertTrue(action2.execute(board));
+        assertTrue(board.getAllTowers().contains(bombTower));
+
+        int expectedCredits = initialCredits - 400 - 600;
+        assertEquals(expectedCredits, Board.PLAYER.getCredit());
     }
 }
