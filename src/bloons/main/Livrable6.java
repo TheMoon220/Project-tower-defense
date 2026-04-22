@@ -128,12 +128,12 @@ public class Livrable6 extends Livrable {
 
         while (!runRound && Board.PLAYER.getHealth() > 0) {
             System.out.println("\n==================================");
-            System.out.println("      MANCHE " + round + " - PRÉPARATION");
+            System.out.println("      STARTING ROUND " + round + "  ");
             System.out.println("==================================");
             System.out.println(Board.PLAYER.toString());
             System.out.println("1. Buy a tower");
             System.out.println("2. Upgrade a tower");
-            System.out.println("3. LANCER LA MANCHE !");
+            System.out.println("3. START ROUND !");
             System.out.print("Choice : ");
 
             try {
