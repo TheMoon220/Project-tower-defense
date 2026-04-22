@@ -132,7 +132,7 @@ public class ClassicalBoard extends Board {
     * @return true when position not in path
     */
 
-   private boolean InPath(Position p) {
+   public boolean InPath(Position p) {
       return this.path.contains(p);
    }
 
