@@ -113,4 +113,13 @@ public class UpgradeTowerActionTest {
         assertTrue(secondCost > 0);
         assertNotEquals(firstCost, secondCost);
     }
+
+    @Test 
+    public void testGetCostWhenNoMoreEvolutions(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        while(testTower.getAppliedEvolutions().size() < testTower.getPossibleEvolutions().size()){
+            action.execute(board);
+        }
+        assertEquals(0, action.getCost());
+    }
 }
