@@ -1,8 +1,11 @@
 package bloons.main;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import bloons.action.BuyTowerAction;
+import bloons.action.UpgradeTowerAction;
 import bloons.board.Board;
 import bloons.board.ClassicalBoard;
 import bloons.tower.IceTower;
@@ -87,5 +90,33 @@ public class Livrable6 extends Livrable {
                 new BuyTowerAction(t, pos).execute(board);
             } 
         } catch (IOException e) { System.out.println("Wrong input !!"); }
+    }
+
+    /**
+     * Choose a random tower that can still evolve
+     */
+    private void upgradeTower(Board board) {
+        List<Tower> evolvable = new ArrayList<>();
+        for (Tower t : board.getAllTowers()) {
+            if (!t.getPossibleEvolutions().isEmpty()) {
+                evolvable.add(t);
+            }
+        }
+        if (evolvable.isEmpty()) {
+            System.out.println("Any tower can evolve!");
+            return;
+        }
+
+        System.out.println("Upgradable towers in board");
+        for (int i = 0; i < evolvable.size(); i++){
+            System.out.println((i + 1) + ". " + evolvable.get(i));
+        } 
+        System.out.print("Choice ? (or 0 for cancel) : ");
+        try {
+            int choix = Input.readInt();
+            if (choix > 0 && choix <= evolvable.size()) 
+                new UpgradeTowerAction(evolvable.get(choix - 1)).execute(board);
+        } catch (IOException e) { }
+        
     }
 }
