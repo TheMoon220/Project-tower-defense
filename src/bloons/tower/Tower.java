@@ -284,6 +284,7 @@ public abstract class Tower {
         costs += tower.possibleEvolutions.getOrDefault(evo, 0);
         tower.removeEvolutionEffect(evo);
       }
+      //give back to the player his tower cost
        Board.PLAYER.addCredit((int)costs);
     }
 }
