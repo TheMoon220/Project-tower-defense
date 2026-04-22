@@ -104,6 +104,13 @@ public class BombTower extends ProjectileTower {
                 break;
         }
     }
+    
+    /**
+     * check if the tower has an evolution
+     */
+     public boolean  hasAnEvolution(Tower tower){
+        return false;
+    }
 
     /**
      * resell  the tower
@@ -112,10 +119,5 @@ public class BombTower extends ProjectileTower {
      @Override
     public void resellTower(Tower tower){
     }
-    /**
-     * check if the tower has an evolution
-     */
-     public boolean  hasAnEvolution(Tower tower){
-        return false;
-    }
+    
 }
