@@ -84,4 +84,22 @@ public class UpgradeTowerActionTest {
         assertFalse(action.execute(board));
         assertEquals(0, testTower.getAppliedEvolutions().size());
     }
+
+    @Test
+    public void testExecuteWithDifferentTowers(){
+        Position BombPos = board.getValidTowerPosition();
+        BombTower bombTower = new BombTower(600, 150,Effect.DISTANCE,1800,BombPos,Projectile.BOMB);
+        board.addTower(bombTower);
+        UpgradeTowerAction bombAction = new UpgradeTowerAction(bombTower);
+
+        assertTrue(bombAction.execute(board));
+        assertEquals(1, bombTower.getAppliedEvolutions().size());
+
+        Position sniperPos = board.getValidTowerPosition();
+        SniperMonkeyTower sniperTower = new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, sniperPos, Projectile.POINTEDDART);
+        board.addTower(sniperTower);
+        UpgradeTowerAction sniperAction = new UpgradeTowerAction(sniperTower);
+        assertTrue(sniperAction.execute(board));
+        assertEquals(1, sniperTower.getAppliedEvolutions().size());
+    }
 }
