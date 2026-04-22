@@ -122,4 +122,13 @@ public class UpgradeTowerActionTest {
         }
         assertEquals(0, action.getCost());
     }
+
+    @Test
+    public void testGetDescription(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        String description = action.getDescription();
+        assertTrue(description.contains("Upgrade"));
+        assertTrue(description.contains("DartMonkeyTower"));
+        assertTrue(description.contains(position.toString()));
+    }
 }
