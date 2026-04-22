@@ -102,4 +102,15 @@ public class UpgradeTowerActionTest {
         assertTrue(sniperAction.execute(board));
         assertEquals(1, sniperTower.getAppliedEvolutions().size());
     }
+
+    @Test
+    public void testGetCost(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        int firstCost = action.getCost();
+        assertTrue(firstCost > 0);
+        action.execute(board);
+        int secondCost = action.getCost();
+        assertTrue(secondCost > 0);
+        assertNotEquals(firstCost, secondCost);
+    }
 }
