@@ -105,19 +105,6 @@ public class BombTower extends ProjectileTower {
         }
     }
 
-    /**
-     * check if the tower has an evolution
-     */
-     public boolean  hasAnEvolution(){
-        return this.possibleEvolutions.isEmpty();
-    }
-
-    /**
-     * resell  the tower
-     * @param tower
-     */
-     @Override
-    public void resellTower(Tower tower){
-    }
+    
     
 }

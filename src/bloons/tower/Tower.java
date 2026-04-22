@@ -270,10 +270,19 @@ public abstract class Tower {
     /**
      * check if the tower has an evolution
      */
-    public abstract boolean hasAnEvolution();
+    public  boolean hasAnEvolution(){
+      return !this.possibleEvolutions.isEmpty();
+    }
     /**
      * resell  the tower
      * @param tower
      */
-    public abstract void resellTower(Tower tower);
+    public void resellTower(Tower tower){
+      double costs= tower.getCost() * 0.5;
+      while (!tower.possibleEvolutions.isEmpty()){
+        Evolution evo = tower.appliedEvolutions.pop();
+        costs += tower.possibleEvolutions.getOrDefault(evo, 0) * 0.5;
+        tower.removeEvolutionEffect(evo);
+      }
+    }
 }

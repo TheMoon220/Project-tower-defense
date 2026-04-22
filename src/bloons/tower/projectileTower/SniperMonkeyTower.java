@@ -72,18 +72,5 @@ public class SniperMonkeyTower extends ProjectileTower{
                 return;
         }
     }
-    /**
-     * resell  the tower
-     * @param tower
-     */
-    @Override
-    public void resellTower(Tower tower){
-
-    }
-    /**
-     * check if the tower has an evolution
-     */
-     public boolean  hasAnEvolution(){
-        return this.possibleEvolutions.isEmpty();
-    }
+    
 }

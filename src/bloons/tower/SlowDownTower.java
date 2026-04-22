@@ -61,18 +61,6 @@ public class SlowDownTower extends Tower {
     @Override
     public void removeEvolutionEffect(Evolution evo){}
     
-    @Override
-    /**
-     * resell  the tower
-     * @param tower
-     */
-    public void resellTower(Tower tower){
+   
 
-    }
-    /**
-     * check if the tower has an evolution
-     */
-     public boolean  hasAnEvolution(){
-        return this.possibleEvolutions.isEmpty();
-    }
 }
