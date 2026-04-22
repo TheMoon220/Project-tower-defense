@@ -76,4 +76,12 @@ public class UpgradeTowerActionTest {
         assertFalse(action.execute(board));
         assertEquals(3, testTower.getAppliedEvolutions().size());
     }
+
+    @Test
+    public void testExecuteNotEnoughCredits(){
+        Board.PLAYER.removeCredit(initialCredits - 50);
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        assertFalse(action.execute(board));
+        assertEquals(0, testTower.getAppliedEvolutions().size());
+    }
 }
