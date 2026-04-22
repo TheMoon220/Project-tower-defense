@@ -21,6 +21,11 @@ public  class  ResellTowerAction implements Action {
      * @return true if the action was successful, false otherwise
      */
     boolean execute(Board board){
+        if (this.tower== null){
+            return false ;
+        }
+        tower.resellTower(board);
+        return true;
 
     }
     
@@ -29,7 +34,7 @@ public  class  ResellTowerAction implements Action {
      * @return description
      */
     String getDescription(){
-
+        
     }
     
     /**
@@ -37,7 +42,7 @@ public  class  ResellTowerAction implements Action {
      * @return the cost, or 0 if the action has no cost
      */
     public int getCost(){
-        
+
     }
     
 }
