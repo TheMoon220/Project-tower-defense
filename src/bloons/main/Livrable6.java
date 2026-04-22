@@ -116,15 +116,16 @@ public class Livrable6 extends Livrable {
     private void chooseActions(Board board, int round) {
         boolean runRound = false;
 
+        System.out.println("\n==================================");
+        System.out.println("      STARTING ROUND " + round + "  ");
+        System.out.println("==================================");
         while (!runRound && Board.PLAYER.getHealth() > 0) {
-            System.out.println("\n==================================");
-            System.out.println("      STARTING ROUND " + round + "  ");
-            System.out.println("==================================");
+            
             System.out.println(Board.PLAYER.toString());
             System.out.println("1. Buy a tower");
             System.out.println("2. Upgrade a tower");
             System.out.println("3. START ROUND !");
-            System.out.print("Choice : ");
+            System.out.print("\nChoice : ");
 
             try {
                 int choix = Input.readInt();
@@ -181,8 +182,6 @@ public class Livrable6 extends Livrable {
                 long start = System.nanoTime();
                 while (!balloons.isEmpty() && Board.PLAYER.getHealth() > 0) {
                     long currentTime = (System.nanoTime() - start) / 1000000;
-                    
-                    displayDuringRound(board, currentTime, balloons);
 
                     board.processTowers(board.getAllTowers(), currentTime);
 
