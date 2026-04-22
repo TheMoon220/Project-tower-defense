@@ -63,7 +63,7 @@ public class TackShooterTower extends ProjectileTower{
                 return;
         }
     }
-    
+
     /**
      * resell  the tower
      * @param tower
@@ -75,8 +75,8 @@ public class TackShooterTower extends ProjectileTower{
     /**
      * check if the tower has an evolution
      */
-     public boolean  hasAnEvolution(Tower tower){
-        return true;
+     public boolean  hasAnEvolution(){
+        return !this.possibleEvolutions.isEmpty();
     }
     
 }

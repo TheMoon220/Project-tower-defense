@@ -72,7 +72,7 @@ public class SlowDownTower extends Tower {
     /**
      * check if the tower has an evolution
      */
-     public boolean  hasAnEvolution(Tower tower){
-        return true;
+     public boolean  hasAnEvolution(){
+        return this.possibleEvolutions.isEmpty();
     }
 }

@@ -97,7 +97,7 @@ public class DartMonkeyTower extends ProjectileTower {
      * check if the tower has an evolution
      */
      public boolean  hasAnEvolution(Tower tower){
-        return true;
+        return this.possibleEvolutions.isEmpty();
     }
 
 }

@@ -104,12 +104,12 @@ public class BombTower extends ProjectileTower {
                 break;
         }
     }
-    
+
     /**
      * check if the tower has an evolution
      */
-     public boolean  hasAnEvolution(Tower tower){
-        return false;
+     public boolean  hasAnEvolution(){
+        return this.possibleEvolutions.isEmpty();
     }
 
     /**
