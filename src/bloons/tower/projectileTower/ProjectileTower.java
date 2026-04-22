@@ -71,13 +71,6 @@ public class ProjectileTower extends Tower{
     @Override
     public void removeEvolutionEffect(Evolution evo){}
     
-    /**
-     * resell  the tower
-     * @param tower
-     */
-    @Override
-    public void resellTower(Tower tower){
-
-    }
+    
     
 }

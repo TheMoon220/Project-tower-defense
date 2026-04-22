@@ -72,13 +72,5 @@ public class SniperMonkeyTower extends ProjectileTower{
                 return;
         }
     }
-    /**
-     * resell  the tower
-     * @param tower
-     */
-    @Override
-    public void resellTower(Tower tower){
-
-    }
-
+    
 }

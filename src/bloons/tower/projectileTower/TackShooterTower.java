@@ -64,13 +64,5 @@ public class TackShooterTower extends ProjectileTower{
         }
     }
 
-    /**
-     * resell  the tower
-     * @param tower
-     */
-    @Override
-    public void resellTower(Tower tower){
-
-    }
-    
+  
 }

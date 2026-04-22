@@ -76,14 +76,7 @@ public class SuperMonkeyTower extends ProjectileTower{
                 return;
         }
     }
-    /**
-     * resell  the tower
-     * @param tower
-     */
-    @Override
-    public void resellTower(Tower tower){
-
-    }
+    
     
     
 }
