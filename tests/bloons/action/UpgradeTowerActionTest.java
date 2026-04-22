@@ -13,7 +13,6 @@ import bloons.tower.projectileTower.SniperMonkeyTower;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 import bloons.utils.Evolution;
-import javax.swing.text.Position;
 
 public class UpgradeTowerActionTest {
     private ClassicalBoard board;
@@ -43,5 +42,16 @@ public class UpgradeTowerActionTest {
         assertTrue(action.execute(board));
         assertEquals(1, testTower.getAppliedEvolutions().size());
         assertTrue(Board.PLAYER.getCredit() < initialCredits);
+    }
+
+    @Test 
+    public void testExecuteMultipleEvolutions(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        assertTrue(action.execute(board));
+        int creditsAfterFirst = Board.PLAYER.getCredit();
+        assertEquals(1, testTower.getAppliedEvolutions().size());
+        assertTrue(action.execute(board));
+        assertEquals(2, testTower.getAppliedEvolutions().size());
+        assertTrue(Board.PLAYER.getCredit() < creditsAfterFirst);
     }
 }
