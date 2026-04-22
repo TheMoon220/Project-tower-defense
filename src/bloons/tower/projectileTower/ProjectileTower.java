@@ -70,4 +70,11 @@ public class ProjectileTower extends Tower{
      */
     @Override
     public void removeEvolutionEffect(Evolution evo){}
+    @Override
+    public void resellTower(Tower tower){
+
+    }
+     public boolean  hasAnEvolution(Tower tower){
+        return true;
+    }
 }

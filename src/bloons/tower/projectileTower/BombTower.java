@@ -2,6 +2,7 @@ package bloons.tower.projectileTower;
 
 import bloons.Position;
 import bloons.balloon.*;
+import bloons.tower.Tower;
 import bloons.utils.*;
 import java.util.*;
 
@@ -102,5 +103,11 @@ public class BombTower extends ProjectileTower {
                 System.out.println("BombTower : reinitialise projectile (Bomb)");
                 break;
         }
+    }
+     @Override
+    public void resellTower(Tower tower){
+    }
+     public boolean  hasAnEvolution(Tower tower){
+        return false;
     }
 }

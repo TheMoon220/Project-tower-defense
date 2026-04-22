@@ -1,6 +1,7 @@
 package bloons.tower.projectileTower;
 
 import bloons.Position;
+import bloons.tower.Tower;
 import bloons.utils.Effect;
 import bloons.utils.Evolution;
 import bloons.utils.Projectile;
@@ -74,6 +75,14 @@ public class SuperMonkeyTower extends ProjectileTower{
             default:
                 return;
         }
+    }
+
+    @Override
+    public void resellTower(Tower tower){
+
+    }
+     public boolean  hasAnEvolution(Tower tower){
+        return true;
     }
 
     

@@ -1,6 +1,7 @@
 package bloons.tower.projectileTower;
 import bloons.Position;
 import bloons.balloon.*;
+import bloons.tower.Tower;
 import bloons.utils.*;
 
 
@@ -70,5 +71,12 @@ public class SniperMonkeyTower extends ProjectileTower{
             default:
                 return;
         }
+    }
+    @Override
+    public void resellTower(Tower tower){
+
+    }
+     public boolean  hasAnEvolution(Tower tower){
+        return true;
     }
 }
