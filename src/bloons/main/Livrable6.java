@@ -180,8 +180,10 @@ public class Livrable6 extends Livrable {
 
                 long deltaTime = 100;
                 long start = System.nanoTime();
-                while (!balloons.isEmpty() && Board.PLAYER.getHealth() > 0) {
+                while (!balloons.isEmpty()) {
                     long currentTime = (System.nanoTime() - start) / 1000000;
+
+                    System.out.println("\ntime: " + currentTime + " ms\n");
 
                     board.processTowers(board.getAllTowers(), currentTime);
 
