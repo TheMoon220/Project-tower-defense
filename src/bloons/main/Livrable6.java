@@ -93,7 +93,7 @@ public class Livrable6 extends Livrable {
     }
 
     /**
-     * Choose a random tower that can still evolve
+     * Choose a tower that can still evolve
      */
     private void upgradeTower(Board board) {
         List<Tower> evolvable = new ArrayList<>();
@@ -118,5 +118,42 @@ public class Livrable6 extends Livrable {
                 new UpgradeTowerAction(evolvable.get(choix - 1)).execute(board);
         } catch (IOException e) { }
         
+    }
+
+    /**
+     * the main menu
+     */
+    private void chooseActions(Board board, int round) {
+        boolean runRound = false;
+
+        while (!runRound && Board.PLAYER.getHealth() > 0) {
+            System.out.println("\n==================================");
+            System.out.println("      MANCHE " + round + " - PRÉPARATION");
+            System.out.println("==================================");
+            System.out.println(Board.PLAYER.toString());
+            System.out.println("1. Buy a tower");
+            System.out.println("2. Upgrade a tower");
+            System.out.println("3. LANCER LA MANCHE !");
+            System.out.print("Choice : ");
+
+            try {
+                int choix = Input.readInt();
+                switch (choix) {
+                    case 1: 
+                        buyTower(board); 
+                        break;
+                    case 2:
+                        upgradeTower(board); 
+                        break;
+                    case 3:
+                        runRound = true; 
+                        break;
+                    default:
+                        System.out.println("Wrong choice.");
+                }
+            } catch (IOException e) {
+                System.out.println("Wrong input. Enter a number");
+            }
+        }
     }
 }
