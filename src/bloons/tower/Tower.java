@@ -278,11 +278,13 @@ public abstract class Tower {
      * @param tower
      */
     public void resellTower(Tower tower){
-      double costs= tower.getCost() * 0.5;
-      while (!tower.possibleEvolutions.isEmpty()){
+      double costs= tower.getCost();
+      while (!tower.appliedEvolutions.isEmpty()){
         Evolution evo = tower.appliedEvolutions.pop();
-        costs += tower.possibleEvolutions.getOrDefault(evo, 0) * 0.5;
+        costs += tower.possibleEvolutions.getOrDefault(evo, 0);
         tower.removeEvolutionEffect(evo);
       }
+      //give back to the player his tower cost
+       Board.PLAYER.addCredit((int)costs);
     }
 }

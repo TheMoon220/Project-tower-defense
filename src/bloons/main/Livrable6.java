@@ -88,7 +88,7 @@ public class Livrable6 extends Livrable {
     private void upgradeTower(Board board) {
         List<Tower> evolvable = new ArrayList<>();
         for (Tower t : board.getAllTowers()) {
-            if (!t.getPossibleEvolutions().isEmpty()) {
+            if (t.hasAnEvolution()) {
                 evolvable.add(t);
             }
         }
@@ -116,15 +116,16 @@ public class Livrable6 extends Livrable {
     private void chooseActions(Board board, int round) {
         boolean runRound = false;
 
+        System.out.println("\n==================================");
+        System.out.println("      STARTING ROUND " + round + "  ");
+        System.out.println("==================================");
         while (!runRound && Board.PLAYER.getHealth() > 0) {
-            System.out.println("\n==================================");
-            System.out.println("      STARTING ROUND " + round + "  ");
-            System.out.println("==================================");
+            
             System.out.println(Board.PLAYER.toString());
             System.out.println("1. Buy a tower");
             System.out.println("2. Upgrade a tower");
             System.out.println("3. START ROUND !");
-            System.out.print("Choice : ");
+            System.out.print("\nChoice : ");
 
             try {
                 int choix = Input.readInt();
@@ -172,20 +173,15 @@ public class Livrable6 extends Livrable {
             // Boucle tant que le joueur est en vie
             while (Board.PLAYER.getHealth() > 0) {
                 chooseActions(board, round);
-
                 board.generateAllballoons(nbBalloons); 
                 List<Balloon> balloons = board.getAllballoons();
                 for (Tower t : board.getAllTowers()) t.addBalloons(balloons);
-
                 long deltaTime = 100;
                 long start = System.nanoTime();
-                while (!balloons.isEmpty() && Board.PLAYER.getHealth() > 0) {
+                while (!balloons.isEmpty()) {
                     long currentTime = (System.nanoTime() - start) / 1000000;
-                    
-                    displayDuringRound(board, currentTime, balloons);
-
+                    System.out.println("\ntime: " + currentTime + " ms\n");
                     board.processTowers(board.getAllTowers(), currentTime);
-
                     List<Balloon> toRemove = new ArrayList<>();
                     for (int i = 0; i < balloons.size(); i++) {
                         Balloon balloon = balloons.get(i);

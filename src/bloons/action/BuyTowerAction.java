@@ -2,6 +2,7 @@ package bloons.action;
 
 import bloons.Position;
 import bloons.board.Board;
+import bloons.board.ClassicalBoard;
 import bloons.tower.Tower;
 
 /** Action of purchasing and placing a tower */
@@ -37,8 +38,16 @@ public class BuyTowerAction implements Action{
         
         // check that if the position is not occupied
         if (board.isPositionOccupiedByTower(position)) {
-            System.out.println("Position " + position + " is already occupied by a tower!");
+            System.out.println("Position " + position + " is already occupied by a tower!\n");
             return false;
+        }
+
+        // check if the position is in the path (for ClassicalBoard)
+        if(board instanceof ClassicalBoard){
+            if(((ClassicalBoard) board).InPath(position)){
+                System.out.println("Position " + position + " in path. Choose another position\n");
+                return false;
+            }
         }
         
         // check if the player has enough credit
