@@ -111,4 +111,25 @@ public class BuyTowerActionTest {
         assertTrue(description.contains("cost: 200"));
         assertTrue(description.contains(validPosition.toString()));
     }
+
+    @Test 
+    public void testExecuteMultipleTowers(){
+        Position pos1 = ((ClassicalBoard) board).getValidTowerPosition();
+        Position pos2 = ((ClassicalBoard) board).getValidTowerPosition();
+        Position pos3 = ((ClassicalBoard) board).getValidTowerPosition();
+
+        Tower tower1 = new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos1, Projectile.DART);
+        Tower tower2 = new IceTower(400, 100, Effect.IMMEDIAT, 1500, pos2);
+        Tower tower3 = new BombTower(600, 150, Effect.DISTANCE, 1800, pos3, Projectile.BOMB);
+
+        BuyTowerAction action1 = new BuyTowerAction(tower1, pos1);
+        BuyTowerAction action2 = new BuyTowerAction(tower2, pos2);
+        BuyTowerAction action3 = new BuyTowerAction(tower3, pos3);
+
+        assertTrue(action1.execute(board));
+        assertTrue(action2.execute(board));
+        assertTrue(action3.execute(board));
+        assertEquals(3, board.getAllTowers().size());
+        assertEquals(initialCredits - 200 - 400 - 600, Board.PLAYER.getCredit());
+    }
 }
