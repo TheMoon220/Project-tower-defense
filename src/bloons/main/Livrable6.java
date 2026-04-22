@@ -1,25 +1,15 @@
 package bloons.main;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-import bloons.action.BuyTowerAction;
-import bloons.action.UpgradeTowerAction;
-import bloons.board.Board;
-import bloons.board.ClassicalBoard;
-import bloons.tower.IceTower;
-import bloons.tower.SlowDownTower;
-import bloons.tower.Tower;
-import bloons.tower.projectileTower.BombTower;
-import bloons.tower.projectileTower.DartMonkeyTower;
-import bloons.tower.projectileTower.SniperMonkeyTower;
-import bloons.tower.projectileTower.SuperMonkeyTower;
-import bloons.tower.projectileTower.TackShooterTower;
-import bloons.utils.Effect;
-import bloons.utils.Input;
-import bloons.utils.Projectile;
-
+import bloons.action.*;
+import bloons.*;
+import bloons.balloon.Balloon;
+import bloons.board.*;
+import bloons.tower.*;
+import bloons.tower.projectileTower.*;
+import bloons.utils.*;
 public class Livrable6 extends Livrable {
     
     @Override
@@ -156,4 +146,83 @@ public class Livrable6 extends Livrable {
             }
         }
     }
+
+    @Override
+    public void run(String[] args) throws InterruptedException {
+        if(args.length != 3){
+            System.out.println("Usage: java -classpath classes bloons.main.Livrable5 width height nbBalloons");
+            return;
+        }
+        try{
+            int width = Integer.parseInt(args[0]);
+            int height = Integer.parseInt(args[1]);
+            int nbBalloons = Integer.parseInt(args[2]);
+
+            if(height < 5 && width < 5){
+                throw new IllegalArgumentException("Size must be at least 5x5!");
+            }
+
+            System.out.println("Board size: " + width + "x" + height);
+            System.out.println();
+
+            Board board = createBoard(width, height, nbBalloons);
+            initBoard(board, nbBalloons);
+
+            int round = 1;
+            // Boucle tant que le joueur est en vie
+            while (Board.PLAYER.getHealth() > 0) {
+                chooseActions(board, round);
+
+                board.generateAllballoons(nbBalloons); 
+                List<Balloon> balloons = board.getAllballoons();
+                for (Tower t : board.getAllTowers()) t.addBalloons(balloons);
+
+                long deltaTime = 100;
+                long start = System.nanoTime();
+                while (!balloons.isEmpty() && Board.PLAYER.getHealth() > 0) {
+                    long currentTime = (System.nanoTime() - start) / 1000000;
+                    
+                    displayDuringRound(board, currentTime, balloons);
+
+                    board.processTowers(board.getAllTowers(), currentTime);
+
+                    List<Balloon> toRemove = new ArrayList<>();
+                    for (int i = 0; i < balloons.size(); i++) {
+                        Balloon balloon = balloons.get(i);
+                        if(balloon.isDestroyed()){
+                            Board.PLAYER.addCredit();
+                            toRemove.add(balloon);
+                            continue;
+                        }
+                        balloon.moveBallon();
+                        if(balloon.checkEndOfPath()){
+                            Board.PLAYER.loseLife();
+                            long exit = (System.nanoTime() - start) / 1000000;
+                            System.out.println("Balloon " + i + " exited at time: " + exit + " ms");
+                            toRemove.add(balloon);
+                        }
+                    }
+                    balloons.removeAll(toRemove);
+                    Thread.sleep(deltaTime);
+                }
+                System.out.println("\nRound " + round + " finiched !");
+                round++;
+            }
+            
+            System.out.println("\n === GAME OVER ===");
+            System.out.println(Board.PLAYER.toString());
+
+        }catch(NumberFormatException e){
+            System.out.println("Arguments must be integers");
+        }
+        
+            
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("=== Livrable final: Classical Board ===");
+        new Livrable6().run(args);
+    }
+
+
 }
