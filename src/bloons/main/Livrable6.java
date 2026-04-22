@@ -88,7 +88,7 @@ public class Livrable6 extends Livrable {
     private void upgradeTower(Board board) {
         List<Tower> evolvable = new ArrayList<>();
         for (Tower t : board.getAllTowers()) {
-            if (!t.getPossibleEvolutions().isEmpty()) {
+            if (t.hasAnEvolution()) {
                 evolvable.add(t);
             }
         }
