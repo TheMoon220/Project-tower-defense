@@ -2,6 +2,7 @@ package bloons.tower.projectileTower;
 
 import bloons.Position;
 import bloons.balloon.*;
+import bloons.tower.Tower;
 import bloons.utils.Effect;
 import bloons.utils.Evolution;
 import bloons.utils.Projectile;
@@ -82,6 +83,21 @@ public class DartMonkeyTower extends ProjectileTower {
             default:
                 return;
         }
+    }
+
+    /**
+     * resell  the tower
+     * @param tower
+     */
+    @Override
+    public void resellTower(Tower tower){
+
+    }
+    /**
+     * check if the tower has an evolution
+     */
+     public boolean  hasAnEvolution(Tower tower){
+        return true;
     }
 
 }

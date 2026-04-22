@@ -267,4 +267,13 @@ public abstract class Tower {
       Evolution last = this.appliedEvolutions.pop();
       this.removeEvolutionEffect(last);
     }
+    /**
+     * check if the tower has an evolution
+     */
+    public abstract boolean hasAnEvolution(Tower tower);
+    /**
+     * resell  the tower
+     * @param tower
+     */
+    public abstract void resellTower(Tower tower);
 }
