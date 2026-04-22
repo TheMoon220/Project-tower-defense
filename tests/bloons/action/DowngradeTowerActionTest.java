@@ -31,4 +31,17 @@ public class DowngradeTowerActionTest {
         Board.PLAYER.removeCredit(Board.PLAYER.getCredit());
         Board.PLAYER.addCredit(2500);
     }
+
+    @Test
+    public void testExecuteSuccess(){
+        UpgradeTowerAction upgrade = new UpgradeTowerAction(testTower);
+        upgrade.execute(board);
+
+        int creditsAfterUpgrade = Board.PLAYER.getCredit();
+        assertEquals(1, testTower.getAppliedEvolutions().size());
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
+        assertTrue(downgrade.execute(board));
+        assertEquals(0, testTower.getAppliedEvolutions().size());
+        assertTrue(Board.PLAYER.getCredit() > creditsAfterUpgrade);
+    }
 }
