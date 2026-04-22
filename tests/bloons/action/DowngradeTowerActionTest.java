@@ -25,4 +25,10 @@ public class DowngradeTowerActionTest {
         initialCredits = Board.PLAYER.getCredit();
         board.addTower(testTower);
     }
+
+    @AfterEach
+    public void tearDown(){
+        Board.PLAYER.removeCredit(Board.PLAYER.getCredit());
+        Board.PLAYER.addCredit(2500);
+    }
 }
