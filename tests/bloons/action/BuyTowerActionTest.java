@@ -91,4 +91,14 @@ public class BuyTowerActionTest {
         int expectedCredits = initialCredits - 400 - 600;
         assertEquals(expectedCredits, Board.PLAYER.getCredit());
     }
+
+    @Test 
+    public void testGetCost(){
+        BuyTowerAction action = new BuyTowerAction(testTower, validPosition);
+        assertEquals(200, action.getCost());
+
+        Tower expensiveTower = new BombTower(600, 150, Effect.DISTANCE, 1800, validPosition, Projectile.BOMB);
+        BuyTowerAction expensiveAction = new BuyTowerAction(expensiveTower, validPosition);
+        assertEquals(600, expensiveAction.getCost());
+    }
 }
