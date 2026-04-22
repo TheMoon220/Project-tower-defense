@@ -270,7 +270,9 @@ public abstract class Tower {
     /**
      * check if the tower has an evolution
      */
-    public abstract boolean hasAnEvolution();
+    public  boolean hasAnEvolution(){
+       return this.possibleEvolutions.isEmpty();
+    }
     /**
      * resell  the tower
      * @param tower

@@ -72,11 +72,5 @@ public class TackShooterTower extends ProjectileTower{
     public void resellTower(Tower tower){
 
     }
-    /**
-     * check if the tower has an evolution
-     */
-     public boolean  hasAnEvolution(){
-        return !this.possibleEvolutions.isEmpty();
-    }
     
 }

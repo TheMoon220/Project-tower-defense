@@ -79,10 +79,5 @@ public class ProjectileTower extends Tower{
     public void resellTower(Tower tower){
 
     }
-    /**
-     * check if the tower has an evolution
-     */
-     public boolean  hasAnEvolution(){
-        return this.possibleEvolutions.isEmpty();
-    }
+    
 }
