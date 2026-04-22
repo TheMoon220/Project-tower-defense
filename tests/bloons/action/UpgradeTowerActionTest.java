@@ -13,6 +13,7 @@ import bloons.tower.projectileTower.SniperMonkeyTower;
 import bloons.utils.Effect;
 import bloons.utils.Projectile;
 import bloons.utils.Evolution;
+import java.util.ArrayList;
 
 public class UpgradeTowerActionTest {
     private ClassicalBoard board;
@@ -101,5 +102,55 @@ public class UpgradeTowerActionTest {
         UpgradeTowerAction sniperAction = new UpgradeTowerAction(sniperTower);
         assertTrue(sniperAction.execute(board));
         assertEquals(1, sniperTower.getAppliedEvolutions().size());
+    }
+
+    @Test
+    public void testGetCost(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        int firstCost = action.getCost();
+        assertTrue(firstCost > 0);
+        action.execute(board);
+        int secondCost = action.getCost();
+        assertTrue(secondCost > 0);
+        assertNotEquals(firstCost, secondCost);
+    }
+
+    @Test 
+    public void testGetCostWhenNoMoreEvolutions(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        while(testTower.getAppliedEvolutions().size() < testTower.getPossibleEvolutions().size()){
+            action.execute(board);
+        }
+        assertEquals(0, action.getCost());
+    }
+
+    @Test
+    public void testGetDescription(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        String description = action.getDescription();
+        assertTrue(description.contains("Upgrade"));
+        assertTrue(description.contains("DartMonkeyTower"));
+        assertTrue(description.contains(position.toString()));
+    }
+
+    @Test 
+    public void testEvolutionOrder(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+        var evolutions = new ArrayList<>(testTower.getPossibleEvolutions().keySet());
+        action.execute(board);
+        assertEquals(evolutions.get(0), testTower.getAppliedEvolutions().peek());
+        action.execute(board);
+        assertEquals(evolutions.get(1), testTower.getAppliedEvolutions().peek());
+    }
+
+    @Test 
+    public void testApplyEvolutionChangesTowerProperties(){
+        UpgradeTowerAction action = new UpgradeTowerAction(testTower);
+
+        double oldRange = testTower.getRange();
+        double oldCadence = testTower.getCadence();
+        action.execute(board);
+        boolean s = (testTower.getRange() != oldRange) || (testTower.getCadence() != oldCadence);
+        assertFalse(testTower.getAppliedEvolutions().isEmpty());
     }
 }
