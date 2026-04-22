@@ -54,4 +54,11 @@ public class UpgradeTowerActionTest {
         assertEquals(2, testTower.getAppliedEvolutions().size());
         assertTrue(Board.PLAYER.getCredit() < creditsAfterFirst);
     }
+
+    @Test
+    public void testExecuteTowerNotOnBoard(){
+        Position otherPos = new Position(5,5);
+        DartMonkeyTower offlineTower = new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, otherPos, Projectile.DART);
+        Upgraaaaaaaaaaaaaaaaaaaaaaaaaaaade
+    }
 }
