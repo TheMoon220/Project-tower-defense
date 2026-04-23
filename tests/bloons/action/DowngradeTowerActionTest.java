@@ -10,7 +10,7 @@ import bloons.board.ClassicalBoard;
 import bloons.utils.*;
 import bloons.tower.*;
 import bloons.tower.projectileTower.*;
-import javax.swing.text.Position;
+import bloons.Position;
 
 public class DowngradeTowerActionTest {
     private ClassicalBoard board;
