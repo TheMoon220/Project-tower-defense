@@ -57,7 +57,16 @@ public class DowngradeTowerActionTest {
         assertTrue(downgrade.execute(board));
         assertEquals(1, testTower.getAppliedEvolutions().size());
         assertTrue(downgrade.execute(board));
-        assertEquals(0, testTower.getAppliedEvolution().size());
+        assertEquals(0, testTower.getAppliedEvolutions().size());
         assertTrue(Board.PLAYER.getCredit() > creditsAfterTwoUpgrades);
+    }
+
+    @Test 
+    public void testExecuteTowerNotOnBoard(){
+        Position otherPos = new Position(5,5);
+        DartMonkeyTower offlineTower = new DartMonkeyTower(200,100,Effect.IMMEDIAT,1000,otherPos,Projectile.DART);
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(offlineTower);
+        assertFalse(downgrade.execute(board));
+        assertEquals(initialCredits, Board.PLAYER.getCredit());
     }
 }
