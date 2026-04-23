@@ -25,19 +25,20 @@ public  class  ResellTowerAction implements Action {
             return false ;
         }
     
-      double costs= this.getCost();
+      double totalcost= this.getCost();
       while (! this.tower.getAppliedEvolutions().isEmpty()){
         Evolution evo = this.tower.getAppliedEvolutions().pop();
-        int evoCost=  this.tower.getPossibleEvolutions().get(evo);
-        if (evoCost != 0){
-            costs+= evoCost;
+        Integer  evoCost=  this.tower.getPossibleEvolutions().get(evo);
+        if (evoCost != null){
+            totalcost+= evoCost;
         }
         this.tower.removeEvolutionEffect(evo);
       }
+      //give back to the player his tower cost
+       Board.PLAYER.addCredit((int)Math.round(totalcost));
       //supprime la tour s=dans le plateau
       board.removeTower(this.tower);
-      //give back to the player his tower cost
-       Board.PLAYER.addCredit((int)Math.round(costs));
+    
       return true ;
     }
 
