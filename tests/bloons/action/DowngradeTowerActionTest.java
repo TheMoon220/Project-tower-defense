@@ -158,4 +158,19 @@ public class DowngradeTowerActionTest {
         assertTrue(Board.PLAYER.getCredit() > creditsAfterAllUpgrades);
         assertFalse(downgrade.execute(board));
     }
+
+    @Test 
+    public void testDowngradeRestoresTowerProperties(){
+        double initialRange = testTower.getRange();
+        double initialCadence = testTower.getCadence();
+
+        UpgradeTowerAction upgrade = new UpgradeTowerAction(testTower);
+        upgrade.execute(board);
+        boolean propertiesChanged = (testTower.getRange() != initialRange) || 
+                                    (testTower.getCadence() != initialCadence);
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
+        downgrade.execute(board);
+        assertEquals(initialRange, testTower.getRange(), 0.001);
+        assertEquals(initialCadence, testTower.getCadence(), 0.001);
+    }
 }
