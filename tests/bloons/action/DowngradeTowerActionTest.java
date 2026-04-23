@@ -109,4 +109,13 @@ public class DowngradeTowerActionTest {
         DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
         assertEquals(0, downgrade.getCost());
     }
+
+    @Test 
+    public void testGetDescription(){
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
+        String description = downgrade.getDescription();
+        assertTrue(description.contains("Downgrade"));
+        assertTrue(description.contains("DartMonkeyTower"));
+        assertTrue(description.contains(position.toString()));
+    }
 }
