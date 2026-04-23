@@ -10,6 +10,7 @@ import bloons.board.ClassicalBoard;
 import bloons.utils.*;
 import bloons.tower.*;
 import bloons.tower.projectileTower.*;
+import javax.swing.text.Position;
 
 public class DowngradeTowerActionTest {
     private ClassicalBoard board;
@@ -88,5 +89,18 @@ public class DowngradeTowerActionTest {
         downgrade.execute(board);
         int expectedCredits = creditsAfterUpgrade + expectedRefund;
         assertEquals(expectedCredits, Board.PLAYER.getCredit());
+    }
+
+    @Test 
+    public void testExecuteWithDifferentTowers(){
+        Position bombPos = board.getValidTowerPosition();
+        BombTower bombTower = new BombTower(600,150,Effect.DISTANCE,1800,bombPos,Projectile.BOMB);
+        board.addTower(bombTower);
+        UpgradeTowerAction bombUpgrade = new UpgradeTowerAction(bombTower);
+        bombUpgrade.execute(board);
+        assertEquals(1, bombTower.getAppliedEvolutions().size());
+        DowngradeTowerAction bombDowngrade = new DowngradeTowerAction(bombTower);
+        assertTrue(bombDowngrade.execute(board));
+        assertEquals(0, bombTower.getAppliedEvolutions().size());
     }
 }
