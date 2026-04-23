@@ -137,4 +137,25 @@ public class DowngradeTowerActionTest {
         assertEquals(1, testTower.getAppliedEvolutions().size());
         assertEquals(firstEvolution, testTower.getAppliedEvolutions().peek());
     }
+
+    @Test 
+    public void testDowngradeAfterMultipleUpgrades(){
+        UpgradeTowerAction upgrade = new UpgradeTowerAction(testTower);
+        int totalEvolutions = testTower.getPossibleEvolutions().size();
+
+        for(int i = 0; i < totalEvolutions; i++){
+            upgrade.execute(board);
+        }
+
+        assertEquals(totalEvolutions, testTower.getAppliedEvolutions().size());
+        int creditsAfterAllUpgrades = Board.PLAYER.getCredit();
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
+        for(int i = 0; i < totalEvolutions; i++){
+            assertTrue(downgrade.execute(board));
+        }
+
+        assertEquals(0, testTower.getAppliedEvolutions().size());
+        assertTrue(Board.PLAYER.getCredit() > creditsAfterAllUpgrades);
+        assertFalse(downgrade.execute(board));
+    }
 }
