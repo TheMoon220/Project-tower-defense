@@ -3,6 +3,8 @@ package bloons.action;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import bloons.*;
 import bloons.action.*;
 import bloons.board.Board;
@@ -117,5 +119,22 @@ public class DowngradeTowerActionTest {
         assertTrue(description.contains("Downgrade"));
         assertTrue(description.contains("DartMonkeyTower"));
         assertTrue(description.contains(position.toString()));
+    }
+
+    @Test 
+    public void testRemoveEvolutionInCorrectOrder(){
+        UpgradeTowerAction upgrade = new UpgradeTowerAction(testTower);
+        upgrade.execute(board);
+        upgrade.execute(board);
+
+        assertEquals(2, testTower.getAppliedEvolutions().size());
+        var evolutions = new ArrayList<>(testTower.getPossibleEvolutions().keySet());
+        Evolution firstEvolution = evolutions.get(0);
+        Evolution secondEvolution = evolutions.get(1);
+        assertEquals(secondEvolution, testTower.getAppliedEvolutions().peek());
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
+        downgrade.execute(board);
+        assertEquals(1, testTower.getAppliedEvolutions().size());
+        assertEquals(firstEvolution, testTower.getAppliedEvolutions().peek());
     }
 }
