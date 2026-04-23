@@ -2,7 +2,7 @@ package bloons.action;
 
 import bloons.board.Board;
 import bloons.tower.Tower;
-
+import bloons.utils.*;;
 public  class  ResellTowerAction implements Action {
 
       private final Tower tower;
@@ -24,10 +24,24 @@ public  class  ResellTowerAction implements Action {
         if (this.tower== null){
             return false ;
         }
-        tower.resellTower(board);
-        return true;
-
+    
+      double costs= this.getCost();
+      while (! this.tower.getAppliedEvolutions().isEmpty()){
+        Evolution evo = this.tower.getAppliedEvolutions().pop();
+        int evoCost=  this.tower.getPossibleEvolutions().get(evo);
+        if (evoCost != 0){
+            costs+= evoCost;
+        }
+        this.tower.removeEvolutionEffect(evo);
+      }
+      //supprime la tour s=dans le plateau
+      board.removeTower(this.tower);
+      //give back to the player his tower cost
+       Board.PLAYER.addCredit((int)Math.round(costs));
+      return true ;
     }
+
+    
     
     /**
      * Returns a textual description of the action
