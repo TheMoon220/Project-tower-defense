@@ -69,4 +69,12 @@ public class DowngradeTowerActionTest {
         assertFalse(downgrade.execute(board));
         assertEquals(initialCredits, Board.PLAYER.getCredit());
     }
+
+    @Test
+    public void testExecuteNoEvolutionsToRemove(){
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
+        assertFalse(downgrade.execute(board));
+        assertEquals(initialCredits, Board.PLAYER.getCredit());
+        assertEquals(0, testTower.getAppliedEvolutions().size());
+    }
 }
