@@ -103,4 +103,10 @@ public class DowngradeTowerActionTest {
         assertTrue(bombDowngrade.execute(board));
         assertEquals(0, bombTower.getAppliedEvolutions().size());
     }
+
+    @Test 
+    public void testGetCost(){
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
+        assertEquals(0, downgrade.getCost());
+    }
 }
