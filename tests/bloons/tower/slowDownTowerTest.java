@@ -8,9 +8,13 @@ public class slowDownTowerTest extends TowerTest{
       public void aTTackBalloonslowDown() throws InterruptedException{
         long time = 1000;
         double before = bal2.getSpeed();
+        System.out.println("Before speed: " + before);
         t7.attackBallon(bal2, time);
-        assertEquals(before * 0.5, bal2.getSpeed(), 0.0001);
-}
+        double after = bal2.getSpeed();
+        System.out.println("After speed: " + after);
+        assertEquals(before * 0.5, after, 0.0001);
+      }
+
     @Test
       public void CanNotaTTackBalloon() throws InterruptedException{
          t7.attackBallon(bal2,System.currentTimeMillis());
