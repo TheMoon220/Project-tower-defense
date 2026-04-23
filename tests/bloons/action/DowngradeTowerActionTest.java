@@ -77,4 +77,16 @@ public class DowngradeTowerActionTest {
         assertEquals(initialCredits, Board.PLAYER.getCredit());
         assertEquals(0, testTower.getAppliedEvolutions().size());
     }
+
+    @Test 
+    public void testExecuteRefundAmount(){
+        UpgradeTowerAction upgrade = new UpgradeTowerAction(testTower);
+        upgrade.execute(board);
+        int creditsAfterUpgrade = Board.PLAYER.getCredit();
+        int expectedRefund = (int) (testTower.getPossibleEvolutions().values().iterator().next() * 0.5);
+        DowngradeTowerAction downgrade = new DowngradeTowerAction(testTower);
+        downgrade.execute(board);
+        int expectedCredits = creditsAfterUpgrade + expectedRefund;
+        assertEquals(expectedCredits, Board.PLAYER.getCredit());
+    }
 }
