@@ -10,7 +10,7 @@ import bloons.board.*;
 import bloons.tower.*;
 import bloons.tower.projectileTower.*;
 import bloons.utils.*;
-public class Livrable6 extends Livrable {
+public class LivrableInteractive extends Livrable {
     
     @Override
     protected Board createBoard(int width, int height, int param) {
