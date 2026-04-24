@@ -113,7 +113,7 @@ public class Livrable6 extends Livrable {
     private void resellTower(Board board) {
         List<Tower> tours = board.getAllTowers();
         if (tours.isEmpty()){
-            System.out.println("Any towers to resell");
+            System.out.println("\nAny towers to resell\n");
             return;
         } 
 
@@ -131,7 +131,7 @@ public class Livrable6 extends Livrable {
             Tower t = tours.get(choix - 1);
             System.out.println("1. Downgrade evolution");
             System.out.println("2. Resell the entire tower");
-            System.out.print("\nChoose a action : ");
+            System.out.print("\nChoose an action : ");
             int mode = Input.readInt();
 
             if (mode == 1) new DowngradeTowerAction(t).execute(board);
@@ -174,6 +174,7 @@ public class Livrable6 extends Livrable {
                         break;
                     case 4:
                         runRound = true; 
+                        System.out.println("\n Balloons pass through....");
                         break;
                     default:
                         System.out.println("Wrong choice.");
@@ -237,7 +238,10 @@ public class Livrable6 extends Livrable {
                     balloons.removeAll(toRemove);
                     Thread.sleep(deltaTime);
                 }
-                System.out.println("\nRound " + round + " finiched !");
+                System.out.println("---------------------------------");
+                System.out.println("   \nRound " + round + " finiched !   ");
+                 System.out.println("---------------------------------");
+                board.displayBoard();
                 round++;
             }
             
