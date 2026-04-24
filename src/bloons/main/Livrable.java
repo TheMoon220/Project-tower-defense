@@ -64,7 +64,10 @@ public abstract class Livrable {
         if(board instanceof RandomBoard){
             RandomBoard rb = (RandomBoard) board;
             rb.displayBoard(balloons);
+        }else {
+            board.displayBoard();
         }
+
     }
 
     /**

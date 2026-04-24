@@ -48,6 +48,16 @@ public class LivrableInteractive extends Livrable {
         System.out.println("Player lives : " + Board.PLAYER.getHealth());
     }
 
+    @Override
+    protected void displayDuringRound(Board board, long currentTime, List<Balloon> balloons) {
+        System.out.println();
+        System.out.println("time: " + currentTime + " ms");
+        if(board instanceof RandomBoard){
+            RandomBoard rb = (RandomBoard) board;
+            rb.displayBoard(balloons);
+        }
+    }
+
     private void displayTowers(){
         System.out.println("\n--- ALL TOWERS ---");
         System.out.println("1. DartMonkey Tower (cost : 200)");
