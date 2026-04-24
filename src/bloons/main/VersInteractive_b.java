@@ -15,5 +15,6 @@ public class VersInteractive_b extends LivrableInteractive{
         RandomBoard rb = (RandomBoard) board;
         rb.generatePaths(numPaths);
         rb.displayBoard();
+        rb.PLAYER.toString();
     }
 }
