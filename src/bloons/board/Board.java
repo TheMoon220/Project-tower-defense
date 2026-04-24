@@ -135,10 +135,17 @@ public abstract class Board {
 
            for (int x = 0; x < this.width; x++) {
               Position currentPos = new Position(x,y);
+              char symbol = '.';
               if(this.getPath() != null && this.getPath().contains(currentPos))
-                System.out.print("X ");
-              else
-                System.out.print(". ");
+                symbol = 'X';
+              // affichge d'une tour
+              for (Tower t : this.allTowers) {
+                  if (t.getPosition().equals(currentPos)) {
+                      symbol = t.getClass().getSimpleName().charAt(0);
+                      break;
+                  }
+              }
+            System.out.print(symbol + " ");
            }
            System.out.println();
         }
