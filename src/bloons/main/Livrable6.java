@@ -110,6 +110,38 @@ public class Livrable6 extends Livrable {
         
     }
 
+    private void resellTower(Board board) {
+        List<Tower> tours = board.getAllTowers();
+        if (tours.isEmpty()){
+            System.out.println("Any towers to resell");
+            return;
+        } 
+
+        for (int i = 0; i < tours.size(); i++){ 
+            System.out.println((i + 1) + ". " + tours.get(i));
+        }
+        System.out.print("Choose a tower : ");
+        try {
+            int choix = Input.readInt();
+            if (choix <= 0 || choix > tours.size()){
+                System.out.println("Wrong choice");
+                return;
+            } 
+            
+            Tower t = tours.get(choix - 1);
+            System.out.println("1. Downgrade evolution");
+            System.out.println("2. Resell the entire tower");
+            System.out.print("\nChoose a action : ");
+            int mode = Input.readInt();
+
+            if (mode == 1) new DowngradeTowerAction(t).execute(board);
+            else{
+                if (mode == 2) new ResellTowerAction(t).execute(board);
+                else{System.out.println("Wrong choice");}
+            }
+        } catch (IOException e) { }
+    }
+
     /**
      * the main menu
      */
