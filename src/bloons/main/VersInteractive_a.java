@@ -11,7 +11,7 @@ public class VersInteractive_a extends LivrableInteractive{
     }
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("\n=== Tower Defense Classical Board (Versdion Interactive) ===");
+        System.out.println("\n=== Tower Defense Classical Board (Interactive Version) ===");
         new VersInteractive_a().run(args);
     }
     
