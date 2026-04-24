@@ -290,7 +290,7 @@ public class LivrableInteractive extends Livrable {
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println("\n=== Livrable final ===");
-        new Livrable6().run(args);
+        new LivrableInteractive().run(args);
     }
 
 
