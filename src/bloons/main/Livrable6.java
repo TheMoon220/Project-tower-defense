@@ -156,7 +156,8 @@ public class Livrable6 extends Livrable {
             System.out.println(Board.PLAYER.toString());
             System.out.println("1. Buy a tower");
             System.out.println("2. Upgrade a tower");
-            System.out.println("3. START ROUND !");
+            System.out.println("3. Resell a tower or its evolution");
+            System.out.println("4. START ROUND !");
             System.out.print("\nChoice : ");
 
             try {
@@ -169,6 +170,9 @@ public class Livrable6 extends Livrable {
                         upgradeTower(board); 
                         break;
                     case 3:
+                        resellTower(board);
+                        break;
+                    case 4:
                         runRound = true; 
                         break;
                     default:
