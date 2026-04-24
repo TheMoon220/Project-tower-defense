@@ -215,7 +215,7 @@ public class Livrable6 extends Livrable {
                 for (Tower t : board.getAllTowers()) t.addBalloons(balloons);
                 long deltaTime = 100;
                 long start = System.nanoTime();
-                while (!balloons.isEmpty()) {
+                while (!balloons.isEmpty() && Board.PLAYER.getHealth() > 0) {
                     long currentTime = (System.nanoTime() - start) / 1000000;
                     System.out.println("\ntime: " + currentTime + " ms\n");
                     board.processTowers(board.getAllTowers(), currentTime);
