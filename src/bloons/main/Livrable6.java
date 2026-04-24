@@ -238,9 +238,9 @@ public class Livrable6 extends Livrable {
                     balloons.removeAll(toRemove);
                     Thread.sleep(deltaTime);
                 }
-                System.out.println("---------------------------------");
-                System.out.println("   \nRound " + round + " finiched !   ");
-                 System.out.println("---------------------------------");
+                System.out.println("\n------------------------------");
+                System.out.println("   Round " + round + " finiched !   ");
+                 System.out.println("------------------------------\n");
                 board.displayBoard();
                 round++;
             }
