@@ -14,7 +14,30 @@ public class Livrable6 extends Livrable {
     
     @Override
     protected Board createBoard(int width, int height, int param) {
-        return new ClassicalBoard(width, height);
+       System.out.println("\n==================================");
+        System.out.println("         CHOOSE GAME MODE         ");
+        System.out.println("==================================");
+        System.out.println("1. Mode 1: Classical Board (Single Path)");
+        System.out.println("2. Mode 2: Random Board (Multiple free paths)");
+        System.out.print("Your choice (1 or 2): ");
+
+        int choice = 1;
+        try {
+            choice = Input.readInt();
+        } catch (IOException e) {
+            System.out.println("Wrong input. Defaulting to Mode 1.");
+        }
+
+        if (choice == 2) {
+            RandomBoard board = new RandomBoard(width, height);
+            // param est le nombre de chemin
+            board.generatePaths(param); 
+            System.out.println("\nRandom Board selected!\n");
+            return board;
+        } else {
+            System.out.println("\nClassical Board selected!\n");
+            return new ClassicalBoard(width, height);
+        }
     }
 
     @Override
@@ -217,7 +240,7 @@ public class Livrable6 extends Livrable {
                 long start = System.nanoTime();
                 while (!balloons.isEmpty() && Board.PLAYER.getHealth() > 0) {
                     long currentTime = (System.nanoTime() - start) / 1000000;
-                    System.out.println("\ntime: " + currentTime + " ms\n");
+                    displayDuringRound(board, currentTime, balloons);
                     board.processTowers(board.getAllTowers(), currentTime);
                     List<Balloon> toRemove = new ArrayList<>();
                     for (int i = 0; i < balloons.size(); i++) {
@@ -256,7 +279,7 @@ public class Livrable6 extends Livrable {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("=== Livrable final: Classical Board ===");
+        System.out.println("\n=== Livrable final ===");
         new Livrable6().run(args);
     }
 
