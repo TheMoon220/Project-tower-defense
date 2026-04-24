@@ -1,5 +1,5 @@
 package bloons.main;
 
-public class VersInteractive_b {
+public class VersInteractive_b extends LivrableInteractive{
     
 }
