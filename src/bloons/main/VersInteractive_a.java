@@ -10,5 +10,9 @@ public class VersInteractive_a extends LivrableInteractive{
         return new ClassicalBoard(width, height);
     }
 
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("\n=== Tower Defense Classical Board (Versdion Interactive) ===");
+        new VersInteractive_a().run(args);
+    }
     
 }
