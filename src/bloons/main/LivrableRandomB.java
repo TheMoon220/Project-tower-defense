@@ -24,11 +24,11 @@ public class LivrableRandomB extends Livrable {
      * @param numPaths number of paths to generate
      */
     @Override
-    protected void initBoard(Board board, int numPaths){
-        RandomBoard rb = (RandomBoard) board;
-        rb.generatePaths(numPaths);
-        rb.displayBoard();
-        //rb.generateAllballoons(numPaths);
+    protected void initBoard(Board board, int param) {
+         RandomBoard randomBoard = (RandomBoard) board;
+        // Génère les chemins aléatoires (param = nombre de chemins)
+        int numPaths = Math.max(1, param);
+        randomBoard.generatePaths(numPaths);
     }
      /**
      * Main method of Livrable4b.
