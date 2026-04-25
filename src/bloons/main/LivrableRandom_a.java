@@ -12,7 +12,7 @@ import java.util.*;
 /**
  * Livrable 5: Classical Board with Actions for tower placement and evolutions
  */
-public class Livrable5 extends Livrable {
+public class LivrableRandom_a extends Livrable {
 
     /** the default constructor */
     public Livrable5() { }
@@ -145,6 +145,6 @@ public class Livrable5 extends Livrable {
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println("=== Livrable 5: Classical Board with Actions ===");
-        new Livrable5().run(args);
+        new LivrableRandom_a().run(args);
     }
 }
