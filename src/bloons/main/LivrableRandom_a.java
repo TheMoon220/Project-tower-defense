@@ -14,9 +14,6 @@ import java.util.*;
  */
 public class LivrableRandom_a extends Livrable {
 
-    /** the default constructor */
-    public Livrable5() { }
-
     @Override
     protected Board createBoard(int width, int height, int param) {
         return new ClassicalBoard(width, height);
