@@ -58,6 +58,9 @@ public class LivrableInteractive extends Livrable {
         }
     }
 
+    /**
+     * display all towers
+     */
     private void displayTowers(){
         System.out.println("\n--- ALL TOWERS ---");
         System.out.println("1. DartMonkey Tower (cost : 200)");
@@ -70,6 +73,10 @@ public class LivrableInteractive extends Livrable {
         System.out.println("8. Cancel");
     }
 
+    /**
+     *  buy a tower
+     * @param board the board
+     */
     private void buyTower(Board board) {
         this.displayTowers();
         System.out.print("Choice : ");
@@ -117,6 +124,7 @@ public class LivrableInteractive extends Livrable {
 
     /**
      * Choose a tower that can still evolve
+     * @param board the board
      */
     private void upgradeTower(Board board) {
         List<Tower> evolvable = new ArrayList<>();
@@ -142,7 +150,10 @@ public class LivrableInteractive extends Livrable {
         } catch (IOException e) { }
         
     }
-
+    /**
+     * reseel a tower
+     * @param board the board
+     */
     private void resellTower(Board board) {
         List<Tower> tours = board.getAllTowers();
         if (tours.isEmpty()){
@@ -177,6 +188,8 @@ public class LivrableInteractive extends Livrable {
 
     /**
      * the main menu
+     * @param board the board
+     * @param round the round
      */
     private void chooseActions(Board board, int round) {
         boolean runRound = false;
