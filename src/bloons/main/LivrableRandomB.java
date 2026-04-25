@@ -53,9 +53,55 @@ public class LivrableRandomB extends Livrable {
         ((RandomBoard) board).displayBoard(balloons);
     }
 
+     /**
+     * Place 2 tours de chaque type via BuyTowerAction
+     */
+    private void setupTowersWithActions(RandomBoard board) {
+        List<BuyTowerAction> actions = new ArrayList<>();
+        Random rand = new Random();
+
+        for (int i = 0; i < 2; i++) {
+            Position pos1 = new Position(rand.nextInt(board.getWidth()), rand.nextInt(board.getHeight()));
+            actions.add(new BuyTowerAction(
+                new IceTower(400, 100, Effect.IMMEDIAT, 1500, pos1), pos1));
+
+            Position pos2 = new Position(rand.nextInt(board.getWidth()), rand.nextInt(board.getHeight()));
+            actions.add(new BuyTowerAction(
+                new SlowDownTower(500, 100, Effect.IMMEDIAT, 1500, pos2), pos2));
+
+            Position pos3 = new Position(rand.nextInt(board.getWidth()), rand.nextInt(board.getHeight()));
+            actions.add(new BuyTowerAction(
+                new BombTower(600, 150, Effect.DISTANCE, 1800, pos3, Projectile.BOMB), pos3));
+
+            Position pos4 = new Position(rand.nextInt(board.getWidth()), rand.nextInt(board.getHeight()));
+            actions.add(new BuyTowerAction(
+                new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos4, Projectile.DART), pos4));
+
+            Position pos5 = new Position(rand.nextInt(board.getWidth()), rand.nextInt(board.getHeight()));
+            actions.add(new BuyTowerAction(
+                new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, pos5, Projectile.POINTEDDART), pos5));
+
+            Position pos6 = new Position(rand.nextInt(board.getWidth()), rand.nextInt(board.getHeight()));
+            actions.add(new BuyTowerAction(
+                new SuperMonkeyTower(1200, 200, Effect.IMMEDIAT, 300, pos6, Projectile.VERYSHARPDART), pos6));
+
+            Position pos7 = new Position(rand.nextInt(board.getWidth()), rand.nextInt(board.getHeight()));
+            actions.add(new BuyTowerAction(
+                new TackShooterTower(350, 80, Effect.IMMEDIAT, 1200, pos7, Projectile.NEEDLE), pos7));
+        }
+
+        for (BuyTowerAction action : actions) {
+            action.execute(board);
+        }
+
+        System.out.println("Tours placées: " + board.getAllTowers().size() + " tours");
+    }
+
+
+
 
      /**
-     * Main method of Livrable4b.
+     * Main method of LivrableRandomB
      *
      * @param args program arguments
      * @throws InterruptedException if simulation sleep is interrupted
