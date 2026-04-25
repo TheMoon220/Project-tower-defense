@@ -112,6 +112,22 @@ public class LivrableRandomB extends Livrable {
         new UpgradeTowerAction(t).execute(board);
     }
 
+    private void downgradeRandomTower(Board board) {
+        List<Tower> downgradable = new ArrayList<>();
+        for (Tower t : board.getAllTowers()) {
+            if (!t.getAppliedEvolutions().isEmpty()) {
+                downgradable.add(t);
+            }
+        }
+        if (downgradable.isEmpty()) {
+            System.out.println("No tower has evolutions to remove!");
+            return;
+        }
+        Tower t = downgradable.get(new Random().nextInt(downgradable.size()));
+        new DowngradeTowerAction(t).execute(board);
+    }
+
+
 
      /**
      * Main method of LivrableRandomB
