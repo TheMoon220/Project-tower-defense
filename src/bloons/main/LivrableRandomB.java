@@ -47,7 +47,11 @@ public class LivrableRandomB extends Livrable {
         }
     }
 
-
+    @Override
+    protected void displayDuringRound(Board board, long currentTime, List<Balloon> balloons) {
+        System.out.println("\ntime: " + currentTime + " ms");
+        ((RandomBoard) board).displayBoard(balloons);
+    }
 
 
      /**
