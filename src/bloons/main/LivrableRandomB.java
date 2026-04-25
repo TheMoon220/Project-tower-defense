@@ -37,6 +37,19 @@ public class LivrableRandomB extends Livrable {
     protected List<Tower> getTowers(Board board, int param) {
          return board.getAllTowers();
     }
+
+    @Override
+    protected void applyEvolutionForRound(Board board, int round) {
+        if (round <= 5) {
+            upgradeRandomTower(board);
+        } else {
+            downgradeRandomTower(board);
+        }
+    }
+
+
+
+
      /**
      * Main method of Livrable4b.
      *
