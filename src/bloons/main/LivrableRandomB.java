@@ -29,6 +29,13 @@ public class LivrableRandomB extends Livrable {
         // Génère les chemins aléatoires (param = nombre de chemins)
         int numPaths = Math.max(1, param);
         randomBoard.generatePaths(numPaths);
+         randomBoard.displayBoard(null);
+        System.out.println("\n=== Placement des tours via actions ===");
+        setupTowersWithActions(randomBoard);
+    }
+    @Override
+    protected List<Tower> getTowers(Board board, int param) {
+         return board.getAllTowers();
     }
      /**
      * Main method of Livrable4b.
