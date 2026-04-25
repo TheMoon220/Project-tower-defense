@@ -56,7 +56,8 @@ docs:
 # Création des jars
 jar: classes
 	@echo "Création des jars..."
-	jar cvfm livrable5.jar manifest-5 -C $(OUT) .
+	jar cvfm towerdefense-a-interactive.jar manifest-interactive-a -C $(OUT) .
+	jar cvfm towerdefense-b-interactive.jar manifest-interactive-b -C $(OUT) .
 	@echo "Jars créés."
 
 # Compilation des tests
