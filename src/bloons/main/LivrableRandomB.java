@@ -8,12 +8,12 @@ import bloons.tower.projectileTower.*;
 import bloons.utils.*;
 import java.util.*;
 
-public class LivrableRandomB extends livrable {
+public class LivrableRandomB extends Livrable {
      /** the default constructor of the class livrableRandomB */
     public LivrableRandomB() { }
      @Override
     protected Board createBoard(int width, int height, int param) {
-        return new RandomBoardBoard(width, height);
+        return new RandomBoard(width, height);
     }
 
      /**
@@ -30,5 +30,14 @@ public class LivrableRandomB extends livrable {
         rb.displayBoard();
         //rb.generateAllballoons(numPaths);
     }
-
+     /**
+     * Main method of Livrable4b.
+     *
+     * @param args program arguments
+     * @throws InterruptedException if simulation sleep is interrupted
+     */
+    public static void main(String[] args) throws InterruptedException{
+        System.out.println("=== Livrable 4b: Random Board ===");
+        new LivrableRandomB().run(args);
+    }
 }
