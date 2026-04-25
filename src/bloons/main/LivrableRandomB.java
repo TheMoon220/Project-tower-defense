@@ -97,7 +97,20 @@ public class LivrableRandomB extends Livrable {
         System.out.println("Tours placées: " + board.getAllTowers().size() + " tours");
     }
 
-
+    private void upgradeRandomTower(Board board) {
+        List<Tower> evolvable = new ArrayList<>();
+        for (Tower t : board.getAllTowers()) {
+            if (t.getAppliedEvolutions().size() < t.getPossibleEvolutions().size()) {
+                evolvable.add(t);
+            }
+        }
+        if (evolvable.isEmpty()) {
+            System.out.println("Aucune tour ne peut évoluer !");
+            return;
+        }
+        Tower t = evolvable.get(new Random().nextInt(evolvable.size()));
+        new UpgradeTowerAction(t).execute(board);
+    }
 
 
      /**
