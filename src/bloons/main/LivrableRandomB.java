@@ -8,7 +8,9 @@ import bloons.tower.projectileTower.*;
 import bloons.utils.*;
 import java.util.*;
 
-public class LivrableRandom_b extends livrable {
+public class LivrableRandomB extends livrable {
+     /** the default constructor of the class livrableRandomB */
+    public LivrableRandomB() { }
      @Override
     protected Board createBoard(int width, int height, int param) {
         return new RandomBoardBoard(width, height);
