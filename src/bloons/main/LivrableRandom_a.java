@@ -141,7 +141,7 @@ public class LivrableRandom_a extends Livrable {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("=== Livrable 5: Classical Board with Actions ===");
+        System.out.println("\n=== Tower Defense Classical Board (Ramdom Version) ===");
         new LivrableRandom_a().run(args);
     }
 }
