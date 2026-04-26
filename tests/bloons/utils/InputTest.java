@@ -52,4 +52,12 @@ public class InputTest {
         int result = Input.readInt();
         assertEquals(expected, result);
     }
+
+    @Test 
+    public void testReadIntNegative() throws IOException{
+        int expected = -100;
+        provideInput(expected + "\n");
+        int result = Input.readInt();
+        assertEquals(expected, result);
+    }
 }
