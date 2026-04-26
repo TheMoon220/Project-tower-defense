@@ -104,4 +104,11 @@ public class InputTest {
         assertEquals(123, result);
     }
 
+    @Test
+    public void testReadStringWithWhitespace() {
+        provideInput("   Hello   \n");
+        
+        String result = Input.readString();
+        assertEquals("Hello", result);
+    }
 }
