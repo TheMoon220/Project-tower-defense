@@ -95,4 +95,17 @@ public class InputTest {
         int result = Input.readInt();
         assertEquals(123, result);
     }
+
+    @Test 
+    public void testMultipleReads() throws IOExeception{
+        provideInput("Hello\n42\nWorld\n99\n");
+        String str1 = Input.readString();
+        int int1 = Input.readInt();
+        String str2 = Input.readString();
+        int int2 = Input.readInt();
+        assertEquals("Hello",str1);
+        assertEquals(42, int1);
+        assertEquals("World", str2);
+        assertEquals(99, int2);
+    }
 }
