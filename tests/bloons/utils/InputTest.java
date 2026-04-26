@@ -88,4 +88,11 @@ public class InputTest {
         provideInput("3.14\n");
         assertThrows(IOException.class, () -> { Input.readInt();});
     }
+
+    @Test 
+    public void testReadIntWithMixedInput() throws IOException{
+        provideInput("123 abc 456\n");
+        int result = Input.readInt();
+        assertEquals(123, result);
+    }
 }
