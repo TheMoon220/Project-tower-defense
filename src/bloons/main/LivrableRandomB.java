@@ -136,7 +136,7 @@ public class LivrableRandomB extends Livrable {
      * @throws InterruptedException if simulation sleep is interrupted
      */
     public static void main(String[] args) throws InterruptedException{
-        System.out.println("=== Livrable 4b: Random Board ===");
+        System.out.println("=== LivrableRandomB: Random Board ===");
         new LivrableRandomB().run(args);
     }
 }
