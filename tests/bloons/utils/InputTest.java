@@ -44,4 +44,12 @@ public class InputTest {
         String result = Input.readString();
         assertEquals("123abc", result);
     }
+
+    @Test 
+    public void testReadInt() throws IOException{
+        int expected = 42;
+        provideInput(expected + "\n");
+        int result = Input.readInt();
+        assertEquals(expected, result);
+    }
 }
