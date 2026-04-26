@@ -60,4 +60,12 @@ public class InputTest {
         int result = Input.readInt();
         assertEquals(expected, result);
     }
+
+    @Test 
+    public void testReadIntZero() throws IOException {
+        int expected = 0;
+        provideInput(expected + "\n");
+        int result = Input.readInt();
+        assertEquals(expected, result);
+    }
 }
