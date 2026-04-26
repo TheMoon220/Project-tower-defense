@@ -14,4 +14,9 @@ public class InputTest {
     public void tearDown(){
         System.setIn(origianlSystemIn);
     }
+
+    private void provideInput(String data){
+        testInput = new ByteArrayInputStream(data.getBytes());
+        System.setIn(testInput);
+    }
 }
