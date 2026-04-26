@@ -108,4 +108,13 @@ public class InputTest {
         assertEquals("World", str2);
         assertEquals(99, int2);
     }
+
+    @Test 
+    public void testReadIntThenString() throws IOException{
+        provideInput("100\nTest\n");
+        int intValue = Input.readInt();
+        String strValue = Input.readString();
+        assertEquals(100, intValue);
+        assertEquals("Test", strValue);
+    }
 }
