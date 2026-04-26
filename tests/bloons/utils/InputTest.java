@@ -76,4 +76,10 @@ public class InputTest {
         int result = Input.readInt();
         assertEquals(expected, result);
     }
+
+    @Test 
+    public void testReadIntInvalidInput(){
+        provideInput("abc\n");
+        assertThrows(IOException.class, () -> { Input.readInt();});
+    }
 }
