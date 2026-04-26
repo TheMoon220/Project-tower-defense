@@ -27,4 +27,13 @@ public class InputTest {
         String result = Input.readString();
         assertEquals(expected, result);
     }
+
+    @Test 
+    public void testReadStringWithMultipleWoards(){
+        String input = "Hello World";
+        provideInput(input + "\n");
+
+        String result = Input.readString();
+        assertEquals("Hello", result);
+    }
 }
