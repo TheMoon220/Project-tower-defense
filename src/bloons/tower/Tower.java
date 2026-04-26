@@ -273,22 +273,6 @@ public abstract class Tower {
     public  boolean hasAnEvolution(){
       return !this.possibleEvolutions.isEmpty();
     }
-    /**
-     * resell  the tower
-     * @param board
-     */
-    public void resellTower( Board board){
-      double costs= this.getCost();
-      while (!this.appliedEvolutions.isEmpty()){
-        Evolution evo = this.appliedEvolutions.pop();
-        costs += this.possibleEvolutions.getOrDefault(evo, 0);
-        this.removeEvolutionEffect(evo);
-      }
-      //supprime la tour s=dans le plateau
-      board.removeTower(this);
-      //give back to the player his tower cost
-       Board.PLAYER.addCredit((int)Math.round(costs));
-      
-    }
+   
 
 }
