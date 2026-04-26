@@ -664,8 +664,24 @@ Finaliser le livrable en suivant les consignes données par la prof afin de rend
 
 ## Semaine 12
 
+Finalisation du projet, notamment avec la boucle finale du jeu. Plusieurs classes ont été créées pour le bon fonctionnement du livrable 6.
+
 ### Ce qui a été réalisé
+
+- création d'une classe action qui est une interface qui va résumé toutes les actions de notre jeu.
+
+- création de plusieurs actions: BuyTowerAction, UpgradeTowerAction... afin d'achéter, de vendre, d'appliquer une évolution à tour.
+
+- création de la classe input afin de permettre la saisie de chaine de caractères et d'entiers.
 
 ### Difficultés rencontrées
 
 ### Objectifs pour finaliser le projet et répartition du travail par membre
+
+- **Khadim Beye**: création des classes mains liés au plateau classical board. régler les bugs qu'il pourrait y avoir durant ce livrable.
+
+- **Mariam Séré Sylla** création des classes mains liés au plateau random board. faire l'uml et vérifié que tous les fichiers UML sont cohérents conformment aux règles listées dans l'email réçu.
+
+- **Farmata Sall SOW**: aide pour régler les bugs qu'il pourrait y avoir, vérifie la javadoc est bien mise en place, aide pour l'implémentation des classes mains.
+
+- **Mamadou Baïllo SOW**: fait les tests unitaires, vérifie que toutes les actions ont bien été bien mise en place, aide pour l'implémentation des classes mains si possibles.
