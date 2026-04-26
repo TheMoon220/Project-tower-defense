@@ -82,4 +82,10 @@ public class InputTest {
         provideInput("abc\n");
         assertThrows(IOException.class, () -> { Input.readInt();});
     }
+
+    @Test 
+    public void testReadIntWithDecimal(){
+        provideInput("3.14\n");
+        assertThrows(IOException.class, () -> { Input.readInt();});
+    }
 }
