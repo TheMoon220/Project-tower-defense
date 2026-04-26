@@ -68,4 +68,12 @@ public class InputTest {
         int result = Input.readInt();
         assertEquals(expected, result);
     }
+
+    @Test 
+    public void testReadIntLargeNumber() throws IOException {
+        int expected = 999999;
+        provideInput(expected + "\n");
+        int result = Input.readInt();
+        assertEquals(expected, result);
+    }
 }
