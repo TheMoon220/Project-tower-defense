@@ -36,4 +36,12 @@ public class InputTest {
         String result = Input.readString();
         assertEquals("Hello", result);
     }
+
+    @Test 
+    public void testReadStringWithNumber(){
+        String input = "123abc";
+        provideInput(input + "\n");
+        String result = Input.readString();
+        assertEquals("123abc", result);
+    }
 }
