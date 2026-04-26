@@ -19,4 +19,12 @@ public class InputTest {
         testInput = new ByteArrayInputStream(data.getBytes());
         System.setIn(testInput);
     }
+
+    @Test 
+    public void testReadString(){
+        String expected = "Hello";
+        provideInput(expected + "\n");
+        String result = Input.readString();
+        assertEquals(expected, result);
+    }
 }
