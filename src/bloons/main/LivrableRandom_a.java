@@ -35,10 +35,30 @@ public class LivrableRandom_a extends Livrable {
 
     @Override
     protected void applyEvolutionForRound(Board board, int round) {
-        if (round <= 5) {
-            upgradeRandomTower(board);
-        } else {
-            downgradeRandomTower(board);
+        System.out.println("\n--- Round " + round + " ---");
+        Board.PLAYER.toString();
+        
+        ListChooser<String> actionChooser = new RandomListChooser<>();
+        List<String> possibleActions = Arrays.asList("Buy", "Upgrade", "Downgrade", "Start");
+
+        boolean startRound = false;
+        int actionCount = 0;
+
+        // Le bot a le droit à un maximum de 5 actions par tour pour ne pas boucler à l'infini
+        while (!startRound && actionCount < 5 && Board.PLAYER.getHealth() > 0) {
+            String choice = actionChooser.choose("Action :", possibleActions);
+            
+            if (choice == null || choice.equals("Start")) {
+                startRound = true;
+                System.out.println("Balloon launch !");
+            } else if (choice.equals("Buy")) {
+                buyRandomTower(board);
+            } else if (choice.equals("Upgrade")) {
+                upgradeRandomTower(board);
+            } else if (choice.equals("Downgrade")) {
+                downgradeRandomTower(board);
+            }
+            actionCount++;
         }
     }
 
