@@ -134,10 +134,10 @@ public class LivrableRandom_a extends Livrable {
             System.out.println("No tower can evolve!");
             return;
         }
-        Random rand = new Random();
-        Tower t = evolvable.get(rand.nextInt(evolvable.size()));
-        UpgradeTowerAction upgrade = new UpgradeTowerAction(t);
-        upgrade.execute(board);
+        Tower t = new RandomListChooser<Tower>().choose("Upgrading tower :", evolvable);
+        if (t != null){
+            new UpgradeTowerAction(t).execute(board);
+        }
     }
 
     /**
@@ -154,10 +154,8 @@ public class LivrableRandom_a extends Livrable {
             System.out.println("No tower has evolutions to remove!");
             return;
         }
-        Random rand = new Random();
-        Tower t = downgradable.get(rand.nextInt(downgradable.size()));
-        DowngradeTowerAction downgrade = new DowngradeTowerAction(t);
-        downgrade.execute(board);
+        Tower t = new RandomListChooser<Tower>().choose("Downgrading tower :", downgradable);
+        if (t != null) new DowngradeTowerAction(t).execute(board);
     }
 
     public static void main(String[] args) throws InterruptedException {
