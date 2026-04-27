@@ -25,7 +25,7 @@ Un lien vers une image de l'UML doit être fourni (une photo d'un diagramme UML 
 
 ## Livrable 1
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/umllivrable1.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable1.pdf)
 
 Le premier livrable une nouvelle branche **livrable1** a été créée. Avec une approche objet pour ce projet, les concepts utilisés sont entre autres l'encapsulation, des exceptions pour quand des valeurs négatives sont saisies ou qu'une position donnée n'est dans le plateau et l'héritage notamment une classe abstraite **Board** qui concentre toutes les méthodes communes aux deux plateaux **ClassicalBoard** et **RandomBoard**. En plus d'une certaine méthode abstraite qui sont définit dans les deux classes correspondantes aux deux plateaux, puisque chacun des plateaux a des choses en plus que l'autre n'a pas c'est-à-dire dans le **ClassicalBoard** un chemin est défini d'avance selon les critères du sujet où les ballons suivront ce chemin definit jusqu'à la sortie et aucune tour ne sera posée sur les cellules traversées par ce chemin. le second plateau le **RandomBoard** est différent, chaque ballon définit sa trajectoire suivant où il est positionné au départ, de ce fait aucun chemin n'est definit d'avance car ce chemin dépendra du ballon (donc le prochain livrable) selon le sujet vue que potentiellement pour ce jeu tout le plateau est un chemin c'est-à-dire chaque cellule peut être traversée par un chemin suivant le ballon sans compter qu'elle peut contenir à la fois un ballon et une tour.
 
@@ -98,7 +98,7 @@ java -jar mainLivrable1.jar
 
 ## Livrable 2
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/umllivrable2.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable2.pdf)
 
 Une nouvelle branche **livrable2** a été créée. Pour ce livrable l'objectif principal est: assurer la création d'un ballon avec la classe **Balloon**, de faire deplacer ce ballon sur un chemin, générer une vitesse aléatoire pour chaque ballon.
 
@@ -166,7 +166,7 @@ make docs
 
 ## Livrable 3
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/umlLivrable3.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable3.pdf)
 
 Une nouvelle branche **livrable3** a été créée.
 Pour ce livrable l'objectif principal est: assurer la création des types de   **tours**  et la gestion de des tirs et l'integration dansla gestion de temps.
@@ -244,7 +244,7 @@ make docs
 
 ## Livrable 4
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/umlLivrable4.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable4.pdf)
 
 Une nouvelle branche a été créée pour ce livrable **livrable4**.
 Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau en plus de la gestion de manche, pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau si cela est possible, bien sûr les tours continueront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
@@ -341,7 +341,7 @@ make docs
 
 ## Livrable 5
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/umlLivrable5.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable5.pdf)
 
 Une nouvelle branche a été créée pour ce livrable **livrable5**.
 Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau via les actions. pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau si cela est possible via les actions, bien sûr les tours continueront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau via les actions. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
@@ -417,7 +417,97 @@ make docs
 
 ## Livrable 6
 
+🔗 **Diagramme UML** : [Voir le PDF](./UML.png)
+
+Pour ce dernier livrable l'objectif est de finaliser le projet avec la boucle principale. Avec les objectifs de la 5ème livrable plus de nouveaux détails pour celui-ci, plusieurs classes ont été créé: notamment **Input** qui permet la saisie d'entiers ou de chaines de caractères, **ResellTowerAction** qui est une action qui permet de vendre une tour soit sans évolution, soit avec évolution, **Livrable** qui est une classe abstraite qui a la méthode de *run* le cœur du programme principale car elle initalise le plateau, génère les ballons ou les chemins selon l'argument passé en paramètre et selon le plateau, gère les tours..., **LivrableInteractive** qui est une classe qui hérite de Livrable et qui représente le plateau **Classical Board** avec les toutes les actions du joueur (achéter,vendre, faire évoluer...), affiche le plateau à chaque round laissant apparaître l'état du plateau si une tour a été achété elle appraît sur le plateau. **LivrableRandom-a**, **LivrableRandom-b** sont des classes qui representent respectivement **Classical et Random** et de manière random les exécutes puis de **VersInteractive-a**, **VersInteractive_b** qui représentent respectivement **Classical et Random** et de manière intéractive c'est-à-dire avec l'intervention du choix les exécutes.
+Les fichiers manifests ont été créé afin de créer les fichiers jars.
+
+Pour ce livrable plusieurs fichiers ont été modifié pour le bon fonctionnement du projet notamment **Board** quelques méthodes ont été ajouté telles que **isPositionOccupiedByTower** qui permet de vérifier une position valide c'est-à-dire qui n'est pas occupée par une tour sur le plateau, **getValidTowerPosition()** permet de générer une position valide pour placer la tour, dans le dossier tower plusieurs fichiers ont été modifié afin de supprimer certaines méthodes. 
+
 ### Atteinte des objectifs
+
+- Création des programmes principaux demandés qui sont listés au-dessus.
+
+- Création de la classe input afin de gérés la saisie sur la console.
+
+- Création des actions du joueurs et surtout de faire de telles sortes que ces actions soient extensibles.
+
+- Création des jars demandés.
+
+- Concernant le groupe, l'entente est globalement très bonne et chacun a donné du sien pour assurer le bon déroulement de ce livrable.
+
+### Lancer le projet
+
+Pour lancer le projet, générer la documentation, et lancer les tests... il faut se mettre dans le dossier l2s4-projet-2026 et utilisez les commandes suivantes:
+
+**Compiler l'ensemble des classes .java en .class**
+
+```bash
+make classes
+```
+
+```bash
+make tests
+```
+
+**Lancer les tests avec junit**
+
+```bash
+make runtests
+```
+
+**lancer tous les fichiers livrable4a et livrable4b**
+
+```bash
+java -classpath classes bloons.main.LivrableInteractive arg1 arg2 arg3
+```
+
+```bash
+java -classpath classes bloons.main.LivrableRandom_a arg1 arg2 arg3
+```
+
+```bash
+java -classpath classes bloons.main.LivrableRandomB arg1 arg2 arg3
+```
+
+```bash
+java -classpath classes bloons.main.VersInteractive_a arg1 arg2 arg3
+```
+
+```bash
+java -classpath classes bloons.main.VersInteractive_b arg1 arg2 arg3
+```
+
+**Générer le jar**
+
+```bash
+make jar
+```
+
+**Lancer les jars**
+
+```bash
+java -jar towerdefense-a-interactive.jar arg1 arg2 arg3
+```
+
+```bash
+java -jar towerdefense-a-random.jar arg1 arg2 arg3
+```
+
+```bash
+java -jar towerdefense-b-interactive.jar arg1 arg2 arg3
+```
+
+```bash
+java -jar towerdefense-interactive.jar arg1 arg2 arg3
+```
+
+
+**Générer la documentation**
+
+```bash
+make docs
+```
 
 ### Difficultés restant à résoudre
 
