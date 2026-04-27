@@ -74,56 +74,6 @@ public class LivrableRandom_a extends Livrable {
         // Board display is omitted as required by livrable 5
     }
 
-    /**
-     * Place 2 towers of each type using BuyTowerAction
-     */
-    private void setupTowersWithActions(ClassicalBoard board) {
-        List<BuyTowerAction> actions = new ArrayList<>();
-        
-        for (int i = 0; i < 2; i++) {
-            // IceTower (cannot evolve)
-            Position pos1 = board.getValidTowerPosition();
-            actions.add(new BuyTowerAction(
-                new IceTower(400, 100, Effect.IMMEDIAT, 1500, pos1), pos1));
-            
-            // SlowDownTower (cannot evolve)
-            Position pos2 = board.getValidTowerPosition();
-            actions.add(new BuyTowerAction(
-                new SlowDownTower(500, 100, Effect.IMMEDIAT, 1500, pos2), pos2));
-            
-            // BombTower
-            Position pos3 = board.getValidTowerPosition();
-            actions.add(new BuyTowerAction(
-                new BombTower(600, 150, Effect.DISTANCE, 1800, pos3, Projectile.BOMB), pos3));
-            
-            // DartMonkeyTower
-            Position pos4 = board.getValidTowerPosition();
-            actions.add(new BuyTowerAction(
-                new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos4, Projectile.DART), pos4));
-            
-            // SniperMonkeyTower
-            Position pos5 = board.getValidTowerPosition();
-            actions.add(new BuyTowerAction(
-                new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, pos5, Projectile.POINTEDDART), pos5));
-            
-            // SuperMonkeyTower
-            Position pos6 = board.getValidTowerPosition();
-            actions.add(new BuyTowerAction(
-                new SuperMonkeyTower(1200, 200, Effect.IMMEDIAT, 300, pos6, Projectile.VERYSHARPDART), pos6));
-            
-            // TackShooterTower
-            Position pos7 = board.getValidTowerPosition();
-            actions.add(new BuyTowerAction(
-                new TackShooterTower(350, 80, Effect.IMMEDIAT, 1200, pos7, Projectile.NEEDLE), pos7));
-        }
-        
-        // Execute all actions
-        for (BuyTowerAction action : actions) {
-            action.execute(board);
-        }
-        
-        System.out.println("\nTowers placed: " + board.getAllTowers().size() + " towers");
-    }
 
     private void buyRandomTower(Board board) {
         List<String> towerNames = Arrays.asList(
