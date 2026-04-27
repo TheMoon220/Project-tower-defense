@@ -25,7 +25,7 @@ Un lien vers une image de l'UML doit être fourni (une photo d'un diagramme UML 
 
 ## Livrable 1
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable1.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable1.png)
 
 Le premier livrable une nouvelle branche **livrable1** a été créée. Avec une approche objet pour ce projet, les concepts utilisés sont entre autres l'encapsulation, des exceptions pour quand des valeurs négatives sont saisies ou qu'une position donnée n'est dans le plateau et l'héritage notamment une classe abstraite **Board** qui concentre toutes les méthodes communes aux deux plateaux **ClassicalBoard** et **RandomBoard**. En plus d'une certaine méthode abstraite qui sont définit dans les deux classes correspondantes aux deux plateaux, puisque chacun des plateaux a des choses en plus que l'autre n'a pas c'est-à-dire dans le **ClassicalBoard** un chemin est défini d'avance selon les critères du sujet où les ballons suivront ce chemin definit jusqu'à la sortie et aucune tour ne sera posée sur les cellules traversées par ce chemin. le second plateau le **RandomBoard** est différent, chaque ballon définit sa trajectoire suivant où il est positionné au départ, de ce fait aucun chemin n'est definit d'avance car ce chemin dépendra du ballon (donc le prochain livrable) selon le sujet vue que potentiellement pour ce jeu tout le plateau est un chemin c'est-à-dire chaque cellule peut être traversée par un chemin suivant le ballon sans compter qu'elle peut contenir à la fois un ballon et une tour.
 
@@ -98,7 +98,7 @@ java -jar mainLivrable1.jar
 
 ## Livrable 2
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable2.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable2.png)
 
 Une nouvelle branche **livrable2** a été créée. Pour ce livrable l'objectif principal est: assurer la création d'un ballon avec la classe **Balloon**, de faire deplacer ce ballon sur un chemin, générer une vitesse aléatoire pour chaque ballon.
 
@@ -166,7 +166,7 @@ make docs
 
 ## Livrable 3
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable3.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable3.png)
 
 Une nouvelle branche **livrable3** a été créée.
 Pour ce livrable l'objectif principal est: assurer la création des types de   **tours**  et la gestion de des tirs et l'integration dansla gestion de temps.
@@ -244,7 +244,7 @@ make docs
 
 ## Livrable 4
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable4.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable4.png)
 
 Une nouvelle branche a été créée pour ce livrable **livrable4**.
 Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau en plus de la gestion de manche, pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau si cela est possible, bien sûr les tours continueront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
@@ -341,7 +341,7 @@ make docs
 
 ## Livrable 5
 
-🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable5.pdf)
+🔗 **Diagramme UML** : [Voir le PDF](./uml/Livrable5-1.png)
 
 Une nouvelle branche a été créée pour ce livrable **livrable5**.
 Pour ce livrable l'objectif est de faire et de supprimer une évolution à chaque tour construite dans le plateau via les actions. pour ce faire voici comment l'on a procédé: de la manche 1 à 5 évoluer toutes les tours construites dans le plateau si cela est possible via les actions, bien sûr les tours continueront attaquer avec la méthode **processTowers**, puis de la manche 6 à 10 on supprime toutes évolutions appliquées à chaque tour construite dans le plateau via les actions. Le tour de jeu se termine quand l'on arrive à la 10ème manche et une manche finie quand tous les ballons générer à cette manche sortent du plateau.
