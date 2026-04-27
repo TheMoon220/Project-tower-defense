@@ -60,6 +60,7 @@ jar: classes
 	jar cvfm towerdefense-b-interactive.jar manifest-interactive-b -C $(OUT) .
 	jar cvfm towerdefense-interactive.jar manifest-interactive -C $(OUT) .
 	jar cvfm towerdefense-a-random.jar manifest-random-a -C $(OUT) .
+	jar cvfm towerdefense-b-random.jar manifest-random-b -C $(OUT) .
 	@echo "Jars créés."
 
 # Compilation des tests
