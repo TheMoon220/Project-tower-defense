@@ -23,7 +23,7 @@ public class RandomListChooser<T> implements ListChooser<T> {
 			return null;
 		}
 		System.out.println(msg);
-		System.out.print("0 - none");
+		System.out.print(" 0 - none");
 		int index = 1;
 		for (T element : list) {
 			System.out.print(",\n " + (index++) + " - " + element);
