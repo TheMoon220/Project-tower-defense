@@ -1,8 +1,8 @@
-package listchooser;
+package bloons.utils;
 
 import java.util.List;
 
-import listchooser.util.Input;
+import bloons.utils.Input;
 
 public class InteractiveListChooser<T> implements ListChooser<T> {
 

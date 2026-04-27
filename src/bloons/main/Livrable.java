@@ -96,9 +96,9 @@ public abstract class Livrable {
             initBoard(board, param);
             
             // Get towers (overridable method)
-            List<Tower> towers = getTowers(board, param);
-            
-            for(int round = 1; round <= 10; round++) {
+            List<Tower> towers = board.getAllTowers();
+            int round = 1;
+            while(Board.PLAYER.getHealth() > 0) {
                 System.out.println("\n=== Round " + round + " ===");
                 
                 // Apply evolutions (overridable method)
@@ -113,7 +113,7 @@ public abstract class Livrable {
 
                 long deltaTime = 100;
                 long start = System.nanoTime();
-                while(!balloons.isEmpty()){
+                while(!balloons.isEmpty()&& Board.PLAYER.getHealth() > 0){
                     long currentTime = (System.nanoTime() - start) / 1000000;
                     
                     // Display during round (overridable method)
@@ -126,11 +126,13 @@ public abstract class Livrable {
                     for (int i = 0; i < balloons.size(); i++) {
                         Balloon balloon = balloons.get(i);
                         if(balloon.isDestroyed()){
+                            Board.PLAYER.addCredit();
                             toRemove.add(balloon);
                             continue;
                         }
                         balloon.moveBallon();
                         if(balloon.checkEndOfPath()){
+                            Board.PLAYER.loseLife();
                             long exit = (System.nanoTime() - start) / 1000000;
                             System.out.println("Balloon " + i + " exited at time: " + exit + " ms");
                             toRemove.add(balloon);
@@ -140,8 +142,13 @@ public abstract class Livrable {
                     Thread.sleep(deltaTime);
                 }
                 System.out.println();
-                System.out.println("=== Round " + round + " finished ===");
+                System.out.println("=== Round " + round + " finished ===\n\n");
+                
+                round++;
             }
+            System.out.println("\n === GAME OVER ===");
+            System.out.println(Board.PLAYER.toString());
+
         } catch(NumberFormatException e){
             System.out.println("Arguments must be integers");
         }

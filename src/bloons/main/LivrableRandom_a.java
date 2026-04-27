@@ -24,7 +24,7 @@ public class LivrableRandom_a extends Livrable {
         board.displayBoard();
         board.displayPath();
         System.out.println("\n=== Tower placement via actions ===");
-        setupTowersWithActions((ClassicalBoard) board);
+        
     }
 
     @Override
@@ -35,8 +35,8 @@ public class LivrableRandom_a extends Livrable {
 
     @Override
     protected void applyEvolutionForRound(Board board, int round) {
-        System.out.println("\n--- Round " + round + " ---");
-        Board.PLAYER.toString();
+        board.displayBoard();
+        System.out.println(board.PLAYER.toString());
         
         ListChooser<String> actionChooser = new RandomListChooser<>();
         List<String> possibleActions = Arrays.asList("Buy", "Upgrade", "Downgrade", "Start");
@@ -46,16 +46,21 @@ public class LivrableRandom_a extends Livrable {
 
         // Le bot a le droit à un maximum de 5 actions par tour pour ne pas boucler à l'infini
         while (!startRound && actionCount < 5 && Board.PLAYER.getHealth() > 0) {
+            System.out.println();
             String choice = actionChooser.choose("Action :", possibleActions);
             
             if (choice == null || choice.equals("Start")) {
                 startRound = true;
-                System.out.println("Balloon launch !");
+                System.out.println("\nChoose : Start\n");
+                System.out.println("Balloon launch ....");
             } else if (choice.equals("Buy")) {
+                System.out.println("\nChoose : Buy\n");
                 buyRandomTower(board);
             } else if (choice.equals("Upgrade")) {
+                System.out.println("\nChoose : Upgrade\n");
                 upgradeRandomTower(board);
             } else if (choice.equals("Downgrade")) {
+                System.out.println("\nChoose : Downgrade\n");
                 downgradeRandomTower(board);
             }
             actionCount++;
@@ -118,6 +123,38 @@ public class LivrableRandom_a extends Livrable {
         }
         
         System.out.println("\nTowers placed: " + board.getAllTowers().size() + " towers");
+    }
+
+    private void buyRandomTower(Board board) {
+        List<String> towerNames = Arrays.asList(
+            "DartMonkey", "TackShooter", "IceTower", "SniperMonkey", 
+            "SlowDown", "BombTower", "SuperMonkey"
+        );
+        ListChooser<String> chooser = new RandomListChooser<>();
+        String choice = chooser.choose("All towers:", towerNames);
+        if (choice == null) return;
+
+        // Génère une position valide
+        Random rand = new Random();
+        Position pos;
+        do {
+            pos = new Position(rand.nextInt(board.getWidth()), rand.nextInt(board.getHeight()));
+        } while (board.isPositionOccupiedByTower(pos) || (board.getPath() != null && board.getPath().contains(pos)));
+
+        Tower t = null;
+        switch (choice) {
+            case "DartMonkey": t = new DartMonkeyTower(200, 100, Effect.IMMEDIAT, 1000, pos, Projectile.DART); break;
+            case "TackShooter": t = new TackShooterTower(350, 80, Effect.IMMEDIAT, 1200, pos, Projectile.NEEDLE); break;
+            case "IceTower": t = new IceTower(400, 100, Effect.IMMEDIAT, 1500, pos); break;
+            case "SniperMonkey": t = new SniperMonkeyTower(500, Effect.IMMEDIAT, 2000, pos, Projectile.POINTEDDART); break;
+            case "SlowDown": t = new SlowDownTower(500, 100, Effect.IMMEDIAT, 1500, pos); break;
+            case "BombTower": t = new BombTower(600, 150, Effect.DISTANCE, 1800, pos, Projectile.BOMB); break;
+            case "SuperMonkey": t = new SuperMonkeyTower(1200, 200, Effect.IMMEDIAT, 300, pos, Projectile.VERYSHARPDART); break;
+        }
+
+        if (t != null){
+            new BuyTowerAction(t, pos).execute(board);
+        } 
     }
 
     /**

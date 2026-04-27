@@ -1,5 +1,4 @@
-package listchooser;
-
+package bloons.utils;
 import java.util.List;
 import java.util.Random;
 
@@ -24,12 +23,12 @@ public class RandomListChooser<T> implements ListChooser<T> {
 			return null;
 		}
 		System.out.println(msg);
-		System.out.print("[0 - none");
+		System.out.print("0 - none");
 		int index = 1;
 		for (T element : list) {
-			System.out.print(", " + (index++) + " - " + element);
+			System.out.print(",\n " + (index++) + " - " + element);
 		}
-		System.out.println("]");
+		System.out.println("");
 		return list.get(random.nextInt(list.size()));
 	}
 
