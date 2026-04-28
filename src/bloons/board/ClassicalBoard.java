@@ -128,7 +128,7 @@ public class ClassicalBoard extends Board {
    }
    /**
     * check if the position p not in the path
-    * @param p
+    * @param p position
     * @return true when position not in path
     */
 

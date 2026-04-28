@@ -110,14 +110,14 @@ public abstract class Tower {
     }
     /**
      * get de evolution
-     * @return
+     * @return applied evolutions
      */
     public Deque<Evolution> getAppliedEvolutions(){
       return this.appliedEvolutions;
     }
     /**
      * get a evolution possible 
-     * @return
+     * @return possible evolutions
      */
     public Map<Evolution, Integer> getPossibleEvolutions(){
       return this.possibleEvolutions;

@@ -21,7 +21,7 @@ public class LivrableRandomB extends Livrable {
      * Generates paths and balloons.
      *
      * @param board the board used in the simulation
-     * @param numPaths number of paths to generate
+     * @param param number of paths to generate
      */
     @Override
     protected void initBoard(Board board, int param) {
