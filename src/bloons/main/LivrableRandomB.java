@@ -55,6 +55,7 @@ public class LivrableRandomB extends Livrable {
 
      /**
      * Place 2 tours de chaque type via BuyTowerAction
+     * @param board the board
      */
     private void setupTowersWithActions(RandomBoard board) {
         List<BuyTowerAction> actions = new ArrayList<>();
