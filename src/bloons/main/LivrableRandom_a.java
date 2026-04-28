@@ -74,7 +74,10 @@ public class LivrableRandom_a extends Livrable {
         // Board display is omitted as required by livrable 5
     }
 
-
+    /**
+     * buy ramdom tower
+     * @param board the board
+     */
     private void buyRandomTower(Board board) {
         List<String> towerNames = Arrays.asList(
             "DartMonkey", "TackShooter", "IceTower", "SniperMonkey", 
@@ -109,6 +112,7 @@ public class LivrableRandom_a extends Livrable {
 
     /**
      * Choose a random tower that can still evolve
+     * @param board the board
      */
     private void upgradeRandomTower(Board board) {
         List<Tower> evolvable = new ArrayList<>();
@@ -129,6 +133,7 @@ public class LivrableRandom_a extends Livrable {
 
     /**
      * Choose a random tower that has evolutions to remove
+     * @param board the board
      */
     private void downgradeRandomTower(Board board) {
         List<Tower> downgradable = new ArrayList<>();
