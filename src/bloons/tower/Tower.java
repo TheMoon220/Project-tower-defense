@@ -268,7 +268,8 @@ public abstract class Tower {
       this.removeEvolutionEffect(last);
     }
     /**
-     * check if the tower has an evolution
+     * check if the tower has an evolution 
+     *@return if the tower has an evolution   
      */
     public  boolean hasAnEvolution(){
       return !this.possibleEvolutions.isEmpty();

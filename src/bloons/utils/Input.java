@@ -32,6 +32,7 @@ public class Input {
 	 * permet la saisie d'un entier sur l'entrée standard
 	 * 
 	 * @return l'entier saisi
+	 * @throws java.io.IOException exception
 	 */
 	public static int readInt() throws java.io.IOException {
 	   return new Input().localReadInt();
