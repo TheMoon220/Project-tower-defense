@@ -17,6 +17,10 @@ N'oubliez pas d'ajouter les autres membres de votre équipe aux membres du proje
 
 [Le sujet 2026](https://www.fil.univ-lille.fr/~varre/portail/l2s4-projet/sujet2026.pdf)
 
+# Diaporama pour la soutenance
+
+🔗 **Diaporama** : [Voir le PDF](./Projet_l2_S4.pdf)
+
 # Livrables
 
 Les paragraphes concernant les livrables doivent être remplis avant la date de rendu du livrable. A chaque fois on décrira l'état du projet par rapport aux objectifs du livrable. Il est attendu un texte de plusieurs lignes qui explique la modélisation choisie, et/ou les algorithmes choisis et/ou les modifications apportées à la modélisation du livrable précédent.
